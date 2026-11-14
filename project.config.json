@@ -4,12 +4,12 @@
   "FRONTEND_URL": "https://wink-spherex-explorer.vercel.app",
   "RENDER_SERVICE": "wink-spherex-explorer-live",
   "RENDER_URL": "https://wink-spherex-explorer-live.onrender.com",
-  "unconfirmed": ["FRONTEND_URL", "RENDER_URL"],
+  "unconfirmed": [],
   "sources": {
     "REPO_NAME": "git remote get-url origin",
     "GITHUB_OWNER": "git remote get-url origin",
-    "FRONTEND_URL": "proposed from the repo name; Vercel assigns the real one on first deploy",
+    "FRONTEND_URL": "confirmed by the team after the first Vercel deploy",
     "RENDER_SERVICE": "proposed as <repo-name>-live; written to render.yaml",
-    "RENDER_URL": "from RENDER_SERVICE; Render adds a suffix if the name is taken"
+    "RENDER_URL": "confirmed by the team after the first Render deploy"
   }
 }
