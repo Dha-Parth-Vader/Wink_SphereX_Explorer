@@ -1,0 +1,1067 @@
+{
+ "patch": {
+  "id": "sample",
+  "name": "Simulated test field",
+  "kind": "simulated",
+  "width_px": 147,
+  "height_px": 147,
+  "ra": 150.1,
+  "dec": 2.2,
+  "epoch": 2026.0,
+  "fov_deg": 0.2511,
+  "pixel_scale_arcsec": 6.15,
+  "simulated": true,
+  "pipeline_version": "sample-1"
+ },
+ "frames": [
+  {
+   "file": "frames/sample/v00_all.png",
+   "flags_file": "frames/sample/v00_all_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "all",
+   "detector": "all",
+   "wavelength_um": [
+    0.75,
+    5.0
+   ],
+   "n_exposures": 18,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.7076,
+    "knee": 0.3433,
+    "top": 17.8723
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v00_1.png",
+   "flags_file": "frames/sample/v00_1_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "1",
+   "detector": 1,
+   "wavelength_um": [
+    0.75,
+    1.09
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.508,
+    "knee": 0.3425,
+    "top": 28.624
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v00_2.png",
+   "flags_file": "frames/sample/v00_2_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "2",
+   "detector": 2,
+   "wavelength_um": [
+    1.1,
+    1.62
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.6074,
+    "knee": 0.3456,
+    "top": 25.9586
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v00_3.png",
+   "flags_file": "frames/sample/v00_3_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "3",
+   "detector": 3,
+   "wavelength_um": [
+    1.63,
+    2.41
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.7065,
+    "knee": 0.3439,
+    "top": 18.8563
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v00_4.png",
+   "flags_file": "frames/sample/v00_4_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "4",
+   "detector": 4,
+   "wavelength_um": [
+    2.42,
+    3.82
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.8067,
+    "knee": 0.3373,
+    "top": 17.6705
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v00_5.png",
+   "flags_file": "frames/sample/v00_5_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "5",
+   "detector": 5,
+   "wavelength_um": [
+    3.83,
+    4.41
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.9056,
+    "knee": 0.3376,
+    "top": 17.7849
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v00_6.png",
+   "flags_file": "frames/sample/v00_6_flags.png",
+   "mjd": 60810.4,
+   "date": "2025-05-15",
+   "visit": 0,
+   "band": "6",
+   "detector": 6,
+   "wavelength_um": [
+    4.42,
+    5.0
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 1.0049,
+    "knee": 0.3336,
+    "top": 17.6845
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_all.png",
+   "flags_file": "frames/sample/v01_all_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "all",
+   "detector": "all",
+   "wavelength_um": [
+    0.75,
+    5.0
+   ],
+   "n_exposures": 18,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 0.7076,
+    "knee": 0.3433,
+    "top": 17.8723
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_1.png",
+   "flags_file": "frames/sample/v01_1_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "1",
+   "detector": 1,
+   "wavelength_um": [
+    0.75,
+    1.09
+   ],
+   "n_exposures": 3,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 0.508,
+    "knee": 0.3425,
+    "top": 28.624
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_2.png",
+   "flags_file": "frames/sample/v01_2_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "2",
+   "detector": 2,
+   "wavelength_um": [
+    1.1,
+    1.62
+   ],
+   "n_exposures": 3,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 0.6074,
+    "knee": 0.3456,
+    "top": 25.9586
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_3.png",
+   "flags_file": "frames/sample/v01_3_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "3",
+   "detector": 3,
+   "wavelength_um": [
+    1.63,
+    2.41
+   ],
+   "n_exposures": 3,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 0.7065,
+    "knee": 0.3439,
+    "top": 18.8563
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_4.png",
+   "flags_file": "frames/sample/v01_4_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "4",
+   "detector": 4,
+   "wavelength_um": [
+    2.42,
+    3.82
+   ],
+   "n_exposures": 3,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 0.8067,
+    "knee": 0.3373,
+    "top": 17.6705
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_5.png",
+   "flags_file": "frames/sample/v01_5_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "5",
+   "detector": 5,
+   "wavelength_um": [
+    3.83,
+    4.41
+   ],
+   "n_exposures": 3,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 0.9056,
+    "knee": 0.3376,
+    "top": 17.7849
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v01_6.png",
+   "flags_file": "frames/sample/v01_6_flags.png",
+   "mjd": 60995.6,
+   "date": "2025-11-16",
+   "visit": 1,
+   "band": "6",
+   "detector": 6,
+   "wavelength_um": [
+    4.42,
+    5.0
+   ],
+   "n_exposures": 3,
+   "coverage": 0.98,
+   "saturated": false,
+   "stretch": {
+    "black": 1.0049,
+    "knee": 0.3336,
+    "top": 17.6845
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_all.png",
+   "flags_file": "frames/sample/v02_all_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "all",
+   "detector": "all",
+   "wavelength_um": [
+    0.75,
+    5.0
+   ],
+   "n_exposures": 18,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.7076,
+    "knee": 0.3433,
+    "top": 17.8723
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_1.png",
+   "flags_file": "frames/sample/v02_1_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "1",
+   "detector": 1,
+   "wavelength_um": [
+    0.75,
+    1.09
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.508,
+    "knee": 0.3425,
+    "top": 28.624
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_2.png",
+   "flags_file": "frames/sample/v02_2_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "2",
+   "detector": 2,
+   "wavelength_um": [
+    1.1,
+    1.62
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.6074,
+    "knee": 0.3456,
+    "top": 25.9586
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_3.png",
+   "flags_file": "frames/sample/v02_3_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "3",
+   "detector": 3,
+   "wavelength_um": [
+    1.63,
+    2.41
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.7065,
+    "knee": 0.3439,
+    "top": 18.8563
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_4.png",
+   "flags_file": "frames/sample/v02_4_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "4",
+   "detector": 4,
+   "wavelength_um": [
+    2.42,
+    3.82
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.8067,
+    "knee": 0.3373,
+    "top": 17.6705
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_5.png",
+   "flags_file": "frames/sample/v02_5_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "5",
+   "detector": 5,
+   "wavelength_um": [
+    3.83,
+    4.41
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 0.9056,
+    "knee": 0.3376,
+    "top": 17.7849
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  },
+  {
+   "file": "frames/sample/v02_6.png",
+   "flags_file": "frames/sample/v02_6_flags.png",
+   "mjd": 61180.3,
+   "date": "2026-05-20",
+   "visit": 2,
+   "band": "6",
+   "detector": 6,
+   "wavelength_um": [
+    4.42,
+    5.0
+   ],
+   "n_exposures": 3,
+   "coverage": 1.0,
+   "saturated": false,
+   "stretch": {
+    "black": 1.0049,
+    "knee": 0.3336,
+    "top": 17.6845
+   },
+   "flags": [
+    "simulated hot pixels and one persistence spot"
+   ],
+   "flag_bits": {
+    "HOT": 9,
+    "PERSIST": 1
+   }
+  }
+ ],
+ "light_curve": [
+  {
+   "mjd": 60810.4,
+   "flux_ujy": 22414.219,
+   "err": 672.927,
+   "detector": 1,
+   "wavelength_um": [
+    0.75,
+    1.09
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60810.4,
+   "flux_ujy": 30637.117,
+   "err": 919.614,
+   "detector": 2,
+   "wavelength_um": [
+    1.1,
+    1.62
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60810.4,
+   "flux_ujy": 27489.967,
+   "err": 825.199,
+   "detector": 3,
+   "wavelength_um": [
+    1.63,
+    2.41
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60810.4,
+   "flux_ujy": 18159.716,
+   "err": 545.291,
+   "detector": 4,
+   "wavelength_um": [
+    2.42,
+    3.82
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60810.4,
+   "flux_ujy": 12596.531,
+   "err": 378.396,
+   "detector": 5,
+   "wavelength_um": [
+    3.83,
+    4.41
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60810.4,
+   "flux_ujy": 10359.619,
+   "err": 311.289,
+   "detector": 6,
+   "wavelength_um": [
+    4.42,
+    5.0
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60995.6,
+   "flux_ujy": 31698.493,
+   "err": 951.455,
+   "detector": 1,
+   "wavelength_um": [
+    0.75,
+    1.09
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60995.6,
+   "flux_ujy": 43327.426,
+   "err": 1300.323,
+   "detector": 2,
+   "wavelength_um": [
+    1.1,
+    1.62
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60995.6,
+   "flux_ujy": 38876.685,
+   "err": 1166.801,
+   "detector": 3,
+   "wavelength_um": [
+    1.63,
+    2.41
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60995.6,
+   "flux_ujy": 25681.717,
+   "err": 770.952,
+   "detector": 4,
+   "wavelength_um": [
+    2.42,
+    3.82
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60995.6,
+   "flux_ujy": 17814.185,
+   "err": 534.926,
+   "detector": 5,
+   "wavelength_um": [
+    3.83,
+    4.41
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 60995.6,
+   "flux_ujy": 14650.714,
+   "err": 440.021,
+   "detector": 6,
+   "wavelength_um": [
+    4.42,
+    5.0
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 61180.3,
+   "flux_ujy": 44828.439,
+   "err": 1345.353,
+   "detector": 1,
+   "wavelength_um": [
+    0.75,
+    1.09
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 61180.3,
+   "flux_ujy": 61274.234,
+   "err": 1838.727,
+   "detector": 2,
+   "wavelength_um": [
+    1.1,
+    1.62
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 61180.3,
+   "flux_ujy": 54979.935,
+   "err": 1649.898,
+   "detector": 3,
+   "wavelength_um": [
+    1.63,
+    2.41
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 61180.3,
+   "flux_ujy": 36319.432,
+   "err": 1090.083,
+   "detector": 4,
+   "wavelength_um": [
+    2.42,
+    3.82
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 61180.3,
+   "flux_ujy": 25193.062,
+   "err": 756.292,
+   "detector": 5,
+   "wavelength_um": [
+    3.83,
+    4.41
+   ],
+   "flagged": false,
+   "approximate": false
+  },
+  {
+   "mjd": 61180.3,
+   "flux_ujy": 20719.238,
+   "err": 622.077,
+   "detector": 6,
+   "wavelength_um": [
+    4.42,
+    5.0
+   ],
+   "flagged": false,
+   "approximate": false
+  }
+ ],
+ "overlays": {
+  "gaia": [
+   {
+    "ra": 149.990149,
+    "dec": 2.309037,
+    "label": "Simulated Gaia 1",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 10.06
+   },
+   {
+    "ra": 150.044985,
+    "dec": 2.187799,
+    "label": "Simulated Gaia 2",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 10.41
+   },
+   {
+    "ra": 150.192436,
+    "dec": 2.233539,
+    "label": "Simulated Gaia 3",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 11.16
+   },
+   {
+    "ra": 150.002074,
+    "dec": 2.241558,
+    "label": "Simulated Gaia 4",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 11.39
+   },
+   {
+    "ra": 149.996955,
+    "dec": 2.298872,
+    "label": "Simulated Gaia 5",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 11.54
+   },
+   {
+    "ra": 149.991763,
+    "dec": 2.152591,
+    "label": "Simulated Gaia 6",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 11.54
+   },
+   {
+    "ra": 150.026203,
+    "dec": 2.246809,
+    "label": "Simulated Gaia 7",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 11.63
+   },
+   {
+    "ra": 150.150674,
+    "dec": 2.308509,
+    "label": "Simulated Gaia 8",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 11.78
+   },
+   {
+    "ra": 150.029475,
+    "dec": 2.174171,
+    "label": "Simulated Gaia 9",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 12.08
+   },
+   {
+    "ra": 150.117837,
+    "dec": 2.200356,
+    "label": "Simulated Gaia 10",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 12.09
+   },
+   {
+    "ra": 150.133092,
+    "dec": 2.241583,
+    "label": "Simulated Gaia 11",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 12.15
+   },
+   {
+    "ra": 150.063361,
+    "dec": 2.246351,
+    "label": "Simulated Gaia 12",
+    "epoch": 2016.0,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 12.19
+   }
+  ],
+  "wise": [
+   {
+    "ra": 149.990149,
+    "dec": 2.309037,
+    "label": "Simulated WISE 1",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 8.06
+   },
+   {
+    "ra": 150.044985,
+    "dec": 2.187799,
+    "label": "Simulated WISE 2",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 8.41
+   },
+   {
+    "ra": 150.192436,
+    "dec": 2.233539,
+    "label": "Simulated WISE 3",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 9.16
+   },
+   {
+    "ra": 150.002074,
+    "dec": 2.241558,
+    "label": "Simulated WISE 4",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 9.39
+   },
+   {
+    "ra": 149.996955,
+    "dec": 2.298872,
+    "label": "Simulated WISE 5",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 9.54
+   },
+   {
+    "ra": 149.991763,
+    "dec": 2.152591,
+    "label": "Simulated WISE 6",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 9.54
+   },
+   {
+    "ra": 150.026203,
+    "dec": 2.246809,
+    "label": "Simulated WISE 7",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 9.63
+   },
+   {
+    "ra": 150.150674,
+    "dec": 2.308509,
+    "label": "Simulated WISE 8",
+    "epoch": 2015.4,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 9.78
+   }
+  ]
+ },
+ "predictions": [
+  {
+   "id": "p1",
+   "label": "Fast mover (simulated)",
+   "kind": "mover",
+   "confidence": 0.95,
+   "pm_arcsec_yr": 24.3,
+   "match": null,
+   "track": [
+    {
+     "epoch": 0,
+     "x": 73.0,
+     "y": 80.0
+    },
+    {
+     "epoch": 1,
+     "x": 73.0,
+     "y": 78.0
+    },
+    {
+     "epoch": 2,
+     "x": 73.0,
+     "y": 76.0
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "label": "Brightening star (simulated)",
+   "kind": "variable",
+   "confidence": 0.9,
+   "track": [
+    {
+     "epoch": 0,
+     "x": 40.0,
+     "y": 105.0
+    },
+    {
+     "epoch": 1,
+     "x": 40.0,
+     "y": 105.0
+    },
+    {
+     "epoch": 2,
+     "x": 40.0,
+     "y": 105.0
+    }
+   ]
+  }
+ ],
+ "verdicts": {
+  "motion": "moves",
+  "variability": "changing",
+  "notes": [
+   "Simulated data for building the site. One star moves 2 px north per date; the one at lower left doubles in brightness."
+  ]
+ }
+}

@@ -1,0 +1,25 @@
+# Live SPHEREx search server (pipeline/server.py) on Render's free plan.
+# The Vercel site calls it for any spot that isn't one of the 100 pre-built targets. Setup: pipeline/RENDER.md
+# Change settings here, not in the dashboard: a Blueprint sync overwrites dashboard edits.
+services:
+  - type: web
+    name: wink-spherex-explorer-live
+    runtime: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r pipeline/requirements.txt
+    # 512 MB RAM and a disk wiped on every restart: one search at a time, 30 images, small cache
+    startCommand: python pipeline/server.py --site public --max 30 --live-max-mb 200
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      # exact origins, comma-separated; wildcards as *.vercel.app (no https://). Keep in step with project.config.json
+      - key: ALLOWED_ORIGINS
+        value: "https://wink-spherex-explorer.vercel.app"
+      - key: LIVE_MAX_JOBS
+        value: "1"
+      - key: LIVE_THREADS
+        value: "8"
+      - key: SPHEREX_LIVE_CACHE
+        value: /tmp/spherex-live
