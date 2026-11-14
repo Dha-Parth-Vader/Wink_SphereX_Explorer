@@ -1,0 +1,14 @@
+epsindib           361/361 in cache, 0 failed, 244.7 s, 296.4 MB new
+wise0855           256/256 in cache, 0 failed, 172.3 s, 215.5 MB new
+rwaur              335/335 in cache, 0 failed, 229.1 s, 279.1 MB new
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Python3.14\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python3.14\Lib\asyncio\proactor_events.py", line 166, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+OSError: [WinError 10022] An invalid argument was supplied
+rdra               358/358 in cache, 0 failed, 261.6 s, 290.1 MB new
