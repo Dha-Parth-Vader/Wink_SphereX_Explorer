@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viewer · SkyBlink</title>
+<meta name="description" content="Blink real NASA SPHEREx infrared images of any spot in the sky to find things that move or change brightness.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-viewer">
+<a class="skip-link" href="#sky-canvas">Skip to the image</a>
+
+<header class="site-header chrome" id="site-header">
+  <a class="brand" href="index.html"><span aria-hidden="true">🔭</span> SkyBlink</a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="learn.html">Education</a>
+    <a href="search.html" aria-current="page">Search Tool</a>
+    <a href="dome.html">Sky Dome</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main class="viewer" id="viewer">
+  <form class="v-topbar chrome" id="search-form" autocomplete="off">
+    <div class="v-fields">
+      <label>RA <input id="in-ra" name="ra" inputmode="decimal" placeholder="269.4463 or 17h57m47s" required></label>
+      <label>Dec <input id="in-dec" name="dec" inputmode="decimal" placeholder="4.7682 or +04d46m06s" required></label>
+      <label>Field of view
+        <select id="in-fov" name="fov" aria-describedby="fov-hint"></select>
+      </label>
+      <button type="submit" class="btn btn-primary">Show images →</button>
+      <span class="hint" id="fov-hint">Bigger = slower.</span>
+    </div>
+    <div class="v-chips" id="chips" aria-label="Test targets"></div>
+    <div class="v-share">
+      <button type="button" class="btn" id="btn-copy-link">Copy link</button>
+      <button type="button" class="btn" id="btn-copy-embed">Copy embed code</button>
+      <a class="btn" id="link-wiseview" href="https://byw.tools/wiseview" target="_blank" rel="noopener">Open in WiseView ↗</a>
+    </div>
+  </form>
+
+  <div class="v-grid">
+    <aside class="v-left chrome-embed" aria-label="Image details">
+      <section class="panel">
+        <h2>This image</h2>
+        <dl class="kv" id="this-image"><dt>Date</dt><dd>–</dd></dl>
+      </section>
+      <section class="panel">
+        <h2>Contamination flags</h2>
+        <div id="flags-info"><p class="muted">No image loaded.</p></div>
+      </section>
+      <section class="panel">
+        <h2>Under cursor</h2>
+        <dl class="kv" id="cursor-info"><dt>RA</dt><dd>–</dd><dt>Dec</dt><dd>–</dd><dt>Value</dt><dd>–</dd></dl>
+      </section>
+      <section class="panel">
+        <h2>Patch info</h2>
+        <dl class="kv" id="patch-info"><dt>Patch</dt><dd>–</dd></dl>
+      </section>
+      <button type="button" class="btn btn-block" id="btn-download">Download this image</button>
+    </aside>
+
+    <section class="v-centre" aria-label="Image and player">
+      <div class="v-title">
+        <h1 id="view-title">SPHEREx viewer</h1>
+        <div class="badges" id="badges"></div>
+      </div>
+
+      <div class="status" id="status" role="status" aria-live="polite" hidden>
+        <p class="status-msg" id="status-msg"></p>
+        <div class="progress" id="status-progress" hidden><div class="progress-bar" id="status-bar"></div></div>
+        <p class="status-detail muted" id="status-detail"></p>
+        <div class="status-actions" id="status-actions"></div>
+      </div>
+
+      <div class="stage" id="stage">
+        <canvas id="sky-canvas" tabindex="0" role="img" aria-label="No image loaded yet"></canvas>
+        <p class="caption" id="caption"></p>
+        <p class="mark-hint" id="mark-hint" hidden>Click the image to mark a spot. Enter marks the centre, Esc cancels.</p>
+        <form class="mark-label" id="mark-label" hidden>
+          <label>Label for this spot <input id="mark-text" maxlength="80" placeholder="e.g. faint thing moving north"></label>
+          <button type="submit" class="btn btn-primary">Save mark</button>
+          <button type="button" class="btn" id="mark-cancel">Cancel</button>
+        </form>
+      </div>
+
+      <div class="player" id="player">
+        <button type="button" class="btn icon" id="btn-prev" aria-label="Previous date">◀</button>
+        <button type="button" class="btn btn-primary" id="btn-play" aria-pressed="false">▶ Play</button>
+        <button type="button" class="btn icon" id="btn-next" aria-label="Next date">▶</button>
+        <label class="inline">Speed
+          <select id="in-speed">
+            <option value="1">1 swap/s</option>
+            <option value="2" selected>2 swaps/s</option>
+            <option value="3">3 swaps/s</option>
+          </select>
+        </label>
+        <span class="frame-label" id="frame-label">–</span>
+      </div>
+
+      <div class="modes">
+        <fieldset class="seg" id="mode-set">
+          <legend>Show</legend>
+          <label><input type="radio" name="mode" value="each" checked> Each date</label>
+          <label><input type="radio" name="mode" value="add"> Add all dates</label>
+          <label><input type="radio" name="mode" value="sub"> Subtract</label>
+        </fieldset>
+        <label class="inline" id="ref-wrap" hidden>minus
+          <select id="in-ref">
+            <option value="first">first date</option>
+            <option value="prev">previous date</option>
+            <option value="all">all dates added</option>
+          </select>
+        </label>
+        <label class="inline">Detector
+          <select id="in-det"></select>
+        </label>
+      </div>
+      <p class="hint" id="mode-hint"></p>
+
+      <div class="timeline">
+        <label for="in-time" class="sr-only">Date</label>
+        <input type="range" id="in-time" min="0" max="0" value="0" step="1">
+        <div class="ticks" id="ticks" aria-hidden="true"></div>
+      </div>
+
+      <section class="panel chart-panel">
+        <div class="chart-head">
+          <h2 id="chart-title">Brightness over time</h2>
+          <div class="chart-tools">
+            <button type="button" class="btn small" id="btn-back-target" hidden>Back to target</button>
+            <button type="button" class="btn small" id="btn-chart-table" aria-pressed="false">Table view</button>
+          </div>
+        </div>
+        <p class="hint" id="chart-hint">Click anywhere on the image to measure that spot.</p>
+        <div id="chart"></div>
+        <div id="chart-table" hidden></div>
+      </section>
+
+      <p class="dome-link chrome"><a id="link-dome" href="dome.html"><span aria-hidden="true">🌐</span> View in Sky Dome</a></p>
+      <p class="embed-link" id="embed-link" hidden><a id="link-full" href="viewer.html" target="_blank" rel="noopener">Open in SkyBlink ↗</a></p>
+    </section>
+
+    <aside class="v-right chrome-embed" aria-label="Layers and tools">
+      <section class="panel">
+        <h2>Layers</h2>
+        <ul class="layers" id="layers">
+          <li><label><input type="checkbox" id="ly-flags"> <span class="glyph g-flags" aria-hidden="true"></span> Contamination flags</label></li>
+          <li id="ly-gaia-row"><label><input type="checkbox" id="ly-gaia" checked> <span class="glyph g-gaia" aria-hidden="true">◆</span> Gaia DR3 stars</label><span class="hint" id="ly-gaia-hint"></span></li>
+          <li id="ly-wise-row"><label><input type="checkbox" id="ly-wise" checked> <span class="glyph g-wise" aria-hidden="true">■</span> CatWISE2020</label><span class="hint" id="ly-wise-hint"></span></li>
+          <li><label><input type="checkbox" id="ly-track" checked> <span class="glyph g-track" aria-hidden="true">○</span> Expected target position</label></li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Adjust image</h2>
+        <label class="slider">Brightness <input type="range" id="adj-bright" min="-100" max="100" value="0"></label>
+        <label class="slider">Contrast <input type="range" id="adj-contrast" min="50" max="300" value="100"></label>
+        <label class="check"><input type="checkbox" id="adj-invert"> Invert</label>
+        <label class="check"><input type="checkbox" id="adj-cross"> Crosshair</label>
+        <button type="button" class="btn small" id="adj-reset">Reset</button>
+      </section>
+      <section class="panel">
+        <h2>Mover predictions <span class="tag">AI · prototype</span></h2>
+        <ul class="predictions" id="predictions"><li class="muted">No predictions for this patch.</li></ul>
+        <label class="check"><input type="checkbox" id="pred-circle"> Circle all candidates</label>
+        <p class="hint">These come from our detection pipeline and can be wrong. Your blink is the final check.</p>
+      </section>
+      <section class="panel">
+        <h2>Report a find</h2>
+        <button type="button" class="btn btn-block" id="btn-mark" aria-pressed="false">✚ Mark this</button>
+        <ul class="marks" id="marks"></ul>
+        <div class="row">
+          <button type="button" class="btn small" id="btn-report-copy">Copy report</button>
+          <button type="button" class="btn small" id="btn-report-txt">Download .txt</button>
+          <button type="button" class="btn small" id="btn-report-json">Download .json</button>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer chrome" id="site-footer">
+  <p>Data: NASA/JPL-Caltech SPHEREx via IRSA · <a href="about.html#credits">Credits</a></p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/data-source.js"></script>
+<script src="js/viewer.js"></script>
+</body>
+</html>
