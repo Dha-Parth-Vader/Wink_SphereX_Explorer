@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · SkyBlink</title>
+  <meta name="description" content="The SkyBlink team and the data sources we use, with full credits.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <main id="main">
+    <div class="wrap">
+      <h1>About SkyBlink</h1>
+      <p class="lead">We built SkyBlink for NASA Space Apps 2026, challenge "Planet X &amp; SPHEREx". Our aim is simple: let anyone blink NASA's newest infrared sky maps and spot what moves.</p>
+
+      <section class="section" aria-labelledby="team-title">
+        <h2 id="team-title">The team</h2>
+        <div class="grid team">
+          <article class="card">
+            <div class="avatar" aria-hidden="true">S</div>
+            <h3>Sky</h3>
+            <div class="role">Astrophysics lead</div>
+            <p class="small muted">Target positions, the Education pages, the Sky Dome and our demo story.</p>
+          </article>
+          <article class="card">
+            <div class="avatar" aria-hidden="true">P</div>
+            <h3>Pipe</h3>
+            <div class="role">Data processing lead</div>
+            <p class="small muted">The SPHEREx pipeline, the live search server and hosting.</p>
+          </article>
+          <article class="card">
+            <div class="avatar" aria-hidden="true">S</div>
+            <h3>Screen</h3>
+            <div class="role">UI/UX lead</div>
+            <p class="small muted">The Viewer, live-search progress, reports and phone testing.</p>
+          </article>
+          <article class="card">
+            <div class="avatar" aria-hidden="true">L</div>
+            <h3>Lens</h3>
+            <div class="role">Data visualisation lead</div>
+            <p class="small muted">Difference images, mover and variability checks, stretch, spectra and Sky Dome data.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="credits" aria-labelledby="credits-title">
+        <h2 id="credits-title">Data &amp; credits</h2>
+        <p class="muted">Everything you see in the Viewer is real data unless it carries a <span class="badge badge-sim">Simulated</span> badge. We follow each archive's data-use terms.</p>
+        <dl class="credits card">
+          <dt>SPHEREx (NASA/JPL-Caltech), via IRSA</dt>
+          <dd>All images are SPHEREx spectral images from NASA's Infrared Science Archive, read from IRSA and its public copy on Amazon Web Services.
+            <blockquote>This publication makes use of data products from the Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer (SPHEREx), which is a joint project of the Jet Propulsion Laboratory and the California Institute of Technology, and is funded by the National Aeronautics and Space Administration.</blockquote>
+            <a href="https://irsa.ipac.caltech.edu/Missions/spherex.html" rel="noopener" target="_blank">IRSA SPHEREx ↗</a>
+          </dd>
+
+          <dt>NASA/IPAC Infrared Science Archive (IRSA)</dt>
+          <dd><blockquote>This research has made use of the NASA/IPAC Infrared Science Archive, which is funded by the National Aeronautics and Space Administration and operated by the California Institute of Technology.</blockquote></dd>
+
+          <dt>IRSA SPHEREx tutorial notebooks</dt>
+          <dd>Our image search and cloud reads follow IRSA's tutorials. <a href="https://caltech-ipac.github.io/irsa-tutorials/" rel="noopener" target="_blank">caltech-ipac.github.io/irsa-tutorials ↗</a></dd>
+
+          <dt>Gaia DR3 (ESA)</dt>
+          <dd>Star positions and motions, epoch 2016.0, read through IRSA.
+            <blockquote>This work has made use of data from the European Space Agency (ESA) mission <em>Gaia</em> (<a href="https://www.cosmos.esa.int/gaia" rel="noopener" target="_blank">https://www.cosmos.esa.int/gaia</a>), processed by the <em>Gaia</em> Data Processing and Analysis Consortium (DPAC, <a href="https://www.cosmos.esa.int/web/gaia/dpac/consortium" rel="noopener" target="_blank">https://www.cosmos.esa.int/web/gaia/dpac/consortium</a>). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the <em>Gaia</em> Multilateral Agreement.</blockquote>
+          </dd>
+
+          <dt>CatWISE2020</dt>
+          <dd>Infrared positions and motions from WISE and NEOWISE, epoch 2015.4, read through IRSA. Marocco, F. et al. 2021, ApJS 253, 8.</dd>
+
+          <dt>SkyBoT (IMCCE)</dt>
+          <dd>Which known asteroids and comets cross our fields. Berthier, J. et al. 2006, ASP Conference Series 351, 367.
+            <a href="https://ssp.imcce.fr/webservices/skybot/" rel="noopener" target="_blank">SkyBoT ↗</a></dd>
+
+          <dt>WiseView</dt>
+          <dd>Our model for an online blinker, and where the Viewer's "Open in WiseView" button goes. Caselden, D. et al. 2018, Astrophysics Source Code Library, ascl:1806.004.
+            <a href="http://byw.tools/wiseview" rel="noopener" target="_blank">WiseView ↗</a></dd>
+
+          <dt>Simulated data</dt>
+          <dd>A few things on the site are made up so we could build before the real data existed: the sample test field and some Sky Dome galaxies and nebulae. Each one shows a Simulated badge.</dd>
+        </dl>
+        <p class="notice">NASA does not endorse any non-U.S. Government entity and is not responsible for information contained on non-U.S. Government websites.</p>
+      </section>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+</body>
+</html>

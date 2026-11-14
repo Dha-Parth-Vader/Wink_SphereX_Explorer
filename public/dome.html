@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sky Dome · SkyBlink</title>
+  <meta name="description" content="Look around the whole sky, sweep through SPHEREx's 102 colours and open any target in the Viewer.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dome" class="page-dome">
+  <main id="main">
+    <h1 class="visually-hidden">Sky Dome</h1>
+    <div class="dome" id="dome">
+      <canvas class="sky-canvas" id="sky" tabindex="0" role="img"
+              aria-label="360 degree sky. Drag or use the arrow keys to look around, scroll or press plus and minus to zoom, click a glowing marker for details."></canvas>
+      <canvas class="overlay-canvas" id="overlay" aria-hidden="true"></canvas>
+
+      <nav class="dome-panel dome-subnav" aria-label="Sky Dome shortcuts">
+        <a href="search.html#gallery">Gallery</a>
+        <span aria-disabled="true" title="Planned">Exoplanet Explorer (planned)</span>
+        <a href="search.html#filtered">Filtered Search</a>
+        <a href="search.html#raw">Raw Search</a>
+      </nav>
+
+      <div class="dome-panel dome-left" role="toolbar" aria-label="View">
+        <button class="btn" type="button" id="btn-objects" aria-expanded="false" aria-controls="drawer" title="Objects">☰</button>
+        <button class="btn" type="button" id="btn-zoom-in" aria-label="Zoom in">+</button>
+        <button class="btn" type="button" id="btn-zoom-out" aria-label="Zoom out">−</button>
+        <button class="btn btn-sm" type="button" id="btn-wide">Wide</button>
+        <button class="btn btn-sm" type="button" id="btn-labels" aria-pressed="true">Labels</button>
+        <button class="btn btn-sm" type="button" id="btn-grid" aria-pressed="false">Grid</button>
+      </div>
+
+      <section class="dome-panel drawer" id="drawer" aria-labelledby="drawer-title" hidden>
+        <h2 id="drawer-title">Objects</h2>
+        <input type="search" id="obj-search" placeholder="Search by name" aria-label="Search objects by name" autocomplete="off">
+        <div class="types" id="obj-types" role="group" aria-label="Types"></div>
+        <div class="row">
+          <button class="btn btn-sm" type="button" id="show-all">Show all</button>
+          <button class="btn btn-sm" type="button" id="hide-all">Hide all</button>
+        </div>
+        <label class="check small"><input type="checkbox" id="only-viewer"> <span>Only with Viewer images</span></label>
+        <span class="count" id="obj-count" aria-live="polite"></span>
+        <ul id="obj-list"></ul>
+      </section>
+
+      <aside class="dome-panel details" id="details" aria-live="polite" hidden>
+        <button class="btn btn-sm btn-ghost close" type="button" id="details-close" aria-label="Close details">✕</button>
+        <h2 id="d-name"></h2>
+        <div class="row" id="d-badges"></div>
+        <p class="small muted mono" id="d-pos"></p>
+        <div class="tile-row">
+          <canvas class="tile" id="d-tile" width="128" height="128" role="img" aria-label="Picture of the object at the chosen band"></canvas>
+          <div class="small">
+            <div id="d-band"></div>
+            <div class="muted" id="d-date"></div>
+          </div>
+        </div>
+        <p class="small" id="d-blurb"></p>
+        <h3 class="small">Spectrum</h3>
+        <div id="d-spectrum"></div>
+        <p class="tiny muted" id="d-measured"></p>
+        <a class="btn btn-primary" id="d-open" href="#">Open in Viewer →</a>
+      </aside>
+
+      <div class="dome-panel dome-bottom" role="group" aria-label="Band and date">
+        <div class="slider-row">
+          <label for="band">Band</label>
+          <input type="range" id="band" min="1" max="102" step="1" value="57">
+          <output id="band-out" for="band"></output>
+          <div class="row">
+            <label class="check small"><input type="checkbox" id="all-bands" checked> <span>All bands</span></label>
+            <button class="btn btn-sm" type="button" id="sweep-bands" aria-pressed="false">▶ Sweep bands</button>
+          </div>
+        </div>
+        <div class="slider-row">
+          <label for="date">Date</label>
+          <input type="range" id="date" min="0" max="0" step="1" value="0">
+          <output id="date-out" for="date"></output>
+          <div class="row">
+            <button class="btn btn-sm" type="button" id="date-latest">Latest</button>
+            <button class="btn btn-sm" type="button" id="sweep-dates" aria-pressed="false">▶ Sweep dates</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="dome-note">Background stars are decoration. Markers are our targets.</p>
+      <div class="dome-status card" id="status" hidden></div>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/dome.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyBlink · Blink NASA's SPHEREx sky</title>
+  <meta name="description" content="Blink real NASA SPHEREx infrared images of any spot in the sky to find things that move or change brightness.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <canvas class="starfield" aria-hidden="true"></canvas>
+  <main id="main">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Welcome to SkyBlink, <span class="accent">the astronomy blinker</span></h1>
+          <p class="lead">Pick any spot in the sky and SkyBlink plays NASA's SPHEREx pictures of it, one date after another, like a little flip book. Stars that stay put stay still. Anything that moves or changes brightness jumps out at you.</p>
+          <p class="lead">That's how Clyde Tombaugh found Pluto in 1930: he flipped between two photos of the same patch of sky. Now you can do it with a space telescope that sees the whole sky in 102 colours of infrared light.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="search.html">🔭 Start searching</a>
+            <a class="btn" href="learn.html">Learn the basics</a>
+          </div>
+        </div>
+
+        <div class="card demo" aria-labelledby="demo-title">
+          <h2 id="demo-title" class="visually-hidden">Blink demo</h2>
+          <div class="demo-stage">
+            <canvas id="demo-canvas" width="147" height="147" role="img"
+                    aria-label="Blink demo of a simulated star field. One star moves upward from date to date and one gets brighter."></canvas>
+            <span class="badge badge-sim">Simulated</span>
+            <span class="demo-ring" id="demo-ring" hidden></span>
+            <span class="stamp" id="demo-stamp">Date 1 of 3</span>
+          </div>
+          <div class="demo-controls">
+            <button class="btn btn-primary" id="demo-play" type="button" aria-pressed="false">▶ Blink</button>
+            <button class="btn btn-sm" id="demo-hint" type="button" aria-pressed="false">Show me where</button>
+            <span class="small muted" id="demo-status">Press Blink. Watch for the star that moves.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="goals-title">
+        <h2 id="goals-title">Our goals</h2>
+        <div class="grid grid-3">
+          <article class="card goal-card">
+            <div class="icon" aria-hidden="true">✦</div>
+            <h3>Amateur accessibility</h3>
+            <p>No login and no jargon. Type a position or tap a famous target, press Play, and look. Everything else is explained along the way.</p>
+          </article>
+          <article class="card goal-card">
+            <div class="icon" aria-hidden="true">🔭</div>
+            <h3>Real NASA data for any spot in the sky</h3>
+            <p>Every picture comes from SPHEREx through NASA's infrared archive at IRSA. 100 targets open instantly, and our live server fetches anywhere else.</p>
+          </article>
+          <article class="card goal-card">
+            <div class="icon" aria-hidden="true">🌐</div>
+            <h3>See in 102 colours</h3>
+            <p>SPHEREx splits infrared light into 102 bands across 6 detectors. Switch detectors, sweep the bands in the Sky Dome, and spot cold brown dwarfs that only glow at the longest wavelengths.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section grid grid-2" aria-label="Where to go next">
+        <a class="card card-link" href="learn.html">
+          <h3>Education →</h3>
+          <p class="muted">Coordinates, infrared light, how stars move, the SPHEREx mission and the hunt for Planet X.</p>
+        </a>
+        <a class="card card-link" href="search.html">
+          <h3>Search Tool →</h3>
+          <p class="muted">Enter a right ascension and declination, or start from one of the five challenge targets.</p>
+        </a>
+      </section>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

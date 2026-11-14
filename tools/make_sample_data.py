@@ -1,7 +1,8 @@
 """Write a small simulated patch so the site can be built before real data exists.
 
 3 dates x 7 bands (all, 1..6) of 147x147 PNGs: a field of fixed stars, one star that moves 2 px north per
-date and one that doubles in brightness. Everything is marked "simulated": true.
+date and one that doubles in brightness. Also the Sky Dome sample: dome/bands.json, dome/poi.json, cubes for
+the sample field and 8 hand-made galaxies and nebulae in extra/. Everything is marked "simulated": true.
 
     python tools/make_sample_data.py [--site public/data]
 """
@@ -180,10 +181,7 @@ def main():
                      "fov": fov, "thumb": f"frames/{PATCH_ID}/v00_all.png", "status": "simulated",
                      "blurb": "Made-up stars for testing the viewer. One moves, one gets brighter.",
                      "simulated": True}
-    extra = site / "extra"
-    extra.mkdir(exist_ok=True)
-    (extra / f"{PATCH_ID}.json").write_text(
-        json.dumps({"patch_entry": patch_entry, "gallery_entry": gallery_entry}, indent=1) + "\n", encoding="utf-8")
+    (site / "extra").mkdir(exist_ok=True)
 
     # merge_lists.py rebuilds these later; until it exists we write the sample entry directly
     for fname, entry in (("patches.json", patch_entry), ("gallery.json", gallery_entry)):
@@ -193,6 +191,185 @@ def main():
         path.write_text(json.dumps(items, indent=1) + "\n", encoding="utf-8")
 
     print(f"wrote {len(frames)} frames to {frame_dir}")
+
+    poi_entry = write_dome_sample(site, fixed, patch_entry, gallery_entry)
+    write_dome_lists(site)
+    print(f"wrote Sky Dome sample: {poi_entry['id']} + {len(SIM_OBJECTS)} simulated objects")
+
+
+# Sky Dome sample ------------------------------------------------------------------------------------
+# Band layout follows the mission: 6 detectors x 17 channels, log-spaced, resolving power per detector.
+BAND_R = {1: 39, 2: 41, 3: 41, 4: 35, 5: 112, 6: 128}
+TILE = 32
+CATEGORIES = {
+    "star": {"label": "Fast stars", "color": "#ffe28a", "shape": "circle"},
+    "brown-dwarf": {"label": "Brown dwarfs", "color": "#ff9a5c", "shape": "diamond"},
+    "variable": {"label": "Variable stars", "color": "#ff7ad9", "shape": "ring"},
+    "galaxy": {"label": "Galaxies", "color": "#9fa8ff", "shape": "square"},
+    "nebula": {"label": "Nebulae and clusters", "color": "#6fe3c5", "shape": "square"},
+    "test": {"label": "Test field", "color": "#c99bff", "shape": "circle"},
+}
+# hand-made objects so the dome has something to show before real data; all marked simulated
+SIM_OBJECTS = [
+    ("sim_m31", "Andromeda Galaxy (M31)", "galaxy", 10.6847, 41.2690, 3.0, "spiral", "Our big neighbour galaxy, 2.5 million light years away."),
+    ("sim_m51", "Whirlpool Galaxy (M51)", "galaxy", 202.4696, 47.1952, 0.2, "spiral", "A face-on spiral pulling on a small companion."),
+    ("sim_lmc", "Large Magellanic Cloud", "galaxy", 80.8942, -69.7561, 8.0, "irregular", "A small galaxy orbiting the Milky Way, seen from the far south."),
+    ("sim_m42", "Orion Nebula (M42)", "nebula", 83.8221, -5.3911, 1.0, "hii", "The nearest big star nursery, glowing in hydrogen and warm dust."),
+    ("sim_carina", "Carina Nebula", "nebula", 161.2650, -59.8670, 2.0, "hii", "A huge cloud lit by some of the most massive stars known."),
+    ("sim_crab", "Crab Nebula (M1)", "nebula", 83.6331, 22.0145, 0.12, "remnant", "What's left of a star that exploded in 1054."),
+    ("sim_pleiades", "Pleiades (M45)", "nebula", 56.7500, 24.1167, 1.8, "cluster", "A young cluster of hot blue stars wrapped in dust."),
+    ("sim_gc", "Galactic Centre", "nebula", 266.4168, -29.0078, 2.0, "dusty", "The crowded heart of our galaxy, hidden behind dust in visible light."),
+]
+
+
+def band_table():
+    bands = []
+    for det in range(1, 7):
+        lo, hi = WAVE[det]
+        for ch in range(17):
+            centre = lo * (hi / lo) ** ((ch + 0.5) / 17)
+            bands.append({"index": len(bands), "detector": det, "channel": ch, "center_um": round(centre, 4),
+                          "width_um": round(centre / BAND_R[det], 4), "resolving_power": BAND_R[det]})
+    return bands
+
+
+def planck_at(lam, temp):
+    return lam ** -3 / (math.exp(min(1.44e4 / (lam * temp), 700)) - 1)
+
+
+def colour_at(lam, temp):
+    # same normalisation as colour(), at any wavelength
+    return planck(lam, temp) / (sum(planck(sum(WAVE[d]) / 2, temp) for d in range(1, 7)) / 6)
+
+
+def gauss_line(lam, centre, width, amp):
+    return amp * math.exp(-0.5 * ((lam - centre) / width) ** 2)
+
+
+def sim_spectrum(kind, lams):
+    out = []
+    for lam in lams:
+        if kind == "spiral":
+            f = planck_at(lam, 4200) + gauss_line(lam, 3.3, 0.05, 0.25 * planck_at(1.6, 4200))
+        elif kind == "irregular":
+            f = planck_at(lam, 6000) + 0.015 * planck_at(lam, 700)
+        elif kind == "hii":
+            base = planck_at(1.0, 9000)
+            f = (0.25 * planck_at(lam, 9000) + 0.6 * base * (lam / 5) ** 2
+                 + sum(gauss_line(lam, c, w, a * base) for c, w, a in
+                       ((1.282, 0.02, 0.5), (1.875, 0.03, 1.2), (2.166, 0.03, 0.4), (3.3, 0.05, 0.7), (4.05, 0.03, 0.9))))
+        elif kind == "remnant":
+            f = lam ** -0.6 + gauss_line(lam, 1.644, 0.03, 0.4)
+        elif kind == "cluster":
+            f = planck_at(lam, 11000) + 0.02 * planck_at(1.0, 11000) * (lam / 5) ** 2
+        else:  # dusty
+            f = planck_at(lam, 3500) * (1 - math.exp(-lam / 1.5)) + gauss_line(lam, 4.05, 0.03, 0.2 * planck_at(2.0, 3500))
+        out.append(f)
+    top = max(out)
+    return [round(v / top, 4) for v in out]
+
+
+def sim_shape(kind, rng):
+    yy, xx = np.mgrid[0:TILE, 0:TILE] - (TILE - 1) / 2
+    if kind in ("spiral", "irregular"):
+        r = np.hypot(xx, yy * 1.6)
+        theta = np.arctan2(yy * 1.6, xx)
+        arms = 1 + (0.6 * np.cos(2 * theta - r / 3) if kind == "spiral" else 0.4 * np.cos(theta * 3 + r / 2))
+        img = np.exp(-r / 4.5) * arms + 1.5 * np.exp(-r ** 2 / 4)
+    elif kind == "cluster":
+        img = 0.2 * np.exp(-np.hypot(xx, yy) / 10)
+        for _ in range(9):
+            x, y = rng.uniform(-11, 11, 2)
+            img += np.exp(-((xx - x) ** 2 + (yy - y) ** 2) / 1.5)
+    elif kind == "remnant":
+        r = np.hypot(xx * 1.3, yy)
+        img = np.exp(-r / 5) * (1 + 0.5 * np.sin(xx * 1.7) * np.cos(yy * 1.3)) + np.exp(-r ** 2 / 2)
+    else:
+        img = np.zeros((TILE, TILE))
+        for _ in range(6):
+            x, y = rng.uniform(-8, 8, 2)
+            s = rng.uniform(3, 8)
+            img += rng.uniform(0.4, 1) * np.exp(-((xx - x) ** 2 + (yy - y) ** 2) / (2 * s * s))
+    return img / img.max()
+
+
+def sim_tile(shape, rng, value):
+    img = shape * (0.12 + 0.88 * value) + rng.normal(0, 0.006, shape.shape)
+    return (np.clip(np.arcsinh(np.clip(img, 0, None) * 6) / np.arcsinh(6), 0, 1) * 255).astype(np.uint8)
+
+
+def write_cube(path, tiles):
+    cube = np.zeros((6 * TILE, 17 * TILE), np.uint8)
+    for (det, ch), tile in tiles.items():
+        cube[(det - 1) * TILE:det * TILE, ch * TILE:(ch + 1) * TILE] = tile
+    path.parent.mkdir(parents=True, exist_ok=True)
+    Image.fromarray(cube).save(path, optimize=True)
+
+
+def write_dome_sample(site, fixed, patch_entry, gallery_entry):
+    rng = np.random.default_rng(102)
+    dome = site / "dome"
+    bands = band_table()
+    lams = [b["center_um"] for b in bands]
+
+    # sample field: tiles centred on the brightening star, same simulated stars as the frames
+    yy, xx = np.mgrid[0:TILE, 0:TILE]
+    x0, y0 = VARIABLE_XY[0] - TILE, VARIABLE_XY[1] - TILE
+    stars_px = fixed
+    epochs = []
+    for v, mjd in enumerate(MJDS):
+        mover = (MOVER_START[0], MOVER_START[1] - MOVER_STEP * v)
+        tiles = {}
+        for b in bands:
+            lam = b["center_um"]
+            srcs = [(x, y, p * colour_at(lam, t)) for x, y, p, t in stars_px]
+            srcs.append((mover[0], mover[1], 6.0 * colour_at(lam, 1200)))
+            srcs.append((VARIABLE_XY[0], VARIABLE_XY[1], 3.0 * VARIABLE_GAIN[v] * colour_at(lam, 3500)))
+            img = np.zeros((TILE, TILE))
+            for x, y, p in srcs:
+                # tile pixel = 2x2 frame pixels
+                img += p * np.exp(-((x0 + 2 * xx + 0.5 - x) ** 2 + (y0 + 2 * yy + 0.5 - y) ** 2) / (2 * SIGMA_PX ** 2))
+            img += 0.5 + rng.normal(0, 0.03, img.shape)
+            tiles[(b["detector"], b["channel"])] = asinh_stretch(img, 0.5, 0.15, 8.0)
+        write_cube(dome / "cubes" / PATCH_ID / f"e{v:02d}.png", tiles)
+        epochs.append({"mjd": mjd, "cube": f"dome/cubes/{PATCH_ID}/e{v:02d}.png",
+                       "brightness": round(VARIABLE_GAIN[v] / VARIABLE_GAIN[-1], 4)})
+    spec = [planck(lam, 3500) for lam in lams]
+    poi_entry = {"id": PATCH_ID, "name": "Simulated test field", "category": "test", "type": "star",
+                 "ra": RA0, "dec": DEC0, "size": patch_entry["fov_deg"],
+                 "blurb": "Made-up stars for testing. The spectrum is the star that brightens.",
+                 "patch": PATCH_ID, "spectrum": [round(s / max(spec), 4) for s in spec], "bands_measured": 102,
+                 "simulated": True, "epochs": epochs}
+    extra = site / "extra"
+    (extra / f"{PATCH_ID}.json").write_text(json.dumps(
+        {"patch_entry": patch_entry, "gallery_entry": gallery_entry, "poi_entry": poi_entry}, indent=1) + "\n",
+        encoding="utf-8")
+
+    for oid, name, cat, ra, dec, size, kind, blurb in SIM_OBJECTS:
+        spec = sim_spectrum(kind, lams)
+        shape = sim_shape(kind, rng)
+        tiles = {(b["detector"], b["channel"]): sim_tile(shape, rng, spec[b["index"]]) for b in bands}
+        write_cube(dome / "cubes" / oid / "e00.png", tiles)
+        poi = {"id": oid, "name": name, "category": cat, "type": cat, "ra": ra, "dec": dec, "size": size,
+               "blurb": blurb, "patch": None, "spectrum": spec, "bands_measured": 102, "simulated": True,
+               "epochs": [{"mjd": MJDS[-1], "cube": f"dome/cubes/{oid}/e00.png", "brightness": 1.0}]}
+        (extra / f"{oid}.json").write_text(json.dumps({"poi_entry": poi}, indent=1) + "\n", encoding="utf-8")
+
+    (dome / "bands.json").write_text(json.dumps(bands, indent=1) + "\n", encoding="utf-8")
+    return poi_entry
+
+
+def write_dome_lists(site):
+    # stand-in for merge_lists.py: every poi_entry from extra/ and pipeline fragments already in poi.json
+    path = site / "dome" / "poi.json"
+    current = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"pois": []}
+    pois = {p["id"]: p for p in current.get("pois", []) if not p.get("simulated")}
+    for f in sorted((site / "extra").glob("*.json")):
+        entry = json.loads(f.read_text(encoding="utf-8")).get("poi_entry")
+        if entry:
+            pois[entry["id"]] = entry
+    ordered = sorted(pois.values(), key=lambda p: (bool(p.get("simulated")), p["id"]))
+    path.write_text(json.dumps({"categories": CATEGORIES, "pois": ordered}, indent=1) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
