@@ -195,6 +195,8 @@ def read_stack(path):
 
     images, extras, cubes = {}, {}, {}
     with fits.open(path, memmap=False) as hdul:
+        if "STACK" in hdul:
+            return _read_cube_stack(Path(path), hdul)
         header = dict(hdul[0].header)
         for hdu in hdul[1:]:
             name = hdu.name.upper()
@@ -210,6 +212,55 @@ def read_stack(path):
             else:
                 extras[(visit, parts[1], parts[2])] = data
     return Stack(header, images, extras, cubes)
+
+
+def _read_cube_stack(path, hdul):
+    """Step 4's layout: STACK, NFRAMES, SATFRAC and FLAGFRAC cubes [visit, band, y, x] with band 0 = all,
+    1-6 = detectors, 7 = cold. Per-visit details come from out/stack/<id>.json."""
+    target_id = path.parent.name
+    info = read_json(OUT / "stack" / f"{target_id}.json", {}) or {}
+    h0 = hdul[0].header
+    stack, flagfrac = hdul["STACK"].data, hdul["FLAGFRAC"].data
+    ny, nx = stack.shape[-2:]
+    header = {"TARGET": target_id, "RA": float(h0["CRVAL1"]), "DEC": float(h0["CRVAL2"]), "EPOCH": EPOCH,
+              "PIXSCALE": abs(float(h0["CDELT2"])) * 3600, "NX": nx, "NY": ny, "PIPEVER": PIPELINE_VERSION}
+    images, extras = {}, {}
+    for i, meta in enumerate(info.get("visits", [])):
+        if i >= stack.shape[0]:
+            break
+        visit = int(meta["visit"])
+        dets = meta.get("detectors", {})
+        for b, band in enumerate(BANDS):
+            data = np.asarray(stack[i, b], dtype=float)
+            if not np.isfinite(data).any():
+                continue
+            if band == "ALL":
+                used = list(dets.values())
+                lams = [w for d in used if d.get("wavelength_um") for w in d["wavelength_um"]]
+                nfr = sum(d["n_frames"] for d in used)
+                coverage = meta.get("coverage_all", float(np.isfinite(data).mean()))
+                sat = any(d.get("target_saturated_frac", 0) >= 0.5 for d in used)
+                bits = {}
+                for d in used:
+                    for k, v in d.get("flag_bits", {}).items():
+                        bits[k] = bits.get(k, 0) + v
+            else:
+                d = dets.get(band[1:])
+                if not d:
+                    continue
+                lams = d.get("wavelength_um") or []
+                nfr, coverage = d["n_frames"], d.get("coverage", float(np.isfinite(data).mean()))
+                sat, bits = d.get("target_saturated_frac", 0) >= 0.5, d.get("flag_bits", {})
+            hdr = {"VISIT": visit, "MJD": meta.get("mjd_mean"), "MJDMIN": meta.get("mjd_min"),
+                   "MJDMAX": meta.get("mjd_max"), "NFRAMES": nfr, "COVERAGE": coverage, "SATUR": bool(sat),
+                   "NOISE": robust_noise(data)}
+            if lams:
+                hdr["WAVEMIN"], hdr["WAVEMAX"] = min(lams), max(lams)
+            hdr.update({f"FB_{k}": v for k, v in bits.items()})
+            images[(visit, band)] = (data, hdr)
+            # step 4 keeps the share of frames the science mask dropped; flag pixels most frames dropped
+            extras[(visit, band, "FLAGS")] = np.asarray(flagfrac[i, b] >= 0.5, np.uint8)
+    return Stack(header, images, extras, {})
 
 
 def write_stack(path, grid, target_id, images, extras=None, cubes=None):
@@ -314,10 +365,18 @@ def read_clean_csv(target_id):
             try:
                 row = {"obs_id": r.get("obs_id", ""), "mjd": float(r["mjd"]),
                        "detector": int(float(r["detector"])), "wavelength_um": float(r["wavelength_um"]),
-                       "flux_ujy": float(r["flux_ujy"]), "err_ujy": float(r.get("err_ujy") or "nan"),
+                       "flux_ujy": float(r["flux_ujy"]),
+                       "err_ujy": float(r.get("err_ujy") or r.get("flux_err_ujy") or "nan"),
                        "flagged": str(r.get("flagged", "")).lower() in ("1", "true", "yes"),
                        "saturated": str(r.get("saturated", "")).lower() in ("1", "true", "yes"),
                        "visit": int(float(r["visit"])) if r.get("visit") not in (None, "") else None}
+                # step 3's names: flux_err_ujy, and aperture_bad_frac for a flagged measurement
+                if "flagged" not in r and r.get("aperture_bad_frac") not in (None, ""):
+                    row["flagged"] = float(r["aperture_bad_frac"]) >= 0.3
+                # the science mask removes saturated cores; keep the display-mask flux, marked saturated
+                if not math.isfinite(row["flux_ujy"]) and row["saturated"]:
+                    row["flux_ujy"] = float(r.get("flux_display_ujy") or "nan")
+                    row["err_ujy"], row["flagged"] = float("nan"), False
             except (KeyError, ValueError):
                 continue
             if math.isfinite(row["flux_ujy"]):

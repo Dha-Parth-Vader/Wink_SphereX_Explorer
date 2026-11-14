@@ -1,0 +1,988 @@
+{
+ "patch": {
+  "id": "tcep",
+  "name": "T Cephei",
+  "kind": "variable",
+  "width_px": 147,
+  "height_px": 147,
+  "ra": 317.38156,
+  "dec": 68.490573,
+  "epoch": 2026.0,
+  "fov_deg": 0.2511,
+  "pixel_scale_arcsec": 6.1499999999998805,
+  "pipeline_version": "1"
+ },
+ "frames": [
+  {
+   "file": "frames/tcep/v00_all.png",
+   "flags_file": "frames/tcep/v00_all_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "all",
+   "detector": "all",
+   "wavelength_um": [
+    0.7435,
+    5.0068
+   ],
+   "n_exposures": 120,
+   "coverage": 0.996,
+   "saturated": true,
+   "stretch": {
+    "black": -0.188624,
+    "knee": 1.938901,
+    "top": 1694.151528
+   },
+   "flags": [
+    "74725 pixels bled into by a saturated star",
+    "1798 cold pixels",
+    "118137 pixels with electronic crosstalk",
+    "53404 pixels on the filter edge",
+    "18185 dead pixels",
+    "43384 pixels with afterglow from a bright star",
+    "6055 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 74725,
+    "COLD": 1798,
+    "CROSSTALK": 118137,
+    "DICHROIC": 53404,
+    "HALO": 95800,
+    "NONFUNC": 18185,
+    "OVERFLOW": 41766,
+    "PERSIST": 43384,
+    "SNOWBALL": 766,
+    "SOURCE": 5355731,
+    "STREAK": 6055,
+    "SUR_ERROR": 69045,
+    "TRANSIENT": 75423
+   }
+  },
+  {
+   "file": "frames/tcep/v00_1.png",
+   "flags_file": "frames/tcep/v00_1_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "1",
+   "detector": 1,
+   "wavelength_um": [
+    0.7435,
+    1.1107
+   ],
+   "n_exposures": 20,
+   "coverage": 0.985,
+   "saturated": true,
+   "stretch": {
+    "black": -0.05275,
+    "knee": 1.415436,
+    "top": 382.384291
+   },
+   "flags": [
+    "6230 pixels bled into by a saturated star",
+    "222 cold pixels",
+    "55583 pixels with electronic crosstalk",
+    "1953 dead pixels",
+    "5596 pixels with afterglow from a bright star",
+    "2633 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 6230,
+    "COLD": 222,
+    "CROSSTALK": 55583,
+    "HALO": 17063,
+    "NONFUNC": 1953,
+    "OVERFLOW": 3319,
+    "PERSIST": 5596,
+    "SNOWBALL": 257,
+    "SOURCE": 831623,
+    "STREAK": 2633,
+    "SUR_ERROR": 7806,
+    "TRANSIENT": 9110
+   }
+  },
+  {
+   "file": "frames/tcep/v00_2.png",
+   "flags_file": "frames/tcep/v00_2_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "2",
+   "detector": 2,
+   "wavelength_um": [
+    1.0951,
+    1.5747
+   ],
+   "n_exposures": 20,
+   "coverage": 0.995,
+   "saturated": true,
+   "stretch": {
+    "black": -0.18772,
+    "knee": 2.200755,
+    "top": 804.301231
+   },
+   "flags": [
+    "11601 pixels bled into by a saturated star",
+    "113 cold pixels",
+    "34594 pixels with electronic crosstalk",
+    "1962 dead pixels",
+    "12198 pixels with afterglow from a bright star",
+    "1163 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 11601,
+    "COLD": 113,
+    "CROSSTALK": 34594,
+    "HALO": 13258,
+    "NONFUNC": 1962,
+    "OVERFLOW": 9072,
+    "PERSIST": 12198,
+    "SNOWBALL": 142,
+    "SOURCE": 942344,
+    "STREAK": 1163,
+    "SUR_ERROR": 6961,
+    "TRANSIENT": 7837
+   }
+  },
+  {
+   "file": "frames/tcep/v00_3.png",
+   "flags_file": "frames/tcep/v00_3_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "3",
+   "detector": 3,
+   "wavelength_um": [
+    1.6918,
+    2.4168
+   ],
+   "n_exposures": 20,
+   "coverage": 0.994,
+   "saturated": true,
+   "stretch": {
+    "black": -0.294186,
+    "knee": 3.241553,
+    "top": 859.382748
+   },
+   "flags": [
+    "17264 pixels bled into by a saturated star",
+    "187 cold pixels",
+    "27960 pixels with electronic crosstalk",
+    "36630 pixels on the filter edge",
+    "2584 dead pixels",
+    "15433 pixels with afterglow from a bright star",
+    "1048 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 17264,
+    "COLD": 187,
+    "CROSSTALK": 27960,
+    "DICHROIC": 36630,
+    "HALO": 14516,
+    "NONFUNC": 2584,
+    "OVERFLOW": 14845,
+    "PERSIST": 15433,
+    "SNOWBALL": 17,
+    "SOURCE": 899868,
+    "STREAK": 1048,
+    "SUR_ERROR": 9443,
+    "TRANSIENT": 8770
+   }
+  },
+  {
+   "file": "frames/tcep/v00_4.png",
+   "flags_file": "frames/tcep/v00_4_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "4",
+   "detector": 4,
+   "wavelength_um": [
+    2.4252,
+    3.616
+   ],
+   "n_exposures": 20,
+   "coverage": 0.985,
+   "saturated": true,
+   "stretch": {
+    "black": -0.15926,
+    "knee": 1.644862,
+    "top": 817.179902
+   },
+   "flags": [
+    "17814 pixels bled into by a saturated star",
+    "272 cold pixels",
+    "16774 pixels on the filter edge",
+    "4108 dead pixels",
+    "5195 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 17814,
+    "COLD": 272,
+    "DICHROIC": 16774,
+    "HALO": 15683,
+    "NONFUNC": 4108,
+    "OVERFLOW": 7740,
+    "PERSIST": 5195,
+    "SNOWBALL": 86,
+    "SOURCE": 836043,
+    "SUR_ERROR": 17838,
+    "TRANSIENT": 18166
+   }
+  },
+  {
+   "file": "frames/tcep/v00_5.png",
+   "flags_file": "frames/tcep/v00_5_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "5",
+   "detector": 5,
+   "wavelength_um": [
+    3.8146,
+    4.3538
+   ],
+   "n_exposures": 20,
+   "coverage": 0.994,
+   "saturated": true,
+   "stretch": {
+    "black": -0.257737,
+    "knee": 2.059895,
+    "top": 3990.627094
+   },
+   "flags": [
+    "12926 pixels bled into by a saturated star",
+    "485 cold pixels",
+    "3741 dead pixels",
+    "3295 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 12926,
+    "COLD": 485,
+    "HALO": 16111,
+    "NONFUNC": 3741,
+    "OVERFLOW": 3946,
+    "PERSIST": 3295,
+    "SNOWBALL": 84,
+    "SOURCE": 947206,
+    "SUR_ERROR": 14297,
+    "TRANSIENT": 16638
+   }
+  },
+  {
+   "file": "frames/tcep/v00_6.png",
+   "flags_file": "frames/tcep/v00_6_flags.png",
+   "mjd": 60865.109,
+   "date": "2025-07-09",
+   "visit": 0,
+   "band": "6",
+   "detector": 6,
+   "wavelength_um": [
+    4.4685,
+    5.0068
+   ],
+   "n_exposures": 20,
+   "coverage": 0.996,
+   "saturated": true,
+   "stretch": {
+    "black": -0.163987,
+    "knee": 1.569817,
+    "top": 5884.946514
+   },
+   "flags": [
+    "8890 pixels bled into by a saturated star",
+    "519 cold pixels",
+    "3837 dead pixels",
+    "1667 pixels with afterglow from a bright star",
+    "1211 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 8890,
+    "COLD": 519,
+    "HALO": 19169,
+    "NONFUNC": 3837,
+    "OVERFLOW": 2844,
+    "PERSIST": 1667,
+    "SNOWBALL": 180,
+    "SOURCE": 898647,
+    "STREAK": 1211,
+    "SUR_ERROR": 12700,
+    "TRANSIENT": 14902
+   }
+  },
+  {
+   "file": "frames/tcep/v01_all.png",
+   "flags_file": "frames/tcep/v01_all_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "all",
+   "detector": "all",
+   "wavelength_um": [
+    0.7512,
+    4.9713
+   ],
+   "n_exposures": 120,
+   "coverage": 0.995,
+   "saturated": true,
+   "stretch": {
+    "black": -0.188624,
+    "knee": 1.938901,
+    "top": 1694.151528
+   },
+   "flags": [
+    "92131 pixels bled into by a saturated star",
+    "1682 cold pixels",
+    "142767 pixels with electronic crosstalk",
+    "16305 pixels on the filter edge",
+    "2 hot pixels",
+    "17569 dead pixels",
+    "44380 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 92131,
+    "COLD": 1682,
+    "CROSSTALK": 142767,
+    "DICHROIC": 16305,
+    "FULLSAMPLE": 544,
+    "HALO": 159710,
+    "HOT": 2,
+    "NONFUNC": 17569,
+    "OVERFLOW": 54235,
+    "PERSIST": 44380,
+    "SNOWBALL": 636,
+    "SOURCE": 5183280,
+    "SUR_ERROR": 85874,
+    "TRANSIENT": 105913
+   }
+  },
+  {
+   "file": "frames/tcep/v01_1.png",
+   "flags_file": "frames/tcep/v01_1_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "1",
+   "detector": 1,
+   "wavelength_um": [
+    0.7512,
+    1.0999
+   ],
+   "n_exposures": 20,
+   "coverage": 0.973,
+   "saturated": true,
+   "stretch": {
+    "black": -0.05275,
+    "knee": 1.415436,
+    "top": 382.384291
+   },
+   "flags": [
+    "6323 pixels bled into by a saturated star",
+    "221 cold pixels",
+    "60583 pixels with electronic crosstalk",
+    "2176 dead pixels",
+    "5213 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 6323,
+    "COLD": 221,
+    "CROSSTALK": 60583,
+    "FULLSAMPLE": 272,
+    "HALO": 19886,
+    "NONFUNC": 2176,
+    "OVERFLOW": 2387,
+    "PERSIST": 5213,
+    "SNOWBALL": 10,
+    "SOURCE": 821326,
+    "SUR_ERROR": 8820,
+    "TRANSIENT": 11066
+   }
+  },
+  {
+   "file": "frames/tcep/v01_2.png",
+   "flags_file": "frames/tcep/v01_2_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "2",
+   "detector": 2,
+   "wavelength_um": [
+    1.082,
+    1.653
+   ],
+   "n_exposures": 20,
+   "coverage": 0.995,
+   "saturated": true,
+   "stretch": {
+    "black": -0.18772,
+    "knee": 2.200755,
+    "top": 804.301231
+   },
+   "flags": [
+    "16945 pixels bled into by a saturated star",
+    "100 cold pixels",
+    "50001 pixels with electronic crosstalk",
+    "1823 dead pixels",
+    "13893 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 16945,
+    "COLD": 100,
+    "CROSSTALK": 50001,
+    "HALO": 19195,
+    "NONFUNC": 1823,
+    "OVERFLOW": 14727,
+    "PERSIST": 13893,
+    "SNOWBALL": 86,
+    "SOURCE": 933946,
+    "SUR_ERROR": 9143,
+    "TRANSIENT": 9728
+   }
+  },
+  {
+   "file": "frames/tcep/v01_3.png",
+   "flags_file": "frames/tcep/v01_3_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "3",
+   "detector": 3,
+   "wavelength_um": [
+    1.6409,
+    2.3688
+   ],
+   "n_exposures": 20,
+   "coverage": 0.967,
+   "saturated": true,
+   "stretch": {
+    "black": -0.294186,
+    "knee": 3.241553,
+    "top": 859.382748
+   },
+   "flags": [
+    "20721 pixels bled into by a saturated star",
+    "143 cold pixels",
+    "32183 pixels with electronic crosstalk",
+    "5481 pixels on the filter edge",
+    "2349 dead pixels",
+    "12617 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 20721,
+    "COLD": 143,
+    "CROSSTALK": 32183,
+    "DICHROIC": 5481,
+    "HALO": 27002,
+    "NONFUNC": 2349,
+    "OVERFLOW": 19879,
+    "PERSIST": 12617,
+    "SNOWBALL": 25,
+    "SOURCE": 823222,
+    "SUR_ERROR": 8376,
+    "TRANSIENT": 11735
+   }
+  },
+  {
+   "file": "frames/tcep/v01_4.png",
+   "flags_file": "frames/tcep/v01_4_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "4",
+   "detector": 4,
+   "wavelength_um": [
+    2.4464,
+    3.7701
+   ],
+   "n_exposures": 20,
+   "coverage": 0.98,
+   "saturated": true,
+   "stretch": {
+    "black": -0.15926,
+    "knee": 1.644862,
+    "top": 817.179902
+   },
+   "flags": [
+    "23454 pixels bled into by a saturated star",
+    "232 cold pixels",
+    "10824 pixels on the filter edge",
+    "3674 dead pixels",
+    "6692 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 23454,
+    "COLD": 232,
+    "DICHROIC": 10824,
+    "FULLSAMPLE": 272,
+    "HALO": 20705,
+    "NONFUNC": 3674,
+    "OVERFLOW": 9459,
+    "PERSIST": 6692,
+    "SNOWBALL": 73,
+    "SOURCE": 830973,
+    "SUR_ERROR": 23145,
+    "TRANSIENT": 24406
+   }
+  },
+  {
+   "file": "frames/tcep/v01_5.png",
+   "flags_file": "frames/tcep/v01_5_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "5",
+   "detector": 5,
+   "wavelength_um": [
+    3.7932,
+    4.4302
+   ],
+   "n_exposures": 20,
+   "coverage": 0.993,
+   "saturated": true,
+   "stretch": {
+    "black": -0.257737,
+    "knee": 2.059895,
+    "top": 3990.627094
+   },
+   "flags": [
+    "14340 pixels bled into by a saturated star",
+    "515 cold pixels",
+    "2 hot pixels",
+    "4120 dead pixels",
+    "4153 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 14340,
+    "COLD": 515,
+    "HALO": 25292,
+    "HOT": 2,
+    "NONFUNC": 4120,
+    "OVERFLOW": 4475,
+    "PERSIST": 4153,
+    "SNOWBALL": 104,
+    "SOURCE": 935051,
+    "SUR_ERROR": 18254,
+    "TRANSIENT": 21318
+   }
+  },
+  {
+   "file": "frames/tcep/v01_6.png",
+   "flags_file": "frames/tcep/v01_6_flags.png",
+   "mjd": 61035.26,
+   "date": "2025-12-26",
+   "visit": 1,
+   "band": "6",
+   "detector": 6,
+   "wavelength_um": [
+    4.428,
+    4.9713
+   ],
+   "n_exposures": 20,
+   "coverage": 0.982,
+   "saturated": true,
+   "stretch": {
+    "black": -0.163987,
+    "knee": 1.569817,
+    "top": 5884.946514
+   },
+   "flags": [
+    "10348 pixels bled into by a saturated star",
+    "471 cold pixels",
+    "3427 dead pixels",
+    "1812 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 10348,
+    "COLD": 471,
+    "HALO": 47630,
+    "NONFUNC": 3427,
+    "OVERFLOW": 3308,
+    "PERSIST": 1812,
+    "SNOWBALL": 338,
+    "SOURCE": 838762,
+    "SUR_ERROR": 18136,
+    "TRANSIENT": 27660
+   }
+  },
+  {
+   "file": "frames/tcep/v02_all.png",
+   "flags_file": "frames/tcep/v02_all_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "all",
+   "detector": "all",
+   "wavelength_um": [
+    0.7376,
+    5.0053
+   ],
+   "n_exposures": 116,
+   "coverage": 0.996,
+   "saturated": true,
+   "stretch": {
+    "black": -0.188624,
+    "knee": 1.938901,
+    "top": 1694.151528
+   },
+   "flags": [
+    "82349 pixels bled into by a saturated star",
+    "1819 cold pixels",
+    "212270 pixels with electronic crosstalk",
+    "36458 pixels on the filter edge",
+    "9 hot pixels",
+    "19187 dead pixels",
+    "47921 pixels with afterglow from a bright star",
+    "2445 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 82349,
+    "COLD": 1819,
+    "CROSSTALK": 212270,
+    "DICHROIC": 36458,
+    "FULLSAMPLE": 480,
+    "HALO": 103677,
+    "HOT": 9,
+    "NONFUNC": 19187,
+    "OVERFLOW": 46090,
+    "PERSIST": 47921,
+    "SNOWBALL": 701,
+    "SOURCE": 5507541,
+    "STREAK": 2445,
+    "SUR_ERROR": 75154,
+    "TRANSIENT": 82939
+   }
+  },
+  {
+   "file": "frames/tcep/v02_1.png",
+   "flags_file": "frames/tcep/v02_1_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "1",
+   "detector": 1,
+   "wavelength_um": [
+    0.7376,
+    1.0867
+   ],
+   "n_exposures": 20,
+   "coverage": 0.997,
+   "saturated": true,
+   "stretch": {
+    "black": -0.05275,
+    "knee": 1.415436,
+    "top": 382.384291
+   },
+   "flags": [
+    "9232 pixels bled into by a saturated star",
+    "212 cold pixels",
+    "143693 pixels with electronic crosstalk",
+    "3 hot pixels",
+    "2264 dead pixels",
+    "10643 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 9232,
+    "COLD": 212,
+    "CROSSTALK": 143693,
+    "HALO": 20117,
+    "HOT": 3,
+    "NONFUNC": 2264,
+    "OVERFLOW": 4777,
+    "PERSIST": 10643,
+    "SNOWBALL": 194,
+    "SOURCE": 939913,
+    "SUR_ERROR": 9522,
+    "TRANSIENT": 11789
+   }
+  },
+  {
+   "file": "frames/tcep/v02_2.png",
+   "flags_file": "frames/tcep/v02_2_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "2",
+   "detector": 2,
+   "wavelength_um": [
+    1.1088,
+    1.6314
+   ],
+   "n_exposures": 20,
+   "coverage": 0.996,
+   "saturated": true,
+   "stretch": {
+    "black": -0.18772,
+    "knee": 2.200755,
+    "top": 804.301231
+   },
+   "flags": [
+    "12444 pixels bled into by a saturated star",
+    "128 cold pixels",
+    "27358 pixels with electronic crosstalk",
+    "2 hot pixels",
+    "1878 dead pixels",
+    "11387 pixels with afterglow from a bright star",
+    "1069 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 12444,
+    "COLD": 128,
+    "CROSSTALK": 27358,
+    "FULLSAMPLE": 240,
+    "HALO": 13021,
+    "HOT": 2,
+    "NONFUNC": 1878,
+    "OVERFLOW": 10120,
+    "PERSIST": 11387,
+    "SNOWBALL": 22,
+    "SOURCE": 959582,
+    "STREAK": 1069,
+    "SUR_ERROR": 7670,
+    "TRANSIENT": 7501
+   }
+  },
+  {
+   "file": "frames/tcep/v02_3.png",
+   "flags_file": "frames/tcep/v02_3_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "3",
+   "detector": 3,
+   "wavelength_um": [
+    1.628,
+    2.4147
+   ],
+   "n_exposures": 18,
+   "coverage": 0.992,
+   "saturated": true,
+   "stretch": {
+    "black": -0.294186,
+    "knee": 3.241553,
+    "top": 859.382748
+   },
+   "flags": [
+    "18566 pixels bled into by a saturated star",
+    "176 cold pixels",
+    "41219 pixels with electronic crosstalk",
+    "14748 pixels on the filter edge",
+    "2509 dead pixels",
+    "15396 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 18566,
+    "COLD": 176,
+    "CROSSTALK": 41219,
+    "DICHROIC": 14748,
+    "HALO": 14654,
+    "NONFUNC": 2509,
+    "OVERFLOW": 15835,
+    "PERSIST": 15396,
+    "SNOWBALL": 62,
+    "SOURCE": 849745,
+    "SUR_ERROR": 10507,
+    "TRANSIENT": 9527
+   }
+  },
+  {
+   "file": "frames/tcep/v02_4.png",
+   "flags_file": "frames/tcep/v02_4_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "4",
+   "detector": 4,
+   "wavelength_um": [
+    2.4094,
+    3.7203
+   ],
+   "n_exposures": 20,
+   "coverage": 0.986,
+   "saturated": true,
+   "stretch": {
+    "black": -0.15926,
+    "knee": 1.644862,
+    "top": 817.179902
+   },
+   "flags": [
+    "21131 pixels bled into by a saturated star",
+    "283 cold pixels",
+    "21710 pixels on the filter edge",
+    "4130 dead pixels",
+    "5997 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 21131,
+    "COLD": 283,
+    "DICHROIC": 21710,
+    "HALO": 21082,
+    "NONFUNC": 4130,
+    "OVERFLOW": 8743,
+    "PERSIST": 5997,
+    "SNOWBALL": 72,
+    "SOURCE": 947427,
+    "SUR_ERROR": 20714,
+    "TRANSIENT": 22779
+   }
+  },
+  {
+   "file": "frames/tcep/v02_5.png",
+   "flags_file": "frames/tcep/v02_5_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "5",
+   "detector": 5,
+   "wavelength_um": [
+    3.8391,
+    4.4097
+   ],
+   "n_exposures": 20,
+   "coverage": 0.994,
+   "saturated": true,
+   "stretch": {
+    "black": -0.257737,
+    "knee": 2.059895,
+    "top": 3990.627094
+   },
+   "flags": [
+    "13302 pixels bled into by a saturated star",
+    "508 cold pixels",
+    "3 hot pixels",
+    "4151 dead pixels",
+    "2980 pixels with afterglow from a bright star",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 13302,
+    "COLD": 508,
+    "FULLSAMPLE": 240,
+    "HALO": 17043,
+    "HOT": 3,
+    "NONFUNC": 4151,
+    "OVERFLOW": 4060,
+    "PERSIST": 2980,
+    "SNOWBALL": 81,
+    "SOURCE": 960687,
+    "SUR_ERROR": 15046,
+    "TRANSIENT": 17567
+   }
+  },
+  {
+   "file": "frames/tcep/v02_6.png",
+   "flags_file": "frames/tcep/v02_6_flags.png",
+   "mjd": 61231.384,
+   "date": "2026-07-10",
+   "visit": 2,
+   "band": "6",
+   "detector": 6,
+   "wavelength_um": [
+    4.4149,
+    5.0053
+   ],
+   "n_exposures": 18,
+   "coverage": 0.995,
+   "saturated": true,
+   "stretch": {
+    "black": -0.163987,
+    "knee": 1.569817,
+    "top": 5884.946514
+   },
+   "flags": [
+    "7674 pixels bled into by a saturated star",
+    "512 cold pixels",
+    "1 hot pixels",
+    "4255 dead pixels",
+    "1518 pixels with afterglow from a bright star",
+    "1376 pixels on a satellite streak",
+    "The target is saturated here, so its brightness is approximate."
+   ],
+   "flag_bits": {
+    "BLOOM": 7674,
+    "COLD": 512,
+    "HALO": 17760,
+    "HOT": 1,
+    "NONFUNC": 4255,
+    "OVERFLOW": 2555,
+    "PERSIST": 1518,
+    "SNOWBALL": 270,
+    "SOURCE": 850187,
+    "STREAK": 1376,
+    "SUR_ERROR": 11695,
+    "TRANSIENT": 13776
+   }
+  }
+ ],
+ "light_curve": [
+  {
+   "mjd": 61052.33484,
+   "flux_ujy": 34718699.74,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7416,
+    0.7608
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61053.14673,
+   "flux_ujy": 13420718.17,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.777,
+    0.7972
+   ],
+   "flagged": false,
+   "approximate": true
+  }
+ ],
+ "overlays": {},
+ "predictions": [],
+ "verdicts": {
+  "motion": "steady",
+  "variability": "only one visit",
+  "notes": [
+   "The target is saturated in some images, so its brightness and position are approximate.",
+   "Gaia DR3 lookup didn't finish; rerun step 6.",
+   "CatWISE2020 lookup didn't finish; rerun step 6."
+  ]
+ },
+ "spectrum": [
+  {
+   "wavelength_um": 0.7512,
+   "flux_ujy": 34718699.74,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7871,
+   "flux_ujy": 13420718.17,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  }
+ ]
+}

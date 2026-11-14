@@ -1,0 +1,108 @@
+{
+ "id": "tcep",
+ "pipeline_version": "1",
+ "reference_visit": 0,
+ "visits": [
+  {
+   "visit": 0,
+   "mjd": 60865.109,
+   "year": 2025.5184,
+   "n_sources_all": 38,
+   "n_sources_cold": 25,
+   "noise": 0.432276,
+   "coverage": 0.996,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 1,
+   "mjd": 61035.26,
+   "year": 2025.9843,
+   "n_sources_all": 33,
+   "n_sources_cold": 23,
+   "noise": 0.557054,
+   "coverage": 0.995,
+   "offset_px": [
+    -0.013,
+    -0.008
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 61231.384,
+   "year": 2026.5212,
+   "n_sources_all": 33,
+   "n_sources_cold": 38,
+   "noise": 0.494729,
+   "coverage": 0.996,
+   "offset_px": [
+    -0.008,
+    0.002
+   ]
+  }
+ ],
+ "movers": [],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 0,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.06,
+     73.14
+    ],
+    "offset_px": 0.149,
+    "saturated": true
+   },
+   {
+    "visit": 1,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     72.91,
+     73.09
+    ],
+    "offset_px": 0.123,
+    "saturated": true
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.0,
+     72.98
+    ],
+    "offset_px": 0.017,
+    "saturated": true
+   }
+  ],
+  "mean_offset_px": 0.096,
+  "within_third_px": true,
+  "mover": null,
+  "saturated": true,
+  "expected_pm_arcsec_yr": 0.063,
+  "measured_pm_arcsec_yr": null
+ },
+ "variability": {
+  "source": "exposures",
+  "n_points": 2,
+  "visits": 1,
+  "per_detector": {},
+  "verdict": "only one visit"
+ },
+ "transients": [],
+ "notes": []
+}
