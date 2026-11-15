@@ -134,18 +134,22 @@ def gator(table, columns, ra, dec, radius_deg):
 
 
 def fallback_rows(table, columns, ra, dec, radius_deg, top, order):
-    """Without IRSA TAP: Gaia from ESA's Gaia archive (same DR3 data), CatWISE2020 from IRSA Gator; tiled
-    IRSA Cone Search if those fail too."""
+    """Without IRSA TAP: IRSA Gator first (Gaia DR3 and CatWISE2020, a second or two even when TAP and Cone
+    Search are down), then ESA's Gaia archive for Gaia, then tiled IRSA Cone Search."""
+    try:
+        return gator(table, columns, ra, dec, radius_deg)
+    except ArchiveError as exc:
+        print(f"  {exc}", flush=True)
     try:
         if table == "gaia_dr3_source":
             head = f"SELECT TOP {top} " if top else "SELECT "
             tail = f" ORDER BY {order}" if top else ""
             return tap(f"{head}{columns} FROM gaiadr3.gaia_source WHERE CONTAINS(POINT('ICRS',ra,dec),"
-                       f"CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{tail}", timeout=180, base=ESA_GAIA_TAP)
-        return gator(table, columns, ra, dec, radius_deg)
+                       f"CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{tail}", retries=2, timeout=60,
+                       base=ESA_GAIA_TAP)
     except ArchiveError as exc:
-        print(f"  {exc}; trying IRSA Cone Search", flush=True)
-        return scs(table, ra, dec, radius_deg)
+        print(f"  ESA Gaia archive: {exc}", flush=True)
+    return scs(table, ra, dec, radius_deg)
 
 
 def cone_rows(table, columns, ra, dec, radius_deg, top=None, order=None):
@@ -160,7 +164,7 @@ def cone_rows(table, columns, ra, dec, radius_deg, top=None, order=None):
                        f"CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{tail}", retries=1, timeout=60)
         except ArchiveError as exc:
             _tap_down = True
-            print(f"  IRSA TAP isn't answering ({str(exc)[:60]}); using ESA Gaia, IRSA Gator, Cone Search",
+            print(f"  IRSA TAP isn't answering ({str(exc)[:60]}); using IRSA Gator, ESA Gaia, Cone Search",
                   flush=True)
     rows = fallback_rows(table, columns, ra, dec, radius_deg, top, order)
     if top:

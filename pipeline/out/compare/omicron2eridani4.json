@@ -1,0 +1,181 @@
+{
+ "id": "omicron2eridani4",
+ "pipeline_version": "1",
+ "reference_visit": 0,
+ "visits": [
+  {
+   "visit": 0,
+   "mjd": 60907.854,
+   "year": 2025.6355,
+   "n_sources_all": 117,
+   "n_sources_cold": 155,
+   "noise": 0.021591,
+   "coverage": 0.999,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 1,
+   "mjd": 61086.493,
+   "year": 2026.1246,
+   "n_sources_all": 116,
+   "n_sources_cold": 173,
+   "noise": 0.023148,
+   "coverage": 0.999,
+   "offset_px": [
+    0.01,
+    -0.005
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 61271.98,
+   "year": 2026.6324,
+   "n_sources_all": 113,
+   "n_sources_cold": 161,
+   "noise": 0.02322,
+   "coverage": 0.999,
+   "offset_px": [
+    -0.001,
+    0.005
+   ]
+  }
+ ],
+ "movers": [
+  {
+   "t0": 2026.1308,
+   "x0": 73.053,
+   "y0": 72.93,
+   "vx_px_yr": 0.3486,
+   "vy_px_yr": -0.5427,
+   "pm_arcsec_yr": 3.967,
+   "pm_err": 0.349,
+   "significance": 11.4,
+   "pa_deg": 212.7,
+   "snr": 38910.6,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 72.871,
+     "y": 73.207,
+     "snr": 37461.5
+    },
+    {
+     "visit": 1,
+     "x": 73.069,
+     "y": 72.919,
+     "snr": 38910.6
+    },
+    {
+     "visit": 2,
+     "x": 73.219,
+     "y": 72.665,
+     "snr": 35016.4
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m1",
+   "is_target": true
+  }
+ ],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 0,
+    "predicted": [
+     72.87,
+     73.2
+    ],
+    "found": false
+   },
+   {
+    "visit": 1,
+    "predicted": [
+     73.05,
+     72.93
+    ],
+    "found": true,
+    "measured": [
+     73.03,
+     72.89
+    ],
+    "offset_px": 0.044,
+    "saturated": false
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     73.23,
+     72.65
+    ],
+    "found": true,
+    "measured": [
+     73.25,
+     72.67
+    ],
+    "offset_px": 0.028,
+    "saturated": false
+   }
+  ],
+  "mean_offset_px": 0.036,
+  "within_third_px": true,
+  "mover": "m1",
+  "saturated": false,
+  "expected_pm_arcsec_yr": 4.084,
+  "measured_pm_arcsec_yr": 3.967
+ },
+ "variability": {
+  "source": "exposures",
+  "n_points": 330,
+  "visits": 3,
+  "per_detector": {
+   "1": {
+    "pairs": 28,
+    "median_ratio": 0.992,
+    "median_sigma": 0.0,
+    "change": false
+   },
+   "2": {
+    "pairs": 55,
+    "median_ratio": 1.009,
+    "median_sigma": 0.0,
+    "change": false
+   },
+   "3": {
+    "pairs": 47,
+    "median_ratio": 1.035,
+    "median_sigma": 0.0,
+    "change": false
+   },
+   "4": {
+    "pairs": 36,
+    "median_ratio": 1.004,
+    "median_sigma": 0.0,
+    "change": false
+   },
+   "5": {
+    "pairs": 121,
+    "median_ratio": 0.99,
+    "median_sigma": 19.1,
+    "change": false
+   },
+   "6": {
+    "pairs": 162,
+    "median_ratio": 0.996,
+    "median_sigma": 6.7,
+    "change": false
+   }
+  },
+  "verdict": "steady",
+  "saturated": true,
+  "changing_detectors": []
+ },
+ "transients": [],
+ "notes": []
+}

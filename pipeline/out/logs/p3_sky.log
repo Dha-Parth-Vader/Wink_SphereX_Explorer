@@ -1,0 +1,150 @@
+2 lists fresh, 23 to query
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+lalande21185         294 images
+gaia16413696         410 images
+  IRSA: HTTP 502; retrying in 3 s
+omicron2eridani4     430 images
+gaia14712448         415 images
+gaia60306560         372 images
+61cygni              467 images
+  IRSA: HTTP 502; retrying in 6 s
+gaia37068160         346 images
+2m0415               383 images
+  IRSA: HTTP 502; retrying in 3 s
+gl570d               370 images
+w0359                368 images
+w1405                470 images
+  IRSA: HTTP 502; retrying in 3 s
+  IRSA: HTTP 502; retrying in 3 s
+  IRSA: HTTP 502; retrying in 3 s
+  IRSA: HTTP 502; retrying in 6 s
+  IRSA: HTTP 502; retrying in 6 s
+  IRSA: HTTP 502; retrying in 6 s
+gaia68019072         364 images
+  IRSA: HTTP 502; retrying in 12 s
+  IRSA: HTTP 502; retrying in 12 s
+raql                 421 images
+  IRSA: HTTP 502; retrying in 3 s
+  IRSA: HTTP 502; retrying in 24 s
+  IRSA: HTTP 502; retrying in 6 s
+w0647                742 images
+  IRSA: HTTP 502; retrying in 3 s
+gv0945707776         340 images
+  IRSA: HTTP 502; retrying in 12 s
+  IRSA: HTTP 502; retrying in 3 s
+fuori                380 images
+  IRSA: HTTP 502; retrying in 6 s
+  IRSA: HTTP 502; retrying in 12 s
+ruma                 315 images
+  IRSA: HTTP 502; retrying in 48 s
+gv6977267328         334 images
+  IRSA: HTTP 502; retrying in 24 s
+gv7798780288         245 images
+gv3589489536         367 images
+gv5907958144         352 images
+  IRSA: HTTP 502; retrying in 48 s
+v1057cyg           FAILED: HTTP 502
+gv3068984832       FAILED: HTTP 502
+could not list: v1057cyg,gv3068984832 (run the same command again)
+23 lists fresh, 2 to query
+  TAP failed (HTTP 502), using SIA
+  IRSA: HTTP 502; retrying in 3 s
+  IRSA: HTTP 502; retrying in 6 s
+  IRSA: HTTP 502; retrying in 12 s
+v1057cyg             436 images
+  TAP failed (HTTPSConnectionPool(host='irsa.ipac.caltech.edu', port=443):), using SIA
+gv3068984832         420 images
+barnard            351/351 in cache, 0 failed, 238.3 s, 293.1 MB new
+rdra               358/358 in cache, 0 failed, 244.4 s, 290.1 MB new
+61cygni            359/359 in cache, 0 failed, 249.9 s, 298.6 MB new
+lalande21185       270/270 in cache, 0 failed, 158.4 s, 223.4 MB new
+omicron2eridani4   352/352 in cache, 0 failed, 225.3 s, 285.2 MB new
+gaia14712448       350/350 in cache, 0 failed, 226.7 s, 288.0 MB new
+gaia60306560       353/353 in cache, 0 failed, 234.3 s, 294.2 MB new
+gaia16413696       335/335 in cache, 0 failed, 211.8 s, 262.0 MB new
+gaia37068160       341/341 in cache, 0 failed, 216.5 s, 282.9 MB new
+gaia68019072       347/347 in cache, 0 failed, 225.8 s, 284.7 MB new
+w1405              358/358 in cache, 0 failed, 230.0 s, 293.0 MB new
+w0359              348/348 in cache, 0 failed, 231.4 s, 288.9 MB new
+2m0415             347/347 in cache, 0 failed, 219.8 s, 286.9 MB new
+gl570d             343/343 in cache, 0 failed, 215.3 s, 279.6 MB new
+w0647              245/245 in cache, 0 failed, 165.6 s, 202.3 MB new
+raql               388/388 in cache, 0 failed, 238.0 s, 318.2 MB new
+ruma               238/238 in cache, 0 failed, 148.2 s, 190.5 MB new
+fuori              345/345 in cache, 0 failed, 219.0 s, 278.3 MB new
+v1057cyg           355/355 in cache, 0 failed, 207.0 s, 287.8 MB new
+gv0945707776       339/339 in cache, 0 failed, 199.0 s, 283.5 MB new
+gv3589489536       340/340 in cache, 0 failed, 208.4 s, 277.6 MB new
+gv6977267328       334/334 in cache, 0 failed, 197.4 s, 277.0 MB new
+gv3068984832       392/392 in cache, 0 failed, 222.8 s, 320.7 MB new
+gv7798780288       232/232 in cache, 0 failed, 145.5 s, 191.2 MB new
+gv5907958144       345/345 in cache, 0 failed, 214.6 s, 286.9 MB new
+run_all: 25 target(s), steps [3, 4, 5, 6, 7], 3 at a time
+[1/25] rdra: done in 587 s
+[2/25] w1405: done in 1767 s
+[3/25] barnard: done in 2333 s
+[4/25] w0359: done in 2106 s
+[5/25] gaia60306560: done in 2101 s
+[6/25] gaia16413696: done in 2229 s
+[7/25] 61cygni: done in 979 s
+[8/25] 2m0415: done in 2863 s
+merged: 76 patches (75 real, 1 simulated), 76 gallery cards, 84 dome objects
+run_all: 25 target(s), steps [3, 4, 5, 6, 7], 3 at a time
+[1/25] rdra: done in 15 s
+[2/25] w1405: done in 39 s
+[3/25] barnard: done in 64 s
+[4/25] w0359: done in 53 s
+[5/25] gaia60306560: done in 62 s
+[6/25] gaia16413696: done in 42 s
+[7/25] 2m0415: done in 54 s
+[8/25] 61cygni: done in 35 s
+[9/25] gaia68019072: done in 46 s
+[10/25] v1057cyg: done in 79 s
+[11/25] fuori: done in 121 s
+[12/25] gaia14712448: done in 97 s
+[13/25] gv3068984832: done in 238 s
+[14/25] omicron2eridani4: done in 66 s
+[15/25] gl570d: done in 131 s
+[16/25] gaia37068160: done in 83 s
+[17/25] raql: done in 275 s
+[18/25] gv0945707776: done in 109 s
+[19/25] gv3589489536: done in 200 s
+[20/25] gv5907958144: done in 109 s
+[21/25] lalande21185: done in 103 s
+[22/25] w0647: done in 67 s
+[23/25] ruma: done in 56 s
+[24/25] gv7798780288: done in 88 s
+[25/25] gv6977267328: done in 372 s
+step 7: exporting
+step 7: exporting 25 target(s) to public/data
+  w1405: 21 frames, 8 prediction(s), 100/102 bands measured, status 'moves 2.5″/yr'
+  barnard: 21 frames, 10 prediction(s), 95/102 bands measured, status 'moves 11.0″/yr'
+  rdra: 21 frames, 1 prediction(s), 73/102 bands measured, status 'steady'
+  w0359: 21 frames, 11 prediction(s), 102/102 bands measured, status 'steady'
+  gaia60306560: 21 frames, 9 prediction(s), 82/102 bands measured, status 'moves 2.8″/yr'
+  gaia16413696: 21 frames, 15 prediction(s), 102/102 bands measured, status 'moves 2.8″/yr'
+  2m0415: 21 frames, 13 prediction(s), 101/102 bands measured, status 'moves 2.2″/yr'
+  gv3068984832: 28 frames, 19 prediction(s), 98/102 bands measured, status 'possible change'
+  61cygni: 21 frames, 4 prediction(s), 85/102 bands measured, status 'steady'
+  v1057cyg: 21 frames, 14 prediction(s), 68/102 bands measured, status 'possible change'
+  gaia68019072: 21 frames, 10 prediction(s), 101/102 bands measured, status 'moves 2.4″/yr'
+  fuori: 21 frames, 11 prediction(s), 88/102 bands measured, status 'not found'
+  gaia14712448: 21 frames, 9 prediction(s), 102/102 bands measured, status 'moves 3.1″/yr'
+  gl570d: 21 frames, 13 prediction(s), 102/102 bands measured, status 'moves 2.2″/yr'
+  omicron2eridani4: 21 frames, 1 prediction(s), 102/102 bands measured, status 'moves 4.0″/yr'
+  raql: 28 frames, 16 prediction(s), 6/102 bands measured, status 'steady'
+  gaia37068160: 21 frames, 6 prediction(s), 101/102 bands measured, status 'moves 2.7″/yr'
+  gv3589489536: 21 frames, 11 prediction(s), 64/102 bands measured, status 'not found'
+  gv0945707776: 21 frames, 11 prediction(s), 102/102 bands measured, status 'possible change'
+  gv6977267328: 21 frames, 19 prediction(s), 92/102 bands measured, status 'possible change'
+  gv5907958144: 21 frames, 4 prediction(s), 21/102 bands measured, status 'steady'
+  lalande21185: 21 frames, 14 prediction(s), 102/102 bands measured, status 'steady'
+  w0647: 15 frames, 5 prediction(s), 87/102 bands measured, status 'steady'
+  ruma: 14 frames, 1 prediction(s), 24/102 bands measured, status 'steady'
+  gv7798780288: 14 frames, 9 prediction(s), 101/102 bands measured, status 'steady'
+merged: 101 patches (100 real, 1 simulated), 101 gallery cards, 109 dome objects
