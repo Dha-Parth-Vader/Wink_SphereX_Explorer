@@ -32140,12 +32140,13 @@
   },
   {
    "id": "var1",
-   "label": "RW Aurigae brightness possible change",
+   "label": "RW Aurigae brightness changing",
    "kind": "variable",
-   "confidence": 0.6,
+   "confidence": 0.9,
    "detectors": [
     1,
     2,
+    4,
     5,
     6
    ],
@@ -32192,7 +32193,7 @@
  ],
  "verdicts": {
   "motion": "steady",
-  "variability": "possible change",
+  "variability": "changing",
   "notes": [
    "Visit 2 is the reference because the first visit is noisier or less complete."
   ]

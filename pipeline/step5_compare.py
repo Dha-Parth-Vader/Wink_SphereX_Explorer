@@ -268,18 +268,8 @@ def target_check(target, stack, per_visit, movers):
             "saturated": any(r.get("saturated") for r in found)}
 
 
-def variability(target_id, target, stack, saturated):
-    """R15: compare frames within 1% in wavelength across visits; a change needs 2 detectors."""
-    rows = [r for r in read_clean_csv(target_id) if not r["flagged"]]
-    source = "exposures"
-    if not rows:
-        rows, source = _stack_photometry(target, stack), "detector stacks"
-    visits = sorted({r["visit"] for r in rows})
-    result = {"source": source, "n_points": len(rows), "visits": len(visits), "per_detector": {}}
-    if len(visits) < 2:
-        result["verdict"] = "only one visit"
-        return result
-    saturated = saturated or any(r["saturated"] for r in rows)
+def _pairs(rows):
+    """Late/early flux ratio and significance per detector, for frames within 1% in wavelength (R15)."""
     by_det = {}
     for i, a in enumerate(rows):
         for b in rows[i + 1:]:
@@ -293,6 +283,29 @@ def variability(target_id, target, stack, saturated):
             err = math.hypot(early["err_ujy"], late["err_ujy"])
             sig = abs(late["flux_ujy"] - early["flux_ujy"]) / err if err > 0 else 0.0
             by_det.setdefault(a["detector"], []).append((late["flux_ujy"] / early["flux_ujy"], sig))
+    return by_det
+
+
+def variability(target_id, target, stack, saturated):
+    """R15: compare frames within 1% in wavelength across visits; a change needs 2 detectors."""
+    rows = [r for r in read_clean_csv(target_id) if not r["flagged"]]
+    source = "exposures"
+    if not rows:
+        rows, source = _stack_photometry(target, stack), "detector stacks"
+    visits = sorted({r["visit"] for r in rows})
+    result = {"source": source, "n_points": len(rows), "visits": len(visits), "per_detector": {}}
+    if len(visits) < 2:
+        result["verdict"] = "only one visit"
+        return result
+    # compare unsaturated frames only when there are enough of them: RW Aur is saturated in D4 alone, and one
+    # saturated frame anywhere used to cap its clear 4-detector change at "possible change"
+    clean = [r for r in rows if not r["saturated"]]
+    by_det = _pairs(clean)
+    if by_det:
+        saturated = False
+    else:
+        by_det = _pairs(rows)
+        saturated = saturated or any(r["saturated"] for r in rows)
     if not by_det:
         result["verdict"] = "no same-wavelength comparison"
         return result
@@ -416,9 +429,12 @@ def compare_target(target_id, targets, force=False):
         offsets[kind] = offs
     movers = merge_movers(mover_lists)
     tgt = target_check(target, stack, detections["all"], movers)
-    if not tgt["mover"] and kind_images["cold"]:
+    # a Y dwarf like WISE 0855 only shows in D5+D6: if its track came from the cold stack, measure it there too,
+    # or the all-detector check lands on whatever static source sits nearby
+    cold_only = any(m["id"] == tgt["mover"] and "all" not in m.get("bands", ["all"]) for m in movers)
+    if (not tgt["mover"] or cold_only) and kind_images["cold"]:
         cold = target_check(target, stack, detections["cold"], movers)
-        if cold["mover"] or (cold["mean_offset_px"] is not None and tgt["mean_offset_px"] is None):
+        if cold_only or cold["mover"] or (cold["mean_offset_px"] is not None and tgt["mean_offset_px"] is None):
             tgt = {**cold, "band": "cold"}
     var = variability(target_id, target, stack, tgt["saturated"])
     transients = find_transients(detections["all"], kind_images["all"]) if len(stack.visits) > 1 else []

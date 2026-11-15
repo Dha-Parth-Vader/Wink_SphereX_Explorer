@@ -436,39 +436,29 @@
   "visits": 3,
   "per_detector": {
    "1": {
-    "pairs": 25,
-    "median_ratio": 1.187,
-    "median_sigma": 65.4,
-    "change": false
-   },
-   "3": {
-    "pairs": 2,
-    "median_ratio": 0.968,
-    "median_sigma": 0.0,
-    "change": false
-   },
-   "4": {
-    "pairs": 36,
-    "median_ratio": 0.938,
-    "median_sigma": 0.0,
-    "change": false
+    "pairs": 22,
+    "median_ratio": 1.242,
+    "median_sigma": 66.1,
+    "change": true
    },
    "5": {
-    "pairs": 13,
-    "median_ratio": 0.919,
-    "median_sigma": 30.0,
+    "pairs": 11,
+    "median_ratio": 0.91,
+    "median_sigma": 31.7,
     "change": false
    },
    "6": {
-    "pairs": 18,
-    "median_ratio": 0.927,
-    "median_sigma": 27.4,
+    "pairs": 14,
+    "median_ratio": 0.911,
+    "median_sigma": 34.0,
     "change": false
    }
   },
-  "verdict": "steady",
-  "saturated": true,
-  "changing_detectors": []
+  "verdict": "possible change",
+  "saturated": false,
+  "changing_detectors": [
+   1
+  ]
  },
  "transients": [],
  "notes": []

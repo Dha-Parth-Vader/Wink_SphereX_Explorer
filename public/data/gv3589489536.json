@@ -32129,6 +32129,38 @@
    ]
   },
   {
+   "id": "var1",
+   "label": "Gaia DR3 4041615043589489536 brightness possible change",
+   "kind": "variable",
+   "confidence": 0.6,
+   "detectors": [
+    1
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60917.74,
+     "x": 73.0,
+     "y": 73.0
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61123.02,
+     "x": 73.0,
+     "y": 73.0
+    },
+    {
+     "epoch": 2,
+     "visit": 2,
+     "mjd": 61283.695,
+     "x": 73.0,
+     "y": 73.0
+    }
+   ]
+  },
+  {
    "id": "a1",
    "label": "Asteroid 1999 VL156 (V 19.3)",
    "kind": "asteroid",
@@ -32163,7 +32195,7 @@
  ],
  "verdicts": {
   "motion": "not found",
-  "variability": "steady",
+  "variability": "possible change",
   "notes": []
  },
  "spectrum": [

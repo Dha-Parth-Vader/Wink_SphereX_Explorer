@@ -571,36 +571,36 @@
  },
  "variability": {
   "source": "exposures",
-  "n_points": 165,
+  "n_points": 196,
   "visits": 3,
   "per_detector": {
    "1": {
-    "pairs": 14,
-    "median_ratio": 0.983,
-    "median_sigma": 13.2,
+    "pairs": 13,
+    "median_ratio": 1.022,
+    "median_sigma": 13.8,
     "change": false
    },
    "2": {
-    "pairs": 3,
-    "median_ratio": 2.877,
-    "median_sigma": 271.3,
+    "pairs": 1,
+    "median_ratio": 0.412,
+    "median_sigma": 225.6,
     "change": true
    },
    "5": {
-    "pairs": 119,
-    "median_ratio": 0.792,
-    "median_sigma": 75.8,
+    "pairs": 103,
+    "median_ratio": 0.786,
+    "median_sigma": 70.4,
     "change": true
    },
    "6": {
-    "pairs": 135,
+    "pairs": 130,
     "median_ratio": 0.878,
-    "median_sigma": 34.5,
+    "median_sigma": 36.3,
     "change": false
    }
   },
-  "verdict": "possible change",
-  "saturated": true,
+  "verdict": "changing",
+  "saturated": false,
   "changing_detectors": [
    2,
    5

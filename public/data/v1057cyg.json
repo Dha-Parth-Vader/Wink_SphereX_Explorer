@@ -32583,43 +32583,11 @@
      "y": 79.21
     }
    ]
-  },
-  {
-   "id": "var1",
-   "label": "V1057 Cygni brightness possible change",
-   "kind": "variable",
-   "confidence": 0.6,
-   "detectors": [
-    2
-   ],
-   "track": [
-    {
-     "epoch": 0,
-     "visit": 0,
-     "mjd": 60820.04,
-     "x": 73.0,
-     "y": 73.0
-    },
-    {
-     "epoch": 1,
-     "visit": 1,
-     "mjd": 60984.175,
-     "x": 73.0,
-     "y": 73.0
-    },
-    {
-     "epoch": 3,
-     "visit": 3,
-     "mjd": 61186.363,
-     "x": 73.0,
-     "y": 73.0
-    }
-   ]
   }
  ],
  "verdicts": {
   "motion": "not found",
-  "variability": "possible change",
+  "variability": "steady",
   "notes": [
    "Visit 3 is the reference because the first visit is noisier or less complete."
   ]

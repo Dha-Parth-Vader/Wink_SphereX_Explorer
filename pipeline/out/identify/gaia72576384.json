@@ -24466,7 +24466,13 @@
      73.1,
      73.22
     ],
-    "found": false
+    "found": true,
+    "measured": [
+     73.1,
+     73.21
+    ],
+    "offset_px": 0.011,
+    "saturated": false
    },
    {
     "visit": 1,
@@ -24474,7 +24480,13 @@
      73.0,
      73.0
     ],
-    "found": false
+    "found": true,
+    "measured": [
+     72.97,
+     72.99
+    ],
+    "offset_px": 0.029,
+    "saturated": false
    },
    {
     "visit": 3,
@@ -24482,13 +24494,20 @@
      72.92,
      72.84
     ],
-    "found": false
+    "found": true,
+    "measured": [
+     72.94,
+     72.85
+    ],
+    "offset_px": 0.022,
+    "saturated": false
    }
   ],
-  "mean_offset_px": null,
-  "within_third_px": false,
+  "mean_offset_px": 0.021,
+  "within_third_px": true,
   "mover": "m2",
   "saturated": false,
+  "band": "cold",
   "expected_pm_arcsec_yr": 2.556,
   "measured_pm_arcsec_yr": 2.411,
   "confirmed": true,
