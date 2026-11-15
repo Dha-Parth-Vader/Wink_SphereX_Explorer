@@ -46,7 +46,7 @@
 
   const S = {
     ra: null, dec: null, fov: 10 / 60, name: "", det: "all", mode: "each", ref: "first",
-    flags: false, gaia: true, wise: true, tmass: true, track: true, community: true, embed: false, speed: 2,
+    flags: false, gaia: false, wise: false, tmass: true, track: true, community: true, embed: false, speed: 2,
     communityMarks: [], communityState: "loading",
     layers: ["gaia", "wise"], passthrough: {},
     res: null, frames: [], i: 0, pix: new Map(),
@@ -206,8 +206,9 @@
     const ref = q.get("ref");
     if (ref === "first" || ref === "prev" || ref === "all") S.ref = ref;
     S.flags = q.get("flags") === "1";
-    S.gaia = q.get("gaia") !== "0";
-    S.wise = q.get("wise") !== "0";
+    // catalogue markers start hidden so the first look is the plain SPHEREx picture; Layers turns them on
+    S.gaia = q.get("gaia") === "1";
+    S.wise = q.get("wise") === "1";
     S.tmass = q.get("tmass") !== "0";
     S.track = q.get("track") !== "0";
     S.community = q.get("community") !== "0";
@@ -232,8 +233,8 @@
     if (S.mode !== "each") q.set("mode", S.mode);
     if (S.mode === "sub") q.set("ref", S.ref);
     if (S.flags) q.set("flags", "1");
-    if (!S.gaia) q.set("gaia", "0");
-    if (!S.wise) q.set("wise", "0");
+    if (S.gaia) q.set("gaia", "1");
+    if (S.wise) q.set("wise", "1");
     if (!S.tmass) q.set("tmass", "0");
     if (!S.track) q.set("track", "0");
     if (!S.community) q.set("community", "0");
@@ -734,7 +735,7 @@
       const tr = p.track || [];
       return tr.find((q) => q.epoch === cur.visit) || tr.find((q) => q.epoch === visitIndex) || null;
     };
-    for (const p of S.res.predictions) {
+    for (const p of topPredictions()) {
       const selected = S.selectedPred === p.id;
       if (!selected && !S.circleAll) continue;
       ctx.strokeStyle = p.kind === "mover" ? cssVar("--mover", "#ff6bd5") : cssVar("--variable", "#9cff6b");
@@ -1192,10 +1193,19 @@
     load();
   }
 
+  const MAX_PREDICTIONS = 10;
+
+  // The most convincing predictions: catalogue-confirmed first, then by confidence
+  function topPredictions() {
+    const all = (S.res && S.res.predictions) || [];
+    const rank = (p) => (p.match ? 1 : 0) + (typeof p.confidence === "number" ? p.confidence : 0);
+    return all.slice().sort((a, b) => rank(b) - rank(a)).slice(0, MAX_PREDICTIONS);
+  }
+
   function renderPredictions() {
     const ul = $("predictions");
     ul.textContent = "";
-    const preds = (S.res && S.res.predictions) || [];
+    const preds = topPredictions();
     if (!preds.length) {
       ul.appendChild(el("li", { class: "muted" }, S.res && S.res.source === "live"
         ? "Live searches skip mover detection to stay fast."
@@ -1218,6 +1228,8 @@
       b.appendChild(el("span", { class: "muted" }, bits.join(" · ")));
       ul.appendChild(el("li")).appendChild(b);
     }
+    const total = S.res.predictions.length;
+    if (total > preds.length) ul.appendChild(el("li", { class: "muted" }, "Showing the " + preds.length + " most likely of " + total + "."));
   }
 
   function renderBadges() {
