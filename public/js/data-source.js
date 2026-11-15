@@ -270,7 +270,11 @@
         if (j && j.status === "no-coverage") return { status: "no-coverage", source: "live", nearest: j.nearest || null, request: req };
         throw new DataError("The live server doesn't know this request (HTTP 404).", "http", { status: 404 });
       }
-      if (!resp.ok) throw new DataError("The live server had a problem (HTTP " + resp.status + "). Try again in a minute.", "http", { status: resp.status });
+      if (!resp.ok) {
+        let j = null;
+        try { j = await resp.json(); } catch (e) { /* not ours */ }
+        throw new DataError(j && j.message ? j.message : "The live server had a problem (HTTP " + resp.status + "). Try again in a minute.", "http", { status: resp.status });
+      }
       let json;
       try { json = await resp.json(); } catch (e) { throw new DataError("The live server sent something we can't read.", "http"); }
       return finish(json, resp.url || url, req, "live");

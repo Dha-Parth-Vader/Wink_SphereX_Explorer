@@ -271,6 +271,7 @@ class Job:
         self.deadline = None
         self.cancelled = False
         self.error = None
+        self.archive_down = False
         self.result = None
 
     def progress(self):
@@ -319,7 +320,9 @@ def run_job(job):
         job.result = make_patch(job)
     except Exception as exc:  # noqa: BLE001
         job.error = str(exc) or type(exc).__name__
-        if not isinstance(exc, JobCancelled):
+        # IRSA answering 5xx or not at all: say so plainly instead of a bare HTTP error
+        job.archive_down = isinstance(exc, (irsa.ArchiveBusy, irsa.requests.ConnectionError, irsa.requests.Timeout))
+        if not isinstance(exc, (JobCancelled, irsa.ArchiveBusy)):
             traceback.print_exc()
         print(f"  live job {job.key} failed: {job.error}", flush=True)
     finally:
@@ -552,6 +555,10 @@ class Handler(SimpleHTTPRequestHandler):
         if job.result == "ok":
             return self.send_json(200, cached_patch(key, layers))
         if job.error:
+            if job.archive_down:
+                return self.send_json(500, {"status": "archive-down", "message": "NASA's SPHEREx archive (IRSA) isn't "
+                                            "answering right now, so we can't fetch new images. Try again in a few "
+                                            "minutes. The 100 targets in the gallery still work."})
             return self.send_json(500, {"status": "error", "message": f"This search failed ({job.error}). Try again."})
         return self.send_json(202, job.progress())
 
