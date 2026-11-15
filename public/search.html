@@ -21,6 +21,7 @@
         <button role="tab" id="tab-raw" aria-controls="panel-raw" aria-selected="true" data-tab="raw">Raw search</button>
         <button role="tab" id="tab-gallery" aria-controls="panel-gallery" aria-selected="false" tabindex="-1" data-tab="gallery">Gallery</button>
         <button role="tab" id="tab-filtered" aria-controls="panel-filtered" aria-selected="false" tabindex="-1" data-tab="filtered">Filtered search <span class="badge badge-proto">Prototype</span></button>
+        <button role="tab" id="tab-community" aria-controls="panel-community" aria-selected="false" tabindex="-1" data-tab="community">Community finds</button>
       </div>
 
       <section id="panel-raw" role="tabpanel" aria-labelledby="tab-raw">
@@ -122,9 +123,29 @@
           </div>
         </div>
       </section>
+
+      <section id="panel-community" role="tabpanel" aria-labelledby="tab-community" hidden>
+        <p class="small muted">Spots that visitors marked in the Viewer and chose to share. Nobody checks them first, so open one and blink it yourself.</p>
+        <div class="row hunt-tools" id="hunt-tools">
+          <label class="check"><input type="checkbox" name="hunt-label" value="mover" checked> <span><span class="hunt-glyph h-mover" aria-hidden="true">◆</span> Movers</span></label>
+          <label class="check"><input type="checkbox" name="hunt-label" value="variable" checked> <span><span class="hunt-glyph h-variable" aria-hidden="true">●</span> Changes brightness</span></label>
+          <label class="check"><input type="checkbox" name="hunt-label" value="artifact" checked> <span><span class="hunt-glyph h-artifact" aria-hidden="true">✕</span> Artifacts</span></label>
+          <label class="check"><input type="checkbox" id="hunt-targets" checked> <span><span class="hunt-glyph h-target" aria-hidden="true">•</span> Our prepared targets</span></label>
+        </div>
+        <div class="card hunt-map">
+          <canvas id="hunt-canvas" role="img" aria-label="All-sky map of shared marks and our prepared targets"></canvas>
+          <p class="tiny muted hunt-note" id="hunt-hover" aria-hidden="true">Point at a dot to see what it is. Click it to open the Viewer there.</p>
+        </div>
+        <p class="small muted" id="hunt-status" aria-live="polite"></p>
+        <h2 class="hunt-h">Latest shared marks</h2>
+        <ul class="hunt-list" id="hunt-list"></ul>
+        <p class="small muted">To add one: open any target in the Viewer, press <strong>✚ Mark this</strong>, click the spot, and pick a type under “Share on the community map”.</p>
+      </section>
     </div>
   </main>
   <script src="js/common.js"></script>
+  <script src="js/data-source.js"></script>
+  <script src="js/hunt.js"></script>
   <script src="js/search.js"></script>
 </body>
 </html>

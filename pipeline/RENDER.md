@@ -59,3 +59,22 @@ python pipeline/server.py --port 8000
 
 Then open http://localhost:8000/search.html. Locally the site uses the same server for live search, the cache
 goes to `public/data/live/` (gitignored) and up to 36 images are used per spot.
+
+## Community marks (Supabase)
+
+Shared marks live in a free Supabase project, because Render's disk is wiped on every deploy. Browsers read
+them straight from Supabase with the public (publishable) key in `public/js/hunt.js`; only this server can add
+them, with the secret key. Labels are limited to mover, variable and artifact, with no free text. Each visitor
+gets 20 marks an hour and the whole site 300 an hour. Visitors are stored only as a salted hash of their address.
+
+Set these in the Render dashboard (Environment). `render.yaml` lists them with `sync: false`, so a Blueprint sync
+keeps them and they never go into git:
+
+| Key | Value |
+|---|---|
+| `SUPABASE_URL` | `https://bkycgwehmvmixkqkldld.supabase.co` |
+| `SUPABASE_SERVICE_KEY` | the project's secret key (`sb_secret_...`) |
+| `MARKS_SALT` | any long random string |
+
+`/api/health` reports `"marks": true` once they're set. To hide a mark, open the `marks` table in Supabase's
+Table Editor and tick `hidden`; it disappears from the site on the next page load.

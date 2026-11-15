@@ -371,6 +371,7 @@
     getPatch,
     loadImages,
     patchList,
+    apiBase,
     DataError,
     LIVE_SERVER,
     MIN_DOWNLOAD_FOV,

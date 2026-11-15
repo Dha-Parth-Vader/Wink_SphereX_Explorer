@@ -46,7 +46,8 @@
 
   const S = {
     ra: null, dec: null, fov: 10 / 60, name: "", det: "all", mode: "each", ref: "first",
-    flags: false, gaia: true, wise: true, tmass: true, track: true, embed: false, speed: 2,
+    flags: false, gaia: true, wise: true, tmass: true, track: true, community: true, embed: false, speed: 2,
+    communityMarks: [], communityState: "loading",
     layers: ["gaia", "wise"], passthrough: {},
     res: null, frames: [], i: 0, pix: new Map(),
     playing: false, playTimer: null, lastSwap: -Infinity, wantFrame: 0, swapTimer: null,
@@ -209,6 +210,7 @@
     S.wise = q.get("wise") !== "0";
     S.tmass = q.get("tmass") !== "0";
     S.track = q.get("track") !== "0";
+    S.community = q.get("community") !== "0";
     S.embed = q.get("embed") === "1";
     const speed = parseInt(q.get("speed"), 10);
     if (isFinite(speed)) S.speed = clamp(speed, 1, MAX_SWAPS_PER_S);
@@ -234,6 +236,7 @@
     if (!S.wise) q.set("wise", "0");
     if (!S.tmass) q.set("tmass", "0");
     if (!S.track) q.set("track", "0");
+    if (!S.community) q.set("community", "0");
     if (S.layers.join(",") !== "gaia,wise") q.set("layers", S.layers.length ? S.layers.join(",") : "none");
     if (S.speed !== 2) q.set("speed", String(S.speed));
     for (const [k, v] of Object.entries(S.passthrough)) q.set(k, v);
@@ -407,6 +410,7 @@
       setupFrames();
       hideStatus();
       renderAll();
+      renderLearnLinks();
     } catch (e) {
       if (token !== S.token || e.code === "cancelled") return;
       showError(e);
@@ -419,6 +423,25 @@
     S.res = null;
     S.frames = [];
     renderAll();
+    renderLearnLinks();
+  }
+
+  // hands-on Education lessons that fit what this patch shows
+  function renderLearnLinks() {
+    const box = $("learn-links");
+    if (!box) return;
+    box.textContent = "";
+    const r = S.res;
+    if (!r) { box.hidden = true; return; }
+    const v = r.verdicts || {}, kind = r.patch && r.patch.kind;
+    const links = [];
+    if (v.motion === "moves") links.push(["lesson-mover", "Find the mover"], ["lesson-moved", "How we know it moved"]);
+    if (kind === "brown-dwarf") links.push(["lesson-wavelength", "Colours you can't see"]);
+    if (v.variability === "changing" || v.variability === "possible change") links.push(["lesson-colour", "A star that changes colour"]);
+    if (!links.length || r.source === "live") links.push(["lesson-planetx", "Could SPHEREx catch Planet X?"]);
+    box.append(el("span", { class: "muted" }, "Learn: "));
+    for (const [id, label] of links) box.append(el("a", { href: "learn.html#" + id }, label));
+    box.hidden = false;
   }
 
   function showEmpty() {
@@ -732,6 +755,27 @@
         ctx.stroke();
         ctx.lineWidth = 1.5 * u;
       }
+    }
+
+    if (S.community && window.WinkHunt) {
+      ctx.save();
+      ctx.lineWidth = 1.5 * u;
+      for (const m of communityInView(P)) {
+        const [x, y] = patchToCanvas(...G.skyToPix(P, m.ra, m.dec));
+        const r = 6 * u;
+        ctx.strokeStyle = cssVar(WinkHunt.LABELS[m.label].colour, "#ffffff");
+        ctx.beginPath();
+        if (m.label === "mover") {
+          ctx.moveTo(x, y - r); ctx.lineTo(x + r, y); ctx.lineTo(x, y + r); ctx.lineTo(x - r, y); ctx.closePath();
+        } else if (m.label === "variable") {
+          ctx.arc(x, y, r, 0, Math.PI * 2);
+        } else {
+          ctx.moveTo(x - r * 0.7, y - r * 0.7); ctx.lineTo(x + r * 0.7, y + r * 0.7);
+          ctx.moveTo(x + r * 0.7, y - r * 0.7); ctx.lineTo(x - r * 0.7, y + r * 0.7);
+        }
+        ctx.stroke();
+      }
+      ctx.restore();
     }
 
     ctx.strokeStyle = cssVar("--mark", "#7dff9b");
@@ -1085,9 +1129,45 @@
     if (box) box.style.minHeight = "";
   }
 
+  function communityInView(P) {
+    if (!S.res || !S.communityMarks.length) return [];
+    const v = view();
+    return S.communityMarks.filter((m) => {
+      if (!WinkHunt.LABELS[m.label] || G.separation(m.ra, m.dec, P.ra, P.dec) > P.fov_deg) return false;
+      const [x, y] = G.skyToPix(P, m.ra, m.dec);
+      return x >= v.x0 - 0.5 && y >= v.y0 - 0.5 && x < v.x0 + v.n - 0.5 && y < v.y0 + v.n - 0.5;
+    });
+  }
+
+  function loadCommunity(force) {
+    if (!window.WinkHunt || !WinkHunt.configured()) {
+      S.communityState = "off";
+      renderLayersPanel();
+      return;
+    }
+    WinkHunt.list(force).then((rows) => {
+      S.communityMarks = rows;
+      S.communityState = "ok";
+      renderLayersPanel();
+      renderCanvas();
+    }, () => {
+      S.communityState = "error";
+      renderLayersPanel();
+    });
+  }
+
   function renderLayersPanel() {
     $("ly-flags").checked = S.flags;
     $("ly-track").checked = S.track;
+    $("ly-community").checked = S.community;
+    $("ly-community").disabled = S.communityState === "off";
+    const n = S.res ? communityInView(S.res.patch).length : 0;
+    $("ly-community-hint").textContent = {
+      off: "Sharing isn't set up yet.",
+      error: "Couldn't load community marks.",
+      loading: "Loading…",
+      ok: n === 1 ? "1 shared mark in this view." : n + " shared marks in this view.",
+    }[S.communityState];
     for (const k of LAYER_ORDER) {
       const box = $("ly-" + k), hint = $("ly-" + k + "-hint");
       const loaded = S.layers.includes(k);
@@ -1433,6 +1513,12 @@
     $("mark-hint").hidden = true;
     $("mark-label").hidden = false;
     $("mark-text").value = "";
+    const canShare = !!(window.WinkHunt && WinkHunt.configured());
+    $("mark-share").value = "";
+    $("mark-share").disabled = !canShare;
+    $("mark-share-hint").textContent = canShare
+      ? "Only the position, date, detector and type are shared, never your label."
+      : "Sharing on the community map isn't set up yet.";
     $("mark-text").focus();
   }
 
@@ -1440,6 +1526,7 @@
     const p = S.pendingMark;
     if (!p) return;
     const cur = S.frames[S.i];
+    const share = $("mark-share").disabled ? "" : $("mark-share").value;
     const q = stateParams();
     q.set("ra", p.ra.toFixed(6));
     q.set("dec", p.dec.toFixed(6));
@@ -1464,7 +1551,20 @@
     cancelMark();
     renderMarks();
     renderCanvas();
-    toast("Mark saved");
+    if (!share) {
+      toast("Mark saved");
+      return;
+    }
+    const mark = S.marks[S.marks.length - 1];
+    toast("Saved. Sharing it… (our server can take a minute to wake up)");
+    WinkHunt.share({ ra: mark.ra, dec: mark.dec, label: share, patch: S.res.patch.id, mjd: mark.mjd, detector: mark.detector })
+      .then(() => {
+        mark.shared = share;
+        storageSet(MARKS_KEY, S.marks);
+        renderMarks();
+        toast("Shared on the community map. Thanks!");
+        loadCommunity(true);
+      }, (e) => toast(e.message));
   }
 
   function renderMarks() {
@@ -1478,6 +1578,9 @@
       const li = el("li");
       const go = el("a", { href: m.link, class: "mark-go" });
       go.appendChild(el("strong", null, m.label));
+      if (m.shared && window.WinkHunt && WinkHunt.LABELS[m.shared]) {
+        go.appendChild(el("span", { class: "tiny muted" }, "Shared as " + WinkHunt.LABELS[m.shared].name.toLowerCase()));
+      }
       go.appendChild(el("span", { class: "muted" }, fmtRA(m.ra) + " " + fmtDec(m.dec) + " · " + m.date));
       li.appendChild(go);
       li.appendChild(el("button", {
@@ -1645,6 +1748,7 @@
     $("ly-wise").addEventListener("change", () => { S.wise = $("ly-wise").checked; renderCanvas(); writeURL(); });
     $("ly-tmass").addEventListener("change", () => { S.tmass = $("ly-tmass").checked; renderCanvas(); writeURL(); });
     $("ly-track").addEventListener("change", () => { S.track = $("ly-track").checked; renderCanvas(); writeURL(); });
+    $("ly-community").addEventListener("change", () => { S.community = $("ly-community").checked; renderCanvas(); writeURL(); });
 
     $("adj-bright").addEventListener("input", () => { S.adj.bright = +$("adj-bright").value; renderCanvas(); });
     $("adj-contrast").addEventListener("input", () => { S.adj.contrast = +$("adj-contrast").value / 100; renderCanvas(); });
@@ -1725,6 +1829,7 @@
     resizeCanvas();
     renderAll();
     load();
+    loadCommunity();
   }
 
   init();

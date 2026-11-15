@@ -6,7 +6,9 @@ GET /api/patch?ra=&dec=&fov=[&det=][&layers=gaia,wise|none][&max=]
   200  a patch in the <id>.json shape (pre-built if one covers the spot, else from the live cache)
   202  {status: working|queued, step, steps: 4, stage, message, done, total, elapsed_s} while a job runs
   404  {status: no-coverage, nearest} when SPHEREx has no image of the spot
-GET /api/health -> {ok, jobs_running, queued, version}
+GET /api/health -> {ok, jobs_running, queued, version, marks}
+POST /api/marks {ra, dec, label, patch?, mjd?, detector?} -> 201 {ok}; shares a mark on the community map
+  label is one of mover, variable, artifact (no free text); 429 when a visitor marks too often
 
 A job finds the images (IRSA), downloads and cleans up to --max of them (steps 2 and 3), stacks them
 (step 4) and exports them (step 7), fetching the ticked catalogues at the same time. Movers and asteroids
@@ -27,10 +29,13 @@ import threading
 import time
 import traceback
 from collections import defaultdict
+from datetime import datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
+
+import requests
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -48,6 +53,15 @@ MIN_COVER = 0.25          # dates covering less of the field than this are dropp
 JOB_TIMEOUT_S = 6 * 60
 LAYERS = ("gaia", "wise")
 STEPS = 4
+
+# community marks live in Supabase (Render's disk is wiped on every deploy); visitors pick from fixed labels
+MARK_LABELS = ("mover", "variable", "artifact")
+MARK_DETECTORS = ("all", "1", "2", "3", "4", "5", "6")
+MARKS_PER_VISITOR_HOUR = 20
+MARKS_PER_HOUR = 300          # whole site, so a flood can't fill the map
+MARK_GAP_S = 5
+LAST_MARK = {}
+MARK_LOCK = threading.Lock()
 
 ARGS = None
 SITE = None
@@ -426,6 +440,63 @@ def make_patch(job):
     return "ok"
 
 
+# ---- community marks ----
+
+def supabase():
+    url, key = os.environ.get("SUPABASE_URL", "").rstrip("/"), os.environ.get("SUPABASE_SERVICE_KEY", "")
+    return (url, key) if url and key else None
+
+
+def supabase_headers(key, **extra):
+    # new-style sb_secret_ keys go in the apikey header only; Supabase rejects them as a Bearer token
+    return {"apikey": key, "Content-Type": "application/json", **extra}
+
+
+def marks_since(conf, minutes, visitor=None):
+    url, key = conf
+    since = (datetime.now(timezone.utc) - timedelta(minutes=minutes)).isoformat()
+    params = {"select": "id", "created_at": f"gte.{since}"}
+    if visitor:
+        params["visitor"] = f"eq.{visitor}"
+    r = requests.get(f"{url}/rest/v1/marks", params=params, timeout=10,
+                     headers=supabase_headers(key, Prefer="count=exact", Range="0-0"))
+    r.raise_for_status()
+    return int(r.headers.get("Content-Range", "*/0").split("/")[-1] or 0)
+
+
+def clean_mark(body):
+    """The mark to store, or a plain-language reason it was refused."""
+    try:
+        ra, dec = float(body["ra"]) % 360, float(body["dec"])
+    except (KeyError, TypeError, ValueError):
+        return None, "A mark needs ra and dec in degrees."
+    if not -90 <= dec <= 90 or not math.isfinite(ra):
+        return None, "That position isn't on the sky."
+    label = str(body.get("label", "")).lower()
+    if label not in MARK_LABELS:
+        return None, "Pick one of: mover, variable, artifact."
+    row = {"ra": round(ra, 6), "dec": round(dec, 6), "label": label}
+    patch = str(body.get("patch") or "")
+    if patch:
+        if not re.fullmatch(r"[A-Za-z0-9_-]{1,40}", patch):
+            return None, "That patch id isn't one of ours."
+        row["patch"] = patch
+    if body.get("mjd") not in (None, ""):
+        try:
+            mjd = float(body["mjd"])
+        except (TypeError, ValueError):
+            return None, "The date should be an MJD number."
+        if not 60000 <= mjd <= 70000:
+            return None, "That date isn't during the SPHEREx mission."
+        row["mjd"] = round(mjd, 4)
+    det = str(body.get("detector") or "")
+    if det:
+        if det not in MARK_DETECTORS:
+            return None, "Detector should be all or 1 to 6."
+        row["detector"] = det
+    return row, None
+
+
 # ---- HTTP ----
 
 def origin_allowed(origin):
@@ -487,7 +558,7 @@ class Handler(SimpleHTTPRequestHandler):
     def do_OPTIONS(self):
         origin = self.headers.get("Origin")
         self.send_response(204 if origin and origin_allowed(origin) else 403)
-        self.send_header("Access-Control-Allow-Methods", "GET, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.send_header("Access-Control-Max-Age", "86400")
         self.send_header("Content-Length", "0")
@@ -504,11 +575,58 @@ class Handler(SimpleHTTPRequestHandler):
                     jobs = list(JOBS.values())
                 return self.send_json(200, {"ok": True, "jobs_running": sum(j.state == "working" for j in jobs),
                                             "queued": sum(j.state == "queued" for j in jobs),
-                                            "version": PIPELINE_VERSION})
+                                            "version": PIPELINE_VERSION, "marks": bool(supabase())})
             if url.path == "/api/patch":
                 return self.api_patch(parse_qs(url.query, keep_blank_values=True))
             return self.send_json(404, {"status": "error", "message": "Unknown API path."})
         return super().do_GET()
+
+    def do_POST(self):
+        if urlparse(self.path).path != "/api/marks":
+            return self.send_json(404, {"status": "error", "message": "Unknown API path."})
+        origin = self.headers.get("Origin")
+        if not origin or not origin_allowed(origin):
+            return self.send_json(403, {"status": "error", "message": "Marks can only be shared from our site."})
+        conf = supabase()
+        if not conf:
+            return self.send_json(503, {"status": "off", "message": "Sharing marks isn't set up on this server yet."})
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            if not 0 < length <= 2048:
+                raise ValueError
+            body = json.loads(self.rfile.read(length))
+            if not isinstance(body, dict):
+                raise ValueError
+        except ValueError:
+            return self.send_json(400, {"status": "error", "message": "Send the mark as a small JSON object."})
+        row, problem = clean_mark(body)
+        if problem:
+            return self.send_json(400, {"status": "error", "message": problem})
+
+        # Render sits behind Cloudflare, which sets CF-Connecting-IP itself; X-Forwarded-For can be faked by the
+        # visitor, which would only dodge the per-visitor cap, not the site-wide one. Only a salted hash is stored.
+        ip = (self.headers.get("CF-Connecting-IP") or self.headers.get("True-Client-IP")
+              or (self.headers.get("X-Forwarded-For") or self.client_address[0]).split(",")[0]).strip()
+        visitor = hashlib.sha256((os.environ.get("MARKS_SALT", "") + ip).encode()).hexdigest()[:16]
+        with MARK_LOCK:
+            if time.time() - LAST_MARK.get(visitor, 0) < MARK_GAP_S:
+                return self.send_json(429, {"status": "slow-down", "message": "One mark every few seconds, please."})
+            LAST_MARK[visitor] = time.time()
+        try:
+            if marks_since(conf, 60, visitor) >= MARKS_PER_VISITOR_HOUR:
+                return self.send_json(429, {"status": "slow-down", "message": f"That's {MARKS_PER_VISITOR_HOUR} "
+                                            "marks this hour, our limit per visitor. Thanks! Try again later."})
+            if marks_since(conf, 60) >= MARKS_PER_HOUR:
+                return self.send_json(429, {"status": "slow-down", "message": "Lots of people are marking right "
+                                            "now. Try again in a little while."})
+            r = requests.post(f"{conf[0]}/rest/v1/marks", json={**row, "visitor": visitor}, timeout=10,
+                              headers=supabase_headers(conf[1], Prefer="return=minimal"))
+            r.raise_for_status()
+        except requests.RequestException as exc:
+            print(f"  marks: database error: {str(exc)[:150]}", flush=True)
+            return self.send_json(502, {"status": "error", "message": "We couldn't save your mark just now. "
+                                        "Try again in a minute."})
+        return self.send_json(201, {"ok": True})
 
     def api_patch(self, qs):
         try:
