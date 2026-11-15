@@ -26,6 +26,7 @@ Every query asks the archive what exists now, so new releases are picked up by r
 | 3 | `step3_clean.py` | ZODI, science and display masks from FLAGS, sky level, wavelength and microJy flux of the target per frame | `cache/<id>/clean/`, `out/clean/<id>.csv` |
 | 4 | `step4_align_stack.py` | North-up 6.15" grid, clipped mean per (visit, detector), all-detector and cold (D5+D6) stacks, alignment check | `cache/<id>/stack.fits`, `out/stack/<id>.json` |
 | 5-7 | `step5_compare.py`, `step6_identify.py`, `step7_export.py` | Movers and changes, catalogue and asteroid checks, web export | see `public/data/README.md` |
+| live | `server.py` | Serves the site and makes a patch for any other RA/Dec on request (steps 2, 3, 4 and 7, ~2 minutes) | `public/data/live/` (cache, gitignored); hosting in [RENDER.md](RENDER.md) |
 
 `cache/` is gitignored (about 140 to 300 MB of FITS per target). `out/targets.json` and `out/inventory/` are committed.
 

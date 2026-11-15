@@ -97,16 +97,25 @@ def sia_for(ra, dec):
             if r["dataproduct_type"] == "image" and not r["obs_collection"].endswith("_cube")]
 
 
+_tap_failed_at = 0.0
+TAP_RETRY_S = 600   # after a TAP failure, go straight to SIA for 10 minutes instead of waiting on TAP each time
+
+
 def obscore_for(ra, dec):
     """Every SPHEREx spectral image (all releases) whose footprint contains (ra, dec), oldest first."""
     q = ("SELECT obs_id, obs_collection, t_min, t_max, energy_bandpassname, em_min, em_max, access_url, s_region "
          "FROM spherex.obscore "
          f"WHERE CONTAINS(POINT('ICRS',{ra:.6f},{dec:.6f}), s_region)=1 "
          "AND dataproduct_type='image' AND obs_collection NOT LIKE '%cube%'")
-    try:
-        rows = tap(q, timeout=120, retries=2)
-    except Exception as e:  # noqa: BLE001
-        print(f"  TAP failed ({str(e)[:60]}), using SIA", flush=True)
+    global _tap_failed_at
+    rows = None
+    if time.time() - _tap_failed_at > TAP_RETRY_S:
+        try:
+            rows = tap(q, timeout=45, retries=1)
+        except Exception as e:  # noqa: BLE001
+            print(f"  TAP failed ({str(e)[:60]}), using SIA", flush=True)
+            _tap_failed_at = time.time()
+    if rows is None:
         rows = sia_for(ra, dec)
     for r in rows:
         r["detector"] = int(r["energy_bandpassname"].replace("SPHEREx-D", ""))

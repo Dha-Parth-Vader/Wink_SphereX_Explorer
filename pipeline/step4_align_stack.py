@@ -101,8 +101,14 @@ def clipped_mean(cube, nsig=3.0, iters=3):
 
 
 def stack_frames(imgs):
-    m, k = clipped_mean(np.array(imgs))
-    need = max(2, int(np.ceil(MIN_COVER * k.max())))
+    cube = np.array(imgs)
+    if len(imgs) < 3:   # too few frames to clip (live patches can have one or two per detector)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", RuntimeWarning)
+            m, k = np.nanmean(cube, axis=0), np.sum(np.isfinite(cube), axis=0)
+    else:
+        m, k = clipped_mean(cube)
+    need = max(min(2, len(imgs)), int(np.ceil(MIN_COVER * k.max())))
     return np.where(k >= need, m, np.nan).astype(np.float32), k.astype(np.int16)
 
 
@@ -173,10 +179,12 @@ def is_cold(t):
     return t["kind"] == "brown-dwarf" and t.get("w1", 0) - t.get("w2", 0) > 2.5
 
 
-def run(t, fov, do_flatten, force):
-    clean_csv = os.path.join(OUT, "clean", t["id"] + ".csv")
-    stack_path = os.path.join(CACHE, t["id"], "stack.fits")
-    out_json = os.path.join(OUT, "stack", t["id"] + ".json")
+def run(t, fov, do_flatten, force, out_dir=OUT, cache_dir=CACHE, min_frames=MIN_FRAMES,
+        min_visit_frames=MIN_VISIT_FRAMES):
+    """The live server passes its own folders and lower frame minimums (it downloads ~30 images, not 300)."""
+    clean_csv = os.path.join(out_dir, "clean", t["id"] + ".csv")
+    stack_path = os.path.join(cache_dir, t["id"], "stack.fits")
+    out_json = os.path.join(out_dir, "stack", t["id"] + ".json")
     if not os.path.exists(clean_csv):
         return f"{t['id']}: not cleaned yet (run step3_clean.py)"
     if (not force and os.path.exists(stack_path) and os.path.exists(out_json)
@@ -186,16 +194,16 @@ def run(t, fov, do_flatten, force):
         rows = list(csv.DictReader(fh))
     grid, n = make_grid(t["ra"], t["dec"], fov)
     counts = Counter(int(r["visit"]) for r in rows)
-    visits = sorted(v for v, k in counts.items() if k >= MIN_VISIT_FRAMES)
-    skipped = sorted(v for v, k in counts.items() if k < MIN_VISIT_FRAMES)
+    visits = sorted(v for v, k in counts.items() if k >= min_visit_frames)
+    skipped = sorted(v for v, k in counts.items() if k < min_visit_frames)
     if not visits:
-        return f"{t['id']}: no visit has {MIN_VISIT_FRAMES}+ cleaned frames, nothing stacked"
+        return f"{t['id']}: no visit has {min_visit_frames}+ cleaned frames, nothing stacked"
     nv, nb = len(visits), len(BANDS)
     stack = np.full((nv, nb, n, n), np.nan, np.float32)
     c0 = max(0, n // 2 - TILE // 2)
     cube = np.full((nv, 102, TILE, TILE), np.nan, np.float32)
     flagf = np.zeros((nv, nb, n, n), np.float32)
-    cdir = os.path.join(CACHE, t["id"], "clean")
+    cdir = os.path.join(cache_dir, t["id"], "clean")
     meta = []
     for i, v in enumerate(visits):
         vrows = [r for r in rows if int(r["visit"]) == v]
@@ -215,7 +223,7 @@ def run(t, fov, do_flatten, force):
                 bi = stackfile.band_index(float(r["wavelength_um"])) if r["wavelength_um"] not in ("", "nan") else None
                 if bi is not None:
                     tiles.setdefault(bi, []).append(im[c0:c0 + TILE, c0:c0 + TILE])
-            if len(imgs) < MIN_FRAMES:
+            if len(imgs) < min_frames:
                 continue
             m, k = stack_frames(imgs)
             if do_flatten:
