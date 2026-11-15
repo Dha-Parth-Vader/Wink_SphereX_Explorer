@@ -234,7 +234,10 @@ def cached_patch(key, layers):
     if not path.exists():
         return None
     doc = json.loads(path.read_text(encoding="utf-8"))
-    missing = [x for x in layers if x not in doc.get("loaded_layers", [])]
+    if "loaded_layers" not in doc:
+        return None   # step 7's copy with relative paths; the job replaces it in a moment
+    absolute(doc, "/data/live/")
+    missing = [x for x in layers if x not in doc["loaded_layers"]]
     if missing:   # asked for a catalogue this patch was made without: fetch just that one now
         doc["overlays"].update(fetch_catalogues(doc["patch"]["ra"], doc["patch"]["dec"], doc["patch"]["fov_deg"],
                                                 missing))
@@ -526,6 +529,10 @@ class Handler(SimpleHTTPRequestHandler):
 
         fov = min(MAX_FOV, max(MIN_FOV, fov))
         key = cache_key(ra, dec, fov)
+        with JOBS_LOCK:
+            running = JOBS.get(key)
+        if running and not (running.result or running.error):
+            return self.send_json(202, running.progress())
         doc = cached_patch(key, layers)
         if doc:
             return self.send_json(200, doc)
