@@ -10,7 +10,7 @@
   "epoch": 2026.0,
   "fov_deg": 0.2511,
   "pixel_scale_arcsec": 6.15,
-  "pipeline_version": "1"
+  "pipeline_version": "2"
  },
  "frames": [
   {
@@ -29,9 +29,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.002046,
-    "knee": 0.098893,
-    "top": 151.043108
+    "black": 0.002282,
+    "knee": 0.095389,
+    "top": 151.049168
    },
    "flags": [
     "72 pixels bled into by a saturated star",
@@ -77,9 +77,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.003747,
-    "knee": 0.109025,
-    "top": 96.883752
+    "black": 0.000355,
+    "knee": 0.106013,
+    "top": 96.889574
    },
    "flags": [
     "71 pixels bled into by a saturated star",
@@ -120,9 +120,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.004796,
-    "knee": 0.145827,
-    "top": 111.925913
+    "black": 0.001605,
+    "knee": 0.140421,
+    "top": 111.932256
    },
    "flags": [
     "83 pixels bled into by a saturated star",
@@ -160,9 +160,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.003474,
-    "knee": 0.138439,
-    "top": 168.623825
+    "black": 0.003007,
+    "knee": 0.132675,
+    "top": 168.634764
    },
    "flags": [
     "97 pixels bled into by a saturated star",
@@ -205,9 +205,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001822,
-    "knee": 0.084858,
-    "top": 169.601517
+    "black": 0.001758,
+    "knee": 0.083533,
+    "top": 169.608338
    },
    "flags": [
     "125 pixels bled into by a saturated star",
@@ -247,9 +247,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.000571,
-    "knee": 0.069026,
-    "top": 120.877569
+    "black": 0.002528,
+    "knee": 0.067653,
+    "top": 120.884028
    },
    "flags": [
     "30 pixels bled into by a saturated star",
@@ -287,9 +287,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000616,
-    "knee": 0.070524,
-    "top": 113.503086
+    "black": 0.00272,
+    "knee": 0.070124,
+    "top": 113.507132
    },
    "flags": [
     "25 pixels bled into by a saturated star",
@@ -329,9 +329,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.002046,
-    "knee": 0.098893,
-    "top": 151.043108
+    "black": 0.002282,
+    "knee": 0.095389,
+    "top": 151.049168
    },
    "flags": [
     "73 pixels bled into by a saturated star",
@@ -374,9 +374,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.003747,
-    "knee": 0.109025,
-    "top": 96.883752
+    "black": 0.000355,
+    "knee": 0.106013,
+    "top": 96.889574
    },
    "flags": [
     "57 pixels bled into by a saturated star",
@@ -417,9 +417,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.004796,
-    "knee": 0.145827,
-    "top": 111.925913
+    "black": 0.001605,
+    "knee": 0.140421,
+    "top": 111.932256
    },
    "flags": [
     "90 pixels bled into by a saturated star",
@@ -457,9 +457,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.003474,
-    "knee": 0.138439,
-    "top": 168.623825
+    "black": 0.003007,
+    "knee": 0.132675,
+    "top": 168.634764
    },
    "flags": [
     "116 pixels bled into by a saturated star",
@@ -499,9 +499,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001822,
-    "knee": 0.084858,
-    "top": 169.601517
+    "black": 0.001758,
+    "knee": 0.083533,
+    "top": 169.608338
    },
    "flags": [
     "117 pixels bled into by a saturated star",
@@ -542,9 +542,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.000571,
-    "knee": 0.069026,
-    "top": 120.877569
+    "black": 0.002528,
+    "knee": 0.067653,
+    "top": 120.884028
    },
    "flags": [
     "38 pixels bled into by a saturated star",
@@ -583,9 +583,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000616,
-    "knee": 0.070524,
-    "top": 113.503086
+    "black": 0.00272,
+    "knee": 0.070124,
+    "top": 113.507132
    },
    "flags": [
     "22 pixels bled into by a saturated star",
@@ -30347,7 +30347,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.9,
-   "pm_arcsec_yr": 29.312,
+   "pm_arcsec_yr": 29.311,
    "match": null,
    "bands": [
     "all",
@@ -30375,7 +30375,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.9,
-   "pm_arcsec_yr": 29.87,
+   "pm_arcsec_yr": 29.939,
    "match": null,
    "bands": [
     "all",
@@ -30394,7 +30394,7 @@
      "visit": 2,
      "mjd": 61131.752,
      "x": 58.9,
-     "y": 59.34
+     "y": 59.33
     }
    ]
   },
@@ -30402,8 +30402,8 @@
    "id": "m3",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.85,
-   "pm_arcsec_yr": 23.352,
+   "confidence": 0.86,
+   "pm_arcsec_yr": 23.351,
    "match": null,
    "bands": [
     "all"
@@ -30413,7 +30413,7 @@
      "epoch": 0,
      "visit": 0,
      "mjd": 60957.744,
-     "x": 85.21,
+     "x": 85.2,
      "y": 90.24
     },
     {
@@ -30429,8 +30429,8 @@
    "id": "m4",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.79,
-   "pm_arcsec_yr": 21.74,
+   "confidence": 0.8,
+   "pm_arcsec_yr": 21.758,
    "match": null,
    "bands": [
     "cold"
@@ -30441,7 +30441,7 @@
      "visit": 0,
      "mjd": 60957.744,
      "x": 10.93,
-     "y": 32.64
+     "y": 32.65
     },
     {
      "epoch": 2,
@@ -30456,35 +30456,8 @@
    "id": "m5",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.79,
-   "pm_arcsec_yr": 26.394,
-   "match": null,
-   "bands": [
-    "cold"
-   ],
-   "track": [
-    {
-     "epoch": 0,
-     "visit": 0,
-     "mjd": 60957.744,
-     "x": 111.79,
-     "y": 73.69
-    },
-    {
-     "epoch": 2,
-     "visit": 2,
-     "mjd": 61131.752,
-     "x": 109.96,
-     "y": 74.61
-    }
-   ]
-  },
-  {
-   "id": "m6",
-   "label": "Possible mover",
-   "kind": "mover",
-   "confidence": 0.76,
-   "pm_arcsec_yr": 15.17,
+   "confidence": 0.78,
+   "pm_arcsec_yr": 15.254,
    "match": null,
    "bands": [
     "all"
@@ -30495,14 +30468,41 @@
      "visit": 0,
      "mjd": 60957.744,
      "x": 128.63,
-     "y": 57.57
+     "y": 57.59
     },
     {
      "epoch": 2,
      "visit": 2,
      "mjd": 61131.752,
      "x": 127.45,
-     "y": 57.57
+     "y": 57.58
+    }
+   ]
+  },
+  {
+   "id": "m6",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.76,
+   "pm_arcsec_yr": 16.026,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60957.744,
+     "x": 40.55,
+     "y": 111.94
+    },
+    {
+     "epoch": 2,
+     "visit": 2,
+     "mjd": 61131.752,
+     "x": 39.57,
+     "y": 112.7
     }
    ]
   },
@@ -30510,8 +30510,8 @@
    "id": "m7",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.73,
-   "pm_arcsec_yr": 14.896,
+   "confidence": 0.74,
+   "pm_arcsec_yr": 14.912,
    "match": null,
    "bands": [
     "all"
@@ -30537,35 +30537,8 @@
    "id": "m8",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.7,
-   "pm_arcsec_yr": 13.006,
-   "match": null,
-   "bands": [
-    "cold"
-   ],
-   "track": [
-    {
-     "epoch": 0,
-     "visit": 0,
-     "mjd": 60957.744,
-     "x": 40.45,
-     "y": 112.22
-    },
-    {
-     "epoch": 2,
-     "visit": 2,
-     "mjd": 61131.752,
-     "x": 39.56,
-     "y": 112.7
-    }
-   ]
-  },
-  {
-   "id": "m9",
-   "label": "Possible mover",
-   "kind": "mover",
-   "confidence": 0.64,
-   "pm_arcsec_yr": 4.071,
+   "confidence": 0.67,
+   "pm_arcsec_yr": 21.493,
    "match": null,
    "bands": [
     "all"
@@ -30575,7 +30548,34 @@
      "epoch": 0,
      "visit": 0,
      "mjd": 60957.744,
-     "x": 83.09,
+     "x": 90.89,
+     "y": 67.12
+    },
+    {
+     "epoch": 2,
+     "visit": 2,
+     "mjd": 61131.752,
+     "x": 92.56,
+     "y": 67.05
+    }
+   ]
+  },
+  {
+   "id": "m9",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.64,
+   "pm_arcsec_yr": 4.072,
+   "match": null,
+   "bands": [
+    "all"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60957.744,
+     "x": 83.08,
      "y": 65.43
     },
     {

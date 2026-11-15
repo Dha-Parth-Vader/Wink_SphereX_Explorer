@@ -1,45 +1,45 @@
 {
  "id": "rhya",
- "pipeline_version": "1",
- "reference_visit": 2,
+ "pipeline_version": "2",
+ "reference_visit": 1,
  "visits": [
   {
    "visit": 0,
    "mjd": 60856.815,
    "year": 2025.4957,
-   "n_sources_all": 5,
-   "n_sources_cold": 14,
-   "noise": 0.816134,
+   "n_sources_all": 17,
+   "n_sources_cold": 28,
+   "noise": 0.312626,
    "coverage": 0.993,
    "offset_px": [
-    0.027,
-    0.012
+    0.01,
+    -0.01
    ]
   },
   {
    "visit": 1,
    "mjd": 61058.313,
    "year": 2026.0474,
-   "n_sources_all": 5,
-   "n_sources_cold": 5,
-   "noise": 0.783324,
+   "n_sources_all": 21,
+   "n_sources_cold": 10,
+   "noise": 0.272947,
    "coverage": 0.993,
    "offset_px": [
-    -0.02,
-    0.002
+    0.0,
+    0.0
    ]
   },
   {
    "visit": 2,
    "mjd": 61212.285,
    "year": 2026.469,
-   "n_sources_all": 6,
-   "n_sources_cold": 27,
-   "noise": 0.765884,
+   "n_sources_all": 18,
+   "n_sources_cold": 39,
+   "noise": 0.312624,
    "coverage": 0.993,
    "offset_px": [
-    0.0,
-    0.0
+    0.019,
+    -0.014
    ]
   }
  ],
@@ -105,6 +105,6 @@
  },
  "transients": [],
  "notes": [
-  "Visit 2 is the reference because the first visit is noisier or less complete."
+  "Visit 1 is the reference because the first visit is noisier or less complete."
  ]
 }

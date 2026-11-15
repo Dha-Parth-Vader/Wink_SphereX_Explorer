@@ -23,3 +23,18 @@ $ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8
 step 6: identifying 1 target(s)
   IRSA TAP failed (IRSA TAP failed: The read operation timed out); using ESA Gaia archive and IRSA Gator
   gaia17922304: 2/10 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia17922304
+gaia17922304: already clean
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia17922304 --force
+gaia17922304: 3 visits stacked on a 147x147 grid, target offsets [0.05, 0.05, 0.04] px; moved 0.4 px (2.45"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia17922304 --force
+step 5: comparing 1 target(s)
+  gaia17922304: 10 mover(s), target 2.518″/yr, variability steady, 0 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia17922304 --force
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using IRSA Gator, ESA Gaia, Cone Search
+  gaia17922304: 2/10 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids

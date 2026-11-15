@@ -25,7 +25,7 @@ from pathlib import Path
 
 import numpy as np
 
-PIPELINE_VERSION = "1"
+PIPELINE_VERSION = "2"
 
 PIPE = Path(__file__).resolve().parent
 ROOT = PIPE.parent

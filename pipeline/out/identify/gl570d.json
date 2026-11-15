@@ -1,6 +1,6 @@
 {
  "id": "gl570d",
- "pipeline_version": "1",
+ "pipeline_version": "2",
  "catalogues": {
   "gaia": {
    "loaded": true,
@@ -31517,63 +31517,128 @@
  },
  "movers": [
   {
-   "t0": 2025.763,
-   "x0": 133.803,
-   "y0": 91.407,
-   "vx_px_yr": -1.3033,
-   "vy_px_yr": 2.7438,
-   "pm_arcsec_yr": 18.681,
-   "pm_err": 0.573,
-   "significance": 32.6,
-   "pa_deg": 25.4,
-   "snr": 59.6,
+   "t0": 2026.0611,
+   "x0": 14.066,
+   "y0": 44.734,
+   "vx_px_yr": 3.8606,
+   "vy_px_yr": 0.912,
+   "pm_arcsec_yr": 24.396,
+   "pm_err": 0.351,
+   "significance": 69.6,
+   "pa_deg": 283.3,
+   "snr": 121.4,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 134.119,
-     "y": 90.751,
-     "snr": 59.6
+     "x": 12.076,
+     "y": 44.195,
+     "snr": 43.4
     },
     {
      "visit": 1,
-     "x": 133.007,
-     "y": 92.983,
-     "snr": 11.5
+     "x": 14.225,
+     "y": 44.931,
+     "snr": 78.9
     },
     {
      "visit": 3,
-     "x": 133.018,
-     "y": 93.122,
-     "snr": 10.9
+     "x": 15.897,
+     "y": 45.077,
+     "snr": 121.4
+    }
+   ],
+   "bands": [
+    "all",
+    "cold"
+   ],
+   "id": "m1",
+   "is_target": false,
+   "ra_2026": 224.429319,
+   "dec_2026": -21.424616,
+   "pmra_mas": -23742.7,
+   "pmdec_mas": 5608.8,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232507926049859456",
+     "sep_arcsec": 11.02,
+     "pm_catalog_arcsec_yr": 0.004,
+     "pm_measured_arcsec_yr": 24.396,
+     "mag": 18.157696
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145800.70-212630.4",
+     "sep_arcsec": 5.65,
+     "pm_catalog_arcsec_yr": 0.088,
+     "pm_measured_arcsec_yr": 24.396,
+     "mag": 16.266
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2025.9069,
+   "x0": 133.571,
+   "y0": 91.846,
+   "vx_px_yr": -1.2608,
+   "vy_px_yr": 2.6662,
+   "pm_arcsec_yr": 18.138,
+   "pm_err": 0.438,
+   "significance": 41.5,
+   "pa_deg": 25.3,
+   "snr": 93.8,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 134.099,
+     "y": 90.751,
+     "snr": 93.8
+    },
+    {
+     "visit": 1,
+     "x": 132.987,
+     "y": 92.979,
+     "snr": 17.5
+    },
+    {
+     "visit": 3,
+     "x": 133.0,
+     "y": 93.121,
+     "snr": 16.2
     }
    ],
    "bands": [
     "all"
    ],
-   "id": "m1",
+   "id": "m2",
    "is_target": false,
-   "ra_2026": 224.20978,
-   "dec_2026": -21.343675,
-   "pmra_mas": 8015.3,
-   "pmdec_mas": 16874.4,
+   "ra_2026": 224.209854,
+   "dec_2026": -21.343612,
+   "pmra_mas": 7753.9,
+   "pmdec_mas": 16397.1,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
      "id": "Gaia DR3 6232325613282333824",
-     "sep_arcsec": 9.41,
+     "sep_arcsec": 11.22,
      "pm_catalog_arcsec_yr": 0.019,
-     "pm_measured_arcsec_yr": 18.681,
+     "pm_measured_arcsec_yr": 18.138,
      "mag": 20.499504
     },
     "wise": {
      "catalog": "CatWISE2020",
      "id": "CatWISE J145644.91-212334.3",
-     "sep_arcsec": 9.43,
+     "sep_arcsec": 7.2,
      "pm_catalog_arcsec_yr": 0.098,
-     "pm_measured_arcsec_yr": 18.681,
+     "pm_measured_arcsec_yr": 18.138,
      "mag": 18.024
     }
    },
@@ -31581,100 +31646,30 @@
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2025.8321,
-   "x0": 140.125,
-   "y0": 100.37,
-   "vx_px_yr": 2.9462,
-   "vy_px_yr": -0.9048,
-   "pm_arcsec_yr": 18.955,
-   "pm_err": 1.15,
-   "significance": 16.5,
-   "pa_deg": 252.9,
-   "snr": 10.6,
-   "n_visits": 3,
+   "t0": 2026.4523,
+   "x0": 89.002,
+   "y0": 65.334,
+   "vx_px_yr": -5.0989,
+   "vy_px_yr": -0.6647,
+   "pm_arcsec_yr": 31.623,
+   "pm_err": 1.301,
+   "significance": 24.3,
+   "pa_deg": 97.4,
+   "snr": 66.1,
+   "n_visits": 2,
    "saturated": false,
    "positions": [
     {
-     "visit": 0,
-     "x": 139.199,
-     "y": 100.653,
-     "snr": 10.6
-    },
-    {
      "visit": 1,
-     "x": 141.711,
-     "y": 99.896,
-     "snr": 5.1
+     "x": 90.783,
+     "y": 65.566,
+     "snr": 12.2
     },
     {
      "visit": 3,
-     "x": 141.866,
-     "y": 99.83,
-     "snr": 5.9
-    }
-   ],
-   "bands": [
-    "cold"
-   ],
-   "id": "m2",
-   "is_target": false,
-   "ra_2026": 224.196723,
-   "dec_2026": -21.329725,
-   "pmra_mas": -18119.1,
-   "pmdec_mas": -5564.5,
-   "matches": {},
-   "motion_mismatch": {
-    "gaia": {
-     "catalog": "Gaia DR3",
-     "id": "Gaia DR3 6232701616191386240",
-     "sep_arcsec": 32.19,
-     "pm_catalog_arcsec_yr": 0.002,
-     "pm_measured_arcsec_yr": 18.954,
-     "mag": 18.9807
-    },
-    "wise": {
-     "catalog": "CatWISE2020",
-     "id": "CatWISE J145701.78-211845.2",
-     "sep_arcsec": 11.8,
-     "pm_catalog_arcsec_yr": 0.472,
-     "pm_measured_arcsec_yr": 18.954,
-     "mag": 18.485
-    }
-   },
-   "confirmed": false,
-   "catwise_gaia_disagree": false
-  },
-  {
-   "t0": 2026.0275,
-   "x0": 54.401,
-   "y0": 21.243,
-   "vx_px_yr": 2.7561,
-   "vy_px_yr": 1.2274,
-   "pm_arcsec_yr": 18.555,
-   "pm_err": 1.273,
-   "significance": 14.6,
-   "pa_deg": 294.0,
-   "snr": 7.2,
-   "n_visits": 3,
-   "saturated": false,
-   "positions": [
-    {
-     "visit": 0,
-     "x": 53.083,
-     "y": 20.694,
-     "snr": 7.2
-    },
-    {
-     "visit": 1,
-     "x": 54.576,
-     "y": 21.208,
-     "snr": 6.2
-    },
-    {
-     "visit": 3,
-     "x": 55.817,
-     "y": 21.931,
-     "snr": 6.6
+     "x": 88.58,
+     "y": 65.279,
+     "snr": 66.1
     }
    ],
    "bands": [
@@ -31682,57 +31677,57 @@
    ],
    "id": "m3",
    "is_target": false,
-   "ra_2026": 224.355014,
-   "dec_2026": -21.46474,
-   "pmra_mas": -16950.0,
-   "pmdec_mas": 7548.5,
+   "ra_2026": 224.287144,
+   "dec_2026": -21.388847,
+   "pmra_mas": 31358.2,
+   "pmdec_mas": -4087.9,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
-     "id": "Gaia DR3 6232132752067865856",
-     "sep_arcsec": 12.27,
-     "pm_catalog_arcsec_yr": 0.01,
-     "pm_measured_arcsec_yr": 18.555,
-     "mag": 19.596855
+     "id": "Gaia DR3 6232325720653176576",
+     "sep_arcsec": 19.24,
+     "pm_catalog_arcsec_yr": 0.02,
+     "pm_measured_arcsec_yr": 31.624,
+     "mag": 20.621372
     },
     "wise": {
      "catalog": "CatWISE2020",
-     "id": "CatWISE J145739.34-212907.6",
-     "sep_arcsec": 18.46,
-     "pm_catalog_arcsec_yr": 0.037,
-     "pm_measured_arcsec_yr": 18.555,
-     "mag": 17.397
+     "id": "CatWISE J145644.56-212236.1",
+     "sep_arcsec": 7.7,
+     "pm_catalog_arcsec_yr": 0.22,
+     "pm_measured_arcsec_yr": 31.624,
+     "mag": 18.31
     }
    },
    "confirmed": false,
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.3983,
-   "x0": 25.034,
-   "y0": 50.22,
-   "vx_px_yr": 1.8008,
-   "vy_px_yr": 4.4917,
-   "pm_arcsec_yr": 29.761,
-   "pm_err": 2.075,
-   "significance": 14.3,
-   "pa_deg": 338.2,
-   "snr": 12.2,
+   "t0": 2025.8007,
+   "x0": 23.264,
+   "y0": 40.031,
+   "vx_px_yr": 2.0621,
+   "vy_px_yr": 2.999,
+   "pm_arcsec_yr": 22.383,
+   "pm_err": 1.245,
+   "significance": 18.0,
+   "pa_deg": 325.5,
+   "snr": 13.1,
    "n_visits": 2,
    "saturated": false,
    "positions": [
     {
-     "visit": 1,
-     "x": 24.502,
-     "y": 48.893,
-     "snr": 8.3
+     "visit": 0,
+     "x": 22.737,
+     "y": 39.265,
+     "snr": 13.1
     },
     {
-     "visit": 3,
-     "x": 25.28,
-     "y": 50.834,
-     "snr": 12.2
+     "visit": 1,
+     "x": 23.887,
+     "y": 40.937,
+     "snr": 12.0
     }
    ],
    "bands": [
@@ -31740,63 +31735,63 @@
    ],
    "id": "m4",
    "is_target": false,
-   "ra_2026": 224.410071,
-   "dec_2026": -21.418216,
-   "pmra_mas": -11074.9,
-   "pmdec_mas": 27624.0,
+   "ra_2026": 224.411257,
+   "dec_2026": -21.431545,
+   "pmra_mas": -12681.9,
+   "pmdec_mas": 18443.9,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
-     "id": "Gaia DR3 6232507273214698880",
-     "sep_arcsec": 9.17,
-     "pm_catalog_arcsec_yr": 0.024,
-     "pm_measured_arcsec_yr": 29.761,
-     "mag": 19.302223
+     "id": "Gaia DR3 6232507376293915264",
+     "sep_arcsec": 22.44,
+     "pm_catalog_arcsec_yr": 0.003,
+     "pm_measured_arcsec_yr": 22.383,
+     "mag": 20.114883
     },
     "wise": {
      "catalog": "CatWISE2020",
-     "id": "CatWISE J145746.57-212954.1",
-     "sep_arcsec": 5.57,
-     "pm_catalog_arcsec_yr": 0.421,
-     "pm_measured_arcsec_yr": 29.761,
-     "mag": 18.137
+     "id": "CatWISE J145748.41-212916.8",
+     "sep_arcsec": 7.91,
+     "pm_catalog_arcsec_yr": 0.158,
+     "pm_measured_arcsec_yr": 22.383,
+     "mag": 17.37
     }
    },
    "confirmed": false,
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2025.8037,
-   "x0": 113.476,
-   "y0": 56.724,
-   "vx_px_yr": -2.5724,
-   "vy_px_yr": 0.7255,
-   "pm_arcsec_yr": 16.437,
-   "pm_err": 1.266,
-   "significance": 13.0,
-   "pa_deg": 74.2,
-   "snr": 10.4,
+   "t0": 2025.8327,
+   "x0": 140.108,
+   "y0": 100.382,
+   "vx_px_yr": 2.9313,
+   "vy_px_yr": -0.9141,
+   "pm_arcsec_yr": 18.884,
+   "pm_err": 1.119,
+   "significance": 16.9,
+   "pa_deg": 252.7,
+   "snr": 10.8,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 114.226,
-     "y": 56.516,
-     "snr": 10.4
+     "x": 139.185,
+     "y": 100.669,
+     "snr": 10.8
     },
     {
      "visit": 1,
-     "x": 112.009,
-     "y": 57.114,
-     "snr": 5.5
+     "x": 141.692,
+     "y": 99.902,
+     "snr": 5.2
     },
     {
      "visit": 3,
-     "x": 112.055,
-     "y": 57.141,
-     "snr": 5.1
+     "x": 141.841,
+     "y": 99.836,
+     "snr": 6.1
     }
    ],
    "bands": [
@@ -31804,57 +31799,63 @@
    ],
    "id": "m5",
    "is_target": false,
-   "ra_2026": 224.247392,
-   "dec_2026": -21.403814,
-   "pmra_mas": 15820.3,
-   "pmdec_mas": 4461.8,
+   "ra_2026": 224.196762,
+   "dec_2026": -21.329706,
+   "pmra_mas": -18027.5,
+   "pmdec_mas": -5621.7,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
-     "id": "Gaia DR3 6232324685566826880",
-     "sep_arcsec": 20.94,
-     "pm_catalog_arcsec_yr": 0.012,
-     "pm_measured_arcsec_yr": 16.437,
-     "mag": 17.170313
+     "id": "Gaia DR3 6232701616191386240",
+     "sep_arcsec": 31.42,
+     "pm_catalog_arcsec_yr": 0.002,
+     "pm_measured_arcsec_yr": 18.884,
+     "mag": 18.9807
     },
     "wise": {
      "catalog": "CatWISE2020",
-     "id": "CatWISE J145646.89-212512.0",
-     "sep_arcsec": 12.91,
-     "pm_catalog_arcsec_yr": 0.028,
-     "pm_measured_arcsec_yr": 16.437,
-     "mag": 13.856
+     "id": "CatWISE J145701.78-211845.2",
+     "sep_arcsec": 12.48,
+     "pm_catalog_arcsec_yr": 0.472,
+     "pm_measured_arcsec_yr": 18.884,
+     "mag": 18.485
     }
    },
    "confirmed": false,
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.0898,
-   "x0": 47.245,
-   "y0": 20.662,
-   "vx_px_yr": 2.3362,
-   "vy_px_yr": 0.7843,
-   "pm_arcsec_yr": 15.156,
-   "pm_err": 1.195,
-   "significance": 12.7,
-   "pa_deg": 288.6,
-   "snr": 7.7,
-   "n_visits": 2,
+   "t0": 2026.0347,
+   "x0": 54.404,
+   "y0": 21.265,
+   "vx_px_yr": 2.7545,
+   "vy_px_yr": 1.2201,
+   "pm_arcsec_yr": 18.528,
+   "pm_err": 1.136,
+   "significance": 16.3,
+   "pa_deg": 293.9,
+   "snr": 8.0,
+   "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 45.973,
-     "y": 20.235,
-     "snr": 7.0
+     "x": 53.066,
+     "y": 20.712,
+     "snr": 8.0
+    },
+    {
+     "visit": 1,
+     "x": 54.561,
+     "y": 21.214,
+     "snr": 6.9
     },
     {
      "visit": 3,
-     "x": 48.285,
-     "y": 21.011,
-     "snr": 7.7
+     "x": 55.797,
+     "y": 21.94,
+     "snr": 7.5
     }
    ],
    "bands": [
@@ -31862,57 +31863,63 @@
    ],
    "id": "m6",
    "is_target": false,
-   "ra_2026": 224.368397,
-   "dec_2026": -21.465792,
-   "pmra_mas": -14367.6,
-   "pmdec_mas": 4823.4,
+   "ra_2026": 224.355045,
+   "dec_2026": -21.464717,
+   "pmra_mas": -16940.2,
+   "pmdec_mas": 7503.6,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
-     "id": "Gaia DR3 6232508273942786560",
-     "sep_arcsec": 11.14,
-     "pm_catalog_arcsec_yr": 0.007,
-     "pm_measured_arcsec_yr": 15.156,
-     "mag": 20.72616
+     "id": "Gaia DR3 6232132752067865856",
+     "sep_arcsec": 12.15,
+     "pm_catalog_arcsec_yr": 0.01,
+     "pm_measured_arcsec_yr": 18.528,
+     "mag": 19.596855
     },
     "wise": {
      "catalog": "CatWISE2020",
-     "id": "CatWISE J145739.32-212847.4",
-     "sep_arcsec": 0.43,
-     "pm_catalog_arcsec_yr": 0.178,
-     "pm_measured_arcsec_yr": 15.156,
-     "mag": 17.219
+     "id": "CatWISE J145739.34-212907.6",
+     "sep_arcsec": 18.31,
+     "pm_catalog_arcsec_yr": 0.037,
+     "pm_measured_arcsec_yr": 18.528,
+     "mag": 17.397
     }
    },
    "confirmed": false,
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.2666,
-   "x0": 100.785,
-   "y0": 71.289,
-   "vx_px_yr": -3.6311,
-   "vy_px_yr": -4.3239,
-   "pm_arcsec_yr": 34.725,
-   "pm_err": 3.443,
-   "significance": 10.1,
-   "pa_deg": 140.0,
-   "snr": 6.7,
-   "n_visits": 2,
+   "t0": 2026.0422,
+   "x0": 65.518,
+   "y0": 29.819,
+   "vx_px_yr": 2.5674,
+   "vy_px_yr": 2.086,
+   "pm_arcsec_yr": 20.344,
+   "pm_err": 1.285,
+   "significance": 15.8,
+   "pa_deg": 309.1,
+   "snr": 6.9,
+   "n_visits": 3,
    "saturated": false,
    "positions": [
     {
+     "visit": 0,
+     "x": 64.11,
+     "y": 28.767,
+     "snr": 6.9
+    },
+    {
      "visit": 1,
-     "x": 101.379,
-     "y": 71.996,
-     "snr": 6.7
+     "x": 66.168,
+     "y": 30.002,
+     "snr": 5.4
     },
     {
      "visit": 3,
-     "x": 99.81,
-     "y": 70.128,
-     "snr": 5.2
+     "x": 66.6,
+     "y": 30.826,
+     "snr": 6.7
     }
    ],
    "bands": [
@@ -31920,57 +31927,57 @@
    ],
    "id": "m7",
    "is_target": false,
-   "ra_2026": 224.267985,
-   "dec_2026": -21.377213,
-   "pmra_mas": 22331.3,
-   "pmdec_mas": -26592.0,
+   "ra_2026": 224.334666,
+   "dec_2026": -21.450185,
+   "pmra_mas": -15789.5,
+   "pmdec_mas": 12828.9,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
-     "id": "Gaia DR3 6232329495929405824",
-     "sep_arcsec": 22.51,
-     "pm_catalog_arcsec_yr": 0.006,
-     "pm_measured_arcsec_yr": 34.725,
-     "mag": 19.179758
+     "id": "Gaia DR3 6232133026945776000",
+     "sep_arcsec": 28.42,
+     "pm_catalog_arcsec_yr": 0.01,
+     "pm_measured_arcsec_yr": 20.344,
+     "mag": 19.217808
     },
     "wise": {
      "catalog": "CatWISE2020",
-     "id": "CatWISE J145646.96-211750.4",
-     "sep_arcsec": 8.08,
-     "pm_catalog_arcsec_yr": 0.221,
-     "pm_measured_arcsec_yr": 34.725,
-     "mag": 17.459
+     "id": "CatWISE J145732.19-212925.2",
+     "sep_arcsec": 8.79,
+     "pm_catalog_arcsec_yr": 0.675,
+     "pm_measured_arcsec_yr": 20.344,
+     "mag": 18.394
     }
    },
    "confirmed": false,
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.3715,
-   "x0": 46.041,
-   "y0": 68.357,
-   "vx_px_yr": 0.6136,
-   "vy_px_yr": -5.085,
-   "pm_arcsec_yr": 31.5,
-   "pm_err": 3.368,
-   "significance": 9.4,
-   "pa_deg": 186.9,
-   "snr": 6.9,
+   "t0": 2026.4013,
+   "x0": 25.007,
+   "y0": 50.247,
+   "vx_px_yr": 1.7469,
+   "vy_px_yr": 4.5175,
+   "pm_arcsec_yr": 29.787,
+   "pm_err": 1.896,
+   "significance": 15.7,
+   "pa_deg": 338.9,
+   "snr": 13.5,
    "n_visits": 2,
    "saturated": false,
    "positions": [
     {
      "visit": 1,
-     "x": 45.876,
-     "y": 69.723,
-     "snr": 5.4
+     "x": 24.486,
+     "y": 48.899,
+     "snr": 9.0
     },
     {
      "visit": 3,
-     "x": 46.141,
-     "y": 67.525,
-     "snr": 6.9
+     "x": 25.241,
+     "y": 50.851,
+     "snr": 13.5
     }
    ],
    "bands": [
@@ -31978,26 +31985,148 @@
    ],
    "id": "m8",
    "is_target": false,
-   "ra_2026": 224.370611,
-   "dec_2026": -21.380965,
-   "pmra_mas": -3773.6,
-   "pmdec_mas": -31272.8,
+   "ra_2026": 224.410091,
+   "dec_2026": -21.418211,
+   "pmra_mas": -10743.4,
+   "pmdec_mas": 27782.6,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232507273214699136",
+     "sep_arcsec": 12.01,
+     "pm_catalog_arcsec_yr": 0.027,
+     "pm_measured_arcsec_yr": 29.788,
+     "mag": 19.293524
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145746.57-212954.1",
+     "sep_arcsec": 5.84,
+     "pm_catalog_arcsec_yr": 0.421,
+     "pm_measured_arcsec_yr": 29.788,
+     "mag": 18.137
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.0728,
+   "x0": 53.818,
+   "y0": 77.812,
+   "vx_px_yr": -2.7643,
+   "vy_px_yr": -0.2859,
+   "pm_arcsec_yr": 17.091,
+   "pm_err": 1.362,
+   "significance": 12.6,
+   "pa_deg": 95.9,
+   "snr": 6.6,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 55.574,
+     "y": 77.995,
+     "snr": 6.3
+    },
+    {
+     "visit": 1,
+     "x": 53.023,
+     "y": 77.727,
+     "snr": 6.2
+    },
+    {
+     "visit": 3,
+     "x": 52.897,
+     "y": 77.718,
+     "snr": 6.6
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m9",
+   "is_target": false,
+   "ra_2026": 224.355553,
+   "dec_2026": -21.368008,
+   "pmra_mas": 17000.4,
+   "pmdec_mas": -1758.3,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232700443664029056",
+     "sep_arcsec": 14.15,
+     "pm_catalog_arcsec_yr": 0.002,
+     "pm_measured_arcsec_yr": 17.091,
+     "mag": 18.367685
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145712.47-212136.8",
+     "sep_arcsec": 9.33,
+     "pm_catalog_arcsec_yr": 0.039,
+     "pm_measured_arcsec_yr": 17.091,
+     "mag": 16.455
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.3737,
+   "x0": 46.023,
+   "y0": 68.355,
+   "vx_px_yr": 0.5975,
+   "vy_px_yr": -5.0989,
+   "pm_arcsec_yr": 31.573,
+   "pm_err": 3.01,
+   "significance": 10.5,
+   "pa_deg": 186.7,
+   "snr": 7.7,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 45.861,
+     "y": 69.735,
+     "snr": 6.0
+    },
+    {
+     "visit": 3,
+     "x": 46.119,
+     "y": 67.531,
+     "snr": 7.7
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m10",
+   "is_target": false,
+   "ra_2026": 224.370636,
+   "dec_2026": -21.380941,
+   "pmra_mas": -3674.6,
+   "pmdec_mas": -31358.2,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
      "id": "Gaia DR3 6232701130861679616",
-     "sep_arcsec": 23.59,
+     "sep_arcsec": 22.92,
      "pm_catalog_arcsec_yr": 0.002,
-     "pm_measured_arcsec_yr": 31.5,
+     "pm_measured_arcsec_yr": 31.573,
      "mag": 20.496241
     },
     "wise": {
      "catalog": "CatWISE2020",
      "id": "CatWISE J145731.17-211713.3",
-     "sep_arcsec": 11.04,
+     "sep_arcsec": 9.67,
      "pm_catalog_arcsec_yr": 0.186,
-     "pm_measured_arcsec_yr": 31.5,
+     "pm_measured_arcsec_yr": 31.573,
      "mag": 17.667
     }
    },
@@ -32005,57 +32134,231 @@
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.3075,
-   "x0": 66.098,
-   "y0": 48.253,
-   "vx_px_yr": 2.1605,
-   "vy_px_yr": -1.3689,
-   "pm_arcsec_yr": 15.73,
-   "pm_err": 2.152,
-   "significance": 7.3,
-   "pa_deg": 237.6,
-   "snr": 9.6,
+   "t0": 2026.3999,
+   "x0": 53.628,
+   "y0": 66.413,
+   "vx_px_yr": -1.1989,
+   "vy_px_yr": 3.6176,
+   "pm_arcsec_yr": 23.438,
+   "pm_err": 2.333,
+   "significance": 10.0,
+   "pa_deg": 18.3,
+   "snr": 10.9,
    "n_visits": 2,
    "saturated": false,
    "positions": [
     {
      "visit": 1,
-     "x": 65.656,
-     "y": 48.532,
-     "snr": 9.6
+     "x": 53.984,
+     "y": 65.339,
+     "snr": 7.4
     },
     {
      "visit": 3,
-     "x": 66.59,
-     "y": 47.941,
-     "snr": 9.1
+     "x": 53.466,
+     "y": 66.902,
+     "snr": 10.9
     }
    ],
    "bands": [
     "cold"
    ],
-   "id": "m9",
+   "id": "m11",
    "is_target": false,
-   "ra_2026": 224.334619,
-   "dec_2026": -21.417824,
-   "pmra_mas": -13287.1,
-   "pmdec_mas": -8418.7,
+   "ra_2026": 224.355396,
+   "dec_2026": -21.389989,
+   "pmra_mas": 7373.2,
+   "pmdec_mas": 22248.2,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232136222401454336",
+     "sep_arcsec": 2.54,
+     "pm_catalog_arcsec_yr": 0.005,
+     "pm_measured_arcsec_yr": 23.438,
+     "mag": 20.437546
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145719.29-212717.3",
+     "sep_arcsec": 6.16,
+     "pm_catalog_arcsec_yr": 0.172,
+     "pm_measured_arcsec_yr": 23.438,
+     "mag": 16.458
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.3782,
+   "x0": 122.715,
+   "y0": 137.163,
+   "vx_px_yr": 3.0129,
+   "vy_px_yr": 4.3097,
+   "pm_arcsec_yr": 32.339,
+   "pm_err": 3.562,
+   "significance": 9.1,
+   "pa_deg": 325.0,
+   "snr": 6.6,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 121.885,
+     "y": 135.977,
+     "snr": 5.0
+    },
+    {
+     "visit": 3,
+     "x": 123.187,
+     "y": 137.84,
+     "snr": 6.6
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m12",
+   "is_target": false,
+   "ra_2026": 224.231685,
+   "dec_2026": -21.269417,
+   "pmra_mas": -18529.3,
+   "pmdec_mas": 26504.7,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232700718541939200",
+     "sep_arcsec": 21.19,
+     "pm_catalog_arcsec_yr": 0.024,
+     "pm_measured_arcsec_yr": 32.339,
+     "mag": 18.109833
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145710.23-212052.3",
+     "sep_arcsec": 8.25,
+     "pm_catalog_arcsec_yr": 0.555,
+     "pm_measured_arcsec_yr": 32.339,
+     "mag": 18.816
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.3513,
+   "x0": 70.721,
+   "y0": 42.247,
+   "vx_px_yr": -5.2235,
+   "vy_px_yr": 0.745,
+   "pm_arcsec_yr": 32.45,
+   "pm_err": 3.731,
+   "significance": 8.7,
+   "pa_deg": 81.9,
+   "snr": 5.9,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 72.018,
+     "y": 42.062,
+     "snr": 5.0
+    },
+    {
+     "visit": 3,
+     "x": 69.761,
+     "y": 42.384,
+     "snr": 5.9
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m13",
+   "is_target": false,
+   "ra_2026": 224.321549,
+   "dec_2026": -21.429251,
+   "pmra_mas": 32124.5,
+   "pmdec_mas": 4581.8,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232324410687896448",
+     "sep_arcsec": 10.51,
+     "pm_catalog_arcsec_yr": 0.011,
+     "pm_measured_arcsec_yr": 32.45,
+     "mag": 16.802994
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145653.14-212630.9",
+     "sep_arcsec": 5.8,
+     "pm_catalog_arcsec_yr": 0.168,
+     "pm_measured_arcsec_yr": 32.45,
+     "mag": 18.087
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.3132,
+   "x0": 66.093,
+   "y0": 48.252,
+   "vx_px_yr": 2.1542,
+   "vy_px_yr": -1.3675,
+   "pm_arcsec_yr": 15.693,
+   "pm_err": 1.975,
+   "significance": 7.9,
+   "pa_deg": 237.6,
+   "snr": 10.3,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 65.64,
+     "y": 48.54,
+     "snr": 10.3
+    },
+    {
+     "visit": 3,
+     "x": 66.571,
+     "y": 47.949,
+     "snr": 10.1
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m14",
+   "is_target": false,
+   "ra_2026": 224.334647,
+   "dec_2026": -21.417814,
+   "pmra_mas": -13248.3,
+   "pmdec_mas": -8410.1,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
      "id": "Gaia DR3 6232511778637263616",
-     "sep_arcsec": 6.58,
+     "sep_arcsec": 6.29,
      "pm_catalog_arcsec_yr": 0.009,
-     "pm_measured_arcsec_yr": 15.73,
+     "pm_measured_arcsec_yr": 15.692,
      "mag": 20.400473
     },
     "wise": {
      "catalog": "CatWISE2020",
      "id": "CatWISE J145733.94-212253.3",
-     "sep_arcsec": 64.71,
+     "sep_arcsec": 64.99,
      "pm_catalog_arcsec_yr": 0.014,
-     "pm_measured_arcsec_yr": 15.73,
+     "pm_measured_arcsec_yr": 15.692,
      "mag": 14.673
     }
    },
@@ -32063,54 +32366,332 @@
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.0611,
-   "x0": 72.968,
-   "y0": 72.98,
-   "vx_px_yr": -0.1768,
-   "vy_px_yr": -0.3075,
-   "pm_arcsec_yr": 2.181,
-   "pm_err": 0.351,
-   "significance": 6.2,
-   "pa_deg": 150.1,
-   "snr": 102.6,
+   "t0": 2026.0175,
+   "x0": 72.584,
+   "y0": 57.202,
+   "vx_px_yr": -0.1521,
+   "vy_px_yr": 0.9461,
+   "pm_arcsec_yr": 5.893,
+   "pm_err": 0.756,
+   "significance": 7.8,
+   "pa_deg": 9.1,
+   "snr": 12.2,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 73.068,
-     "y": 73.147,
-     "snr": 101.6
+     "x": 72.67,
+     "y": 56.654,
+     "snr": 12.2
     },
     {
      "visit": 1,
-     "x": 72.941,
-     "y": 72.949,
-     "snr": 89.8
+     "x": 72.523,
+     "y": 57.617,
+     "snr": 10.2
     },
     {
      "visit": 3,
-     "x": 72.895,
-     "y": 72.845,
-     "snr": 102.6
+     "x": 72.528,
+     "y": 57.528,
+     "snr": 10.9
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m15",
+   "is_target": false,
+   "ra_2026": 224.321492,
+   "dec_2026": -21.403285,
+   "pmra_mas": 935.4,
+   "pmdec_mas": 5818.5,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232137150114718208",
+     "sep_arcsec": 5.81,
+     "pm_catalog_arcsec_yr": 0.008,
+     "pm_measured_arcsec_yr": 5.893,
+     "mag": 19.617741
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145715.51-212502.9",
+     "sep_arcsec": 16.77,
+     "pm_catalog_arcsec_yr": 0.068,
+     "pm_measured_arcsec_yr": 5.893,
+     "mag": 16.472
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.3338,
+   "x0": 56.256,
+   "y0": 22.454,
+   "vx_px_yr": -2.2818,
+   "vy_px_yr": -2.5521,
+   "pm_arcsec_yr": 21.054,
+   "pm_err": 2.798,
+   "significance": 7.5,
+   "pa_deg": 138.2,
+   "snr": 7.5,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 56.783,
+     "y": 23.043,
+     "snr": 7.0
+    },
+    {
+     "visit": 3,
+     "x": 55.797,
+     "y": 21.94,
+     "snr": 7.5
     }
    ],
    "bands": [
     "cold"
    ],
-   "id": "m10",
+   "id": "m16",
+   "is_target": false,
+   "ra_2026": 224.350071,
+   "dec_2026": -21.461159,
+   "pmra_mas": 14033.1,
+   "pmdec_mas": -15695.4,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232137115754659328",
+     "sep_arcsec": 9.67,
+     "pm_catalog_arcsec_yr": 0.002,
+     "pm_measured_arcsec_yr": 21.054,
+     "mag": 18.722414
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145713.37-212452.2",
+     "sep_arcsec": 1.54,
+     "pm_catalog_arcsec_yr": 0.495,
+     "pm_measured_arcsec_yr": 21.054,
+     "mag": 17.993
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.0182,
+   "x0": 59.785,
+   "y0": 67.363,
+   "vx_px_yr": 0.3065,
+   "vy_px_yr": 0.4602,
+   "pm_arcsec_yr": 3.401,
+   "pm_err": 0.494,
+   "significance": 6.9,
+   "pa_deg": 326.3,
+   "snr": 18.7,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 59.648,
+     "y": 67.129,
+     "snr": 18.7
+    },
+    {
+     "visit": 1,
+     "x": 59.782,
+     "y": 67.459,
+     "snr": 15.5
+    },
+    {
+     "visit": 3,
+     "x": 59.957,
+     "y": 67.574,
+     "snr": 16.8
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m17",
+   "is_target": false,
+   "ra_2026": 224.344989,
+   "dec_2026": -21.38591,
+   "pmra_mas": -1885.0,
+   "pmdec_mas": 2830.2,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232512495896561536",
+     "sep_arcsec": 20.56,
+     "pm_catalog_arcsec_yr": 0.02,
+     "pm_measured_arcsec_yr": 3.4,
+     "mag": 17.032326
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2025.8071,
+   "x0": 28.259,
+   "y0": 43.02,
+   "vx_px_yr": -0.7019,
+   "vy_px_yr": -0.1319,
+   "pm_arcsec_yr": 4.392,
+   "pm_err": 0.644,
+   "significance": 6.8,
+   "pa_deg": 100.6,
+   "snr": 25.4,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 28.443,
+     "y": 43.055,
+     "snr": 25.4
+    },
+    {
+     "visit": 1,
+     "x": 28.052,
+     "y": 42.981,
+     "snr": 23.5
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m18",
+   "is_target": false,
+   "ra_2026": 224.40309,
+   "dec_2026": -21.427507,
+   "pmra_mas": 4316.7,
+   "pmdec_mas": -811.2,
+   "matches": {},
+   "motion_mismatch": {},
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.2737,
+   "x0": 38.601,
+   "y0": 19.271,
+   "vx_px_yr": 1.402,
+   "vy_px_yr": -3.3653,
+   "pm_arcsec_yr": 22.421,
+   "pm_err": 3.4,
+   "significance": 6.6,
+   "pa_deg": 202.6,
+   "snr": 6.7,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 38.362,
+     "y": 19.845,
+     "snr": 6.7
+    },
+    {
+     "visit": 3,
+     "x": 38.968,
+     "y": 18.391,
+     "snr": 5.4
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m19",
+   "is_target": false,
+   "ra_2026": 224.384584,
+   "dec_2026": -21.466469,
+   "pmra_mas": -8622.3,
+   "pmdec_mas": -20696.6,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232511538117449984",
+     "sep_arcsec": 16.32,
+     "pm_catalog_arcsec_yr": 0.009,
+     "pm_measured_arcsec_yr": 22.421,
+     "mag": 19.33795
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145739.18-212408.5",
+     "sep_arcsec": 12.28,
+     "pm_catalog_arcsec_yr": 1.948,
+     "pm_measured_arcsec_yr": 22.421,
+     "mag": 15.397
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.0611,
+   "x0": 72.952,
+   "y0": 72.99,
+   "vx_px_yr": -0.1826,
+   "vy_px_yr": -0.3153,
+   "pm_arcsec_yr": 2.241,
+   "pm_err": 0.351,
+   "significance": 6.4,
+   "pa_deg": 149.9,
+   "snr": 106.7,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 73.054,
+     "y": 73.162,
+     "snr": 104.8
+    },
+    {
+     "visit": 1,
+     "x": 72.925,
+     "y": 72.956,
+     "snr": 92.5
+    },
+    {
+     "visit": 3,
+     "x": 72.876,
+     "y": 72.853,
+     "snr": 106.7
+    }
+   ],
+   "bands": [
+    "all",
+    "cold"
+   ],
+   "id": "m20",
    "is_target": true,
-   "ra_2026": 224.320773,
-   "dec_2026": -21.37627,
-   "pmra_mas": 1087.3,
-   "pmdec_mas": -1891.1,
+   "ra_2026": 224.320802,
+   "dec_2026": -21.376252,
+   "pmra_mas": 1123.0,
+   "pmdec_mas": -1939.1,
    "matches": {
     "wise": {
      "catalog": "CatWISE2020",
      "id": "CatWISE J145716.20-212216.3",
-     "sep_arcsec": 1.98,
+     "sep_arcsec": 2.62,
      "pm_catalog_arcsec_yr": 1.979,
-     "pm_measured_arcsec_yr": 2.181,
+     "pm_measured_arcsec_yr": 2.241,
      "mag": 15.756
     }
    },
@@ -32119,64 +32700,128 @@
    "catwise_gaia_disagree": false
   },
   {
-   "t0": 2026.0787,
-   "x0": 51.365,
-   "y0": 21.21,
-   "vx_px_yr": 0.8747,
-   "vy_px_yr": 0.3763,
-   "pm_arcsec_yr": 5.856,
-   "pm_err": 1.067,
-   "significance": 5.5,
-   "pa_deg": 293.3,
-   "snr": 8.5,
+   "t0": 2026.0821,
+   "x0": 51.351,
+   "y0": 21.223,
+   "vx_px_yr": 0.8693,
+   "vy_px_yr": 0.3683,
+   "pm_arcsec_yr": 5.806,
+   "pm_err": 0.964,
+   "significance": 6.0,
+   "pa_deg": 293.0,
+   "snr": 9.4,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 50.927,
-     "y": 21.053,
-     "snr": 8.0
+     "x": 50.913,
+     "y": 21.07,
+     "snr": 8.8
     },
     {
      "visit": 1,
-     "x": 51.322,
-     "y": 21.123,
-     "snr": 8.2
+     "x": 51.304,
+     "y": 21.129,
+     "snr": 8.9
     },
     {
      "visit": 3,
-     "x": 51.798,
-     "y": 21.433,
-     "snr": 8.5
+     "x": 51.778,
+     "y": 21.441,
+     "snr": 9.4
     }
    ],
    "bands": [
     "cold"
    ],
-   "id": "m11",
+   "id": "m21",
    "is_target": false,
-   "ra_2026": 224.360575,
-   "dec_2026": -21.464788,
-   "pmra_mas": -5379.4,
-   "pmdec_mas": 2314.2,
+   "ra_2026": 224.360605,
+   "dec_2026": -21.464767,
+   "pmra_mas": -5346.2,
+   "pmdec_mas": 2265.0,
    "matches": {},
    "motion_mismatch": {
     "gaia": {
      "catalog": "Gaia DR3",
      "id": "Gaia DR3 6232135951817674240",
-     "sep_arcsec": 20.23,
+     "sep_arcsec": 19.9,
      "pm_catalog_arcsec_yr": 0.008,
-     "pm_measured_arcsec_yr": 5.856,
+     "pm_measured_arcsec_yr": 5.806,
      "mag": 19.75927
     },
     "wise": {
      "catalog": "CatWISE2020",
      "id": "CatWISE J145728.98-212812.2",
-     "sep_arcsec": 23.56,
+     "sep_arcsec": 23.18,
      "pm_catalog_arcsec_yr": 0.073,
-     "pm_measured_arcsec_yr": 5.856,
+     "pm_measured_arcsec_yr": 5.806,
      "mag": 15.985
+    }
+   },
+   "confirmed": false,
+   "catwise_gaia_disagree": false
+  },
+  {
+   "t0": 2026.0919,
+   "x0": 19.469,
+   "y0": 7.893,
+   "vx_px_yr": -0.2842,
+   "vy_px_yr": -0.7233,
+   "pm_arcsec_yr": 4.779,
+   "pm_err": 0.914,
+   "significance": 5.2,
+   "pa_deg": 158.5,
+   "snr": 10.1,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 19.523,
+     "y": 8.162,
+     "snr": 9.2
+    },
+    {
+     "visit": 1,
+     "x": 19.675,
+     "y": 8.145,
+     "snr": 9.7
+    },
+    {
+     "visit": 3,
+     "x": 19.235,
+     "y": 7.438,
+     "snr": 10.1
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m22",
+   "is_target": false,
+   "ra_2026": 224.418965,
+   "dec_2026": -21.48735,
+   "pmra_mas": 1747.8,
+   "pmdec_mas": -4448.3,
+   "matches": {},
+   "motion_mismatch": {
+    "gaia": {
+     "catalog": "Gaia DR3",
+     "id": "Gaia DR3 6232508273942786560",
+     "sep_arcsec": 6.58,
+     "pm_catalog_arcsec_yr": 0.007,
+     "pm_measured_arcsec_yr": 4.779,
+     "mag": 20.72616
+    },
+    "wise": {
+     "catalog": "CatWISE2020",
+     "id": "CatWISE J145739.02-212831.4",
+     "sep_arcsec": 4.98,
+     "pm_catalog_arcsec_yr": 0.25,
+     "pm_measured_arcsec_yr": 4.779,
+     "mag": 16.95
     }
    },
    "confirmed": false,
@@ -32262,10 +32907,10 @@
     ],
     "found": true,
     "measured": [
-     73.06,
-     73.15
+     73.05,
+     73.13
     ],
-    "offset_px": 0.029,
+    "offset_px": 0.028,
     "saturated": false
    },
    {
@@ -32279,7 +32924,7 @@
      72.92,
      72.96
     ],
-    "offset_px": 0.061,
+    "offset_px": 0.067,
     "saturated": false
    },
    {
@@ -32290,22 +32935,21 @@
     ],
     "found": true,
     "measured": [
-     72.9,
-     72.85
+     72.88,
+     72.89
     ],
-    "offset_px": 0.019,
+    "offset_px": 0.052,
     "saturated": false
    }
   ],
-  "mean_offset_px": 0.036,
+  "mean_offset_px": 0.049,
   "within_third_px": true,
-  "mover": "m10",
+  "mover": "m20",
   "saturated": false,
-  "band": "cold",
   "expected_pm_arcsec_yr": 1.979,
-  "measured_pm_arcsec_yr": 2.181,
+  "measured_pm_arcsec_yr": 2.241,
   "confirmed": true,
-  "pm_ratio": 1.102
+  "pm_ratio": 1.132
  },
  "notes": [],
  "errors": []

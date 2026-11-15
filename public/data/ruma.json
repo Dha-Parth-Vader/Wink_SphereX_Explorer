@@ -10,7 +10,7 @@
   "epoch": 2026.0,
   "fov_deg": 0.2511,
   "pixel_scale_arcsec": 6.15,
-  "pipeline_version": "1"
+  "pipeline_version": "2"
  },
  "frames": [
   {
@@ -29,9 +29,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.020506,
-    "knee": 0.192513,
-    "top": 1232.291367
+    "black": 0.010448,
+    "knee": 0.074289,
+    "top": 1232.409043
    },
    "flags": [
     "226 pixels bled into by a saturated star",
@@ -77,9 +77,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.004652,
-    "knee": 0.168659,
-    "top": 338.88055
+    "black": 0.007789,
+    "knee": 0.089381,
+    "top": 339.039956
    },
    "flags": [
     "160 pixels bled into by a saturated star",
@@ -122,9 +122,9 @@
    "coverage": 0.979,
    "saturated": true,
    "stretch": {
-    "black": -0.023933,
-    "knee": 0.207067,
-    "top": 823.814935
+    "black": 0.011617,
+    "knee": 0.08439,
+    "top": 824.054742
    },
    "flags": [
     "166 pixels bled into by a saturated star",
@@ -164,9 +164,9 @@
    "coverage": 0.998,
    "saturated": true,
    "stretch": {
-    "black": -0.026835,
-    "knee": 0.281311,
-    "top": 730.357815
+    "black": 0.015103,
+    "knee": 0.116688,
+    "top": 730.587546
    },
    "flags": [
     "206 pixels bled into by a saturated star",
@@ -209,9 +209,9 @@
    "coverage": 0.996,
    "saturated": true,
    "stretch": {
-    "black": -0.018087,
-    "knee": 0.18009,
-    "top": 942.289512
+    "black": 0.010061,
+    "knee": 0.071984,
+    "top": 942.452006
    },
    "flags": [
     "375 pixels bled into by a saturated star",
@@ -252,9 +252,9 @@
    "coverage": 0.984,
    "saturated": true,
    "stretch": {
-    "black": -0.025481,
-    "knee": 0.214465,
-    "top": 2840.363453
+    "black": 0.012104,
+    "knee": 0.087228,
+    "top": 2840.532643
    },
    "flags": [
     "251 pixels bled into by a saturated star",
@@ -294,9 +294,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.017734,
-    "knee": 0.180872,
-    "top": 3002.295549
+    "black": 0.0094,
+    "knee": 0.083146,
+    "top": 3002.504534
    },
    "flags": [
     "197 pixels bled into by a saturated star",
@@ -336,9 +336,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.020506,
-    "knee": 0.192513,
-    "top": 1232.291367
+    "black": 0.010448,
+    "knee": 0.074289,
+    "top": 1232.409043
    },
    "flags": [
     "180 pixels bled into by a saturated star",
@@ -383,9 +383,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.004652,
-    "knee": 0.168659,
-    "top": 338.88055
+    "black": 0.007789,
+    "knee": 0.089381,
+    "top": 339.039956
    },
    "flags": [
     "109 pixels bled into by a saturated star",
@@ -426,9 +426,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.023933,
-    "knee": 0.207067,
-    "top": 823.814935
+    "black": 0.011617,
+    "knee": 0.08439,
+    "top": 824.054742
    },
    "flags": [
     "145 pixels bled into by a saturated star",
@@ -468,9 +468,9 @@
    "coverage": 0.998,
    "saturated": true,
    "stretch": {
-    "black": -0.026835,
-    "knee": 0.281311,
-    "top": 730.357815
+    "black": 0.015103,
+    "knee": 0.116688,
+    "top": 730.587546
    },
    "flags": [
     "174 pixels bled into by a saturated star",
@@ -512,9 +512,9 @@
    "coverage": 0.998,
    "saturated": true,
    "stretch": {
-    "black": -0.018087,
-    "knee": 0.18009,
-    "top": 942.289512
+    "black": 0.010061,
+    "knee": 0.071984,
+    "top": 942.452006
    },
    "flags": [
     "311 pixels bled into by a saturated star",
@@ -555,9 +555,9 @@
    "coverage": 0.999,
    "saturated": true,
    "stretch": {
-    "black": -0.025481,
-    "knee": 0.214465,
-    "top": 2840.363453
+    "black": 0.012104,
+    "knee": 0.087228,
+    "top": 2840.532643
    },
    "flags": [
     "209 pixels bled into by a saturated star",
@@ -596,9 +596,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.017734,
-    "knee": 0.180872,
-    "top": 3002.295549
+    "black": 0.0094,
+    "knee": 0.083146,
+    "top": 3002.504534
    },
    "flags": [
     "133 pixels bled into by a saturated star",
@@ -17948,8 +17948,8 @@
    "id": "m1",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.76,
-   "pm_arcsec_yr": 6.197,
+   "confidence": 0.77,
+   "pm_arcsec_yr": 6.451,
    "match": null,
    "bands": [
     "all"
@@ -17959,8 +17959,8 @@
      "epoch": 0,
      "visit": 0,
      "mjd": 60970.663,
-     "x": 74.09,
-     "y": 99.08
+     "x": 74.07,
+     "y": 99.06
     },
     {
      "epoch": 1,
@@ -17968,6 +17968,168 @@
      "mjd": 61142.976,
      "x": 74.1,
      "y": 99.56
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.73,
+   "pm_arcsec_yr": 16.496,
+   "match": null,
+   "bands": [
+    "all"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60970.663,
+     "x": 114.73,
+     "y": 81.76
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61142.976,
+     "x": 113.63,
+     "y": 81.14
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.68,
+   "pm_arcsec_yr": 18.675,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60970.663,
+     "x": 66.96,
+     "y": 118.58
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61142.976,
+     "x": 68.29,
+     "y": 118.04
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.66,
+   "pm_arcsec_yr": 11.027,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60970.663,
+     "x": 113.78,
+     "y": 72.08
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61142.976,
+     "x": 112.94,
+     "y": 71.99
+    }
+   ]
+  },
+  {
+   "id": "m5",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.64,
+   "pm_arcsec_yr": 17.602,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60970.663,
+     "x": 30.29,
+     "y": 57.11
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61142.976,
+     "x": 28.99,
+     "y": 57.46
+    }
+   ]
+  },
+  {
+   "id": "m6",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.62,
+   "pm_arcsec_yr": 5.263,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60970.663,
+     "x": 98.55,
+     "y": 101.83
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61142.976,
+     "x": 98.93,
+     "y": 101.95
+    }
+   ]
+  },
+  {
+   "id": "m7",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.62,
+   "pm_arcsec_yr": 12.132,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60970.663,
+     "x": 50.2,
+     "y": 35.42
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61142.976,
+     "x": 50.94,
+     "y": 34.85
     }
    ]
   }

@@ -10,7 +10,7 @@
   "epoch": 2026.0,
   "fov_deg": 0.2511,
   "pixel_scale_arcsec": 6.15,
-  "pipeline_version": "1"
+  "pipeline_version": "2"
  },
  "frames": [
   {
@@ -29,9 +29,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001034,
-    "knee": 0.049144,
-    "top": 95.295794
+    "black": 0.001239,
+    "knee": 0.047182,
+    "top": 95.300845
    },
    "flags": [
     "52 pixels bled into by a saturated star",
@@ -75,9 +75,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.000961,
-    "knee": 0.061463,
-    "top": 117.449288
+    "black": 0.002119,
+    "knee": 0.05752,
+    "top": 117.455631
    },
    "flags": [
     "57 pixels bled into by a saturated star",
@@ -118,9 +118,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001886,
-    "knee": 0.071939,
-    "top": 119.900552
+    "black": 0.002014,
+    "knee": 0.066586,
+    "top": 119.908158
    },
    "flags": [
     "81 pixels bled into by a saturated star",
@@ -158,9 +158,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001838,
-    "knee": 0.064141,
-    "top": 94.523449
+    "black": 0.001609,
+    "knee": 0.060629,
+    "top": 94.527307
    },
    "flags": [
     "81 pixels bled into by a saturated star",
@@ -201,9 +201,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001053,
-    "knee": 0.043859,
-    "top": 65.528081
+    "black": 0.000857,
+    "knee": 0.042781,
+    "top": 65.531108
    },
    "flags": [
     "75 pixels bled into by a saturated star",
@@ -244,9 +244,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000501,
-    "knee": 0.043499,
-    "top": 68.826566
+    "black": 0.001418,
+    "knee": 0.043335,
+    "top": 68.828025
    },
    "flags": [
     "11 pixels bled into by a saturated star",
@@ -285,9 +285,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.00131,
-    "knee": 0.055517,
-    "top": 37.283409
+    "black": 0.001721,
+    "knee": 0.055481,
+    "top": 37.284222
    },
    "flags": [
     "5 pixels bled into by a saturated star",
@@ -326,9 +326,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001034,
-    "knee": 0.049144,
-    "top": 95.295794
+    "black": 0.001239,
+    "knee": 0.047182,
+    "top": 95.300845
    },
    "flags": [
     "53 pixels bled into by a saturated star",
@@ -374,9 +374,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.000961,
-    "knee": 0.061463,
-    "top": 117.449288
+    "black": 0.002119,
+    "knee": 0.05752,
+    "top": 117.455631
    },
    "flags": [
     "58 pixels bled into by a saturated star",
@@ -419,9 +419,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001886,
-    "knee": 0.071939,
-    "top": 119.900552
+    "black": 0.002014,
+    "knee": 0.066586,
+    "top": 119.908158
    },
    "flags": [
     "83 pixels bled into by a saturated star",
@@ -461,9 +461,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001838,
-    "knee": 0.064141,
-    "top": 94.523449
+    "black": 0.001609,
+    "knee": 0.060629,
+    "top": 94.527307
    },
    "flags": [
     "88 pixels bled into by a saturated star",
@@ -505,9 +505,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -0.001053,
-    "knee": 0.043859,
-    "top": 65.528081
+    "black": 0.000857,
+    "knee": 0.042781,
+    "top": 65.531108
    },
    "flags": [
     "70 pixels bled into by a saturated star",
@@ -550,9 +550,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000501,
-    "knee": 0.043499,
-    "top": 68.826566
+    "black": 0.001418,
+    "knee": 0.043335,
+    "top": 68.828025
    },
    "flags": [
     "12 pixels bled into by a saturated star",
@@ -593,9 +593,9 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.00131,
-    "knee": 0.055517,
-    "top": 37.283409
+    "black": 0.001721,
+    "knee": 0.055481,
+    "top": 37.284222
    },
    "flags": [
     "5 pixels bled into by a saturated star",
@@ -622,6 +622,450 @@
  ],
  "light_curve": [
   {
+   "mjd": 60955.54825,
+   "flux_ujy": 2298343.79,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0709,
+    1.0987
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.54825,
+   "flux_ujy": 3609955.77,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.6586,
+    3.7646
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.54975,
+   "flux_ujy": 5203289.2,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0965,
+    1.1249
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.74727,
+   "flux_ujy": 2733670.21,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7692,
+    0.7892
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.74727,
+   "flux_ujy": 3942318.11,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.5071,
+    2.5797
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.74877,
+   "flux_ujy": 1689027.97,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7878,
+    0.8082
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.74877,
+   "flux_ujy": 5174401.25,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.5761,
+    2.6507
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.75026,
+   "flux_ujy": 1621261.86,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8064,
+    0.8274
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.75026,
+   "flux_ujy": 4262803.22,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.6489,
+    2.7257
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.81371,
+   "flux_ujy": 2489173.69,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8259,
+    0.8473
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.81371,
+   "flux_ujy": 4670378.58,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.7212,
+    2.8
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.81521,
+   "flux_ujy": 2176997.71,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.845,
+    0.867
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.81521,
+   "flux_ujy": 2988171.12,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.7934,
+    2.8744
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.81889,
+   "flux_ujy": 2739626.31,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8656,
+    0.888
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.81889,
+   "flux_ujy": 2675188.68,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.8701,
+    2.9533
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.82038,
+   "flux_ujy": 2762091.01,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8863,
+    0.9093
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.82038,
+   "flux_ujy": 2563448.0,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.9495,
+    3.0349
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.82187,
+   "flux_ujy": 2012586.49,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9071,
+    0.9307
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.82187,
+   "flux_ujy": 2334796.85,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.0315,
+    3.1193
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.88495,
+   "flux_ujy": 3718746.29,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9291,
+    0.9533
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.88495,
+   "flux_ujy": 2585551.03,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.1147,
+    3.2049
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.88644,
+   "flux_ujy": 3796050.87,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9513,
+    0.9761
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.88644,
+   "flux_ujy": 3804995.32,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.2003,
+    3.2931
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.88794,
+   "flux_ujy": 5074653.21,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9743,
+    0.9997
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.88794,
+   "flux_ujy": 3519986.16,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.2879,
+    3.3833
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.95173,
+   "flux_ujy": 3458860.42,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9974,
+    1.0234
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.95173,
+   "flux_ujy": 3557918.46,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.377,
+    3.4748
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.95322,
+   "flux_ujy": 3774972.36,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0214,
+    1.048
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.95322,
+   "flux_ujy": 3833329.96,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.4684,
+    3.569
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.95471,
+   "flux_ujy": 2204883.79,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0455,
+    1.0727
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60955.95471,
+   "flux_ujy": 3606094.51,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.5629,
+    3.6661
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60956.76806,
+   "flux_ujy": 2535733.32,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7275,
+    0.7463
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60956.76956,
+   "flux_ujy": 2954972.13,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7447,
+    0.7641
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60956.76956,
+   "flux_ujy": 3196165.43,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.4173,
+    2.4873
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60956.77105,
+   "flux_ujy": 977824.69,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7619,
+    0.7817
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60956.77105,
+   "flux_ujy": 3033558.89,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.4808,
+    2.5528
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.00973,
+   "flux_ujy": 3162729.84,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.134,
+    1.162
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60959.00973,
    "flux_ujy": 2102019.04,
    "err": 9516.48,
@@ -631,6 +1075,18 @@
     3.8969
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.01123,
+   "flux_ujy": 5020597.01,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.1612,
+    1.1898
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -647,6 +1103,18 @@
   },
   {
    "mjd": 60959.01272,
+   "flux_ujy": 4120552.63,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.1896,
+    1.219
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.01272,
    "flux_ujy": 1467395.11,
    "err": 7386.48,
    "detector": 5,
@@ -655,6 +1123,18 @@
     3.9676
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.01421,
+   "flux_ujy": 5359388.34,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.2184,
+    1.2484
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -671,6 +1151,18 @@
   },
   {
    "mjd": 60959.07671,
+   "flux_ujy": 5767518.36,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.2475,
+    1.2783
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.07671,
    "flux_ujy": 1313914.78,
    "err": 7233.66,
    "detector": 5,
@@ -679,6 +1171,18 @@
     4.0386
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.0782,
+   "flux_ujy": 3237225.04,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.2772,
+    1.3088
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -695,6 +1199,18 @@
   },
   {
    "mjd": 60959.28125,
+   "flux_ujy": 5912348.25,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.3081,
+    1.3403
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.28125,
    "flux_ujy": 1185908.96,
    "err": 7061.19,
    "detector": 5,
@@ -703,6 +1219,18 @@
     4.1076
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.28275,
+   "flux_ujy": 3101527.03,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.339,
+    1.372
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -719,6 +1247,18 @@
   },
   {
    "mjd": 60959.28424,
+   "flux_ujy": 5413456.35,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.3713,
+    1.4051
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.28424,
    "flux_ujy": 1089074.34,
    "err": 4718.36,
    "detector": 5,
@@ -727,6 +1267,18 @@
     4.1787
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.28573,
+   "flux_ujy": 5780070.93,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.4045,
+    1.4391
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -743,6 +1295,18 @@
   },
   {
    "mjd": 60959.68878,
+   "flux_ujy": 5579738.92,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.4377,
+    1.4731
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.68878,
    "flux_ujy": 1547564.28,
    "err": 6999.31,
    "detector": 5,
@@ -751,6 +1315,18 @@
     4.2504
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.69027,
+   "flux_ujy": 7174378.37,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.4731,
+    1.5095
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -767,6 +1343,18 @@
   },
   {
    "mjd": 60959.8282,
+   "flux_ujy": 5798362.2,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.509,
+    1.5462
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.8282,
    "flux_ujy": 1275020.1,
    "err": 3159.74,
    "detector": 5,
@@ -775,6 +1363,18 @@
     4.3238
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.82969,
+   "flux_ujy": 4619446.81,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.5457,
+    1.5839
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -791,6 +1391,18 @@
   },
   {
    "mjd": 60959.89301,
+   "flux_ujy": 6599800.49,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.583,
+    1.622
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.89301,
    "flux_ujy": 1301694.15,
    "err": 3295.36,
    "detector": 5,
@@ -799,6 +1411,18 @@
     4.4015
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60959.89452,
+   "flux_ujy": 5261065.93,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.6207,
+    1.6607
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -815,6 +1439,18 @@
   },
   {
    "mjd": 60960.16103,
+   "flux_ujy": 2118173.64,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.072,
+    1.0984
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60960.16103,
    "flux_ujy": 1318413.48,
    "err": 5474.54,
    "detector": 5,
@@ -823,6 +1459,18 @@
     3.8172
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60960.16252,
+   "flux_ujy": 5351537.59,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.0975,
+    1.1245
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -838,6 +1486,30 @@
    "approximate": true
   },
   {
+   "mjd": 60960.16401,
+   "flux_ujy": 827927.92,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.1236,
+    1.1514
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60960.16401,
+   "flux_ujy": 3859229.42,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.8528,
+    3.8874
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60964.17022,
    "flux_ujy": 680394.28,
    "err": 2558.58,
@@ -847,6 +1519,18 @@
     4.5223
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60964.17022,
+   "flux_ujy": 2878619.23,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.7147,
+    1.7571
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -862,6 +1546,18 @@
    "approximate": true
   },
   {
+   "mjd": 60964.17171,
+   "flux_ujy": 1995513.78,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.7547,
+    1.7981
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60964.1732,
    "flux_ujy": 1062652.14,
    "err": 3011.05,
@@ -871,6 +1567,18 @@
     4.589
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60964.1732,
+   "flux_ujy": 3968402.08,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.7964,
+    1.8408
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -886,6 +1594,18 @@
    "approximate": true
   },
   {
+   "mjd": 60964.1747,
+   "flux_ujy": 3316193.77,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.8387,
+    1.8841
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60964.51065,
    "flux_ujy": 554936.12,
    "err": 2337.56,
@@ -895,6 +1615,18 @@
     4.6563
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60964.51065,
+   "flux_ujy": 1976145.36,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.8817,
+    1.9281
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -910,6 +1642,18 @@
    "approximate": true
   },
   {
+   "mjd": 60964.57661,
+   "flux_ujy": 4053842.62,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.9255,
+    1.9731
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60964.5781,
    "flux_ujy": 1219511.11,
    "err": 3349.92,
@@ -919,6 +1663,18 @@
     4.7265
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60964.5781,
+   "flux_ujy": 6146527.39,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.9701,
+    2.0187
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -934,6 +1690,18 @@
    "approximate": true
   },
   {
+   "mjd": 60964.57959,
+   "flux_ujy": 6492205.53,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.0157,
+    2.0655
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60964.58109,
    "flux_ujy": 890750.21,
    "err": 2583.39,
@@ -943,6 +1711,18 @@
     4.7947
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60964.58109,
+   "flux_ujy": 5103318.83,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.0629,
+    2.1139
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -958,6 +1738,18 @@
    "approximate": true
   },
   {
+   "mjd": 60965.0501,
+   "flux_ujy": 7675849.66,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.111,
+    2.1632
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60965.05159,
    "flux_ujy": 760402.98,
    "err": 2500.72,
@@ -967,6 +1759,18 @@
     4.8642
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60965.05159,
+   "flux_ujy": 4118433.4,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.1603,
+    2.2137
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -982,6 +1786,30 @@
    "approximate": true
   },
   {
+   "mjd": 60965.05308,
+   "flux_ujy": 3233900.4,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.2106,
+    2.2652
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60965.32185,
+   "flux_ujy": 3019515.61,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.2616,
+    2.3174
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60965.32334,
    "flux_ujy": 2695061.85,
    "err": 5582.16,
@@ -989,6 +1817,18 @@
    "wavelength_um": [
     4.9337,
     4.9723
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 60965.32334,
+   "flux_ujy": 4234483.1,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.3135,
+    2.3707
    ],
    "flagged": false,
    "approximate": true
@@ -1006,6 +1846,18 @@
    "approximate": false
   },
   {
+   "mjd": 60965.32483,
+   "flux_ujy": 3893099.92,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.3657,
+    2.4241
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60965.3909,
    "flux_ujy": 3160975.98,
    "err": 5868.26,
@@ -1016,6 +1868,18 @@
    ],
    "flagged": false,
    "approximate": false
+  },
+  {
+   "mjd": 60965.3909,
+   "flux_ujy": 7754183.48,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.6619,
+    1.7029
+   ],
+   "flagged": false,
+   "approximate": true
   },
   {
    "mjd": 60965.39239,
@@ -1030,6 +1894,18 @@
    "approximate": true
   },
   {
+   "mjd": 60965.39239,
+   "flux_ujy": 6423022.96,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.7011,
+    1.7431
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 60965.59552,
    "flux_ujy": 1523065.17,
    "err": 2973.13,
@@ -1039,6 +1915,30 @@
     4.4441
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 60965.59552,
+   "flux_ujy": 6990584.85,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.624,
+    1.664
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.04041,
+   "flux_ujy": 3907725.1,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.614,
+    1.6538
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1055,6 +1955,18 @@
   },
   {
    "mjd": 61124.0419,
+   "flux_ujy": 6539688.18,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.6517,
+    1.6925
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.0419,
    "flux_ujy": 3197441.11,
    "err": 5861.67,
    "detector": 6,
@@ -1067,6 +1979,18 @@
   },
   {
    "mjd": 61124.0434,
+   "flux_ujy": 1279390.62,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.6904,
+    1.7322
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.0434,
    "flux_ujy": 954849.04,
    "err": 2673.68,
    "detector": 6,
@@ -1075,6 +1999,30 @@
     4.4988
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.37841,
+   "flux_ujy": 3788048.07,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.8846,
+    3.9194
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.37841,
+   "flux_ujy": 6418512.42,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.1548,
+    1.1834
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1090,6 +2038,66 @@
    "approximate": true
   },
   {
+   "mjd": 61124.3799,
+   "flux_ujy": 5004391.68,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.183,
+    1.2122
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.38139,
+   "flux_ujy": 3722506.73,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.9536,
+    3.989
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.38139,
+   "flux_ujy": 7120496.48,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.211,
+    1.241
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.38288,
+   "flux_ujy": 3825081.63,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.9892,
+    4.025
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.38288,
+   "flux_ujy": 4593849.95,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.2403,
+    1.2709
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61124.51438,
    "flux_ujy": 1094260.82,
    "err": 3250.77,
@@ -1099,6 +2107,18 @@
     4.3654
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.51438,
+   "flux_ujy": 5200775.08,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.5471,
+    1.5853
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1114,6 +2134,18 @@
    "approximate": false
   },
   {
+   "mjd": 61124.51587,
+   "flux_ujy": 2569553.7,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.5847,
+    1.6239
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61124.51736,
    "flux_ujy": 3453224.19,
    "err": 6697.76,
@@ -1124,6 +2156,126 @@
    ],
    "flagged": false,
    "approximate": false
+  },
+  {
+   "mjd": 61124.51736,
+   "flux_ujy": 6198555.82,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.6224,
+    1.6624
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.64986,
+   "flux_ujy": 2617804.63,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8369,
+    0.8587
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.64986,
+   "flux_ujy": 3345198.14,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.7603,
+    2.8403
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.65135,
+   "flux_ujy": 4617712.58,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8566,
+    0.8788
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.65135,
+   "flux_ujy": 2750573.87,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.8354,
+    2.9176
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.65284,
+   "flux_ujy": 1856550.92,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8772,
+    0.9
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.65284,
+   "flux_ujy": 1972510.66,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.9134,
+    2.9978
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.65433,
+   "flux_ujy": 3289515.09,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8979,
+    0.9213
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61124.65433,
+   "flux_ujy": 2291894.39,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.9946,
+    3.0814
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61130.08438,
+   "flux_ujy": 3782344.58,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.3048,
+    2.3618
+   ],
+   "flagged": false,
+   "approximate": true
   },
   {
    "mjd": 61130.08438,
@@ -1139,6 +2291,18 @@
   },
   {
    "mjd": 61130.08587,
+   "flux_ujy": 4014312.57,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.357,
+    2.4152
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61130.08587,
    "flux_ujy": 2321045.04,
    "err": 4535.44,
    "detector": 6,
@@ -1151,6 +2315,18 @@
   },
   {
    "mjd": 61130.62419,
+   "flux_ujy": 6887791.51,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.7302,
+    1.773
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61130.62419,
    "flux_ujy": 636021.73,
    "err": 2433.78,
    "detector": 6,
@@ -1159,6 +2335,18 @@
     4.534
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61130.62568,
+   "flux_ujy": 5374098.4,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.7707,
+    1.8145
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1175,6 +2363,18 @@
   },
   {
    "mjd": 61130.62717,
+   "flux_ujy": 6504541.39,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.8124,
+    1.8572
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61130.62717,
    "flux_ujy": 1033238.12,
    "err": 3390.93,
    "detector": 6,
@@ -1183,6 +2383,18 @@
     4.5988
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61130.62866,
+   "flux_ujy": 4098470.89,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.8551,
+    1.9009
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1199,6 +2411,18 @@
   },
   {
    "mjd": 61132.45797,
+   "flux_ujy": 7545330.14,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.899,
+    1.9458
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61132.45797,
    "flux_ujy": 587507.22,
    "err": 2835.33,
    "detector": 6,
@@ -1207,6 +2431,18 @@
     4.6679
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61132.45946,
+   "flux_ujy": 4617710.14,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.9429,
+    1.9909
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1223,6 +2459,18 @@
   },
   {
    "mjd": 61132.46096,
+   "flux_ujy": 4069074.69,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    1.9885,
+    2.0375
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61132.46096,
    "flux_ujy": 1229101.34,
    "err": 3399.53,
    "detector": 6,
@@ -1235,6 +2483,18 @@
   },
   {
    "mjd": 61132.46245,
+   "flux_ujy": 3908996.89,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.0343,
+    2.0845
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61132.46245,
    "flux_ujy": 948195.99,
    "err": 2762.0,
    "detector": 6,
@@ -1243,6 +2503,66 @@
     4.7739
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.81711,
+   "flux_ujy": 3607881.55,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    4.0233,
+    4.0593
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.81711,
+   "flux_ujy": 6466123.59,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.2699,
+    1.3013
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.81861,
+   "flux_ujy": 3502437.6,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    4.0595,
+    4.0959
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.81861,
+   "flux_ujy": 4757363.57,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.3005,
+    1.3327
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.95131,
+   "flux_ujy": 5260259.57,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.0819,
+    2.1333
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1259,6 +2579,18 @@
   },
   {
    "mjd": 61133.9528,
+   "flux_ujy": 5265249.56,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.1303,
+    2.1829
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.9528,
    "flux_ujy": 920043.57,
    "err": 2971.87,
    "detector": 6,
@@ -1267,6 +2599,18 @@
     4.8431
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61133.95429,
+   "flux_ujy": 4165111.18,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.181,
+    2.2348
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1282,6 +2626,18 @@
    "approximate": true
   },
   {
+   "mjd": 61133.95579,
+   "flux_ujy": 3422819.44,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.231,
+    2.286
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61134.76672,
    "flux_ujy": 1486636.95,
    "err": 7829.6,
@@ -1291,6 +2647,18 @@
     4.132
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61134.76672,
+   "flux_ujy": 7081253.16,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.3312,
+    1.364
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1306,6 +2674,18 @@
    "approximate": true
   },
   {
+   "mjd": 61134.76821,
+   "flux_ujy": 3211702.67,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.3635,
+    1.3971
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61134.7697,
    "flux_ujy": 1381767.08,
    "err": 7504.39,
@@ -1315,6 +2695,150 @@
     4.2037
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61134.7697,
+   "flux_ujy": 3621463.56,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.3959,
+    1.4303
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61135.85251,
+   "flux_ujy": 6445663.7,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0379,
+    1.0649
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61135.85251,
+   "flux_ujy": 2422022.31,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.5323,
+    3.6347
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61135.85401,
+   "flux_ujy": 4266140.83,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0629,
+    1.0905
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61135.85401,
+   "flux_ujy": 3411795.85,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.6284,
+    3.7336
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.05713,
+   "flux_ujy": 4127520.52,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.7884,
+    3.8224
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.05713,
+   "flux_ujy": 7092884.23,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.0756,
+    1.1022
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.05862,
+   "flux_ujy": 4066037.83,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.8238,
+    3.858
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.05862,
+   "flux_ujy": 2511372.56,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.1013,
+    1.1285
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.06011,
+   "flux_ujy": 3919460.66,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    3.8536,
+    3.8882
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.06011,
+   "flux_ujy": 4435729.28,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.1275,
+    1.1553
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.39546,
+   "flux_ujy": 4328060.15,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.2827,
+    2.3391
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1330,6 +2854,114 @@
    "approximate": true
   },
   {
+   "mjd": 61136.66878,
+   "flux_ujy": 2631148.93,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7269,
+    0.7457
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.67027,
+   "flux_ujy": 3050132.29,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7441,
+    0.7635
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.67027,
+   "flux_ujy": 4394622.61,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.4164,
+    2.4864
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.67176,
+   "flux_ujy": 2527207.33,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7614,
+    0.7812
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.67176,
+   "flux_ujy": 4375065.72,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.4781,
+    2.5499
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.73614,
+   "flux_ujy": 4416440.97,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0883,
+    1.1165
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61136.73614,
+   "flux_ujy": 2541364.72,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.7238,
+    3.8318
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61137.82121,
+   "flux_ujy": 3591204.64,
+   "err": null,
+   "detector": 5,
+   "wavelength_um": [
+    4.2057,
+    4.2435
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61137.82121,
+   "flux_ujy": 6163705.84,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.4295,
+    1.4647
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61137.8227,
    "flux_ujy": 1660693.74,
    "err": 4806.22,
@@ -1339,6 +2971,114 @@
     4.2799
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61137.8227,
+   "flux_ujy": 4333669.05,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.4643,
+    1.5005
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.5682,
+   "flux_ujy": 2621586.73,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9192,
+    0.943
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.5682,
+   "flux_ujy": 3430239.19,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.0758,
+    3.165
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.56969,
+   "flux_ujy": 2761659.27,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9412,
+    0.9656
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.56969,
+   "flux_ujy": 2507415.14,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.1613,
+    3.2529
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.57119,
+   "flux_ujy": 2164377.89,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9638,
+    0.9888
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.57119,
+   "flux_ujy": 2555908.37,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.2476,
+    3.3418
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.57268,
+   "flux_ujy": 5490610.38,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.9866,
+    1.0122
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.57268,
+   "flux_ujy": 2688617.1,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.3361,
+    3.4327
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1354,6 +3094,18 @@
    "approximate": true
   },
   {
+   "mjd": 61138.70739,
+   "flux_ujy": 4715772.6,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.4998,
+    1.5368
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61138.70888,
    "flux_ujy": 1243127.12,
    "err": 3239.43,
@@ -1363,6 +3115,30 @@
     4.3535
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61138.70888,
+   "flux_ujy": 6248256.54,
+   "err": null,
+   "detector": 2,
+   "wavelength_um": [
+    1.5362,
+    1.5742
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61139.52067,
+   "flux_ujy": 7139322.83,
+   "err": null,
+   "detector": 3,
+   "wavelength_um": [
+    2.231,
+    2.286
+   ],
+   "flagged": false,
    "approximate": true
   },
   {
@@ -1378,6 +3154,102 @@
    "approximate": true
   },
   {
+   "mjd": 61140.19744,
+   "flux_ujy": 1930020.9,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7796,
+    0.7998
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61140.19744,
+   "flux_ujy": 3432210.22,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.5462,
+    2.62
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61140.19893,
+   "flux_ujy": 4157836.69,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.7983,
+    0.8191
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61140.19893,
+   "flux_ujy": 4128511.7,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.6141,
+    2.6899
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61140.20043,
+   "flux_ujy": 3121472.8,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    0.8175,
+    0.8387
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61140.20043,
+   "flux_ujy": 2085891.62,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    2.6868,
+    2.7646
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61141.62461,
+   "flux_ujy": 2956343.48,
+   "err": null,
+   "detector": 1,
+   "wavelength_um": [
+    1.0104,
+    1.0366
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
+   "mjd": 61141.62461,
+   "flux_ujy": 3511094.12,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.4251,
+    3.5243
+   ],
+   "flagged": false,
+   "approximate": true
+  },
+  {
    "mjd": 61141.6261,
    "flux_ujy": 305755.12,
    "err": 1528.96,
@@ -1387,6 +3259,18 @@
     1.0614
    ],
    "flagged": true,
+   "approximate": true
+  },
+  {
+   "mjd": 61141.6261,
+   "flux_ujy": 2593543.63,
+   "err": null,
+   "detector": 4,
+   "wavelength_um": [
+    3.5167,
+    3.6187
+   ],
+   "flagged": false,
    "approximate": true
   }
  ],
@@ -1451,7 +3335,7 @@
     "dec": 5.1344191,
     "label": "Gaia DR3 3139845157528550272",
     "epoch": 2016.0,
-    "pmra": -2.47,
+    "pmra": -2.48,
     "pmdec": -1.14,
     "mag": 10.67
    },
@@ -1496,7 +3380,7 @@
     "dec": 5.1390788,
     "label": "Gaia DR3 3139834265490907008",
     "epoch": 2016.0,
-    "pmra": -1.22,
+    "pmra": -1.23,
     "pmdec": -9.59,
     "mag": 11.24
    },
@@ -1560,7 +3444,7 @@
     "label": "Gaia DR3 3139842954206646528",
     "epoch": 2016.0,
     "pmra": 0.06,
-    "pmdec": -0.45,
+    "pmdec": -0.46,
     "mag": 11.79
    },
    {
@@ -1632,7 +3516,7 @@
     "label": "Gaia DR3 3139849310758243840",
     "epoch": 2016.0,
     "pmra": -2.25,
-    "pmdec": 1.22,
+    "pmdec": 1.23,
     "mag": 12.23
    },
    {
@@ -1721,7 +3605,7 @@
     "dec": 5.1588079,
     "label": "Gaia DR3 3139846768138441600",
     "epoch": 2016.0,
-    "pmra": 0.0,
+    "pmra": 0.01,
     "pmdec": -0.19,
     "mag": 12.77
    },
@@ -1749,7 +3633,7 @@
     "label": "Gaia DR3 3139848043746894976",
     "epoch": 2016.0,
     "pmra": 0.12,
-    "pmdec": 0.43,
+    "pmdec": 0.42,
     "mag": 12.82
    },
    {
@@ -1929,7 +3813,7 @@
     "label": "Gaia DR3 3141348838461470080",
     "epoch": 2016.0,
     "pmra": 4.39,
-    "pmdec": 0.26,
+    "pmdec": 0.27,
     "mag": 13.51
    },
    {
@@ -2189,7 +4073,7 @@
     "dec": 5.001476,
     "label": "Gaia DR3 3139825430741881216",
     "epoch": 2016.0,
-    "pmra": -0.32,
+    "pmra": -0.33,
     "pmdec": -0.97,
     "mag": 14.06
    },
@@ -2253,7 +4137,7 @@
     "label": "Gaia DR3 3139845462470064768",
     "epoch": 2016.0,
     "pmra": 2.54,
-    "pmdec": -0.13,
+    "pmdec": -0.12,
     "mag": 14.16
    },
    {
@@ -2261,7 +4145,7 @@
     "dec": 5.1426313,
     "label": "Gaia DR3 3139834712167528832",
     "epoch": 2016.0,
-    "pmra": -2.07,
+    "pmra": -2.08,
     "pmdec": 0.31,
     "mag": 14.16
    },
@@ -2307,7 +4191,7 @@
     "label": "Gaia DR3 3139850753867252864",
     "epoch": 2016.0,
     "pmra": 2.1,
-    "pmdec": -36.28,
+    "pmdec": -36.27,
     "mag": 14.31
    },
    {
@@ -2495,7 +4379,7 @@
     "dec": 5.0199825,
     "label": "Gaia DR3 3139825778635614592",
     "epoch": 2016.0,
-    "pmra": -2.63,
+    "pmra": -2.62,
     "pmdec": -0.83,
     "mag": 14.56
    },
@@ -2613,7 +4497,7 @@
     "label": "Gaia DR3 3139833337778017792",
     "epoch": 2016.0,
     "pmra": 6.69,
-    "pmdec": -17.67,
+    "pmdec": -17.66,
     "mag": 14.72
    },
    {
@@ -2892,7 +4776,7 @@
     "label": "Gaia DR3 3139850758165197824",
     "epoch": 2016.0,
     "pmra": -1.48,
-    "pmdec": -0.76,
+    "pmdec": -0.77,
     "mag": 15.14
    },
    {
@@ -3063,7 +4947,7 @@
     "label": "Gaia DR3 3139835021406068352",
     "epoch": 2016.0,
     "pmra": -4.54,
-    "pmdec": -3.78,
+    "pmdec": -3.77,
     "mag": 15.33
    },
    {
@@ -3261,7 +5145,7 @@
     "label": "Gaia DR3 3141349216419193600",
     "epoch": 2016.0,
     "pmra": -1.46,
-    "pmdec": -0.39,
+    "pmdec": -0.4,
     "mag": 15.49
    },
    {
@@ -3296,7 +5180,7 @@
     "dec": 5.2055423,
     "label": "Gaia DR3 3139835468081739264",
     "epoch": 2016.0,
-    "pmra": 0.08,
+    "pmra": 0.09,
     "pmdec": -0.55,
     "mag": 15.54
    },
@@ -3422,7 +5306,7 @@
     "dec": 5.0731475,
     "label": "Gaia DR3 3139832203906657664",
     "epoch": 2016.0,
-    "pmra": -0.22,
+    "pmra": -0.21,
     "pmdec": -3.05,
     "mag": 15.63
    },
@@ -3477,7 +5361,7 @@
     "label": "Gaia DR3 3141350423306365184",
     "epoch": 2016.0,
     "pmra": -1.37,
-    "pmdec": -0.49,
+    "pmdec": -0.48,
     "mag": 15.65
    },
    {
@@ -3540,7 +5424,7 @@
     "label": "Gaia DR3 3139851819021196416",
     "epoch": 2016.0,
     "pmra": -2.5,
-    "pmdec": -0.55,
+    "pmdec": -0.56,
     "mag": 15.7
    },
    {
@@ -3747,7 +5631,7 @@
     "label": "Gaia DR3 3139830692078136320",
     "epoch": 2016.0,
     "pmra": -0.99,
-    "pmdec": -0.37,
+    "pmdec": -0.38,
     "mag": 15.77
    },
    {
@@ -3755,7 +5639,7 @@
     "dec": 5.1914635,
     "label": "Gaia DR3 3139846527621437568",
     "epoch": 2016.0,
-    "pmra": 2.66,
+    "pmra": 2.65,
     "pmdec": 1.26,
     "mag": 15.78
    },
@@ -3864,7 +5748,7 @@
     "label": "Gaia DR3 3139826431470655616",
     "epoch": 2016.0,
     "pmra": -1.74,
-    "pmdec": 0.42,
+    "pmdec": 0.41,
     "mag": 15.82
    },
    {
@@ -3881,7 +5765,7 @@
     "dec": 5.2986683,
     "label": "Gaia DR3 3139852540574276608",
     "epoch": 2016.0,
-    "pmra": -1.44,
+    "pmra": -1.45,
     "pmdec": 0.17,
     "mag": 15.83
    },
@@ -3981,7 +5865,7 @@
     "label": "Gaia DR3 3139847734508339968",
     "epoch": 2016.0,
     "pmra": -2.35,
-    "pmdec": -0.71,
+    "pmdec": -0.7,
     "mag": 15.87
    },
    {
@@ -4007,7 +5891,7 @@
     "dec": 5.1231356,
     "label": "Gaia DR3 3139833337778017664",
     "epoch": 2016.0,
-    "pmra": -1.94,
+    "pmra": -1.95,
     "pmdec": -1.7,
     "mag": 15.89
    },
@@ -4017,7 +5901,7 @@
     "label": "Gaia DR3 3139830722141707776",
     "epoch": 2016.0,
     "pmra": -6.55,
-    "pmdec": -9.31,
+    "pmdec": -9.3,
     "mag": 15.89
    },
    {
@@ -4052,7 +5936,7 @@
     "dec": 5.014858,
     "label": "Gaia DR3 3139825739979544448",
     "epoch": 2016.0,
-    "pmra": -2.39,
+    "pmra": -2.38,
     "pmdec": 1.73,
     "mag": 15.89
    },
@@ -4089,7 +5973,7 @@
     "label": "Gaia DR3 3139828527414661632",
     "epoch": 2016.0,
     "pmra": 0.34,
-    "pmdec": -0.83,
+    "pmdec": -0.82,
     "mag": 15.9
    },
    {
@@ -4098,7 +5982,7 @@
     "label": "Gaia DR3 3139851273561425408",
     "epoch": 2016.0,
     "pmra": -0.27,
-    "pmdec": 5.32,
+    "pmdec": 5.33,
     "mag": 15.9
    },
    {
@@ -4116,7 +6000,7 @@
     "label": "Gaia DR3 3139834746527276288",
     "epoch": 2016.0,
     "pmra": -1.61,
-    "pmdec": -1.16,
+    "pmdec": -1.17,
     "mag": 15.9
    },
    {
@@ -4169,7 +6053,7 @@
     "dec": 5.179759,
     "label": "Gaia DR3 3139847047313609472",
     "epoch": 2016.0,
-    "pmra": -0.22,
+    "pmra": -0.23,
     "pmdec": 4.92,
     "mag": 15.94
    },
@@ -4214,7 +6098,7 @@
     "dec": 5.1569752,
     "label": "Gaia DR3 3139843130303291648",
     "epoch": 2016.0,
-    "pmra": -1.82,
+    "pmra": -1.81,
     "pmdec": -1.65,
     "mag": 15.95
    },
@@ -4250,7 +6134,7 @@
     "dec": 5.0757191,
     "label": "Gaia DR3 3139832650583265408",
     "epoch": 2016.0,
-    "pmra": -3.45,
+    "pmra": -3.44,
     "pmdec": -2.21,
     "mag": 15.96
    },
@@ -4268,7 +6152,7 @@
     "dec": 5.3816914,
     "label": "Gaia DR3 3141354374675940480",
     "epoch": 2016.0,
-    "pmra": -2.11,
+    "pmra": -2.12,
     "pmdec": -1.75,
     "mag": 15.97
    },
@@ -4404,7 +6288,7 @@
     "label": "Gaia DR3 3139832547504063488",
     "epoch": 2016.0,
     "pmra": -3.07,
-    "pmdec": 0.25,
+    "pmdec": 0.26,
     "mag": 16.03
    },
    {
@@ -4457,7 +6341,7 @@
     "dec": 5.1500972,
     "label": "Gaia DR3 3139834231131170944",
     "epoch": 2016.0,
-    "pmra": -0.33,
+    "pmra": -0.34,
     "pmdec": -1.15,
     "mag": 16.06
    },
@@ -4575,7 +6459,7 @@
     "label": "Gaia DR3 3141350354586888064",
     "epoch": 2016.0,
     "pmra": -2.45,
-    "pmdec": -0.57,
+    "pmdec": -0.56,
     "mag": 16.12
    },
    {
@@ -4656,7 +6540,7 @@
     "label": "Gaia DR3 3139833578296174976",
     "epoch": 2016.0,
     "pmra": 3.46,
-    "pmdec": -7.87,
+    "pmdec": -7.88,
     "mag": 16.17
    },
    {
@@ -4718,7 +6602,7 @@
     "dec": 5.3046683,
     "label": "Gaia DR3 3141350010989517824",
     "epoch": 2016.0,
-    "pmra": -1.1,
+    "pmra": -1.09,
     "pmdec": 0.48,
     "mag": 16.19
    },
@@ -4737,7 +6621,7 @@
     "label": "Gaia DR3 3139839900488094464",
     "epoch": 2016.0,
     "pmra": 1.94,
-    "pmdec": -5.85,
+    "pmdec": -5.84,
     "mag": 16.2
    },
    {
@@ -5042,7 +6926,7 @@
     "dec": 5.3151499,
     "label": "Gaia DR3 3139851960756156160",
     "epoch": 2016.0,
-    "pmra": -1.05,
+    "pmra": -1.04,
     "pmdec": 0.9,
     "mag": 16.33
    },
@@ -5052,7 +6936,7 @@
     "label": "Gaia DR3 3141354752633061760",
     "epoch": 2016.0,
     "pmra": -1.37,
-    "pmdec": -4.85,
+    "pmdec": -4.84,
     "mag": 16.33
    },
    {
@@ -5069,7 +6953,7 @@
     "dec": 5.041629,
     "label": "Gaia DR3 3139826603269331968",
     "epoch": 2016.0,
-    "pmra": 1.13,
+    "pmra": 1.14,
     "pmdec": -4.45,
     "mag": 16.34
    },
@@ -5105,7 +6989,7 @@
     "dec": 5.1897752,
     "label": "Gaia DR3 3139846360118852608",
     "epoch": 2016.0,
-    "pmra": -9.24,
+    "pmra": -9.23,
     "pmdec": 2.22,
     "mag": 16.36
    },
@@ -5258,7 +7142,7 @@
     "dec": 5.1741986,
     "label": "Gaia DR3 3141335579899415552",
     "epoch": 2016.0,
-    "pmra": -0.75,
+    "pmra": -0.74,
     "pmdec": 0.99,
     "mag": 16.45
    },
@@ -5322,7 +7206,7 @@
     "label": "Gaia DR3 3139848146825241472",
     "epoch": 2016.0,
     "pmra": -1.27,
-    "pmdec": -4.6,
+    "pmdec": -4.59,
     "mag": 16.47
    },
    {
@@ -5375,7 +7259,7 @@
     "dec": 5.2434576,
     "label": "Gaia DR3 3139850655085983744",
     "epoch": 2016.0,
-    "pmra": -0.43,
+    "pmra": -0.42,
     "pmdec": -2.44,
     "mag": 16.49
    },
@@ -5412,7 +7296,7 @@
     "label": "Gaia DR3 3139838491738830848",
     "epoch": 2016.0,
     "pmra": -0.05,
-    "pmdec": -0.78,
+    "pmdec": -0.79,
     "mag": 16.5
    },
    {
@@ -5610,7 +7494,7 @@
     "label": "Gaia DR3 3139848211248640256",
     "epoch": 2016.0,
     "pmra": -4.09,
-    "pmdec": -4.19,
+    "pmdec": -4.2,
     "mag": 16.56
    },
    {
@@ -6123,7 +8007,7 @@
     "label": "Gaia DR3 3139832062171474304",
     "epoch": 2016.0,
     "pmra": 4.02,
-    "pmdec": 2.59,
+    "pmdec": 2.6,
     "mag": 16.73
    },
    {
@@ -6230,7 +8114,7 @@
     "dec": 5.1897753,
     "label": "Gaia DR3 3139835502441494016",
     "epoch": 2016.0,
-    "pmra": -2.07,
+    "pmra": -2.08,
     "pmdec": -5.49,
     "mag": 16.75
    },
@@ -6285,7 +8169,7 @@
     "label": "Gaia DR3 3140038809015500416",
     "epoch": 2016.0,
     "pmra": -3.88,
-    "pmdec": 2.76,
+    "pmdec": 2.77,
     "mag": 16.77
    },
    {
@@ -6348,7 +8232,7 @@
     "label": "Gaia DR3 3139833612655901568",
     "epoch": 2016.0,
     "pmra": -0.59,
-    "pmdec": -0.11,
+    "pmdec": -0.1,
     "mag": 16.78
    },
    {
@@ -6383,7 +8267,7 @@
     "dec": 5.2990455,
     "label": "Gaia DR3 3141349942270039680",
     "epoch": 2016.0,
-    "pmra": -1.13,
+    "pmra": -1.14,
     "pmdec": -1.54,
     "mag": 16.78
    },
@@ -6392,7 +8276,7 @@
     "dec": 5.1037556,
     "label": "Gaia DR3 3139839694330123904",
     "epoch": 2016.0,
-    "pmra": -1.29,
+    "pmra": -1.28,
     "pmdec": -1.55,
     "mag": 16.79
    },
@@ -6402,7 +8286,7 @@
     "label": "Gaia DR3 3141348701023024384",
     "epoch": 2016.0,
     "pmra": -7.86,
-    "pmdec": -0.64,
+    "pmdec": -0.65,
     "mag": 16.79
    },
    {
@@ -6410,7 +8294,7 @@
     "dec": 5.2388812,
     "label": "Gaia DR3 3139850311488602368",
     "epoch": 2016.0,
-    "pmra": 0.13,
+    "pmra": 0.12,
     "pmdec": -3.35,
     "mag": 16.79
    },
@@ -6419,7 +8303,7 @@
     "dec": 5.156794,
     "label": "Gaia DR3 3139834879670103296",
     "epoch": 2016.0,
-    "pmra": -0.26,
+    "pmra": -0.27,
     "pmdec": -1.82,
     "mag": 16.79
    },
@@ -6437,7 +8321,7 @@
     "dec": 5.0634457,
     "label": "Gaia DR3 3139831860309284480",
     "epoch": 2016.0,
-    "pmra": -0.42,
+    "pmra": -0.41,
     "pmdec": -11.62,
     "mag": 16.8
    },
@@ -6456,7 +8340,7 @@
     "label": "Gaia DR3 3141353378243885824",
     "epoch": 2016.0,
     "pmra": -0.06,
-    "pmdec": -0.76,
+    "pmdec": -0.77,
     "mag": 16.81
    },
    {
@@ -6474,7 +8358,7 @@
     "label": "Gaia DR3 3141335816121066752",
     "epoch": 2016.0,
     "pmra": 0.41,
-    "pmdec": -25.24,
+    "pmdec": -25.23,
     "mag": 16.81
    },
    {
@@ -6510,7 +8394,7 @@
     "label": "Gaia DR3 3139838148141447808",
     "epoch": 2016.0,
     "pmra": -1.73,
-    "pmdec": 2.59,
+    "pmdec": 2.58,
     "mag": 16.82
    },
    {
@@ -6653,7 +8537,7 @@
     "dec": 5.3534868,
     "label": "Gaia DR3 3141350728247769472",
     "epoch": 2016.0,
-    "pmra": 0.93,
+    "pmra": 0.94,
     "pmdec": -1.93,
     "mag": 16.88
    },
@@ -6690,7 +8574,7 @@
     "label": "Gaia DR3 3139832921164957184",
     "epoch": 2016.0,
     "pmra": -1.06,
-    "pmdec": 0.0,
+    "pmdec": 0.01,
     "mag": 16.89
    },
    {
@@ -6753,7 +8637,7 @@
     "label": "Gaia DR3 3139838697897238016",
     "epoch": 2016.0,
     "pmra": -1.42,
-    "pmdec": -1.03,
+    "pmdec": -1.02,
     "mag": 16.91
    },
    {
@@ -6833,7 +8717,7 @@
     "dec": 5.375701,
     "label": "Gaia DR3 3141354507819021824",
     "epoch": 2016.0,
-    "pmra": -0.08,
+    "pmra": -0.09,
     "pmdec": -0.86,
     "mag": 16.93
    },
@@ -7157,7 +9041,7 @@
     "dec": 5.3934201,
     "label": "Gaia DR3 3141354645258004608",
     "epoch": 2016.0,
-    "pmra": 1.87,
+    "pmra": 1.86,
     "pmdec": -22.69,
     "mag": 17.04
    },
@@ -7500,7 +9384,7 @@
     "label": "Gaia DR3 3139848348687604608",
     "epoch": 2016.0,
     "pmra": -0.76,
-    "pmdec": -1.59,
+    "pmdec": -1.58,
     "mag": 17.13
    },
    {
@@ -7553,7 +9437,7 @@
     "dec": 5.1693661,
     "label": "Gaia DR3 3139835261923321600",
     "epoch": 2016.0,
-    "pmra": 5.65,
+    "pmra": 5.66,
     "pmdec": 0.01,
     "mag": 17.16
    },
@@ -7571,7 +9455,7 @@
     "dec": 5.0334884,
     "label": "Gaia DR3 3139826397110926336",
     "epoch": 2016.0,
-    "pmra": -1.72,
+    "pmra": -1.73,
     "pmdec": -3.8,
     "mag": 17.16
    },
@@ -7653,7 +9537,7 @@
     "label": "Gaia DR3 3139847562709645312",
     "epoch": 2016.0,
     "pmra": -1.47,
-    "pmdec": 0.22,
+    "pmdec": 0.21,
     "mag": 17.18
    },
    {
@@ -8022,7 +9906,7 @@
     "label": "Gaia DR3 3139835090124648704",
     "epoch": 2016.0,
     "pmra": -0.49,
-    "pmdec": -1.11,
+    "pmdec": -1.1,
     "mag": 17.28
    },
    {
@@ -8049,7 +9933,7 @@
     "label": "Gaia DR3 3139838590520374656",
     "epoch": 2016.0,
     "pmra": 1.48,
-    "pmdec": -10.05,
+    "pmdec": -10.04,
     "mag": 17.29
    },
    {
@@ -8274,7 +10158,7 @@
     "label": "Gaia DR3 3139833165979324416",
     "epoch": 2016.0,
     "pmra": 0.5,
-    "pmdec": -0.16,
+    "pmdec": -0.17,
     "mag": 17.35
    },
    {
@@ -8336,7 +10220,7 @@
     "dec": 5.1493291,
     "label": "Gaia DR3 3139845398046192384",
     "epoch": 2016.0,
-    "pmra": -2.34,
+    "pmra": -2.35,
     "pmdec": -4.62,
     "mag": 17.38
    },
@@ -8391,7 +10275,7 @@
     "label": "Gaia DR3 3140038809016168960",
     "epoch": 2016.0,
     "pmra": -9.49,
-    "pmdec": 10.25,
+    "pmdec": 10.24,
     "mag": 17.4
    },
    {
@@ -8400,7 +10284,7 @@
     "label": "Gaia DR3 3141350835623216768",
     "epoch": 2016.0,
     "pmra": -0.02,
-    "pmdec": 5.55,
+    "pmdec": 5.54,
     "mag": 17.4
    },
    {
@@ -8534,7 +10418,7 @@
     "dec": 5.2220123,
     "label": "Gaia DR3 3139847420974654336",
     "epoch": 2016.0,
-    "pmra": -1.4,
+    "pmra": -1.41,
     "pmdec": 0.14,
     "mag": 17.44
    },
@@ -8562,7 +10446,7 @@
     "label": "Gaia DR3 3141335889137053568",
     "epoch": 2016.0,
     "pmra": -0.15,
-    "pmdec": 0.16,
+    "pmdec": 0.17,
     "mag": 17.45
    },
    {
@@ -8795,7 +10679,7 @@
     "dec": 5.2205739,
     "label": "Gaia DR3 3139846733779885440",
     "epoch": 2016.0,
-    "pmra": -0.93,
+    "pmra": -0.94,
     "pmdec": -0.29,
     "mag": 17.52
    },
@@ -8840,7 +10724,7 @@
     "dec": 5.2781852,
     "label": "Gaia DR3 3139848829723953280",
     "epoch": 2016.0,
-    "pmra": -3.95,
+    "pmra": -3.94,
     "pmdec": 1.74,
     "mag": 17.52
    },
@@ -8895,7 +10779,7 @@
     "label": "Gaia DR3 3139845325030560384",
     "epoch": 2016.0,
     "pmra": -6.03,
-    "pmdec": 2.43,
+    "pmdec": 2.44,
     "mag": 17.54
    },
    {
@@ -9120,7 +11004,7 @@
     "label": "Gaia DR3 3139825533821098240",
     "epoch": 2016.0,
     "pmra": -0.23,
-    "pmdec": -0.21,
+    "pmdec": -0.2,
     "mag": 17.61
    },
    {
@@ -9210,7 +11094,7 @@
     "label": "Gaia DR3 3139849654357645696",
     "epoch": 2016.0,
     "pmra": -1.31,
-    "pmdec": 0.5,
+    "pmdec": 0.51,
     "mag": 17.63
    },
    {
@@ -9255,7 +11139,7 @@
     "label": "Gaia DR3 3139834810950618880",
     "epoch": 2016.0,
     "pmra": -4.18,
-    "pmdec": -7.77,
+    "pmdec": -7.78,
     "mag": 17.64
    },
    {
@@ -9264,7 +11148,7 @@
     "label": "Gaia DR3 3139826942570454656",
     "epoch": 2016.0,
     "pmra": 0.1,
-    "pmdec": -1.19,
+    "pmdec": -1.2,
     "mag": 17.64
    },
    {
@@ -9453,7 +11337,7 @@
     "label": "Gaia DR3 3139833024244168192",
     "epoch": 2016.0,
     "pmra": -5.45,
-    "pmdec": -2.05,
+    "pmdec": -2.04,
     "mag": 17.7
    },
    {
@@ -9542,7 +11426,7 @@
     "dec": 5.1872613,
     "label": "Gaia DR3 3139835326346726016",
     "epoch": 2016.0,
-    "pmra": -6.06,
+    "pmra": -6.05,
     "pmdec": -2.16,
     "mag": 17.73
    },
@@ -9695,7 +11579,7 @@
     "dec": 5.2920016,
     "label": "Gaia DR3 3139848932803173376",
     "epoch": 2016.0,
-    "pmra": -0.75,
+    "pmra": -0.74,
     "pmdec": -0.79,
     "mag": 17.76
    },
@@ -9705,7 +11589,7 @@
     "label": "Gaia DR3 3139853055971790080",
     "epoch": 2016.0,
     "pmra": -0.51,
-    "pmdec": -0.53,
+    "pmdec": -0.54,
     "mag": 17.76
    },
    {
@@ -9723,7 +11607,7 @@
     "label": "Gaia DR3 3139833539640295552",
     "epoch": 2016.0,
     "pmra": -1.87,
-    "pmdec": 0.64,
+    "pmdec": 0.65,
     "mag": 17.77
    },
    {
@@ -9867,7 +11751,7 @@
     "label": "Gaia DR3 3139826117936933632",
     "epoch": 2016.0,
     "pmra": -0.27,
-    "pmdec": -1.77,
+    "pmdec": -1.76,
     "mag": 17.83
    },
    {
@@ -9875,7 +11759,7 @@
     "dec": 5.1294081,
     "label": "Gaia DR3 3139840072284264960",
     "epoch": 2016.0,
-    "pmra": -0.83,
+    "pmra": -0.82,
     "pmdec": 0.14,
     "mag": 17.83
    },
@@ -9920,7 +11804,7 @@
     "dec": 5.3280107,
     "label": "Gaia DR3 3139852162618589184",
     "epoch": 2016.0,
-    "pmra": -1.18,
+    "pmra": -1.19,
     "pmdec": -0.67,
     "mag": 17.85
    },
@@ -9983,7 +11867,7 @@
     "dec": 5.1319232,
     "label": "Gaia DR3 3139834024973641472",
     "epoch": 2016.0,
-    "pmra": 0.46,
+    "pmra": 0.47,
     "pmdec": 1.33,
     "mag": 17.86
    },
@@ -10011,7 +11895,7 @@
     "label": "Gaia DR3 3139851411000367488",
     "epoch": 2016.0,
     "pmra": 1.38,
-    "pmdec": 1.22,
+    "pmdec": 1.23,
     "mag": 17.86
    },
    {
@@ -10082,7 +11966,7 @@
     "dec": 5.0642665,
     "label": "Gaia DR3 3139826946867188480",
     "epoch": 2016.0,
-    "pmra": 0.86,
+    "pmra": 0.85,
     "pmdec": 0.67,
     "mag": 17.89
    },
@@ -10487,7 +12371,7 @@
     "dec": 5.2517691,
     "label": "Gaia DR3 3139847764572054912",
     "epoch": 2016.0,
-    "pmra": -15.19,
+    "pmra": -15.2,
     "pmdec": -31.07,
     "mag": 17.96
    },
@@ -10560,7 +12444,7 @@
     "label": "Gaia DR3 3139825778635613568",
     "epoch": 2016.0,
     "pmra": -0.75,
-    "pmdec": -0.5,
+    "pmdec": -0.51,
     "mag": 17.97
    },
    {
@@ -10686,7 +12570,7 @@
     "label": "Gaia DR3 3139851166186146048",
     "epoch": 2016.0,
     "pmra": -0.32,
-    "pmdec": -0.84,
+    "pmdec": -0.83,
     "mag": 18.0
    },
    {
@@ -10956,7 +12840,7 @@
     "label": "Gaia DR3 3139852746732710656",
     "epoch": 2016.0,
     "pmra": -2.02,
-    "pmdec": -1.15,
+    "pmdec": -1.16,
     "mag": 18.08
    },
    {
@@ -11063,7 +12947,7 @@
     "dec": 5.238131,
     "label": "Gaia DR3 3139849757436872192",
     "epoch": 2016.0,
-    "pmra": -0.29,
+    "pmra": -0.28,
     "pmdec": -0.91,
     "mag": 18.11
    },
@@ -11081,7 +12965,7 @@
     "dec": 5.1488198,
     "label": "Gaia DR3 3139834226835068160",
     "epoch": 2016.0,
-    "pmra": -1.91,
+    "pmra": -1.92,
     "pmdec": 0.52,
     "mag": 18.11
    },
@@ -11127,7 +13011,7 @@
     "label": "Gaia DR3 3139847317895429504",
     "epoch": 2016.0,
     "pmra": -0.44,
-    "pmdec": -2.41,
+    "pmdec": -2.42,
     "mag": 18.12
    },
    {
@@ -11199,7 +13083,7 @@
     "label": "Gaia DR3 3141348735382774912",
     "epoch": 2016.0,
     "pmra": -1.58,
-    "pmdec": -5.02,
+    "pmdec": -5.01,
     "mag": 18.13
    },
    {
@@ -11541,7 +13425,7 @@
     "label": "Gaia DR3 3139835326346721152",
     "epoch": 2016.0,
     "pmra": -5.62,
-    "pmdec": 3.03,
+    "pmdec": 3.02,
     "mag": 18.19
    },
    {
@@ -11658,7 +13542,7 @@
     "label": "Gaia DR3 3139851956460156800",
     "epoch": 2016.0,
     "pmra": -0.54,
-    "pmdec": -1.08,
+    "pmdec": -1.07,
     "mag": 18.22
    },
    {
@@ -11667,7 +13551,7 @@
     "label": "Gaia DR3 3139831825949543424",
     "epoch": 2016.0,
     "pmra": 9.18,
-    "pmdec": -15.78,
+    "pmdec": -15.79,
     "mag": 18.23
    },
    {
@@ -11703,7 +13587,7 @@
     "label": "Gaia DR3 3139846974298039168",
     "epoch": 2016.0,
     "pmra": 0.58,
-    "pmdec": -0.88,
+    "pmdec": -0.89,
     "mag": 18.24
    },
    {
@@ -11720,8 +13604,8 @@
     "dec": 5.3256626,
     "label": "Gaia DR3 3139852196978326912",
     "epoch": 2016.0,
-    "pmra": -0.31,
-    "pmdec": -0.46,
+    "pmra": -0.3,
+    "pmdec": -0.47,
     "mag": 18.24
    },
    {
@@ -11793,7 +13677,7 @@
     "label": "Gaia DR3 3139825808699035648",
     "epoch": 2016.0,
     "pmra": -0.26,
-    "pmdec": -0.7,
+    "pmdec": -0.69,
     "mag": 18.25
    },
    {
@@ -11901,7 +13785,7 @@
     "label": "Gaia DR3 3139834329914282240",
     "epoch": 2016.0,
     "pmra": 1.23,
-    "pmdec": -8.26,
+    "pmdec": -8.27,
     "mag": 18.27
    },
    {
@@ -11963,7 +13847,7 @@
     "dec": 5.3279269,
     "label": "Gaia DR3 3141353133429414272",
     "epoch": 2016.0,
-    "pmra": -2.74,
+    "pmra": -2.73,
     "pmdec": -2.0,
     "mag": 18.28
    },
@@ -12080,7 +13964,7 @@
     "dec": 5.1337735,
     "label": "Gaia DR3 3139834742231131136",
     "epoch": 2016.0,
-    "pmra": 0.5,
+    "pmra": 0.51,
     "pmdec": -0.84,
     "mag": 18.3
    },
@@ -12135,7 +14019,7 @@
     "label": "Gaia DR3 3139848520486300928",
     "epoch": 2016.0,
     "pmra": -1.04,
-    "pmdec": -2.64,
+    "pmdec": -2.65,
     "mag": 18.31
    },
    {
@@ -12206,7 +14090,7 @@
     "dec": 5.165758,
     "label": "Gaia DR3 3139834364274035712",
     "epoch": 2016.0,
-    "pmra": -0.77,
+    "pmra": -0.78,
     "pmdec": 1.12,
     "mag": 18.33
    },
@@ -12234,7 +14118,7 @@
     "label": "Gaia DR3 3139835601224644736",
     "epoch": 2016.0,
     "pmra": 0.51,
-    "pmdec": -1.74,
+    "pmdec": -1.75,
     "mag": 18.34
    },
    {
@@ -12350,7 +14234,7 @@
     "dec": 5.235521,
     "label": "Gaia DR3 3139847558413615232",
     "epoch": 2016.0,
-    "pmra": -1.45,
+    "pmra": -1.46,
     "pmdec": -0.24,
     "mag": 18.37
    },
@@ -12413,7 +14297,7 @@
     "dec": 5.276461,
     "label": "Gaia DR3 3139851028745784064",
     "epoch": 2016.0,
-    "pmra": -2.89,
+    "pmra": -2.88,
     "pmdec": -7.4,
     "mag": 18.38
    },
@@ -12449,7 +14333,7 @@
     "dec": 5.0274629,
     "label": "Gaia DR3 3139831447989911040",
     "epoch": 2016.0,
-    "pmra": -1.49,
+    "pmra": -1.5,
     "pmdec": 1.75,
     "mag": 18.38
    },
@@ -12468,7 +14352,7 @@
     "label": "Gaia DR3 3141350178491887872",
     "epoch": 2016.0,
     "pmra": -13.99,
-    "pmdec": -0.43,
+    "pmdec": -0.42,
     "mag": 18.39
    },
    {
@@ -12764,7 +14648,7 @@
     "dec": 5.2244582,
     "label": "Gaia DR3 3139849860514664704",
     "epoch": 2016.0,
-    "pmra": -0.19,
+    "pmra": -0.18,
     "pmdec": -2.46,
     "mag": 18.45
    },
@@ -12774,7 +14658,7 @@
     "label": "Gaia DR3 3139845943504448512",
     "epoch": 2016.0,
     "pmra": 2.69,
-    "pmdec": -5.69,
+    "pmdec": -5.68,
     "mag": 18.45
    },
    {
@@ -13025,7 +14909,7 @@
     "dec": 5.3811284,
     "label": "Gaia DR3 3141353854984002432",
     "epoch": 2016.0,
-    "pmra": -1.76,
+    "pmra": -1.75,
     "pmdec": -0.67,
     "mag": 18.49
    },
@@ -13179,7 +15063,7 @@
     "label": "Gaia DR3 3139851750301716736",
     "epoch": 2016.0,
     "pmra": 5.91,
-    "pmdec": -5.35,
+    "pmdec": -5.34,
     "mag": 18.54
    },
    {
@@ -13224,7 +15108,7 @@
     "label": "Gaia DR3 3139852712372972928",
     "epoch": 2016.0,
     "pmra": -0.21,
-    "pmdec": 0.11,
+    "pmdec": 0.1,
     "mag": 18.55
    },
    {
@@ -13295,7 +15179,7 @@
     "dec": 5.0591861,
     "label": "Gaia DR3 3139832508848057984",
     "epoch": 2016.0,
-    "pmra": 0.22,
+    "pmra": 0.21,
     "pmdec": -0.66,
     "mag": 18.57
    },
@@ -13304,7 +15188,7 @@
     "dec": 5.1064574,
     "label": "Gaia DR3 3139833161683140096",
     "epoch": 2016.0,
-    "pmra": -0.98,
+    "pmra": -0.97,
     "pmdec": -0.53,
     "mag": 18.58
    },
@@ -13431,7 +15315,7 @@
     "label": "Gaia DR3 3139832027811737856",
     "epoch": 2016.0,
     "pmra": 0.01,
-    "pmdec": 3.63,
+    "pmdec": 3.62,
     "mag": 18.58
    },
    {
@@ -13583,8 +15467,8 @@
     "dec": 5.3032477,
     "label": "Gaia DR3 3141349972333445376",
     "epoch": 2016.0,
-    "pmra": -1.33,
-    "pmdec": 2.36,
+    "pmra": -1.32,
+    "pmdec": 2.35,
     "mag": 18.6
    },
    {
@@ -13647,7 +15531,7 @@
     "label": "Gaia DR3 3139831203178074368",
     "epoch": 2016.0,
     "pmra": 0.25,
-    "pmdec": -1.45,
+    "pmdec": -1.46,
     "mag": 18.61
    },
    {
@@ -13827,7 +15711,7 @@
     "label": "Gaia DR3 3139846149662897280",
     "epoch": 2016.0,
     "pmra": 0.11,
-    "pmdec": 4.24,
+    "pmdec": 4.25,
     "mag": 18.66
    },
    {
@@ -13890,7 +15774,7 @@
     "label": "Gaia DR3 3139846390182484992",
     "epoch": 2016.0,
     "pmra": -0.41,
-    "pmdec": 0.54,
+    "pmdec": 0.55,
     "mag": 18.67
    },
    {
@@ -13944,7 +15828,7 @@
     "label": "Gaia DR3 3141350419010075776",
     "epoch": 2016.0,
     "pmra": -1.74,
-    "pmdec": 2.51,
+    "pmdec": 2.52,
     "mag": 18.68
    },
    {
@@ -14106,7 +15990,7 @@
     "label": "Gaia DR3 3139845806066898432",
     "epoch": 2016.0,
     "pmra": 12.02,
-    "pmdec": -13.8,
+    "pmdec": -13.79,
     "mag": 18.71
    },
    {
@@ -14123,7 +16007,7 @@
     "dec": 5.1854203,
     "label": "Gaia DR3 3139835188907770752",
     "epoch": 2016.0,
-    "pmra": 0.43,
+    "pmra": 0.42,
     "pmdec": -2.2,
     "mag": 18.71
    },
@@ -14231,7 +16115,7 @@
     "dec": 5.0571901,
     "label": "Gaia DR3 3139832547504918144",
     "epoch": 2016.0,
-    "pmra": 0.75,
+    "pmra": 0.74,
     "pmdec": -2.75,
     "mag": 18.74
    },
@@ -14286,7 +16170,7 @@
     "label": "Gaia DR3 3141335987919790336",
     "epoch": 2016.0,
     "pmra": 1.0,
-    "pmdec": -1.31,
+    "pmdec": -1.3,
     "mag": 18.75
    },
    {
@@ -14493,7 +16377,7 @@
     "label": "Gaia DR3 3139828935435237376",
     "epoch": 2016.0,
     "pmra": -9.06,
-    "pmdec": 1.56,
+    "pmdec": 1.55,
     "mag": 18.79
    },
    {
@@ -14547,7 +16431,7 @@
     "label": "Gaia DR3 3139849379478316416",
     "epoch": 2016.0,
     "pmra": 2.39,
-    "pmdec": 2.03,
+    "pmdec": 2.04,
     "mag": 18.8
    },
    {
@@ -14573,7 +16457,7 @@
     "dec": 5.2291612,
     "label": "Gaia DR3 3139850238471788160",
     "epoch": 2016.0,
-    "pmra": -1.14,
+    "pmra": -1.15,
     "pmdec": -0.48,
     "mag": 18.8
    },
@@ -28401,8 +30285,8 @@
    "id": "m1",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.86,
-   "pm_arcsec_yr": 29.928,
+   "confidence": 0.87,
+   "pm_arcsec_yr": 29.924,
    "match": null,
    "bands": [
     "cold"
@@ -28412,7 +30296,7 @@
      "epoch": 0,
      "visit": 0,
      "mjd": 60960.054,
-     "x": 54.07,
+     "x": 54.06,
      "y": 38.12
     },
     {
@@ -28429,7 +30313,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.86,
-   "pm_arcsec_yr": 31.181,
+   "pm_arcsec_yr": 31.178,
    "match": null,
    "bands": [
     "cold"
@@ -28440,7 +30324,7 @@
      "visit": 0,
      "mjd": 60960.054,
      "x": 7.6,
-     "y": 52.38
+     "y": 52.39
     },
     {
      "epoch": 1,
@@ -28456,7 +30340,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.84,
-   "pm_arcsec_yr": 30.695,
+   "pm_arcsec_yr": 30.688,
    "match": null,
    "bands": [
     "cold"
@@ -28483,7 +30367,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.81,
-   "pm_arcsec_yr": 26.521,
+   "pm_arcsec_yr": 26.531,
    "match": null,
    "bands": [
     "cold"
@@ -28500,7 +30384,7 @@
      "epoch": 1,
      "visit": 1,
      "mjd": 61132.9,
-     "x": 135.84,
+     "x": 135.85,
      "y": 27.14
     }
    ]
@@ -28509,8 +30393,8 @@
    "id": "m5",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.77,
-   "pm_arcsec_yr": 19.006,
+   "confidence": 0.78,
+   "pm_arcsec_yr": 19.093,
    "match": null,
    "bands": [
     "cold"
@@ -28521,7 +30405,7 @@
      "visit": 0,
      "mjd": 60960.054,
      "x": 94.28,
-     "y": 78.53
+     "y": 78.52
     },
     {
      "epoch": 1,
@@ -28536,7 +30420,7 @@
    "id": "m6",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.76,
+   "confidence": 0.77,
    "pm_arcsec_yr": 22.872,
    "match": null,
    "bands": [
@@ -28554,7 +30438,7 @@
      "epoch": 1,
      "visit": 1,
      "mjd": 61132.9,
-     "x": 63.09,
+     "x": 63.08,
      "y": 81.9
     }
    ]
@@ -28563,8 +30447,35 @@
    "id": "m7",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.74,
-   "pm_arcsec_yr": 18.096,
+   "confidence": 0.77,
+   "pm_arcsec_yr": 25.428,
+   "match": null,
+   "bands": [
+    "cold"
+   ],
+   "track": [
+    {
+     "epoch": 0,
+     "visit": 0,
+     "mjd": 60960.054,
+     "x": 77.88,
+     "y": 60.03
+    },
+    {
+     "epoch": 1,
+     "visit": 1,
+     "mjd": 61132.9,
+     "x": 79.71,
+     "y": 59.33
+    }
+   ]
+  },
+  {
+   "id": "m8",
+   "label": "Possible mover",
+   "kind": "mover",
+   "confidence": 0.75,
+   "pm_arcsec_yr": 18.1,
    "match": null,
    "bands": [
     "cold"
@@ -28587,11 +30498,11 @@
    ]
   },
   {
-   "id": "m8",
+   "id": "m9",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.7,
-   "pm_arcsec_yr": 16.206,
+   "confidence": 0.71,
+   "pm_arcsec_yr": 16.22,
    "match": null,
    "bands": [
     "cold"
@@ -28623,6 +30534,1105 @@
   ]
  },
  "spectrum": [
+  {
+   "wavelength_um": 0.7363,
+   "flux_ujy": 2631148.93,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7369,
+   "flux_ujy": 2535733.32,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7538,
+   "flux_ujy": 3050132.29,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7544,
+   "flux_ujy": 2954972.13,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7713,
+   "flux_ujy": 2527207.33,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7718,
+   "flux_ujy": 977824.69,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7792,
+   "flux_ujy": 2733670.21,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.7897,
+   "flux_ujy": 1930020.9,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.798,
+   "flux_ujy": 1689027.97,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8087,
+   "flux_ujy": 4157836.69,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8169,
+   "flux_ujy": 1621261.86,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8281,
+   "flux_ujy": 3121472.8,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8366,
+   "flux_ujy": 2489173.69,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8478,
+   "flux_ujy": 2617804.63,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.856,
+   "flux_ujy": 2176997.71,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8677,
+   "flux_ujy": 4617712.58,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8768,
+   "flux_ujy": 2739626.31,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8886,
+   "flux_ujy": 1856550.92,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.8978,
+   "flux_ujy": 2762091.01,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9096,
+   "flux_ujy": 3289515.09,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9189,
+   "flux_ujy": 2012586.49,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9311,
+   "flux_ujy": 2621586.73,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9412,
+   "flux_ujy": 3718746.29,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9534,
+   "flux_ujy": 2761659.27,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9637,
+   "flux_ujy": 3796050.87,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9763,
+   "flux_ujy": 2164377.89,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.987,
+   "flux_ujy": 5074653.21,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 0.9994,
+   "flux_ujy": 5490610.38,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0104,
+   "flux_ujy": 3458860.42,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0235,
+   "flux_ujy": 2956343.48,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0347,
+   "flux_ujy": 3774972.36,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0514,
+   "flux_ujy": 6445663.7,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0591,
+   "flux_ujy": 2204883.79,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0767,
+   "flux_ujy": 4266140.83,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0848,
+   "flux_ujy": 2298343.79,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0852,
+   "flux_ujy": 2118173.64,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.0889,
+   "flux_ujy": 7092884.23,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1024,
+   "flux_ujy": 4416440.97,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1107,
+   "flux_ujy": 5203289.2,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.111,
+   "flux_ujy": 5351537.59,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1149,
+   "flux_ujy": 2511372.56,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1375,
+   "flux_ujy": 827927.92,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1414,
+   "flux_ujy": 4435729.28,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.148,
+   "flux_ujy": 3162729.84,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1691,
+   "flux_ujy": 6418512.42,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1755,
+   "flux_ujy": 5020597.01,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.1976,
+   "flux_ujy": 5004391.68,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.2043,
+   "flux_ujy": 4120552.63,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.226,
+   "flux_ujy": 7120496.48,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.2334,
+   "flux_ujy": 5359388.34,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.2556,
+   "flux_ujy": 4593849.95,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.2629,
+   "flux_ujy": 5767518.36,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.2856,
+   "flux_ujy": 6466123.59,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.293,
+   "flux_ujy": 3237225.04,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.3166,
+   "flux_ujy": 4757363.57,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.3242,
+   "flux_ujy": 5912348.25,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.3476,
+   "flux_ujy": 7081253.16,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.3555,
+   "flux_ujy": 3101527.03,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.3803,
+   "flux_ujy": 3211702.67,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.3882,
+   "flux_ujy": 5413456.35,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.4131,
+   "flux_ujy": 3621463.56,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.4218,
+   "flux_ujy": 5780070.93,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.4471,
+   "flux_ujy": 6163705.84,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.4554,
+   "flux_ujy": 5579738.92,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.4824,
+   "flux_ujy": 4333669.05,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.4913,
+   "flux_ujy": 7174378.37,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.5183,
+   "flux_ujy": 4715772.6,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.5276,
+   "flux_ujy": 5798362.2,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.5552,
+   "flux_ujy": 6248256.54,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.5648,
+   "flux_ujy": 4619446.81,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.5662,
+   "flux_ujy": 5200775.08,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6025,
+   "flux_ujy": 6599800.49,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6043,
+   "flux_ujy": 2569553.7,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6339,
+   "flux_ujy": 3907725.1,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6407,
+   "flux_ujy": 5261065.93,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6424,
+   "flux_ujy": 6198555.82,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.644,
+   "flux_ujy": 6990584.85,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6721,
+   "flux_ujy": 6539688.18,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.6824,
+   "flux_ujy": 7754183.48,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.7113,
+   "flux_ujy": 1279390.62,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.7221,
+   "flux_ujy": 6423022.96,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.7359,
+   "flux_ujy": 2878619.23,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.7516,
+   "flux_ujy": 6887791.51,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.7764,
+   "flux_ujy": 1995513.78,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.7926,
+   "flux_ujy": 5374098.4,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.8186,
+   "flux_ujy": 3968402.08,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.8348,
+   "flux_ujy": 6504541.39,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.8614,
+   "flux_ujy": 3316193.77,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.878,
+   "flux_ujy": 4098470.89,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.9049,
+   "flux_ujy": 1976145.36,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.9224,
+   "flux_ujy": 7545330.14,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.9493,
+   "flux_ujy": 4053842.62,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.9669,
+   "flux_ujy": 4617710.14,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 1.9944,
+   "flux_ujy": 6146527.39,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.013,
+   "flux_ujy": 4069074.69,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.0406,
+   "flux_ujy": 6492205.53,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.0594,
+   "flux_ujy": 3908996.89,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.0884,
+   "flux_ujy": 5103318.83,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.1076,
+   "flux_ujy": 5260259.57,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.1371,
+   "flux_ujy": 7675849.66,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.1566,
+   "flux_ujy": 5265249.56,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.187,
+   "flux_ujy": 4118433.4,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.2079,
+   "flux_ujy": 4165111.18,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.2379,
+   "flux_ujy": 3233900.4,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.2585,
+   "flux_ujy": 3422819.44,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.2585,
+   "flux_ujy": 7139322.83,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.2895,
+   "flux_ujy": 3019515.61,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.3109,
+   "flux_ujy": 4328060.15,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.3333,
+   "flux_ujy": 3782344.58,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.3421,
+   "flux_ujy": 4234483.1,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.3861,
+   "flux_ujy": 4014312.57,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.3949,
+   "flux_ujy": 3893099.92,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.4514,
+   "flux_ujy": 4394622.61,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.4523,
+   "flux_ujy": 3196165.43,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.514,
+   "flux_ujy": 4375065.72,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.5168,
+   "flux_ujy": 3033558.89,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.5434,
+   "flux_ujy": 3942318.11,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.5831,
+   "flux_ujy": 3432210.22,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.6134,
+   "flux_ujy": 5174401.25,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.652,
+   "flux_ujy": 4128511.7,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.6873,
+   "flux_ujy": 4262803.22,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.7257,
+   "flux_ujy": 2085891.62,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.7606,
+   "flux_ujy": 4670378.58,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.8003,
+   "flux_ujy": 3345198.14,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.8339,
+   "flux_ujy": 2988171.12,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.8765,
+   "flux_ujy": 2750573.87,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.9117,
+   "flux_ujy": 2675188.68,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.9556,
+   "flux_ujy": 1972510.66,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 2.9922,
+   "flux_ujy": 2563448.0,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.038,
+   "flux_ujy": 2291894.39,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.0754,
+   "flux_ujy": 2334796.85,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.1204,
+   "flux_ujy": 3430239.19,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.1598,
+   "flux_ujy": 2585551.03,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.2071,
+   "flux_ujy": 2507415.14,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.2467,
+   "flux_ujy": 3804995.32,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.2947,
+   "flux_ujy": 2555908.37,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.3356,
+   "flux_ujy": 3519986.16,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.3844,
+   "flux_ujy": 2688617.1,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.4259,
+   "flux_ujy": 3557918.46,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.4747,
+   "flux_ujy": 3511094.12,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.5187,
+   "flux_ujy": 3833329.96,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.5677,
+   "flux_ujy": 2593543.63,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.5835,
+   "flux_ujy": 2422022.31,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.6145,
+   "flux_ujy": 3606094.51,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.681,
+   "flux_ujy": 3411795.85,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.7116,
+   "flux_ujy": 3609955.77,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.7778,
+   "flux_ujy": 2541364.72,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.8054,
+   "flux_ujy": 4127520.52,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.8409,
+   "flux_ujy": 4066037.83,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.8701,
+   "flux_ujy": 3859229.42,
+   "err": null,
+   "visit": 0,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.8709,
+   "flux_ujy": 3919460.66,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.902,
+   "flux_ujy": 3788048.07,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 3.9713,
+   "flux_ujy": 3722506.73,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 4.0071,
+   "flux_ujy": 3825081.63,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 4.0413,
+   "flux_ujy": 3607881.55,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 4.0777,
+   "flux_ujy": 3502437.6,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
+  {
+   "wavelength_um": 4.2246,
+   "flux_ujy": 3591204.64,
+   "err": null,
+   "visit": 1,
+   "saturated": true
+  },
   {
    "wavelength_um": 4.3437,
    "flux_ujy": 3661363.49,

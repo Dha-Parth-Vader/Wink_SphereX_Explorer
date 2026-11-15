@@ -9,8 +9,8 @@
   "dec": 6.995229,
   "epoch": 2026.0,
   "fov_deg": 0.2511,
-  "pixel_scale_arcsec": 6.1499999999998805,
-  "pipeline_version": "1"
+  "pixel_scale_arcsec": 6.15,
+  "pipeline_version": "2"
  },
  "frames": [
   {
@@ -29,36 +29,36 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -5.5e-05,
-    "knee": 0.017324,
-    "top": 18.326243
+    "black": 0.000169,
+    "knee": 0.017198,
+    "top": 18.326788
    },
    "flags": [
-    "1742 pixels bled into by a saturated star",
-    "2641 cold pixels",
-    "722 pixels with electronic crosstalk",
-    "16900 pixels on the filter edge",
-    "20254 dead pixels",
-    "6668 pixels with afterglow from a bright star",
-    "3705 pixels on a satellite streak",
+    "16 pixels bled into by a saturated star",
+    "23 cold pixels",
+    "7 pixels with electronic crosstalk",
+    "166 pixels on the filter edge",
+    "181 dead pixels",
+    "59 pixels with afterglow from a bright star",
+    "32 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 1742,
-    "COLD": 2641,
-    "CROSSTALK": 722,
-    "DICHROIC": 16900,
-    "FULLSAMPLE": 536,
-    "HALO": 69719,
-    "NONFUNC": 20254,
-    "OUTLIER": 98151,
-    "OVERFLOW": 1729,
-    "PERSIST": 6668,
-    "SNOWBALL": 159,
-    "SOURCE": 1731556,
-    "STREAK": 3705,
-    "SUR_ERROR": 21890,
-    "TRANSIENT": 29771
+    "BLOOM": 16,
+    "COLD": 23,
+    "CROSSTALK": 7,
+    "DICHROIC": 166,
+    "FULLSAMPLE": 5,
+    "HALO": 619,
+    "NONFUNC": 181,
+    "OUTLIER": 870,
+    "OVERFLOW": 16,
+    "PERSIST": 59,
+    "SNOWBALL": 2,
+    "SOURCE": 15378,
+    "STREAK": 32,
+    "SUR_ERROR": 195,
+    "TRANSIENT": 265
    }
   },
   {
@@ -77,34 +77,34 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000533,
-    "knee": 0.021621,
-    "top": 13.906008
+    "black": 0.000628,
+    "knee": 0.021607,
+    "top": 13.906031
    },
    "flags": [
-    "340 pixels bled into by a saturated star",
-    "347 cold pixels",
-    "722 pixels with electronic crosstalk",
-    "2322 dead pixels",
-    "1451 pixels with afterglow from a bright star",
-    "133 pixels on a satellite streak",
+    "19 pixels bled into by a saturated star",
+    "19 cold pixels",
+    "40 pixels with electronic crosstalk",
+    "129 dead pixels",
+    "81 pixels with afterglow from a bright star",
+    "7 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 340,
-    "COLD": 347,
-    "CROSSTALK": 722,
-    "FULLSAMPLE": 80,
-    "HALO": 14223,
-    "NONFUNC": 2322,
-    "OUTLIER": 15338,
-    "OVERFLOW": 98,
-    "PERSIST": 1451,
-    "SNOWBALL": 26,
-    "SOURCE": 227264,
-    "STREAK": 133,
-    "SUR_ERROR": 3265,
-    "TRANSIENT": 5171
+    "BLOOM": 19,
+    "COLD": 19,
+    "CROSSTALK": 40,
+    "FULLSAMPLE": 4,
+    "HALO": 790,
+    "NONFUNC": 129,
+    "OUTLIER": 852,
+    "OVERFLOW": 5,
+    "PERSIST": 81,
+    "SNOWBALL": 1,
+    "SOURCE": 12626,
+    "STREAK": 7,
+    "SUR_ERROR": 181,
+    "TRANSIENT": 287
    }
   },
   {
@@ -123,31 +123,30 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000571,
-    "knee": 0.023224,
-    "top": 23.712515
+    "black": 0.000883,
+    "knee": 0.023058,
+    "top": 23.712913
    },
    "flags": [
-    "509 pixels bled into by a saturated star",
-    "248 cold pixels",
-    "1925 dead pixels",
-    "1971 pixels with afterglow from a bright star",
-    "3231 pixels on a satellite streak",
+    "27 pixels bled into by a saturated star",
+    "13 cold pixels",
+    "101 dead pixels",
+    "104 pixels with afterglow from a bright star",
+    "170 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 509,
-    "COLD": 248,
-    "HALO": 9745,
-    "NONFUNC": 1925,
-    "OUTLIER": 17285,
-    "OVERFLOW": 121,
-    "PERSIST": 1971,
-    "SNOWBALL": 8,
-    "SOURCE": 297155,
-    "STREAK": 3231,
-    "SUR_ERROR": 2744,
-    "TRANSIENT": 3958
+    "BLOOM": 27,
+    "COLD": 13,
+    "HALO": 513,
+    "NONFUNC": 101,
+    "OUTLIER": 910,
+    "OVERFLOW": 6,
+    "PERSIST": 104,
+    "SOURCE": 15640,
+    "STREAK": 170,
+    "SUR_ERROR": 144,
+    "TRANSIENT": 208
    }
   },
   {
@@ -166,30 +165,30 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000396,
-    "knee": 0.022933,
-    "top": 21.781008
+    "black": 0.000836,
+    "knee": 0.022716,
+    "top": 21.781534
    },
    "flags": [
-    "470 pixels bled into by a saturated star",
-    "414 cold pixels",
-    "2752 dead pixels",
-    "1970 pixels with afterglow from a bright star",
-    "210 pixels on a satellite streak",
+    "24 pixels bled into by a saturated star",
+    "21 cold pixels",
+    "138 dead pixels",
+    "98 pixels with afterglow from a bright star",
+    "10 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 470,
-    "COLD": 414,
-    "HALO": 12346,
-    "NONFUNC": 2752,
-    "OUTLIER": 20613,
-    "OVERFLOW": 157,
-    "PERSIST": 1970,
-    "SOURCE": 300914,
-    "STREAK": 210,
-    "SUR_ERROR": 3477,
-    "TRANSIENT": 4890
+    "BLOOM": 24,
+    "COLD": 21,
+    "HALO": 617,
+    "NONFUNC": 138,
+    "OUTLIER": 1031,
+    "OVERFLOW": 8,
+    "PERSIST": 98,
+    "SOURCE": 15046,
+    "STREAK": 10,
+    "SUR_ERROR": 174,
+    "TRANSIENT": 244
    }
   },
   {
@@ -208,32 +207,32 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000162,
-    "knee": 0.019928,
-    "top": 22.761723
+    "black": 0.000542,
+    "knee": 0.019848,
+    "top": 22.76249
    },
    "flags": [
-    "399 pixels bled into by a saturated star",
-    "386 cold pixels",
-    "16900 pixels on the filter edge",
-    "5462 dead pixels",
-    "891 pixels with afterglow from a bright star",
+    "23 pixels bled into by a saturated star",
+    "23 cold pixels",
+    "994 pixels on the filter edge",
+    "321 dead pixels",
+    "52 pixels with afterglow from a bright star",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 399,
-    "COLD": 386,
-    "DICHROIC": 16900,
-    "FULLSAMPLE": 240,
-    "HALO": 11216,
-    "NONFUNC": 5462,
-    "OUTLIER": 16624,
-    "OVERFLOW": 624,
-    "PERSIST": 891,
-    "SNOWBALL": 114,
-    "SOURCE": 319906,
-    "SUR_ERROR": 4319,
-    "TRANSIENT": 5618
+    "BLOOM": 23,
+    "COLD": 23,
+    "DICHROIC": 994,
+    "FULLSAMPLE": 14,
+    "HALO": 660,
+    "NONFUNC": 321,
+    "OUTLIER": 978,
+    "OVERFLOW": 37,
+    "PERSIST": 52,
+    "SNOWBALL": 7,
+    "SOURCE": 18818,
+    "SUR_ERROR": 254,
+    "TRANSIENT": 330
    }
   },
   {
@@ -252,30 +251,30 @@
    "coverage": 1.0,
    "saturated": false,
    "stretch": {
-    "black": 0.000484,
-    "knee": 0.035223,
-    "top": 25.513622
+    "black": 0.000603,
+    "knee": 0.035248,
+    "top": 25.513876
    },
    "flags": [
-    "24 pixels bled into by a saturated star",
-    "517 cold pixels",
-    "3783 dead pixels",
-    "204 pixels with afterglow from a bright star",
-    "131 pixels on a satellite streak"
+    "1 pixels bled into by a saturated star",
+    "27 cold pixels",
+    "199 dead pixels",
+    "11 pixels with afterglow from a bright star",
+    "7 pixels on a satellite streak"
    ],
    "flag_bits": {
-    "BLOOM": 24,
-    "COLD": 517,
-    "FULLSAMPLE": 216,
-    "HALO": 9140,
-    "NONFUNC": 3783,
-    "OUTLIER": 12974,
-    "OVERFLOW": 397,
-    "PERSIST": 204,
-    "SOURCE": 312788,
-    "STREAK": 131,
-    "SUR_ERROR": 3707,
-    "TRANSIENT": 4503
+    "BLOOM": 1,
+    "COLD": 27,
+    "FULLSAMPLE": 11,
+    "HALO": 481,
+    "NONFUNC": 199,
+    "OUTLIER": 683,
+    "OVERFLOW": 21,
+    "PERSIST": 11,
+    "SOURCE": 16463,
+    "STREAK": 7,
+    "SUR_ERROR": 195,
+    "TRANSIENT": 237
    }
   },
   {
@@ -294,26 +293,26 @@
    "coverage": 1.0,
    "saturated": false,
    "stretch": {
-    "black": 0.000606,
-    "knee": 0.050094,
-    "top": 15.31519
+    "black": 0.000659,
+    "knee": 0.050123,
+    "top": 15.315342
    },
    "flags": [
-    "729 cold pixels",
-    "4010 dead pixels",
-    "181 pixels with afterglow from a bright star"
+    "36 cold pixels",
+    "200 dead pixels",
+    "9 pixels with afterglow from a bright star"
    ],
    "flag_bits": {
-    "COLD": 729,
-    "HALO": 13049,
-    "NONFUNC": 4010,
-    "OUTLIER": 15317,
-    "OVERFLOW": 332,
-    "PERSIST": 181,
-    "SNOWBALL": 11,
-    "SOURCE": 273529,
-    "SUR_ERROR": 4378,
-    "TRANSIENT": 5631
+    "COLD": 36,
+    "HALO": 652,
+    "NONFUNC": 200,
+    "OUTLIER": 766,
+    "OVERFLOW": 17,
+    "PERSIST": 9,
+    "SNOWBALL": 1,
+    "SOURCE": 13676,
+    "SUR_ERROR": 219,
+    "TRANSIENT": 282
    }
   },
   {
@@ -332,36 +331,36 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -5.5e-05,
-    "knee": 0.017324,
-    "top": 18.326243
+    "black": 0.000169,
+    "knee": 0.017198,
+    "top": 18.326788
    },
    "flags": [
-    "1714 pixels bled into by a saturated star",
-    "2468 cold pixels",
-    "134 pixels with electronic crosstalk",
-    "13956 pixels on the filter edge",
-    "20156 dead pixels",
-    "22429 pixels with afterglow from a bright star",
-    "1280 pixels on a satellite streak",
+    "15 pixels bled into by a saturated star",
+    "22 cold pixels",
+    "1 pixels with electronic crosstalk",
+    "126 pixels on the filter edge",
+    "180 dead pixels",
+    "201 pixels with afterglow from a bright star",
+    "11 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 1714,
-    "COLD": 2468,
-    "CROSSTALK": 134,
-    "DICHROIC": 13956,
-    "FULLSAMPLE": 240,
-    "HALO": 71432,
-    "NONFUNC": 20156,
-    "OUTLIER": 98470,
-    "OVERFLOW": 2032,
-    "PERSIST": 22429,
-    "SNOWBALL": 153,
-    "SOURCE": 1719409,
-    "STREAK": 1280,
-    "SUR_ERROR": 23255,
-    "TRANSIENT": 30450
+    "BLOOM": 15,
+    "COLD": 22,
+    "CROSSTALK": 1,
+    "DICHROIC": 126,
+    "FULLSAMPLE": 2,
+    "HALO": 638,
+    "NONFUNC": 180,
+    "OUTLIER": 878,
+    "OVERFLOW": 18,
+    "PERSIST": 201,
+    "SNOWBALL": 1,
+    "SOURCE": 15385,
+    "STREAK": 11,
+    "SUR_ERROR": 208,
+    "TRANSIENT": 272
    }
   },
   {
@@ -380,31 +379,31 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000533,
-    "knee": 0.021621,
-    "top": 13.906008
+    "black": 0.000628,
+    "knee": 0.021607,
+    "top": 13.906031
    },
    "flags": [
-    "279 pixels bled into by a saturated star",
-    "302 cold pixels",
-    "134 pixels with electronic crosstalk",
-    "2523 dead pixels",
-    "3278 pixels with afterglow from a bright star",
+    "16 pixels bled into by a saturated star",
+    "17 cold pixels",
+    "7 pixels with electronic crosstalk",
+    "140 dead pixels",
+    "182 pixels with afterglow from a bright star",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 279,
-    "COLD": 302,
-    "CROSSTALK": 134,
-    "HALO": 14140,
-    "NONFUNC": 2523,
-    "OUTLIER": 15885,
-    "OVERFLOW": 146,
-    "PERSIST": 3278,
-    "SNOWBALL": 19,
-    "SOURCE": 226554,
-    "SUR_ERROR": 3454,
-    "TRANSIENT": 5124
+    "BLOOM": 16,
+    "COLD": 17,
+    "CROSSTALK": 7,
+    "HALO": 786,
+    "NONFUNC": 140,
+    "OUTLIER": 882,
+    "OVERFLOW": 8,
+    "PERSIST": 182,
+    "SNOWBALL": 1,
+    "SOURCE": 12586,
+    "SUR_ERROR": 192,
+    "TRANSIENT": 285
    }
   },
   {
@@ -423,28 +422,28 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000571,
-    "knee": 0.023224,
-    "top": 23.712515
+    "black": 0.000883,
+    "knee": 0.023058,
+    "top": 23.712913
    },
    "flags": [
-    "503 pixels bled into by a saturated star",
-    "188 cold pixels",
-    "1766 dead pixels",
-    "7831 pixels with afterglow from a bright star",
+    "28 pixels bled into by a saturated star",
+    "10 cold pixels",
+    "98 dead pixels",
+    "435 pixels with afterglow from a bright star",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 503,
-    "COLD": 188,
-    "HALO": 8362,
-    "NONFUNC": 1766,
-    "OUTLIER": 15981,
-    "OVERFLOW": 140,
-    "PERSIST": 7831,
-    "SOURCE": 281333,
-    "SUR_ERROR": 2329,
-    "TRANSIENT": 3446
+    "BLOOM": 28,
+    "COLD": 10,
+    "HALO": 465,
+    "NONFUNC": 98,
+    "OUTLIER": 888,
+    "OVERFLOW": 8,
+    "PERSIST": 435,
+    "SOURCE": 15630,
+    "SUR_ERROR": 129,
+    "TRANSIENT": 191
    }
   },
   {
@@ -463,33 +462,33 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000396,
-    "knee": 0.022933,
-    "top": 21.781008
+    "black": 0.000836,
+    "knee": 0.022716,
+    "top": 21.781534
    },
    "flags": [
-    "486 pixels bled into by a saturated star",
-    "374 cold pixels",
-    "3387 pixels on the filter edge",
-    "2743 dead pixels",
-    "5466 pixels with afterglow from a bright star",
-    "691 pixels on a satellite streak",
+    "24 pixels bled into by a saturated star",
+    "19 cold pixels",
+    "169 pixels on the filter edge",
+    "137 dead pixels",
+    "273 pixels with afterglow from a bright star",
+    "35 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 486,
-    "COLD": 374,
-    "DICHROIC": 3387,
-    "FULLSAMPLE": 240,
-    "HALO": 12119,
-    "NONFUNC": 2743,
-    "OUTLIER": 19909,
-    "OVERFLOW": 152,
-    "PERSIST": 5466,
-    "SOURCE": 303832,
-    "STREAK": 691,
-    "SUR_ERROR": 3398,
-    "TRANSIENT": 4760
+    "BLOOM": 24,
+    "COLD": 19,
+    "DICHROIC": 169,
+    "FULLSAMPLE": 12,
+    "HALO": 606,
+    "NONFUNC": 137,
+    "OUTLIER": 995,
+    "OVERFLOW": 8,
+    "PERSIST": 273,
+    "SOURCE": 15192,
+    "STREAK": 35,
+    "SUR_ERROR": 170,
+    "TRANSIENT": 238
    }
   },
   {
@@ -508,31 +507,31 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000162,
-    "knee": 0.019928,
-    "top": 22.761723
+    "black": 0.000542,
+    "knee": 0.019848,
+    "top": 22.76249
    },
    "flags": [
-    "423 pixels bled into by a saturated star",
-    "432 cold pixels",
-    "10569 pixels on the filter edge",
-    "3792 dead pixels",
-    "770 pixels with afterglow from a bright star",
+    "24 pixels bled into by a saturated star",
+    "24 cold pixels",
+    "587 pixels on the filter edge",
+    "211 dead pixels",
+    "43 pixels with afterglow from a bright star",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 423,
-    "COLD": 432,
-    "DICHROIC": 10569,
-    "HALO": 12529,
-    "NONFUNC": 3792,
-    "OUTLIER": 16734,
-    "OVERFLOW": 474,
-    "PERSIST": 770,
-    "SNOWBALL": 14,
-    "SOURCE": 337447,
-    "SUR_ERROR": 4567,
-    "TRANSIENT": 5805
+    "BLOOM": 24,
+    "COLD": 24,
+    "DICHROIC": 587,
+    "HALO": 696,
+    "NONFUNC": 211,
+    "OUTLIER": 930,
+    "OVERFLOW": 26,
+    "PERSIST": 43,
+    "SNOWBALL": 1,
+    "SOURCE": 18747,
+    "SUR_ERROR": 254,
+    "TRANSIENT": 322
    }
   },
   {
@@ -551,28 +550,28 @@
    "coverage": 1.0,
    "saturated": false,
    "stretch": {
-    "black": 0.000484,
-    "knee": 0.035223,
-    "top": 25.513622
+    "black": 0.000603,
+    "knee": 0.035248,
+    "top": 25.513876
    },
    "flags": [
-    "23 pixels bled into by a saturated star",
-    "611 cold pixels",
-    "4715 dead pixels",
-    "3081 pixels with afterglow from a bright star"
+    "1 pixels bled into by a saturated star",
+    "34 cold pixels",
+    "262 dead pixels",
+    "171 pixels with afterglow from a bright star"
    ],
    "flag_bits": {
-    "BLOOM": 23,
-    "COLD": 611,
-    "HALO": 11322,
-    "NONFUNC": 4715,
-    "OUTLIER": 13470,
-    "OVERFLOW": 594,
-    "PERSIST": 3081,
-    "SNOWBALL": 105,
-    "SOURCE": 295493,
-    "SUR_ERROR": 4611,
-    "TRANSIENT": 5375
+    "BLOOM": 1,
+    "COLD": 34,
+    "HALO": 629,
+    "NONFUNC": 262,
+    "OUTLIER": 748,
+    "OVERFLOW": 33,
+    "PERSIST": 171,
+    "SNOWBALL": 6,
+    "SOURCE": 16416,
+    "SUR_ERROR": 256,
+    "TRANSIENT": 299
    }
   },
   {
@@ -591,28 +590,28 @@
    "coverage": 1.0,
    "saturated": false,
    "stretch": {
-    "black": 0.000606,
-    "knee": 0.050094,
-    "top": 15.31519
+    "black": 0.000659,
+    "knee": 0.050123,
+    "top": 15.315342
    },
    "flags": [
-    "561 cold pixels",
-    "4617 dead pixels",
-    "2003 pixels with afterglow from a bright star",
-    "589 pixels on a satellite streak"
+    "28 cold pixels",
+    "231 dead pixels",
+    "100 pixels with afterglow from a bright star",
+    "29 pixels on a satellite streak"
    ],
    "flag_bits": {
-    "COLD": 561,
-    "HALO": 12960,
-    "NONFUNC": 4617,
-    "OUTLIER": 16491,
-    "OVERFLOW": 526,
-    "PERSIST": 2003,
-    "SNOWBALL": 15,
-    "SOURCE": 274750,
-    "STREAK": 589,
-    "SUR_ERROR": 4896,
-    "TRANSIENT": 5940
+    "COLD": 28,
+    "HALO": 648,
+    "NONFUNC": 231,
+    "OUTLIER": 825,
+    "OVERFLOW": 26,
+    "PERSIST": 100,
+    "SNOWBALL": 1,
+    "SOURCE": 13738,
+    "STREAK": 29,
+    "SUR_ERROR": 245,
+    "TRANSIENT": 297
    }
   },
   {
@@ -631,33 +630,32 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": -5.5e-05,
-    "knee": 0.017324,
-    "top": 18.326243
+    "black": 0.000169,
+    "knee": 0.017198,
+    "top": 18.326788
    },
    "flags": [
-    "607 pixels bled into by a saturated star",
-    "921 cold pixels",
-    "286 pixels with electronic crosstalk",
-    "6842 dead pixels",
-    "2430 pixels with afterglow from a bright star",
-    "1672 pixels on a satellite streak",
+    "15 pixels bled into by a saturated star",
+    "23 cold pixels",
+    "6 pixels with electronic crosstalk",
+    "167 dead pixels",
+    "59 pixels with afterglow from a bright star",
+    "45 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 607,
-    "COLD": 921,
-    "CROSSTALK": 286,
-    "HALO": 25288,
-    "NONFUNC": 6842,
-    "OUTLIER": 35507,
-    "OVERFLOW": 678,
-    "PERSIST": 2430,
-    "SNOWBALL": 24,
-    "SOURCE": 632821,
-    "STREAK": 1672,
-    "SUR_ERROR": 7611,
-    "TRANSIENT": 10936
+    "BLOOM": 15,
+    "COLD": 23,
+    "CROSSTALK": 6,
+    "HALO": 620,
+    "NONFUNC": 167,
+    "OUTLIER": 889,
+    "OVERFLOW": 16,
+    "PERSIST": 59,
+    "SOURCE": 15631,
+    "STREAK": 45,
+    "SUR_ERROR": 188,
+    "TRANSIENT": 266
    }
   },
   {
@@ -676,30 +674,30 @@
    "coverage": 0.993,
    "saturated": true,
    "stretch": {
-    "black": 0.000533,
-    "knee": 0.021621,
-    "top": 13.906008
+    "black": 0.000628,
+    "knee": 0.021607,
+    "top": 13.906031
    },
    "flags": [
-    "113 pixels bled into by a saturated star",
-    "159 cold pixels",
-    "286 pixels with electronic crosstalk",
-    "961 dead pixels",
-    "628 pixels with afterglow from a bright star",
+    "14 pixels bled into by a saturated star",
+    "20 cold pixels",
+    "36 pixels with electronic crosstalk",
+    "120 dead pixels",
+    "78 pixels with afterglow from a bright star",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 113,
-    "COLD": 159,
-    "CROSSTALK": 286,
-    "HALO": 6890,
-    "NONFUNC": 961,
-    "OUTLIER": 6677,
-    "OVERFLOW": 52,
-    "PERSIST": 628,
-    "SOURCE": 102387,
-    "SUR_ERROR": 1545,
-    "TRANSIENT": 2572
+    "BLOOM": 14,
+    "COLD": 20,
+    "CROSSTALK": 36,
+    "HALO": 861,
+    "NONFUNC": 120,
+    "OUTLIER": 835,
+    "OVERFLOW": 6,
+    "PERSIST": 78,
+    "SOURCE": 12798,
+    "SUR_ERROR": 193,
+    "TRANSIENT": 322
    }
   },
   {
@@ -718,29 +716,29 @@
    "coverage": 0.994,
    "saturated": true,
    "stretch": {
-    "black": 0.000571,
-    "knee": 0.023224,
-    "top": 23.712515
+    "black": 0.000883,
+    "knee": 0.023058,
+    "top": 23.712913
    },
    "flags": [
-    "196 pixels bled into by a saturated star",
-    "99 cold pixels",
-    "749 dead pixels",
-    "591 pixels with afterglow from a bright star",
+    "24 pixels bled into by a saturated star",
+    "12 cold pixels",
+    "94 dead pixels",
+    "74 pixels with afterglow from a bright star",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 196,
-    "COLD": 99,
-    "HALO": 3257,
-    "NONFUNC": 749,
-    "OUTLIER": 7045,
-    "OVERFLOW": 72,
-    "PERSIST": 591,
-    "SNOWBALL": 9,
-    "SOURCE": 126931,
-    "SUR_ERROR": 860,
-    "TRANSIENT": 1308
+    "BLOOM": 24,
+    "COLD": 12,
+    "HALO": 407,
+    "NONFUNC": 94,
+    "OUTLIER": 881,
+    "OVERFLOW": 9,
+    "PERSIST": 74,
+    "SNOWBALL": 1,
+    "SOURCE": 15866,
+    "SUR_ERROR": 108,
+    "TRANSIENT": 164
    }
   },
   {
@@ -759,30 +757,30 @@
    "coverage": 1.0,
    "saturated": true,
    "stretch": {
-    "black": 0.000396,
-    "knee": 0.022933,
-    "top": 21.781008
+    "black": 0.000836,
+    "knee": 0.022716,
+    "top": 21.781534
    },
    "flags": [
-    "94 pixels bled into by a saturated star",
-    "62 cold pixels",
-    "483 dead pixels",
-    "315 pixels with afterglow from a bright star",
-    "477 pixels on a satellite streak",
+    "24 pixels bled into by a saturated star",
+    "16 cold pixels",
+    "121 dead pixels",
+    "79 pixels with afterglow from a bright star",
+    "119 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 94,
-    "COLD": 62,
-    "HALO": 2191,
-    "NONFUNC": 483,
-    "OUTLIER": 4044,
-    "OVERFLOW": 32,
-    "PERSIST": 315,
-    "SOURCE": 61752,
-    "STREAK": 477,
-    "SUR_ERROR": 642,
-    "TRANSIENT": 858
+    "BLOOM": 24,
+    "COLD": 16,
+    "HALO": 548,
+    "NONFUNC": 121,
+    "OUTLIER": 1011,
+    "OVERFLOW": 8,
+    "PERSIST": 79,
+    "SOURCE": 15438,
+    "STREAK": 119,
+    "SUR_ERROR": 160,
+    "TRANSIENT": 214
    }
   },
   {
@@ -801,30 +799,30 @@
    "coverage": 0.991,
    "saturated": true,
    "stretch": {
-    "black": 0.000162,
-    "knee": 0.019928,
-    "top": 22.761723
+    "black": 0.000542,
+    "knee": 0.019848,
+    "top": 22.76249
    },
    "flags": [
-    "195 pixels bled into by a saturated star",
-    "200 cold pixels",
-    "2260 dead pixels",
-    "668 pixels with afterglow from a bright star",
-    "244 pixels on a satellite streak",
+    "24 pixels bled into by a saturated star",
+    "25 cold pixels",
+    "282 dead pixels",
+    "84 pixels with afterglow from a bright star",
+    "30 pixels on a satellite streak",
     "The target is saturated here, so its brightness is approximate."
    ],
    "flag_bits": {
-    "BLOOM": 195,
-    "COLD": 200,
-    "HALO": 6688,
-    "NONFUNC": 2260,
-    "OUTLIER": 8763,
-    "OVERFLOW": 280,
-    "PERSIST": 668,
-    "SOURCE": 152527,
-    "STREAK": 244,
-    "SUR_ERROR": 2188,
-    "TRANSIENT": 3259
+    "BLOOM": 24,
+    "COLD": 25,
+    "HALO": 836,
+    "NONFUNC": 282,
+    "OUTLIER": 1095,
+    "OVERFLOW": 35,
+    "PERSIST": 84,
+    "SOURCE": 19066,
+    "STREAK": 30,
+    "SUR_ERROR": 274,
+    "TRANSIENT": 407
    }
   },
   {
@@ -843,30 +841,30 @@
    "coverage": 0.992,
    "saturated": false,
    "stretch": {
-    "black": 0.000484,
-    "knee": 0.035223,
-    "top": 25.513622
+    "black": 0.000603,
+    "knee": 0.035248,
+    "top": 25.513876
    },
    "flags": [
-    "9 pixels bled into by a saturated star",
-    "288 cold pixels",
-    "1711 dead pixels",
-    "141 pixels with afterglow from a bright star",
-    "951 pixels on a satellite streak"
+    "1 pixels bled into by a saturated star",
+    "36 cold pixels",
+    "214 dead pixels",
+    "18 pixels with afterglow from a bright star",
+    "119 pixels on a satellite streak"
    ],
    "flag_bits": {
-    "BLOOM": 9,
-    "COLD": 288,
-    "HALO": 3980,
-    "NONFUNC": 1711,
-    "OUTLIER": 5858,
-    "OVERFLOW": 171,
-    "PERSIST": 141,
-    "SNOWBALL": 15,
-    "SOURCE": 133513,
-    "STREAK": 951,
-    "SUR_ERROR": 1600,
-    "TRANSIENT": 1969
+    "BLOOM": 1,
+    "COLD": 36,
+    "HALO": 498,
+    "NONFUNC": 214,
+    "OUTLIER": 732,
+    "OVERFLOW": 21,
+    "PERSIST": 18,
+    "SNOWBALL": 2,
+    "SOURCE": 16689,
+    "STREAK": 119,
+    "SUR_ERROR": 200,
+    "TRANSIENT": 246
    }
   },
   {
@@ -885,25 +883,25 @@
    "coverage": 1.0,
    "saturated": false,
    "stretch": {
-    "black": 0.000606,
-    "knee": 0.050094,
-    "top": 15.31519
+    "black": 0.000659,
+    "knee": 0.050123,
+    "top": 15.315342
    },
    "flags": [
-    "113 cold pixels",
-    "678 dead pixels",
-    "87 pixels with afterglow from a bright star"
+    "28 cold pixels",
+    "170 dead pixels",
+    "22 pixels with afterglow from a bright star"
    ],
    "flag_bits": {
-    "COLD": 113,
-    "HALO": 2282,
-    "NONFUNC": 678,
-    "OUTLIER": 3120,
-    "OVERFLOW": 71,
-    "PERSIST": 87,
-    "SOURCE": 55711,
-    "SUR_ERROR": 776,
-    "TRANSIENT": 970
+    "COLD": 28,
+    "HALO": 570,
+    "NONFUNC": 170,
+    "OUTLIER": 780,
+    "OVERFLOW": 18,
+    "PERSIST": 22,
+    "SOURCE": 13928,
+    "SUR_ERROR": 194,
+    "TRANSIENT": 242
    }
   }
  ],
@@ -9044,21 +9042,21 @@
     "mag": 15.34
    },
    {
-    "ra": 164.1842849,
-    "dec": 6.8746539,
-    "label": "CatWISE J105644.22+065228.7",
-    "epoch": 2015.4,
-    "pmra": -29.25,
-    "pmdec": -11.71,
-    "mag": 15.36
-   },
-   {
     "ra": 164.2008312,
     "dec": 6.9599849,
     "label": "CatWISE J105648.19+065735.9",
     "epoch": 2015.4,
     "pmra": 2.45,
     "pmdec": 2.85,
+    "mag": 15.36
+   },
+   {
+    "ra": 164.1842849,
+    "dec": 6.8746539,
+    "label": "CatWISE J105644.22+065228.7",
+    "epoch": 2015.4,
+    "pmra": -29.25,
+    "pmdec": -11.71,
     "mag": 15.36
    },
    {
@@ -9071,21 +9069,21 @@
     "mag": 15.37
    },
    {
-    "ra": 164.1473658,
-    "dec": 6.8873185,
-    "label": "CatWISE J105635.36+065314.3",
-    "epoch": 2015.4,
-    "pmra": -36.82,
-    "pmdec": -2.95,
-    "mag": 15.4
-   },
-   {
     "ra": 164.1154128,
     "dec": 7.0859291,
     "label": "CatWISE J105627.69+070509.3",
     "epoch": 2015.4,
     "pmra": 0.07,
     "pmdec": -37.49,
+    "mag": 15.4
+   },
+   {
+    "ra": 164.1473658,
+    "dec": 6.8873185,
+    "label": "CatWISE J105635.36+065314.3",
+    "epoch": 2015.4,
+    "pmra": -36.82,
+    "pmdec": -2.95,
     "mag": 15.4
    },
    {
@@ -9260,21 +9258,21 @@
     "mag": 15.51
    },
    {
-    "ra": 164.214104,
-    "dec": 6.9191659,
-    "label": "CatWISE J105651.38+065508.9",
-    "epoch": 2015.4,
-    "pmra": -59.02,
-    "pmdec": 9.62,
-    "mag": 15.52
-   },
-   {
     "ra": 164.1462695,
     "dec": 7.0330355,
     "label": "CatWISE J105635.10+070158.9",
     "epoch": 2015.4,
     "pmra": 4.82,
     "pmdec": -62.28,
+    "mag": 15.52
+   },
+   {
+    "ra": 164.214104,
+    "dec": 6.9191659,
+    "label": "CatWISE J105651.38+065508.9",
+    "epoch": 2015.4,
+    "pmra": -59.02,
+    "pmdec": 9.62,
     "mag": 15.52
    },
    {
@@ -9413,6 +9411,15 @@
     "mag": 15.58
    },
    {
+    "ra": 164.0654357,
+    "dec": 7.0741033,
+    "label": "CatWISE J105615.70+070426.7",
+    "epoch": 2015.4,
+    "pmra": -0.23,
+    "pmdec": -37.93,
+    "mag": 15.58
+   },
+   {
     "ra": 164.2033135,
     "dec": 7.0077016,
     "label": "CatWISE J105648.79+070027.7",
@@ -9428,15 +9435,6 @@
     "epoch": 2015.4,
     "pmra": -20.74,
     "pmdec": -75.45,
-    "mag": 15.58
-   },
-   {
-    "ra": 164.0654357,
-    "dec": 7.0741033,
-    "label": "CatWISE J105615.70+070426.7",
-    "epoch": 2015.4,
-    "pmra": -0.23,
-    "pmdec": -37.93,
     "mag": 15.58
    },
    {
@@ -9638,21 +9636,21 @@
     "mag": 15.66
    },
    {
-    "ra": 164.060043,
-    "dec": 7.1030188,
-    "label": "CatWISE J105614.41+070610.8",
-    "epoch": 2015.4,
-    "pmra": 12.58,
-    "pmdec": -9.04,
-    "mag": 15.66
-   },
-   {
     "ra": 164.0638883,
     "dec": 7.0767418,
     "label": "CatWISE J105615.33+070436.2",
     "epoch": 2015.4,
     "pmra": -21.06,
     "pmdec": -41.4,
+    "mag": 15.66
+   },
+   {
+    "ra": 164.060043,
+    "dec": 7.1030188,
+    "label": "CatWISE J105614.41+070610.8",
+    "epoch": 2015.4,
+    "pmra": 12.58,
+    "pmdec": -9.04,
     "mag": 15.66
    },
    {
@@ -9773,21 +9771,21 @@
     "mag": 15.71
    },
    {
-    "ra": 164.1954066,
-    "dec": 6.8267395,
-    "label": "CatWISE J105646.89+064936.2",
-    "epoch": 2015.4,
-    "pmra": -32.46,
-    "pmdec": -36.58,
-    "mag": 15.71
-   },
-   {
     "ra": 164.1169895,
     "dec": 6.8892757,
     "label": "CatWISE J105628.07+065321.3",
     "epoch": 2015.4,
     "pmra": -55.88,
     "pmdec": -0.74,
+    "mag": 15.71
+   },
+   {
+    "ra": 164.1954066,
+    "dec": 6.8267395,
+    "label": "CatWISE J105646.89+064936.2",
+    "epoch": 2015.4,
+    "pmra": -32.46,
+    "pmdec": -36.58,
     "mag": 15.71
    },
    {
@@ -10061,15 +10059,6 @@
     "mag": 15.83
    },
    {
-    "ra": 163.9615518,
-    "dec": 6.8788565,
-    "label": "CatWISE J105550.77+065243.8",
-    "epoch": 2015.4,
-    "pmra": -12.13,
-    "pmdec": -17.71,
-    "mag": 15.83
-   },
-   {
     "ra": 164.1512154,
     "dec": 6.9968131,
     "label": "CatWISE J105636.29+065948.5",
@@ -10085,6 +10074,15 @@
     "epoch": 2015.4,
     "pmra": -27.4,
     "pmdec": -1.73,
+    "mag": 15.83
+   },
+   {
+    "ra": 163.9615518,
+    "dec": 6.8788565,
+    "label": "CatWISE J105550.77+065243.8",
+    "epoch": 2015.4,
+    "pmra": -12.13,
+    "pmdec": -17.71,
     "mag": 15.83
    },
    {
@@ -10430,21 +10428,21 @@
     "mag": 15.94
    },
    {
-    "ra": 163.9531166,
-    "dec": 6.8767845,
-    "label": "CatWISE J105548.74+065236.4",
-    "epoch": 2015.4,
-    "pmra": -0.73,
-    "pmdec": -36.98,
-    "mag": 15.94
-   },
-   {
     "ra": 164.1408475,
     "dec": 7.1364482,
     "label": "CatWISE J105633.80+070811.2",
     "epoch": 2015.4,
     "pmra": 37.39,
     "pmdec": -25.73,
+    "mag": 15.94
+   },
+   {
+    "ra": 163.9531166,
+    "dec": 6.8767845,
+    "label": "CatWISE J105548.74+065236.4",
+    "epoch": 2015.4,
+    "pmra": -0.73,
+    "pmdec": -36.98,
     "mag": 15.94
    },
    {
@@ -10592,21 +10590,21 @@
     "mag": 15.98
    },
    {
-    "ra": 164.0773883,
-    "dec": 6.8492488,
-    "label": "CatWISE J105618.57+065057.2",
-    "epoch": 2015.4,
-    "pmra": -5.45,
-    "pmdec": -37.6,
-    "mag": 15.99
-   },
-   {
     "ra": 164.1438256,
     "dec": 6.9155612,
     "label": "CatWISE J105634.51+065456.0",
     "epoch": 2015.4,
     "pmra": 10.55,
     "pmdec": -56.88,
+    "mag": 15.99
+   },
+   {
+    "ra": 164.0773883,
+    "dec": 6.8492488,
+    "label": "CatWISE J105618.57+065057.2",
+    "epoch": 2015.4,
+    "pmra": -5.45,
+    "pmdec": -37.6,
     "mag": 15.99
    },
    {
@@ -10709,21 +10707,21 @@
     "mag": 16.01
    },
    {
-    "ra": 164.0341896,
-    "dec": 7.1689199,
-    "label": "CatWISE J105608.20+071008.1",
-    "epoch": 2015.4,
-    "pmra": -102.26,
-    "pmdec": 4.53,
-    "mag": 16.01
-   },
-   {
     "ra": 163.997732,
     "dec": 7.1273372,
     "label": "CatWISE J105559.45+070738.4",
     "epoch": 2015.4,
     "pmra": -18.63,
     "pmdec": 1.69,
+    "mag": 16.01
+   },
+   {
+    "ra": 164.0341896,
+    "dec": 7.1689199,
+    "label": "CatWISE J105608.20+071008.1",
+    "epoch": 2015.4,
+    "pmra": -102.26,
+    "pmdec": 4.53,
     "mag": 16.01
    },
    {
@@ -10880,21 +10878,21 @@
     "mag": 16.05
    },
    {
-    "ra": 164.0722969,
-    "dec": 6.8176592,
-    "label": "CatWISE J105617.35+064903.5",
-    "epoch": 2015.4,
-    "pmra": -20.13,
-    "pmdec": -7.25,
-    "mag": 16.06
-   },
-   {
     "ra": 164.1183371,
     "dec": 7.0357846,
     "label": "CatWISE J105628.40+070208.8",
     "epoch": 2015.4,
     "pmra": -45.48,
     "pmdec": -17.21,
+    "mag": 16.06
+   },
+   {
+    "ra": 164.0722969,
+    "dec": 6.8176592,
+    "label": "CatWISE J105617.35+064903.5",
+    "epoch": 2015.4,
+    "pmra": -20.13,
+    "pmdec": -7.25,
     "mag": 16.06
    },
    {
@@ -10916,12 +10914,12 @@
     "mag": 16.06
    },
    {
-    "ra": 164.2024352,
-    "dec": 6.893918,
-    "label": "CatWISE J105648.58+065338.1",
+    "ra": 164.0839709,
+    "dec": 7.0950151,
+    "label": "CatWISE J105620.15+070542.0",
     "epoch": 2015.4,
-    "pmra": 11.02,
-    "pmdec": -62.97,
+    "pmra": -25.88,
+    "pmdec": -22.02,
     "mag": 16.07
    },
    {
@@ -10934,12 +10932,12 @@
     "mag": 16.07
    },
    {
-    "ra": 164.0839709,
-    "dec": 7.0950151,
-    "label": "CatWISE J105620.15+070542.0",
+    "ra": 164.2024352,
+    "dec": 6.893918,
+    "label": "CatWISE J105648.58+065338.1",
     "epoch": 2015.4,
-    "pmra": -25.88,
-    "pmdec": -22.02,
+    "pmra": 11.02,
+    "pmdec": -62.97,
     "mag": 16.07
    },
    {
@@ -11015,21 +11013,21 @@
     "mag": 16.09
    },
    {
-    "ra": 163.9772548,
-    "dec": 6.8472385,
-    "label": "CatWISE J105554.54+065050.0",
-    "epoch": 2015.4,
-    "pmra": -92.34,
-    "pmdec": 45.15,
-    "mag": 16.1
-   },
-   {
     "ra": 164.0473632,
     "dec": 6.9178027,
     "label": "CatWISE J105611.36+065504.0",
     "epoch": 2015.4,
     "pmra": -30.17,
     "pmdec": -51.67,
+    "mag": 16.1
+   },
+   {
+    "ra": 163.9772548,
+    "dec": 6.8472385,
+    "label": "CatWISE J105554.54+065050.0",
+    "epoch": 2015.4,
+    "pmra": -92.34,
+    "pmdec": 45.15,
     "mag": 16.1
    },
    {
@@ -11069,15 +11067,6 @@
     "mag": 16.12
    },
    {
-    "ra": 164.0746006,
-    "dec": 6.8369657,
-    "label": "CatWISE J105617.90+065013.0",
-    "epoch": 2015.4,
-    "pmra": 23.2,
-    "pmdec": -39.23,
-    "mag": 16.12
-   },
-   {
     "ra": 164.2346158,
     "dec": 6.9927542,
     "label": "CatWISE J105656.30+065933.9",
@@ -11087,12 +11076,12 @@
     "mag": 16.12
    },
    {
-    "ra": 163.91316,
-    "dec": 6.9513789,
-    "label": "CatWISE J105539.15+065704.9",
+    "ra": 164.0746006,
+    "dec": 6.8369657,
+    "label": "CatWISE J105617.90+065013.0",
     "epoch": 2015.4,
-    "pmra": -21.56,
-    "pmdec": 34.1,
+    "pmra": 23.2,
+    "pmdec": -39.23,
     "mag": 16.12
    },
    {
@@ -11102,6 +11091,15 @@
     "epoch": 2015.4,
     "pmra": -63.86,
     "pmdec": 6.2,
+    "mag": 16.12
+   },
+   {
+    "ra": 163.91316,
+    "dec": 6.9513789,
+    "label": "CatWISE J105539.15+065704.9",
+    "epoch": 2015.4,
+    "pmra": -21.56,
+    "pmdec": 34.1,
     "mag": 16.12
    },
    {
@@ -11294,21 +11292,21 @@
     "mag": 16.18
    },
    {
-    "ra": 164.286108,
-    "dec": 7.0027428,
-    "label": "CatWISE J105708.66+070009.8",
-    "epoch": 2015.4,
-    "pmra": -13.02,
-    "pmdec": 1.5,
-    "mag": 16.18
-   },
-   {
     "ra": 164.1516295,
     "dec": 7.1780492,
     "label": "CatWISE J105636.39+071040.9",
     "epoch": 2015.4,
     "pmra": 39.88,
     "pmdec": -7.37,
+    "mag": 16.18
+   },
+   {
+    "ra": 164.286108,
+    "dec": 7.0027428,
+    "label": "CatWISE J105708.66+070009.8",
+    "epoch": 2015.4,
+    "pmra": -13.02,
+    "pmdec": 1.5,
     "mag": 16.18
    },
    {
@@ -11366,21 +11364,21 @@
     "mag": 16.21
    },
    {
-    "ra": 164.0787742,
-    "dec": 6.8212507,
-    "label": "CatWISE J105618.90+064916.5",
-    "epoch": 2015.4,
-    "pmra": -60.38,
-    "pmdec": -19.44,
-    "mag": 16.21
-   },
-   {
     "ra": 164.1572192,
     "dec": 7.0784889,
     "label": "CatWISE J105637.73+070442.5",
     "epoch": 2015.4,
     "pmra": -43.01,
     "pmdec": -34.39,
+    "mag": 16.21
+   },
+   {
+    "ra": 164.0787742,
+    "dec": 6.8212507,
+    "label": "CatWISE J105618.90+064916.5",
+    "epoch": 2015.4,
+    "pmra": -60.38,
+    "pmdec": -19.44,
     "mag": 16.21
    },
    {
@@ -11411,21 +11409,21 @@
     "mag": 16.21
    },
    {
-    "ra": 164.0022605,
-    "dec": 6.9070659,
-    "label": "CatWISE J105600.54+065425.4",
-    "epoch": 2015.4,
-    "pmra": 16.14,
-    "pmdec": 23.24,
-    "mag": 16.21
-   },
-   {
     "ra": 164.1469857,
     "dec": 7.0463247,
     "label": "CatWISE J105635.27+070246.7",
     "epoch": 2015.4,
     "pmra": -35.09,
     "pmdec": -12.81,
+    "mag": 16.21
+   },
+   {
+    "ra": 164.0022605,
+    "dec": 6.9070659,
+    "label": "CatWISE J105600.54+065425.4",
+    "epoch": 2015.4,
+    "pmra": 16.14,
+    "pmdec": 23.24,
     "mag": 16.21
    },
    {
@@ -11555,21 +11553,21 @@
     "mag": 16.24
    },
    {
-    "ra": 164.0709769,
-    "dec": 7.036934,
-    "label": "CatWISE J105617.03+070212.9",
-    "epoch": 2015.4,
-    "pmra": 1.13,
-    "pmdec": -5.19,
-    "mag": 16.25
-   },
-   {
     "ra": 164.1306588,
     "dec": 6.9857245,
     "label": "CatWISE J105631.35+065908.6",
     "epoch": 2015.4,
     "pmra": 166.84,
     "pmdec": 62.22,
+    "mag": 16.25
+   },
+   {
+    "ra": 164.0709769,
+    "dec": 7.036934,
+    "label": "CatWISE J105617.03+070212.9",
+    "epoch": 2015.4,
+    "pmra": 1.13,
+    "pmdec": -5.19,
     "mag": 16.25
    },
    {
@@ -11591,21 +11589,21 @@
     "mag": 16.25
    },
    {
-    "ra": 164.1715286,
-    "dec": 6.8598037,
-    "label": "CatWISE J105641.16+065135.2",
-    "epoch": 2015.4,
-    "pmra": -9.03,
-    "pmdec": 24.39,
-    "mag": 16.25
-   },
-   {
     "ra": 164.0977343,
     "dec": 7.0202292,
     "label": "CatWISE J105623.45+070112.8",
     "epoch": 2015.4,
     "pmra": 10.48,
     "pmdec": 545.33,
+    "mag": 16.25
+   },
+   {
+    "ra": 164.1715286,
+    "dec": 6.8598037,
+    "label": "CatWISE J105641.16+065135.2",
+    "epoch": 2015.4,
+    "pmra": -9.03,
+    "pmdec": 24.39,
     "mag": 16.25
    },
    {
@@ -11681,15 +11679,6 @@
     "mag": 16.27
    },
    {
-    "ra": 164.1839652,
-    "dec": 6.8278117,
-    "label": "CatWISE J105644.15+064940.1",
-    "epoch": 2015.4,
-    "pmra": -27.77,
-    "pmdec": -26.89,
-    "mag": 16.28
-   },
-   {
     "ra": 164.2187325,
     "dec": 6.9916874,
     "label": "CatWISE J105652.49+065930.0",
@@ -11699,12 +11688,12 @@
     "mag": 16.28
    },
    {
-    "ra": 163.9910244,
-    "dec": 7.0298894,
-    "label": "CatWISE J105557.84+070147.6",
+    "ra": 164.1839652,
+    "dec": 6.8278117,
+    "label": "CatWISE J105644.15+064940.1",
     "epoch": 2015.4,
-    "pmra": 11.43,
-    "pmdec": -6.92,
+    "pmra": -27.77,
+    "pmdec": -26.89,
     "mag": 16.28
    },
    {
@@ -11714,6 +11703,15 @@
     "epoch": 2015.4,
     "pmra": -17.5,
     "pmdec": -3.1,
+    "mag": 16.28
+   },
+   {
+    "ra": 163.9910244,
+    "dec": 7.0298894,
+    "label": "CatWISE J105557.84+070147.6",
+    "epoch": 2015.4,
+    "pmra": 11.43,
+    "pmdec": -6.92,
     "mag": 16.28
    },
    {
@@ -11744,21 +11742,21 @@
     "mag": 16.28
    },
    {
-    "ra": 163.9668449,
-    "dec": 6.986268,
-    "label": "CatWISE J105552.04+065910.5",
-    "epoch": 2015.4,
-    "pmra": 3.98,
-    "pmdec": -29.3,
-    "mag": 16.29
-   },
-   {
     "ra": 164.0898676,
     "dec": 7.0070294,
     "label": "CatWISE J105621.56+070025.3",
     "epoch": 2015.4,
     "pmra": -1419.39,
     "pmdec": -1046.07,
+    "mag": 16.29
+   },
+   {
+    "ra": 163.9668449,
+    "dec": 6.986268,
+    "label": "CatWISE J105552.04+065910.5",
+    "epoch": 2015.4,
+    "pmra": 3.98,
+    "pmdec": -29.3,
     "mag": 16.29
    },
    {
@@ -11780,21 +11778,21 @@
     "mag": 16.3
    },
    {
-    "ra": 164.2355526,
-    "dec": 6.8645568,
-    "label": "CatWISE J105656.53+065152.4",
-    "epoch": 2015.4,
-    "pmra": 64.59,
-    "pmdec": 54.93,
-    "mag": 16.3
-   },
-   {
     "ra": 164.0835876,
     "dec": 7.16843,
     "label": "CatWISE J105620.06+071006.3",
     "epoch": 2015.4,
     "pmra": -4.14,
     "pmdec": -52.98,
+    "mag": 16.3
+   },
+   {
+    "ra": 164.2355526,
+    "dec": 6.8645568,
+    "label": "CatWISE J105656.53+065152.4",
+    "epoch": 2015.4,
+    "pmra": 64.59,
+    "pmdec": 54.93,
     "mag": 16.3
    },
    {
@@ -11897,21 +11895,21 @@
     "mag": 16.32
    },
    {
-    "ra": 164.1999103,
-    "dec": 6.8520264,
-    "label": "CatWISE J105647.97+065107.2",
-    "epoch": 2015.4,
-    "pmra": -31.2,
-    "pmdec": -15.52,
-    "mag": 16.32
-   },
-   {
     "ra": 164.0347485,
     "dec": 6.9592933,
     "label": "CatWISE J105608.34+065733.4",
     "epoch": 2015.4,
     "pmra": -71.23,
     "pmdec": -42.31,
+    "mag": 16.32
+   },
+   {
+    "ra": 164.1999103,
+    "dec": 6.8520264,
+    "label": "CatWISE J105647.97+065107.2",
+    "epoch": 2015.4,
+    "pmra": -31.2,
+    "pmdec": -15.52,
     "mag": 16.32
    },
    {
@@ -11969,21 +11967,21 @@
     "mag": 16.32
    },
    {
-    "ra": 164.1475782,
-    "dec": 6.8854622,
-    "label": "CatWISE J105635.41+065307.6",
-    "epoch": 2015.4,
-    "pmra": -12.91,
-    "pmdec": -48.31,
-    "mag": 16.32
-   },
-   {
     "ra": 164.1512605,
     "dec": 7.0106476,
     "label": "CatWISE J105636.30+070038.3",
     "epoch": 2015.4,
     "pmra": -33.21,
     "pmdec": 21.71,
+    "mag": 16.32
+   },
+   {
+    "ra": 164.1475782,
+    "dec": 6.8854622,
+    "label": "CatWISE J105635.41+065307.6",
+    "epoch": 2015.4,
+    "pmra": -12.91,
+    "pmdec": -48.31,
     "mag": 16.32
    },
    {
@@ -12050,21 +12048,21 @@
     "mag": 16.34
    },
    {
-    "ra": 164.0052817,
-    "dec": 6.849579,
-    "label": "CatWISE J105601.26+065058.4",
-    "epoch": 2015.4,
-    "pmra": -50.09,
-    "pmdec": -27.72,
-    "mag": 16.34
-   },
-   {
     "ra": 164.0898654,
     "dec": 6.8950847,
     "label": "CatWISE J105621.56+065342.3",
     "epoch": 2015.4,
     "pmra": -14.38,
     "pmdec": 32.12,
+    "mag": 16.34
+   },
+   {
+    "ra": 164.0052817,
+    "dec": 6.849579,
+    "label": "CatWISE J105601.26+065058.4",
+    "epoch": 2015.4,
+    "pmra": -50.09,
+    "pmdec": -27.72,
     "mag": 16.34
    },
    {
@@ -12122,21 +12120,21 @@
     "mag": 16.35
    },
    {
-    "ra": 163.9957878,
-    "dec": 6.8470938,
-    "label": "CatWISE J105558.98+065049.5",
-    "epoch": 2015.4,
-    "pmra": -66.48,
-    "pmdec": -37.81,
-    "mag": 16.35
-   },
-   {
     "ra": 164.0369399,
     "dec": 7.0058996,
     "label": "CatWISE J105608.86+070021.2",
     "epoch": 2015.4,
     "pmra": -18.5,
     "pmdec": 8.23,
+    "mag": 16.35
+   },
+   {
+    "ra": 163.9957878,
+    "dec": 6.8470938,
+    "label": "CatWISE J105558.98+065049.5",
+    "epoch": 2015.4,
+    "pmra": -66.48,
+    "pmdec": -37.81,
     "mag": 16.35
    },
    {
@@ -12221,21 +12219,21 @@
     "mag": 16.37
    },
    {
-    "ra": 164.0466511,
-    "dec": 7.0609926,
-    "label": "CatWISE J105611.19+070339.5",
-    "epoch": 2015.4,
-    "pmra": -2.73,
-    "pmdec": 41.58,
-    "mag": 16.37
-   },
-   {
     "ra": 164.1083082,
     "dec": 7.0614138,
     "label": "CatWISE J105625.99+070341.0",
     "epoch": 2015.4,
     "pmra": -5.87,
     "pmdec": 122.29,
+    "mag": 16.37
+   },
+   {
+    "ra": 164.0466511,
+    "dec": 7.0609926,
+    "label": "CatWISE J105611.19+070339.5",
+    "epoch": 2015.4,
+    "pmra": -2.73,
+    "pmdec": 41.58,
     "mag": 16.37
    },
    {
@@ -12248,21 +12246,21 @@
     "mag": 16.38
    },
    {
-    "ra": 163.9064861,
-    "dec": 6.9254146,
-    "label": "CatWISE J105537.55+065531.4",
-    "epoch": 2015.4,
-    "pmra": 7.46,
-    "pmdec": 189.89,
-    "mag": 16.38
-   },
-   {
     "ra": 164.1694833,
     "dec": 6.976388,
     "label": "CatWISE J105640.67+065834.9",
     "epoch": 2015.4,
     "pmra": -13.52,
     "pmdec": 13.31,
+    "mag": 16.38
+   },
+   {
+    "ra": 163.9064861,
+    "dec": 6.9254146,
+    "label": "CatWISE J105537.55+065531.4",
+    "epoch": 2015.4,
+    "pmra": 7.46,
+    "pmdec": 189.89,
     "mag": 16.38
    },
    {
@@ -12356,15 +12354,6 @@
     "mag": 16.39
    },
    {
-    "ra": 164.203287,
-    "dec": 6.8379497,
-    "label": "CatWISE J105648.78+065016.6",
-    "epoch": 2015.4,
-    "pmra": 31.27,
-    "pmdec": -25.28,
-    "mag": 16.39
-   },
-   {
     "ra": 164.1546867,
     "dec": 6.9561069,
     "label": "CatWISE J105637.12+065721.9",
@@ -12380,6 +12369,15 @@
     "epoch": 2015.4,
     "pmra": 49.84,
     "pmdec": -57.11,
+    "mag": 16.39
+   },
+   {
+    "ra": 164.203287,
+    "dec": 6.8379497,
+    "label": "CatWISE J105648.78+065016.6",
+    "epoch": 2015.4,
+    "pmra": 31.27,
+    "pmdec": -25.28,
     "mag": 16.39
    },
    {
@@ -12536,21 +12534,21 @@
     "mag": 16.44
    },
    {
-    "ra": 164.221203,
-    "dec": 6.8764716,
-    "label": "CatWISE J105653.08+065235.2",
-    "epoch": 2015.4,
-    "pmra": 11.65,
-    "pmdec": -55.13,
-    "mag": 16.44
-   },
-   {
     "ra": 164.0873592,
     "dec": 7.1634874,
     "label": "CatWISE J105620.96+070948.5",
     "epoch": 2015.4,
     "pmra": -11.04,
     "pmdec": -3.33,
+    "mag": 16.44
+   },
+   {
+    "ra": 164.221203,
+    "dec": 6.8764716,
+    "label": "CatWISE J105653.08+065235.2",
+    "epoch": 2015.4,
+    "pmra": 11.65,
+    "pmdec": -55.13,
     "mag": 16.44
    },
    {
@@ -12608,21 +12606,21 @@
     "mag": 16.45
    },
    {
-    "ra": 164.0953865,
-    "dec": 6.8507752,
-    "label": "CatWISE J105622.89+065102.7",
-    "epoch": 2015.4,
-    "pmra": 0.37,
-    "pmdec": 26.07,
-    "mag": 16.45
-   },
-   {
     "ra": 164.13999,
     "dec": 7.1103845,
     "label": "CatWISE J105633.59+070637.3",
     "epoch": 2015.4,
     "pmra": -50.98,
     "pmdec": -178.61,
+    "mag": 16.45
+   },
+   {
+    "ra": 164.0953865,
+    "dec": 6.8507752,
+    "label": "CatWISE J105622.89+065102.7",
+    "epoch": 2015.4,
+    "pmra": 0.37,
+    "pmdec": 26.07,
     "mag": 16.45
    },
    {
@@ -12653,21 +12651,21 @@
     "mag": 16.46
    },
    {
-    "ra": 164.208837,
-    "dec": 6.8658134,
-    "label": "CatWISE J105650.12+065156.9",
-    "epoch": 2015.4,
-    "pmra": -33.93,
-    "pmdec": -1.63,
-    "mag": 16.46
-   },
-   {
     "ra": 164.1870223,
     "dec": 6.8657874,
     "label": "CatWISE J105644.88+065156.8",
     "epoch": 2015.4,
     "pmra": -22.47,
     "pmdec": 37.89,
+    "mag": 16.46
+   },
+   {
+    "ra": 164.208837,
+    "dec": 6.8658134,
+    "label": "CatWISE J105650.12+065156.9",
+    "epoch": 2015.4,
+    "pmra": -33.93,
+    "pmdec": -1.63,
     "mag": 16.46
    },
    {
@@ -12716,15 +12714,6 @@
     "mag": 16.46
    },
    {
-    "ra": 164.1203988,
-    "dec": 6.8232345,
-    "label": "CatWISE J105628.89+064923.6",
-    "epoch": 2015.4,
-    "pmra": -25.54,
-    "pmdec": 28.08,
-    "mag": 16.47
-   },
-   {
     "ra": 164.173446,
     "dec": 6.9217896,
     "label": "CatWISE J105641.62+065518.4",
@@ -12743,12 +12732,12 @@
     "mag": 16.47
    },
    {
-    "ra": 163.9514609,
-    "dec": 6.8696793,
-    "label": "CatWISE J105548.35+065210.8",
+    "ra": 164.1203988,
+    "dec": 6.8232345,
+    "label": "CatWISE J105628.89+064923.6",
     "epoch": 2015.4,
-    "pmra": -58.91,
-    "pmdec": -99.51,
+    "pmra": -25.54,
+    "pmdec": 28.08,
     "mag": 16.47
    },
    {
@@ -12761,6 +12750,15 @@
     "mag": 16.47
    },
    {
+    "ra": 163.9514609,
+    "dec": 6.8696793,
+    "label": "CatWISE J105548.35+065210.8",
+    "epoch": 2015.4,
+    "pmra": -58.91,
+    "pmdec": -99.51,
+    "mag": 16.47
+   },
+   {
     "ra": 164.1140332,
     "dec": 6.8791721,
     "label": "CatWISE J105627.36+065245.0",
@@ -12770,21 +12768,21 @@
     "mag": 16.47
    },
    {
-    "ra": 164.0096625,
-    "dec": 6.8849912,
-    "label": "CatWISE J105602.31+065305.9",
-    "epoch": 2015.4,
-    "pmra": -50.65,
-    "pmdec": 93.36,
-    "mag": 16.47
-   },
-   {
     "ra": 164.0543231,
     "dec": 6.8967135,
     "label": "CatWISE J105613.03+065348.1",
     "epoch": 2015.4,
     "pmra": -42.59,
     "pmdec": -56.76,
+    "mag": 16.47
+   },
+   {
+    "ra": 164.0096625,
+    "dec": 6.8849912,
+    "label": "CatWISE J105602.31+065305.9",
+    "epoch": 2015.4,
+    "pmra": -50.65,
+    "pmdec": 93.36,
     "mag": 16.47
    },
    {
@@ -12806,21 +12804,21 @@
     "mag": 16.47
    },
    {
-    "ra": 164.1232652,
-    "dec": 7.0058944,
-    "label": "CatWISE J105629.58+070021.2",
-    "epoch": 2015.4,
-    "pmra": 84.2,
-    "pmdec": -3.02,
-    "mag": 16.47
-   },
-   {
     "ra": 164.1080176,
     "dec": 6.9856446,
     "label": "CatWISE J105625.92+065908.3",
     "epoch": 2015.4,
     "pmra": -4678.3,
     "pmdec": -1032.6,
+    "mag": 16.47
+   },
+   {
+    "ra": 164.1232652,
+    "dec": 7.0058944,
+    "label": "CatWISE J105629.58+070021.2",
+    "epoch": 2015.4,
+    "pmra": 84.2,
+    "pmdec": -3.02,
     "mag": 16.47
    },
    {
@@ -12851,12 +12849,12 @@
     "mag": 16.48
    },
    {
-    "ra": 164.2560951,
-    "dec": 6.8960531,
-    "label": "CatWISE J105701.46+065345.7",
+    "ra": 164.1473989,
+    "dec": 7.1341828,
+    "label": "CatWISE J105635.37+070803.0",
     "epoch": 2015.4,
-    "pmra": -14.07,
-    "pmdec": -11.16,
+    "pmra": -19.31,
+    "pmdec": -38.42,
     "mag": 16.48
    },
    {
@@ -12869,12 +12867,12 @@
     "mag": 16.48
    },
    {
-    "ra": 164.1473989,
-    "dec": 7.1341828,
-    "label": "CatWISE J105635.37+070803.0",
+    "ra": 164.2560951,
+    "dec": 6.8960531,
+    "label": "CatWISE J105701.46+065345.7",
     "epoch": 2015.4,
-    "pmra": -19.31,
-    "pmdec": -38.42,
+    "pmra": -14.07,
+    "pmdec": -11.16,
     "mag": 16.48
    },
    {
@@ -12959,15 +12957,6 @@
     "mag": 16.5
    },
    {
-    "ra": 164.2099319,
-    "dec": 6.8444959,
-    "label": "CatWISE J105650.38+065040.1",
-    "epoch": 2015.4,
-    "pmra": -62.57,
-    "pmdec": -44.5,
-    "mag": 16.5
-   },
-   {
     "ra": 163.9589178,
     "dec": 7.1216259,
     "label": "CatWISE J105550.14+070717.8",
@@ -12977,12 +12966,12 @@
     "mag": 16.5
    },
    {
-    "ra": 164.0520496,
-    "dec": 6.8180547,
-    "label": "CatWISE J105612.49+064904.9",
+    "ra": 164.2099319,
+    "dec": 6.8444959,
+    "label": "CatWISE J105650.38+065040.1",
     "epoch": 2015.4,
-    "pmra": -90.99,
-    "pmdec": -6.39,
+    "pmra": -62.57,
+    "pmdec": -44.5,
     "mag": 16.5
    },
    {
@@ -12992,6 +12981,15 @@
     "epoch": 2015.4,
     "pmra": -215.04,
     "pmdec": -86.04,
+    "mag": 16.5
+   },
+   {
+    "ra": 164.0520496,
+    "dec": 6.8180547,
+    "label": "CatWISE J105612.49+064904.9",
+    "epoch": 2015.4,
+    "pmra": -90.99,
+    "pmdec": -6.39,
     "mag": 16.5
    },
    {
@@ -13058,21 +13056,21 @@
     "mag": 16.51
    },
    {
-    "ra": 164.0233184,
-    "dec": 6.8233726,
-    "label": "CatWISE J105605.59+064924.1",
-    "epoch": 2015.4,
-    "pmra": 27.81,
-    "pmdec": -129.46,
-    "mag": 16.51
-   },
-   {
     "ra": 164.1000068,
     "dec": 7.1172062,
     "label": "CatWISE J105624.00+070701.9",
     "epoch": 2015.4,
     "pmra": 43.32,
     "pmdec": 268.17,
+    "mag": 16.51
+   },
+   {
+    "ra": 164.0233184,
+    "dec": 6.8233726,
+    "label": "CatWISE J105605.59+064924.1",
+    "epoch": 2015.4,
+    "pmra": 27.81,
+    "pmdec": -129.46,
     "mag": 16.51
    },
    {
@@ -13184,30 +13182,21 @@
     "mag": 16.52
    },
    {
+    "ra": 164.1143987,
+    "dec": 7.0869955,
+    "label": "CatWISE J105627.45+070513.1",
+    "epoch": 2015.4,
+    "pmra": 49.1,
+    "pmdec": 131.75,
+    "mag": 16.52
+   },
+   {
     "ra": 164.0760896,
     "dec": 6.8586326,
     "label": "CatWISE J105618.26+065131.0",
     "epoch": 2015.4,
     "pmra": 1.33,
     "pmdec": 10.1,
-    "mag": 16.52
-   },
-   {
-    "ra": 164.1896819,
-    "dec": 6.8308778,
-    "label": "CatWISE J105645.52+064951.1",
-    "epoch": 2015.4,
-    "pmra": 6.99,
-    "pmdec": 12.77,
-    "mag": 16.52
-   },
-   {
-    "ra": 164.2439409,
-    "dec": 6.9108514,
-    "label": "CatWISE J105658.54+065439.0",
-    "epoch": 2015.4,
-    "pmra": 0.87,
-    "pmdec": 2.96,
     "mag": 16.52
    },
    {
@@ -13220,12 +13209,21 @@
     "mag": 16.52
    },
    {
-    "ra": 164.1143987,
-    "dec": 7.0869955,
-    "label": "CatWISE J105627.45+070513.1",
+    "ra": 164.2439409,
+    "dec": 6.9108514,
+    "label": "CatWISE J105658.54+065439.0",
     "epoch": 2015.4,
-    "pmra": 49.1,
-    "pmdec": 131.75,
+    "pmra": 0.87,
+    "pmdec": 2.96,
+    "mag": 16.52
+   },
+   {
+    "ra": 164.1896819,
+    "dec": 6.8308778,
+    "label": "CatWISE J105645.52+064951.1",
+    "epoch": 2015.4,
+    "pmra": 6.99,
+    "pmdec": 12.77,
     "mag": 16.52
    },
    {
@@ -13247,15 +13245,6 @@
     "mag": 16.53
    },
    {
-    "ra": 164.0754713,
-    "dec": 6.8708942,
-    "label": "CatWISE J105618.11+065215.2",
-    "epoch": 2015.4,
-    "pmra": 50.13,
-    "pmdec": -88.31,
-    "mag": 16.53
-   },
-   {
     "ra": 164.1141635,
     "dec": 7.1092821,
     "label": "CatWISE J105627.39+070633.4",
@@ -13265,12 +13254,12 @@
     "mag": 16.53
    },
    {
-    "ra": 164.2569973,
-    "dec": 7.0340302,
-    "label": "CatWISE J105701.67+070202.5",
+    "ra": 164.0754713,
+    "dec": 6.8708942,
+    "label": "CatWISE J105618.11+065215.2",
     "epoch": 2015.4,
-    "pmra": 56.81,
-    "pmdec": -49.18,
+    "pmra": 50.13,
+    "pmdec": -88.31,
     "mag": 16.53
    },
    {
@@ -13292,12 +13281,12 @@
     "mag": 16.53
    },
    {
-    "ra": 163.9187188,
-    "dec": 6.9287872,
-    "label": "CatWISE J105540.49+065543.6",
+    "ra": 164.2569973,
+    "dec": 7.0340302,
+    "label": "CatWISE J105701.67+070202.5",
     "epoch": 2015.4,
-    "pmra": 24.31,
-    "pmdec": 29.43,
+    "pmra": 56.81,
+    "pmdec": -49.18,
     "mag": 16.53
    },
    {
@@ -13316,6 +13305,15 @@
     "epoch": 2015.4,
     "pmra": 4.94,
     "pmdec": -59.46,
+    "mag": 16.53
+   },
+   {
+    "ra": 163.9187188,
+    "dec": 6.9287872,
+    "label": "CatWISE J105540.49+065543.6",
+    "epoch": 2015.4,
+    "pmra": 24.31,
+    "pmdec": 29.43,
     "mag": 16.53
    },
    {
@@ -13355,21 +13353,21 @@
     "mag": 16.54
    },
    {
-    "ra": 163.9291336,
-    "dec": 6.924131,
-    "label": "CatWISE J105542.99+065526.8",
-    "epoch": 2015.4,
-    "pmra": -15.24,
-    "pmdec": -48.82,
-    "mag": 16.54
-   },
-   {
     "ra": 164.1299048,
     "dec": 7.1576988,
     "label": "CatWISE J105631.17+070927.7",
     "epoch": 2015.4,
     "pmra": -36.95,
     "pmdec": -33.78,
+    "mag": 16.54
+   },
+   {
+    "ra": 163.9291336,
+    "dec": 6.924131,
+    "label": "CatWISE J105542.99+065526.8",
+    "epoch": 2015.4,
+    "pmra": -15.24,
+    "pmdec": -48.82,
     "mag": 16.54
    },
    {
@@ -13382,12 +13380,12 @@
     "mag": 16.54
    },
    {
-    "ra": 164.0411086,
-    "dec": 6.8080265,
-    "label": "CatWISE J105609.86+064828.8",
+    "ra": 164.1670838,
+    "dec": 7.0611451,
+    "label": "CatWISE J105640.10+070340.1",
     "epoch": 2015.4,
-    "pmra": -40.44,
-    "pmdec": 11.87,
+    "pmra": -204.18,
+    "pmdec": 66.63,
     "mag": 16.54
    },
    {
@@ -13400,12 +13398,12 @@
     "mag": 16.54
    },
    {
-    "ra": 164.1670838,
-    "dec": 7.0611451,
-    "label": "CatWISE J105640.10+070340.1",
+    "ra": 164.0411086,
+    "dec": 6.8080265,
+    "label": "CatWISE J105609.86+064828.8",
     "epoch": 2015.4,
-    "pmra": -204.18,
-    "pmdec": 66.63,
+    "pmra": -40.44,
+    "pmdec": 11.87,
     "mag": 16.54
    },
    {
@@ -13535,15 +13533,6 @@
     "mag": 16.56
    },
    {
-    "ra": 163.9152504,
-    "dec": 7.0763766,
-    "label": "CatWISE J105539.66+070434.9",
-    "epoch": 2015.4,
-    "pmra": -28.14,
-    "pmdec": 44.19,
-    "mag": 16.57
-   },
-   {
     "ra": 164.0359127,
     "dec": 7.0839182,
     "label": "CatWISE J105608.61+070502.1",
@@ -13553,21 +13542,12 @@
     "mag": 16.57
    },
    {
-    "ra": 164.0212679,
-    "dec": 6.849038,
-    "label": "CatWISE J105605.10+065056.5",
+    "ra": 163.9152504,
+    "dec": 7.0763766,
+    "label": "CatWISE J105539.66+070434.9",
     "epoch": 2015.4,
-    "pmra": -87.59,
-    "pmdec": -46.7,
-    "mag": 16.57
-   },
-   {
-    "ra": 164.1399233,
-    "dec": 6.8567976,
-    "label": "CatWISE J105633.58+065124.4",
-    "epoch": 2015.4,
-    "pmra": -103.58,
-    "pmdec": -35.94,
+    "pmra": -28.14,
+    "pmdec": 44.19,
     "mag": 16.57
    },
    {
@@ -13580,12 +13560,30 @@
     "mag": 16.57
    },
    {
+    "ra": 164.1399233,
+    "dec": 6.8567976,
+    "label": "CatWISE J105633.58+065124.4",
+    "epoch": 2015.4,
+    "pmra": -103.58,
+    "pmdec": -35.94,
+    "mag": 16.57
+   },
+   {
     "ra": 164.2063752,
     "dec": 7.1094934,
     "label": "CatWISE J105649.53+070634.1",
     "epoch": 2015.4,
     "pmra": -9.95,
     "pmdec": -0.95,
+    "mag": 16.57
+   },
+   {
+    "ra": 164.0212679,
+    "dec": 6.849038,
+    "label": "CatWISE J105605.10+065056.5",
+    "epoch": 2015.4,
+    "pmra": -87.59,
+    "pmdec": -46.7,
     "mag": 16.57
    },
    {
@@ -13643,12 +13641,12 @@
     "mag": 16.57
    },
    {
-    "ra": 164.0409292,
-    "dec": 6.8153322,
-    "label": "CatWISE J105609.82+064855.1",
+    "ra": 164.0890693,
+    "dec": 7.0759974,
+    "label": "CatWISE J105621.37+070433.5",
     "epoch": 2015.4,
-    "pmra": -58.48,
-    "pmdec": -19.5,
+    "pmra": -74.15,
+    "pmdec": -38.66,
     "mag": 16.57
    },
    {
@@ -13661,12 +13659,12 @@
     "mag": 16.57
    },
    {
-    "ra": 164.0890693,
-    "dec": 7.0759974,
-    "label": "CatWISE J105621.37+070433.5",
+    "ra": 164.0409292,
+    "dec": 6.8153322,
+    "label": "CatWISE J105609.82+064855.1",
     "epoch": 2015.4,
-    "pmra": -74.15,
-    "pmdec": -38.66,
+    "pmra": -58.48,
+    "pmdec": -19.5,
     "mag": 16.57
    },
    {
@@ -13715,21 +13713,21 @@
     "mag": 16.58
    },
    {
-    "ra": 164.2320909,
-    "dec": 6.9722596,
-    "label": "CatWISE J105655.70+065820.1",
-    "epoch": 2015.4,
-    "pmra": 72.93,
-    "pmdec": -112.59,
-    "mag": 16.59
-   },
-   {
     "ra": 164.1423487,
     "dec": 7.0858655,
     "label": "CatWISE J105634.16+070509.1",
     "epoch": 2015.4,
     "pmra": 43.61,
     "pmdec": -63.49,
+    "mag": 16.59
+   },
+   {
+    "ra": 164.2320909,
+    "dec": 6.9722596,
+    "label": "CatWISE J105655.70+065820.1",
+    "epoch": 2015.4,
+    "pmra": 72.93,
+    "pmdec": -112.59,
     "mag": 16.59
    },
    {
@@ -13868,21 +13866,21 @@
     "mag": 16.6
    },
    {
-    "ra": 163.998689,
-    "dec": 6.8833324,
-    "label": "CatWISE J105559.68+065259.9",
-    "epoch": 2015.4,
-    "pmra": 24.77,
-    "pmdec": 14.92,
-    "mag": 16.6
-   },
-   {
     "ra": 164.0417414,
     "dec": 7.123927,
     "label": "CatWISE J105610.01+070726.1",
     "epoch": 2015.4,
     "pmra": 23.95,
     "pmdec": -53.86,
+    "mag": 16.6
+   },
+   {
+    "ra": 163.998689,
+    "dec": 6.8833324,
+    "label": "CatWISE J105559.68+065259.9",
+    "epoch": 2015.4,
+    "pmra": 24.77,
+    "pmdec": 14.92,
     "mag": 16.6
    },
    {
@@ -13895,21 +13893,21 @@
     "mag": 16.61
    },
    {
-    "ra": 164.0260678,
-    "dec": 6.8824053,
-    "label": "CatWISE J105606.25+065256.6",
-    "epoch": 2015.4,
-    "pmra": 3.05,
-    "pmdec": 13.66,
-    "mag": 16.61
-   },
-   {
     "ra": 164.1368806,
     "dec": 7.0869737,
     "label": "CatWISE J105632.85+070513.1",
     "epoch": 2015.4,
     "pmra": -65.37,
     "pmdec": -44.15,
+    "mag": 16.61
+   },
+   {
+    "ra": 164.0260678,
+    "dec": 6.8824053,
+    "label": "CatWISE J105606.25+065256.6",
+    "epoch": 2015.4,
+    "pmra": 3.05,
+    "pmdec": 13.66,
     "mag": 16.61
    },
    {
@@ -13967,21 +13965,21 @@
     "mag": 16.61
    },
    {
-    "ra": 163.9531107,
-    "dec": 6.9684546,
-    "label": "CatWISE J105548.74+065806.4",
-    "epoch": 2015.4,
-    "pmra": 70.59,
-    "pmdec": 78.97,
-    "mag": 16.61
-   },
-   {
     "ra": 164.1283641,
     "dec": 7.1136329,
     "label": "CatWISE J105630.80+070649.0",
     "epoch": 2015.4,
     "pmra": -32.06,
     "pmdec": 70.95,
+    "mag": 16.61
+   },
+   {
+    "ra": 163.9531107,
+    "dec": 6.9684546,
+    "label": "CatWISE J105548.74+065806.4",
+    "epoch": 2015.4,
+    "pmra": 70.59,
+    "pmdec": 78.97,
     "mag": 16.61
    },
    {
@@ -13994,21 +13992,21 @@
     "mag": 16.62
    },
    {
-    "ra": 164.0104757,
-    "dec": 6.9098306,
-    "label": "CatWISE J105602.51+065435.3",
-    "epoch": 2015.4,
-    "pmra": -4.72,
-    "pmdec": 3.04,
-    "mag": 16.62
-   },
-   {
     "ra": 164.030671,
     "dec": 7.0445471,
     "label": "CatWISE J105607.36+070240.3",
     "epoch": 2015.4,
     "pmra": 27.03,
     "pmdec": 6.06,
+    "mag": 16.62
+   },
+   {
+    "ra": 164.0104757,
+    "dec": 6.9098306,
+    "label": "CatWISE J105602.51+065435.3",
+    "epoch": 2015.4,
+    "pmra": -4.72,
+    "pmdec": 3.04,
     "mag": 16.62
    },
    {
@@ -14030,15 +14028,6 @@
     "mag": 16.62
    },
    {
-    "ra": 164.0813164,
-    "dec": 6.836822,
-    "label": "CatWISE J105619.51+065012.5",
-    "epoch": 2015.4,
-    "pmra": -11.47,
-    "pmdec": -47.78,
-    "mag": 16.62
-   },
-   {
     "ra": 163.9992264,
     "dec": 6.9483371,
     "label": "CatWISE J105559.81+065654.0",
@@ -14048,12 +14037,12 @@
     "mag": 16.62
    },
    {
-    "ra": 164.0219209,
-    "dec": 6.8229438,
-    "label": "CatWISE J105605.26+064922.5",
+    "ra": 164.0813164,
+    "dec": 6.836822,
+    "label": "CatWISE J105619.51+065012.5",
     "epoch": 2015.4,
-    "pmra": 12.12,
-    "pmdec": 2.2,
+    "pmra": -11.47,
+    "pmdec": -47.78,
     "mag": 16.62
    },
    {
@@ -14072,6 +14061,15 @@
     "epoch": 2015.4,
     "pmra": 28.79,
     "pmdec": 4.43,
+    "mag": 16.62
+   },
+   {
+    "ra": 164.0219209,
+    "dec": 6.8229438,
+    "label": "CatWISE J105605.26+064922.5",
+    "epoch": 2015.4,
+    "pmra": 12.12,
+    "pmdec": 2.2,
     "mag": 16.62
    },
    {
@@ -14201,21 +14199,21 @@
     "mag": 16.64
    },
    {
-    "ra": 164.109954,
-    "dec": 6.8300392,
-    "label": "CatWISE J105626.38+064948.1",
-    "epoch": 2015.4,
-    "pmra": -26.5,
-    "pmdec": 1.95,
-    "mag": 16.64
-   },
-   {
     "ra": 164.1082487,
     "dec": 6.9519146,
     "label": "CatWISE J105625.98+065706.8",
     "epoch": 2015.4,
     "pmra": -85.52,
     "pmdec": 28.73,
+    "mag": 16.64
+   },
+   {
+    "ra": 164.109954,
+    "dec": 6.8300392,
+    "label": "CatWISE J105626.38+064948.1",
+    "epoch": 2015.4,
+    "pmra": -26.5,
+    "pmdec": 1.95,
     "mag": 16.64
    },
    {
@@ -14264,6 +14262,15 @@
     "mag": 16.65
    },
    {
+    "ra": 164.058464,
+    "dec": 6.9727355,
+    "label": "CatWISE J105614.03+065821.8",
+    "epoch": 2015.4,
+    "pmra": -138.96,
+    "pmdec": -85.2,
+    "mag": 16.66
+   },
+   {
     "ra": 164.1633126,
     "dec": 6.9238782,
     "label": "CatWISE J105639.19+065525.9",
@@ -14279,15 +14286,6 @@
     "epoch": 2015.4,
     "pmra": -38.5,
     "pmdec": 35.58,
-    "mag": 16.66
-   },
-   {
-    "ra": 164.058464,
-    "dec": 6.9727355,
-    "label": "CatWISE J105614.03+065821.8",
-    "epoch": 2015.4,
-    "pmra": -138.96,
-    "pmdec": -85.2,
     "mag": 16.66
    },
    {
@@ -14336,21 +14334,21 @@
     "mag": 16.66
    },
    {
-    "ra": 164.1174512,
-    "dec": 6.8456424,
-    "label": "CatWISE J105628.18+065044.3",
-    "epoch": 2015.4,
-    "pmra": 45.36,
-    "pmdec": -75.41,
-    "mag": 16.67
-   },
-   {
     "ra": 163.9689117,
     "dec": 7.0248436,
     "label": "CatWISE J105552.53+070129.4",
     "epoch": 2015.4,
     "pmra": 29.01,
     "pmdec": 48.41,
+    "mag": 16.67
+   },
+   {
+    "ra": 164.1174512,
+    "dec": 6.8456424,
+    "label": "CatWISE J105628.18+065044.3",
+    "epoch": 2015.4,
+    "pmra": 45.36,
+    "pmdec": -75.41,
     "mag": 16.67
    },
    {
@@ -14363,21 +14361,21 @@
     "mag": 16.67
    },
    {
-    "ra": 164.0471785,
-    "dec": 6.8452538,
-    "label": "CatWISE J105611.32+065042.9",
-    "epoch": 2015.4,
-    "pmra": -41.65,
-    "pmdec": -23.34,
-    "mag": 16.67
-   },
-   {
     "ra": 164.1875872,
     "dec": 7.0740905,
     "label": "CatWISE J105645.02+070426.7",
     "epoch": 2015.4,
     "pmra": -26.61,
     "pmdec": 151.46,
+    "mag": 16.67
+   },
+   {
+    "ra": 164.0471785,
+    "dec": 6.8452538,
+    "label": "CatWISE J105611.32+065042.9",
+    "epoch": 2015.4,
+    "pmra": -41.65,
+    "pmdec": -23.34,
     "mag": 16.67
    },
    {
@@ -14435,21 +14433,21 @@
     "mag": 16.68
    },
    {
-    "ra": 163.9185663,
-    "dec": 7.0122252,
-    "label": "CatWISE J105540.45+070044.0",
-    "epoch": 2015.4,
-    "pmra": 31.75,
-    "pmdec": -32.62,
-    "mag": 16.68
-   },
-   {
     "ra": 164.2437097,
     "dec": 7.0334348,
     "label": "CatWISE J105658.49+070200.3",
     "epoch": 2015.4,
     "pmra": -45.16,
     "pmdec": -75.08,
+    "mag": 16.68
+   },
+   {
+    "ra": 163.9185663,
+    "dec": 7.0122252,
+    "label": "CatWISE J105540.45+070044.0",
+    "epoch": 2015.4,
+    "pmra": 31.75,
+    "pmdec": -32.62,
     "mag": 16.68
    },
    {
@@ -14471,21 +14469,21 @@
     "mag": 16.68
    },
    {
-    "ra": 164.2910797,
-    "dec": 7.0143357,
-    "label": "CatWISE J105709.85+070051.6",
-    "epoch": 2015.4,
-    "pmra": -71.77,
-    "pmdec": 86.47,
-    "mag": 16.69
-   },
-   {
     "ra": 164.0034244,
     "dec": 7.0940148,
     "label": "CatWISE J105600.82+070538.4",
     "epoch": 2015.4,
     "pmra": 60.87,
     "pmdec": 41.26,
+    "mag": 16.69
+   },
+   {
+    "ra": 164.2910797,
+    "dec": 7.0143357,
+    "label": "CatWISE J105709.85+070051.6",
+    "epoch": 2015.4,
+    "pmra": -71.77,
+    "pmdec": 86.47,
     "mag": 16.69
    },
    {
@@ -14543,21 +14541,21 @@
     "mag": 16.7
    },
    {
-    "ra": 163.9952654,
-    "dec": 6.837276,
-    "label": "CatWISE J105558.86+065014.1",
-    "epoch": 2015.4,
-    "pmra": -9.93,
-    "pmdec": -54.46,
-    "mag": 16.7
-   },
-   {
     "ra": 163.967352,
     "dec": 6.9882662,
     "label": "CatWISE J105552.16+065917.7",
     "epoch": 2015.4,
     "pmra": 34.18,
     "pmdec": -47.63,
+    "mag": 16.7
+   },
+   {
+    "ra": 163.9952654,
+    "dec": 6.837276,
+    "label": "CatWISE J105558.86+065014.1",
+    "epoch": 2015.4,
+    "pmra": -9.93,
+    "pmdec": -54.46,
     "mag": 16.7
    },
    {
@@ -14606,12 +14604,12 @@
     "mag": 16.71
    },
    {
-    "ra": 164.1549268,
-    "dec": 6.8406702,
-    "label": "CatWISE J105637.18+065026.4",
+    "ra": 164.1843336,
+    "dec": 7.0066918,
+    "label": "CatWISE J105644.24+070024.0",
     "epoch": 2015.4,
-    "pmra": 2.14,
-    "pmdec": -33.57,
+    "pmra": -48.79,
+    "pmdec": 22.04,
     "mag": 16.71
    },
    {
@@ -14624,12 +14622,12 @@
     "mag": 16.71
    },
    {
-    "ra": 164.1843336,
-    "dec": 7.0066918,
-    "label": "CatWISE J105644.24+070024.0",
+    "ra": 164.1549268,
+    "dec": 6.8406702,
+    "label": "CatWISE J105637.18+065026.4",
     "epoch": 2015.4,
-    "pmra": -48.79,
-    "pmdec": 22.04,
+    "pmra": 2.14,
+    "pmdec": -33.57,
     "mag": 16.71
    },
    {
@@ -14813,21 +14811,21 @@
     "mag": 16.73
    },
    {
-    "ra": 163.9973919,
-    "dec": 7.1341544,
-    "label": "CatWISE J105559.37+070802.9",
-    "epoch": 2015.4,
-    "pmra": 58.85,
-    "pmdec": -74.26,
-    "mag": 16.73
-   },
-   {
     "ra": 164.0981207,
     "dec": 7.1372999,
     "label": "CatWISE J105623.54+070814.2",
     "epoch": 2015.4,
     "pmra": -20.23,
     "pmdec": -46.27,
+    "mag": 16.73
+   },
+   {
+    "ra": 163.9973919,
+    "dec": 7.1341544,
+    "label": "CatWISE J105559.37+070802.9",
+    "epoch": 2015.4,
+    "pmra": 58.85,
+    "pmdec": -74.26,
     "mag": 16.73
    },
    {
@@ -14885,21 +14883,21 @@
     "mag": 16.74
    },
    {
-    "ra": 163.9107978,
-    "dec": 7.0712366,
-    "label": "CatWISE J105538.59+070416.4",
-    "epoch": 2015.4,
-    "pmra": -115.21,
-    "pmdec": 43.76,
-    "mag": 16.74
-   },
-   {
     "ra": 164.0906072,
     "dec": 7.0970425,
     "label": "CatWISE J105621.74+070549.3",
     "epoch": 2015.4,
     "pmra": -27.68,
     "pmdec": 111.08,
+    "mag": 16.74
+   },
+   {
+    "ra": 163.9107978,
+    "dec": 7.0712366,
+    "label": "CatWISE J105538.59+070416.4",
+    "epoch": 2015.4,
+    "pmra": -115.21,
+    "pmdec": 43.76,
     "mag": 16.74
    },
    {
@@ -14910,6 +14908,15 @@
     "pmra": 62.23,
     "pmdec": 8.45,
     "mag": 16.74
+   },
+   {
+    "ra": 164.1336906,
+    "dec": 7.0149349,
+    "label": "CatWISE J105632.08+070053.7",
+    "epoch": 2015.4,
+    "pmra": -370.43,
+    "pmdec": -1202.96,
+    "mag": 16.75
    },
    {
     "ra": 164.0103959,
@@ -14927,15 +14934,6 @@
     "epoch": 2015.4,
     "pmra": 140.31,
     "pmdec": 154.1,
-    "mag": 16.75
-   },
-   {
-    "ra": 164.1336906,
-    "dec": 7.0149349,
-    "label": "CatWISE J105632.08+070053.7",
-    "epoch": 2015.4,
-    "pmra": -370.43,
-    "pmdec": -1202.96,
     "mag": 16.75
    },
    {
@@ -14957,15 +14955,6 @@
     "mag": 16.75
    },
    {
-    "ra": 163.9616603,
-    "dec": 6.9345569,
-    "label": "CatWISE J105550.79+065604.4",
-    "epoch": 2015.4,
-    "pmra": 66.98,
-    "pmdec": -26.96,
-    "mag": 16.75
-   },
-   {
     "ra": 164.0261993,
     "dec": 6.9504455,
     "label": "CatWISE J105606.28+065701.6",
@@ -14981,6 +14970,15 @@
     "epoch": 2015.4,
     "pmra": -76.77,
     "pmdec": 107.73,
+    "mag": 16.75
+   },
+   {
+    "ra": 163.9616603,
+    "dec": 6.9345569,
+    "label": "CatWISE J105550.79+065604.4",
+    "epoch": 2015.4,
+    "pmra": 66.98,
+    "pmdec": -26.96,
     "mag": 16.75
    },
    {
@@ -15029,21 +15027,21 @@
     "mag": 16.75
    },
    {
-    "ra": 164.259246,
-    "dec": 6.9632879,
-    "label": "CatWISE J105702.21+065747.8",
-    "epoch": 2015.4,
-    "pmra": 51.98,
-    "pmdec": -44.36,
-    "mag": 16.75
-   },
-   {
     "ra": 164.0685384,
     "dec": 7.1412076,
     "label": "CatWISE J105616.44+070828.3",
     "epoch": 2015.4,
     "pmra": -28.31,
     "pmdec": 4.2,
+    "mag": 16.75
+   },
+   {
+    "ra": 164.259246,
+    "dec": 6.9632879,
+    "label": "CatWISE J105702.21+065747.8",
+    "epoch": 2015.4,
+    "pmra": 51.98,
+    "pmdec": -44.36,
     "mag": 16.75
    },
    {
@@ -15128,15 +15126,6 @@
     "mag": 16.77
    },
    {
-    "ra": 163.9068234,
-    "dec": 6.9273174,
-    "label": "CatWISE J105537.63+065538.3",
-    "epoch": 2015.4,
-    "pmra": 142.6,
-    "pmdec": -324.94,
-    "mag": 16.77
-   },
-   {
     "ra": 163.9054405,
     "dec": 6.9433745,
     "label": "CatWISE J105537.30+065636.1",
@@ -15146,12 +15135,12 @@
     "mag": 16.77
    },
    {
-    "ra": 164.0431272,
-    "dec": 6.8661447,
-    "label": "CatWISE J105610.35+065158.1",
+    "ra": 163.9068234,
+    "dec": 6.9273174,
+    "label": "CatWISE J105537.63+065538.3",
     "epoch": 2015.4,
-    "pmra": 17.68,
-    "pmdec": 36.28,
+    "pmra": 142.6,
+    "pmdec": -324.94,
     "mag": 16.77
    },
    {
@@ -15179,6 +15168,15 @@
     "epoch": 2015.4,
     "pmra": 156.34,
     "pmdec": -194.14,
+    "mag": 16.77
+   },
+   {
+    "ra": 164.0431272,
+    "dec": 6.8661447,
+    "label": "CatWISE J105610.35+065158.1",
+    "epoch": 2015.4,
+    "pmra": 17.68,
+    "pmdec": 36.28,
     "mag": 16.77
    },
    {
@@ -15254,15 +15252,6 @@
     "mag": 16.78
    },
    {
-    "ra": 164.0301328,
-    "dec": 6.8397695,
-    "label": "CatWISE J105607.23+065023.1",
-    "epoch": 2015.4,
-    "pmra": -103.61,
-    "pmdec": -35.92,
-    "mag": 16.78
-   },
-   {
     "ra": 163.9652007,
     "dec": 6.9680785,
     "label": "CatWISE J105551.64+065805.0",
@@ -15272,12 +15261,12 @@
     "mag": 16.78
    },
    {
-    "ra": 164.0081716,
-    "dec": 6.8275471,
-    "label": "CatWISE J105601.96+064939.1",
+    "ra": 164.0301328,
+    "dec": 6.8397695,
+    "label": "CatWISE J105607.23+065023.1",
     "epoch": 2015.4,
-    "pmra": 72.54,
-    "pmdec": -18.79,
+    "pmra": -103.61,
+    "pmdec": -35.92,
     "mag": 16.78
    },
    {
@@ -15287,6 +15276,15 @@
     "epoch": 2015.4,
     "pmra": -37.46,
     "pmdec": 56.1,
+    "mag": 16.78
+   },
+   {
+    "ra": 164.0081716,
+    "dec": 6.8275471,
+    "label": "CatWISE J105601.96+064939.1",
+    "epoch": 2015.4,
+    "pmra": 72.54,
+    "pmdec": -18.79,
     "mag": 16.78
    },
    {
@@ -15308,15 +15306,6 @@
     "mag": 16.79
    },
    {
-    "ra": 164.0882614,
-    "dec": 6.8932922,
-    "label": "CatWISE J105621.18+065335.8",
-    "epoch": 2015.4,
-    "pmra": 138.03,
-    "pmdec": -82.9,
-    "mag": 16.79
-   },
-   {
     "ra": 164.088069,
     "dec": 7.0835016,
     "label": "CatWISE J105621.13+070500.6",
@@ -15326,12 +15315,12 @@
     "mag": 16.79
    },
    {
-    "ra": 164.0276868,
-    "dec": 6.8078376,
-    "label": "CatWISE J105606.64+064828.2",
+    "ra": 164.0882614,
+    "dec": 6.8932922,
+    "label": "CatWISE J105621.18+065335.8",
     "epoch": 2015.4,
-    "pmra": -40.22,
-    "pmdec": -71.21,
+    "pmra": 138.03,
+    "pmdec": -82.9,
     "mag": 16.79
    },
    {
@@ -15341,6 +15330,15 @@
     "epoch": 2015.4,
     "pmra": -816.46,
     "pmdec": -1400.74,
+    "mag": 16.79
+   },
+   {
+    "ra": 164.0276868,
+    "dec": 6.8078376,
+    "label": "CatWISE J105606.64+064828.2",
+    "epoch": 2015.4,
+    "pmra": -40.22,
+    "pmdec": -71.21,
     "mag": 16.79
    },
    {
@@ -15362,15 +15360,6 @@
     "mag": 16.79
    },
    {
-    "ra": 164.2038361,
-    "dec": 6.8752541,
-    "label": "CatWISE J105648.92+065230.9",
-    "epoch": 2015.4,
-    "pmra": -122.64,
-    "pmdec": 76.48,
-    "mag": 16.79
-   },
-   {
     "ra": 164.0585514,
     "dec": 7.0942361,
     "label": "CatWISE J105614.05+070539.2",
@@ -15380,13 +15369,13 @@
     "mag": 16.79
    },
    {
-    "ra": 164.1623734,
-    "dec": 6.852078,
-    "label": "CatWISE J105638.97+065107.4",
+    "ra": 164.2038361,
+    "dec": 6.8752541,
+    "label": "CatWISE J105648.92+065230.9",
     "epoch": 2015.4,
-    "pmra": -10.95,
-    "pmdec": 0.55,
-    "mag": 16.8
+    "pmra": -122.64,
+    "pmdec": 76.48,
+    "mag": 16.79
    },
    {
     "ra": 164.1522963,
@@ -15395,6 +15384,15 @@
     "epoch": 2015.4,
     "pmra": -50.4,
     "pmdec": -53.38,
+    "mag": 16.8
+   },
+   {
+    "ra": 164.1623734,
+    "dec": 6.852078,
+    "label": "CatWISE J105638.97+065107.4",
+    "epoch": 2015.4,
+    "pmra": -10.95,
+    "pmdec": 0.55,
     "mag": 16.8
    },
    {
@@ -15416,21 +15414,21 @@
     "mag": 16.8
    },
    {
-    "ra": 163.9586535,
-    "dec": 6.8624356,
-    "label": "CatWISE J105550.07+065144.7",
-    "epoch": 2015.4,
-    "pmra": -109.24,
-    "pmdec": -68.79,
-    "mag": 16.8
-   },
-   {
     "ra": 163.9314466,
     "dec": 6.9198107,
     "label": "CatWISE J105543.54+065511.3",
     "epoch": 2015.4,
     "pmra": 164.84,
     "pmdec": 53.65,
+    "mag": 16.8
+   },
+   {
+    "ra": 163.9586535,
+    "dec": 6.8624356,
+    "label": "CatWISE J105550.07+065144.7",
+    "epoch": 2015.4,
+    "pmra": -109.24,
+    "pmdec": -68.79,
     "mag": 16.8
    },
    {
@@ -15452,21 +15450,21 @@
     "mag": 16.8
    },
    {
-    "ra": 163.9156273,
-    "dec": 7.0104359,
-    "label": "CatWISE J105539.75+070037.5",
-    "epoch": 2015.4,
-    "pmra": 64.84,
-    "pmdec": -54.41,
-    "mag": 16.81
-   },
-   {
     "ra": 164.1085941,
     "dec": 7.1393115,
     "label": "CatWISE J105626.06+070821.5",
     "epoch": 2015.4,
     "pmra": 75.97,
     "pmdec": -37.86,
+    "mag": 16.81
+   },
+   {
+    "ra": 163.9156273,
+    "dec": 7.0104359,
+    "label": "CatWISE J105539.75+070037.5",
+    "epoch": 2015.4,
+    "pmra": 64.84,
+    "pmdec": -54.41,
     "mag": 16.81
    },
    {
@@ -15515,21 +15513,21 @@
     "mag": 16.81
    },
    {
-    "ra": 164.2354502,
-    "dec": 6.891417,
-    "label": "CatWISE J105656.50+065329.1",
-    "epoch": 2015.4,
-    "pmra": -90.94,
-    "pmdec": -38.83,
-    "mag": 16.81
-   },
-   {
     "ra": 163.9711588,
     "dec": 6.9842473,
     "label": "CatWISE J105553.07+065903.2",
     "epoch": 2015.4,
     "pmra": -34.92,
     "pmdec": 134.21,
+    "mag": 16.81
+   },
+   {
+    "ra": 164.2354502,
+    "dec": 6.891417,
+    "label": "CatWISE J105656.50+065329.1",
+    "epoch": 2015.4,
+    "pmra": -90.94,
+    "pmdec": -38.83,
     "mag": 16.81
    },
    {
@@ -15605,21 +15603,21 @@
     "mag": 16.83
    },
    {
-    "ra": 163.943927,
-    "dec": 7.0532121,
-    "label": "CatWISE J105546.54+070311.5",
-    "epoch": 2015.4,
-    "pmra": 7.97,
-    "pmdec": 55.59,
-    "mag": 16.83
-   },
-   {
     "ra": 164.2045964,
     "dec": 7.0746829,
     "label": "CatWISE J105649.10+070428.8",
     "epoch": 2015.4,
     "pmra": 30.76,
     "pmdec": -14.86,
+    "mag": 16.83
+   },
+   {
+    "ra": 163.943927,
+    "dec": 7.0532121,
+    "label": "CatWISE J105546.54+070311.5",
+    "epoch": 2015.4,
+    "pmra": 7.97,
+    "pmdec": 55.59,
     "mag": 16.83
    },
    {
@@ -15713,15 +15711,6 @@
     "mag": 16.84
    },
    {
-    "ra": 164.1042584,
-    "dec": 6.8488991,
-    "label": "CatWISE J105625.02+065056.0",
-    "epoch": 2015.4,
-    "pmra": 7.06,
-    "pmdec": -32.59,
-    "mag": 16.84
-   },
-   {
     "ra": 164.1832125,
     "dec": 7.0421075,
     "label": "CatWISE J105643.97+070231.5",
@@ -15731,12 +15720,12 @@
     "mag": 16.84
    },
    {
-    "ra": 164.1459057,
-    "dec": 6.8665153,
-    "label": "CatWISE J105635.01+065159.4",
+    "ra": 164.1042584,
+    "dec": 6.8488991,
+    "label": "CatWISE J105625.02+065056.0",
     "epoch": 2015.4,
-    "pmra": 116.07,
-    "pmdec": 79.87,
+    "pmra": 7.06,
+    "pmdec": -32.59,
     "mag": 16.84
    },
    {
@@ -15749,12 +15738,21 @@
     "mag": 16.84
    },
    {
-    "ra": 163.9741461,
-    "dec": 6.9200005,
-    "label": "CatWISE J105553.79+065512.0",
+    "ra": 164.1459057,
+    "dec": 6.8665153,
+    "label": "CatWISE J105635.01+065159.4",
     "epoch": 2015.4,
-    "pmra": -47.23,
-    "pmdec": -117.45,
+    "pmra": 116.07,
+    "pmdec": 79.87,
+    "mag": 16.84
+   },
+   {
+    "ra": 164.1420797,
+    "dec": 6.9742636,
+    "label": "CatWISE J105634.09+065827.3",
+    "epoch": 2015.4,
+    "pmra": -18.27,
+    "pmdec": -8.8,
     "mag": 16.84
    },
    {
@@ -15767,12 +15765,12 @@
     "mag": 16.84
    },
    {
-    "ra": 164.1420797,
-    "dec": 6.9742636,
-    "label": "CatWISE J105634.09+065827.3",
+    "ra": 163.9741461,
+    "dec": 6.9200005,
+    "label": "CatWISE J105553.79+065512.0",
     "epoch": 2015.4,
-    "pmra": -18.27,
-    "pmdec": -8.8,
+    "pmra": -47.23,
+    "pmdec": -117.45,
     "mag": 16.84
    },
    {
@@ -15803,12 +15801,12 @@
     "mag": 16.85
    },
    {
-    "ra": 164.0069568,
-    "dec": 6.8643623,
-    "label": "CatWISE J105601.67+065151.7",
+    "ra": 164.1006463,
+    "dec": 6.9610688,
+    "label": "CatWISE J105624.15+065739.8",
     "epoch": 2015.4,
-    "pmra": 39.06,
-    "pmdec": -26.89,
+    "pmra": -29.44,
+    "pmdec": 69.02,
     "mag": 16.85
    },
    {
@@ -15821,12 +15819,12 @@
     "mag": 16.85
    },
    {
-    "ra": 164.1006463,
-    "dec": 6.9610688,
-    "label": "CatWISE J105624.15+065739.8",
+    "ra": 164.0069568,
+    "dec": 6.8643623,
+    "label": "CatWISE J105601.67+065151.7",
     "epoch": 2015.4,
-    "pmra": -29.44,
-    "pmdec": 69.02,
+    "pmra": 39.06,
+    "pmdec": -26.89,
     "mag": 16.85
    },
    {
@@ -15857,15 +15855,6 @@
     "mag": 16.85
    },
    {
-    "ra": 164.1241924,
-    "dec": 6.8630047,
-    "label": "CatWISE J105629.80+065146.8",
-    "epoch": 2015.4,
-    "pmra": -89.38,
-    "pmdec": 123.31,
-    "mag": 16.85
-   },
-   {
     "ra": 163.9818187,
     "dec": 7.0145549,
     "label": "CatWISE J105555.63+070052.3",
@@ -15884,6 +15873,15 @@
     "mag": 16.85
    },
    {
+    "ra": 164.1241924,
+    "dec": 6.8630047,
+    "label": "CatWISE J105629.80+065146.8",
+    "epoch": 2015.4,
+    "pmra": -89.38,
+    "pmdec": 123.31,
+    "mag": 16.85
+   },
+   {
     "ra": 163.9903394,
     "dec": 7.1479243,
     "label": "CatWISE J105557.68+070852.5",
@@ -15893,21 +15891,21 @@
     "mag": 16.85
    },
    {
-    "ra": 163.9313635,
-    "dec": 6.9476155,
-    "label": "CatWISE J105543.52+065651.4",
-    "epoch": 2015.4,
-    "pmra": 49.24,
-    "pmdec": 99.13,
-    "mag": 16.86
-   },
-   {
     "ra": 164.0070803,
     "dec": 7.1386968,
     "label": "CatWISE J105601.69+070819.3",
     "epoch": 2015.4,
     "pmra": -57.37,
     "pmdec": 16.46,
+    "mag": 16.86
+   },
+   {
+    "ra": 163.9313635,
+    "dec": 6.9476155,
+    "label": "CatWISE J105543.52+065651.4",
+    "epoch": 2015.4,
+    "pmra": 49.24,
+    "pmdec": 99.13,
     "mag": 16.86
    },
    {
@@ -15992,21 +15990,21 @@
     "mag": 16.87
    },
    {
-    "ra": 164.246117,
-    "dec": 6.91799,
-    "label": "CatWISE J105659.06+065504.7",
-    "epoch": 2015.4,
-    "pmra": 0.48,
-    "pmdec": -25.77,
-    "mag": 16.87
-   },
-   {
     "ra": 164.1609376,
     "dec": 7.0515435,
     "label": "CatWISE J105638.62+070305.5",
     "epoch": 2015.4,
     "pmra": 53.96,
     "pmdec": 14.72,
+    "mag": 16.87
+   },
+   {
+    "ra": 164.246117,
+    "dec": 6.91799,
+    "label": "CatWISE J105659.06+065504.7",
+    "epoch": 2015.4,
+    "pmra": 0.48,
+    "pmdec": -25.77,
     "mag": 16.87
    },
    {
@@ -16037,15 +16035,6 @@
     "mag": 16.87
    },
    {
-    "ra": 163.946002,
-    "dec": 6.875854,
-    "label": "CatWISE J105547.04+065233.0",
-    "epoch": 2015.4,
-    "pmra": 25.51,
-    "pmdec": 20.88,
-    "mag": 16.87
-   },
-   {
     "ra": 164.0406018,
     "dec": 6.8840246,
     "label": "CatWISE J105609.74+065302.4",
@@ -16055,12 +16044,12 @@
     "mag": 16.87
    },
    {
-    "ra": 163.9955112,
-    "dec": 7.0397017,
-    "label": "CatWISE J105558.92+070222.9",
+    "ra": 163.946002,
+    "dec": 6.875854,
+    "label": "CatWISE J105547.04+065233.0",
     "epoch": 2015.4,
-    "pmra": 76.58,
-    "pmdec": -88.1,
+    "pmra": 25.51,
+    "pmdec": 20.88,
     "mag": 16.87
    },
    {
@@ -16070,6 +16059,15 @@
     "epoch": 2015.4,
     "pmra": 14.28,
     "pmdec": -78.55,
+    "mag": 16.87
+   },
+   {
+    "ra": 163.9955112,
+    "dec": 7.0397017,
+    "label": "CatWISE J105558.92+070222.9",
+    "epoch": 2015.4,
+    "pmra": 76.58,
+    "pmdec": -88.1,
     "mag": 16.87
    },
    {
@@ -16235,12 +16233,12 @@
     "mag": 16.88
    },
    {
-    "ra": 163.9760854,
-    "dec": 6.9516441,
-    "label": "CatWISE J105554.26+065705.9",
+    "ra": 164.1695775,
+    "dec": 6.9887319,
+    "label": "CatWISE J105640.69+065919.4",
     "epoch": 2015.4,
-    "pmra": -111.41,
-    "pmdec": 155.0,
+    "pmra": 85.23,
+    "pmdec": 11.36,
     "mag": 16.89
    },
    {
@@ -16253,12 +16251,12 @@
     "mag": 16.89
    },
    {
-    "ra": 164.1695775,
-    "dec": 6.9887319,
-    "label": "CatWISE J105640.69+065919.4",
+    "ra": 163.9760854,
+    "dec": 6.9516441,
+    "label": "CatWISE J105554.26+065705.9",
     "epoch": 2015.4,
-    "pmra": 85.23,
-    "pmdec": 11.36,
+    "pmra": -111.41,
+    "pmdec": 155.0,
     "mag": 16.89
    },
    {
@@ -16289,6 +16287,15 @@
     "mag": 16.89
    },
    {
+    "ra": 164.2748085,
+    "dec": 7.0330649,
+    "label": "CatWISE J105705.95+070159.0",
+    "epoch": 2015.4,
+    "pmra": 94.39,
+    "pmdec": 123.02,
+    "mag": 16.89
+   },
+   {
     "ra": 164.2706902,
     "dec": 6.924658,
     "label": "CatWISE J105704.96+065528.7",
@@ -16304,15 +16311,6 @@
     "epoch": 2015.4,
     "pmra": 18.73,
     "pmdec": 20.62,
-    "mag": 16.89
-   },
-   {
-    "ra": 164.2748085,
-    "dec": 7.0330649,
-    "label": "CatWISE J105705.95+070159.0",
-    "epoch": 2015.4,
-    "pmra": 94.39,
-    "pmdec": 123.02,
     "mag": 16.89
    },
    {
@@ -16361,21 +16359,21 @@
     "mag": 16.9
    },
    {
-    "ra": 163.9734241,
-    "dec": 7.1092428,
-    "label": "CatWISE J105553.62+070633.2",
-    "epoch": 2015.4,
-    "pmra": -7.44,
-    "pmdec": 64.55,
-    "mag": 16.9
-   },
-   {
     "ra": 164.1383171,
     "dec": 7.1113786,
     "label": "CatWISE J105633.19+070640.9",
     "epoch": 2015.4,
     "pmra": 31.04,
     "pmdec": -19.64,
+    "mag": 16.9
+   },
+   {
+    "ra": 163.9734241,
+    "dec": 7.1092428,
+    "label": "CatWISE J105553.62+070633.2",
+    "epoch": 2015.4,
+    "pmra": -7.44,
+    "pmdec": 64.55,
     "mag": 16.9
    },
    {
@@ -16433,12 +16431,12 @@
     "mag": 16.91
    },
    {
-    "ra": 164.0091205,
-    "dec": 6.849195,
-    "label": "CatWISE J105602.18+065057.1",
+    "ra": 164.1972015,
+    "dec": 7.0465211,
+    "label": "CatWISE J105647.32+070247.4",
     "epoch": 2015.4,
-    "pmra": -34.79,
-    "pmdec": -136.09,
+    "pmra": -16.09,
+    "pmdec": -7.4,
     "mag": 16.91
    },
    {
@@ -16451,12 +16449,12 @@
     "mag": 16.91
    },
    {
-    "ra": 164.1972015,
-    "dec": 7.0465211,
-    "label": "CatWISE J105647.32+070247.4",
+    "ra": 164.0091205,
+    "dec": 6.849195,
+    "label": "CatWISE J105602.18+065057.1",
     "epoch": 2015.4,
-    "pmra": -16.09,
-    "pmdec": -7.4,
+    "pmra": -34.79,
+    "pmdec": -136.09,
     "mag": 16.91
    },
    {
@@ -16514,15 +16512,6 @@
     "mag": 16.91
    },
    {
-    "ra": 164.1711421,
-    "dec": 6.9829115,
-    "label": "CatWISE J105641.07+065858.4",
-    "epoch": 2015.4,
-    "pmra": -128.42,
-    "pmdec": 20.6,
-    "mag": 16.91
-   },
-   {
     "ra": 164.1337102,
     "dec": 7.0357228,
     "label": "CatWISE J105632.09+070208.6",
@@ -16532,13 +16521,13 @@
     "mag": 16.91
    },
    {
-    "ra": 164.0023032,
-    "dec": 6.9989844,
-    "label": "CatWISE J105600.55+065956.3",
+    "ra": 164.1711421,
+    "dec": 6.9829115,
+    "label": "CatWISE J105641.07+065858.4",
     "epoch": 2015.4,
-    "pmra": 23.79,
-    "pmdec": -140.21,
-    "mag": 16.92
+    "pmra": -128.42,
+    "pmdec": 20.6,
+    "mag": 16.91
    },
    {
     "ra": 164.115891,
@@ -16550,12 +16539,12 @@
     "mag": 16.92
    },
    {
-    "ra": 163.9782682,
-    "dec": 6.8410063,
-    "label": "CatWISE J105554.78+065027.6",
+    "ra": 164.0023032,
+    "dec": 6.9989844,
+    "label": "CatWISE J105600.55+065956.3",
     "epoch": 2015.4,
-    "pmra": 10.13,
-    "pmdec": 87.63,
+    "pmra": 23.79,
+    "pmdec": -140.21,
     "mag": 16.92
    },
    {
@@ -16568,12 +16557,12 @@
     "mag": 16.92
    },
    {
-    "ra": 163.9694463,
-    "dec": 6.8693292,
-    "label": "CatWISE J105552.66+065209.5",
+    "ra": 163.9782682,
+    "dec": 6.8410063,
+    "label": "CatWISE J105554.78+065027.6",
     "epoch": 2015.4,
-    "pmra": 98.98,
-    "pmdec": 17.18,
+    "pmra": 10.13,
+    "pmdec": 87.63,
     "mag": 16.92
    },
    {
@@ -16592,6 +16581,15 @@
     "epoch": 2015.4,
     "pmra": 19.72,
     "pmdec": -17.07,
+    "mag": 16.92
+   },
+   {
+    "ra": 163.9694463,
+    "dec": 6.8693292,
+    "label": "CatWISE J105552.66+065209.5",
+    "epoch": 2015.4,
+    "pmra": 98.98,
+    "pmdec": 17.18,
     "mag": 16.92
    },
    {
@@ -16649,21 +16647,21 @@
     "mag": 16.93
    },
    {
-    "ra": 164.1669468,
-    "dec": 6.8592364,
-    "label": "CatWISE J105640.06+065133.2",
-    "epoch": 2015.4,
-    "pmra": 6.5,
-    "pmdec": -31.86,
-    "mag": 16.93
-   },
-   {
     "ra": 164.0745329,
     "dec": 7.0268323,
     "label": "CatWISE J105617.88+070136.5",
     "epoch": 2015.4,
     "pmra": -94.67,
     "pmdec": 6.49,
+    "mag": 16.93
+   },
+   {
+    "ra": 164.1669468,
+    "dec": 6.8592364,
+    "label": "CatWISE J105640.06+065133.2",
+    "epoch": 2015.4,
+    "pmra": 6.5,
+    "pmdec": -31.86,
     "mag": 16.93
    },
    {
@@ -16676,15 +16674,6 @@
     "mag": 16.93
    },
    {
-    "ra": 164.165137,
-    "dec": 6.9332158,
-    "label": "CatWISE J105639.63+065559.5",
-    "epoch": 2015.4,
-    "pmra": -29.84,
-    "pmdec": -73.9,
-    "mag": 16.93
-   },
-   {
     "ra": 164.0191128,
     "dec": 7.0555966,
     "label": "CatWISE J105604.58+070320.1",
@@ -16694,12 +16683,12 @@
     "mag": 16.93
    },
    {
-    "ra": 164.1262538,
-    "dec": 6.8591668,
-    "label": "CatWISE J105630.30+065133.0",
+    "ra": 164.165137,
+    "dec": 6.9332158,
+    "label": "CatWISE J105639.63+065559.5",
     "epoch": 2015.4,
-    "pmra": -28.06,
-    "pmdec": 121.35,
+    "pmra": -29.84,
+    "pmdec": -73.9,
     "mag": 16.93
    },
    {
@@ -16709,6 +16698,15 @@
     "epoch": 2015.4,
     "pmra": 45.06,
     "pmdec": -43.4,
+    "mag": 16.93
+   },
+   {
+    "ra": 164.1262538,
+    "dec": 6.8591668,
+    "label": "CatWISE J105630.30+065133.0",
+    "epoch": 2015.4,
+    "pmra": -28.06,
+    "pmdec": 121.35,
     "mag": 16.93
    },
    {
@@ -16730,21 +16728,21 @@
     "mag": 16.93
    },
    {
-    "ra": 164.1015101,
-    "dec": 6.8119343,
-    "label": "CatWISE J105624.36+064842.9",
-    "epoch": 2015.4,
-    "pmra": 12.8,
-    "pmdec": -17.09,
-    "mag": 16.93
-   },
-   {
     "ra": 164.1492855,
     "dec": 7.1075339,
     "label": "CatWISE J105635.82+070627.1",
     "epoch": 2015.4,
     "pmra": -51.61,
     "pmdec": 123.27,
+    "mag": 16.93
+   },
+   {
+    "ra": 164.1015101,
+    "dec": 6.8119343,
+    "label": "CatWISE J105624.36+064842.9",
+    "epoch": 2015.4,
+    "pmra": 12.8,
+    "pmdec": -17.09,
     "mag": 16.93
    },
    {
@@ -16766,6 +16764,15 @@
     "mag": 16.94
    },
    {
+    "ra": 164.0296206,
+    "dec": 7.1052621,
+    "label": "CatWISE J105607.10+070618.9",
+    "epoch": 2015.4,
+    "pmra": -79.29,
+    "pmdec": -92.27,
+    "mag": 16.94
+   },
+   {
     "ra": 163.9540711,
     "dec": 6.8954249,
     "label": "CatWISE J105548.97+065343.5",
@@ -16784,24 +16791,6 @@
     "mag": 16.94
    },
    {
-    "ra": 164.0296206,
-    "dec": 7.1052621,
-    "label": "CatWISE J105607.10+070618.9",
-    "epoch": 2015.4,
-    "pmra": -79.29,
-    "pmdec": -92.27,
-    "mag": 16.94
-   },
-   {
-    "ra": 163.9628033,
-    "dec": 6.8533329,
-    "label": "CatWISE J105551.07+065111.9",
-    "epoch": 2015.4,
-    "pmra": -20.35,
-    "pmdec": 82.46,
-    "mag": 16.94
-   },
-   {
     "ra": 164.0747743,
     "dec": 7.010535,
     "label": "CatWISE J105617.94+070037.9",
@@ -16817,6 +16806,15 @@
     "epoch": 2015.4,
     "pmra": 23.85,
     "pmdec": 24.96,
+    "mag": 16.94
+   },
+   {
+    "ra": 163.9628033,
+    "dec": 6.8533329,
+    "label": "CatWISE J105551.07+065111.9",
+    "epoch": 2015.4,
+    "pmra": -20.35,
+    "pmdec": 82.46,
     "mag": 16.94
    },
    {
@@ -16856,21 +16854,21 @@
     "mag": 16.94
    },
    {
-    "ra": 164.1253436,
-    "dec": 7.1561638,
-    "label": "CatWISE J105630.08+070922.1",
-    "epoch": 2015.4,
-    "pmra": -15.36,
-    "pmdec": -29.12,
-    "mag": 16.94
-   },
-   {
     "ra": 164.1780663,
     "dec": 7.1192414,
     "label": "CatWISE J105642.73+070709.2",
     "epoch": 2015.4,
     "pmra": -14.07,
     "pmdec": 66.18,
+    "mag": 16.94
+   },
+   {
+    "ra": 164.1253436,
+    "dec": 7.1561638,
+    "label": "CatWISE J105630.08+070922.1",
+    "epoch": 2015.4,
+    "pmra": -15.36,
+    "pmdec": -29.12,
     "mag": 16.94
    },
    {
@@ -16919,21 +16917,21 @@
     "mag": 16.95
    },
    {
-    "ra": 164.2179831,
-    "dec": 6.9785541,
-    "label": "CatWISE J105652.31+065842.7",
-    "epoch": 2015.4,
-    "pmra": 257.02,
-    "pmdec": -77.77,
-    "mag": 16.95
-   },
-   {
     "ra": 163.9915932,
     "dec": 7.0692297,
     "label": "CatWISE J105557.98+070409.2",
     "epoch": 2015.4,
     "pmra": 8.35,
     "pmdec": -164.47,
+    "mag": 16.95
+   },
+   {
+    "ra": 164.2179831,
+    "dec": 6.9785541,
+    "label": "CatWISE J105652.31+065842.7",
+    "epoch": 2015.4,
+    "pmra": 257.02,
+    "pmdec": -77.77,
     "mag": 16.95
    },
    {
@@ -16946,12 +16944,12 @@
     "mag": 16.95
    },
    {
-    "ra": 164.1412553,
-    "dec": 6.8592767,
-    "label": "CatWISE J105633.90+065133.3",
+    "ra": 164.1280831,
+    "dec": 7.0462027,
+    "label": "CatWISE J105630.74+070246.3",
     "epoch": 2015.4,
-    "pmra": -12.83,
-    "pmdec": -38.08,
+    "pmra": -40.98,
+    "pmdec": -83.7,
     "mag": 16.95
    },
    {
@@ -16982,12 +16980,12 @@
     "mag": 16.95
    },
    {
-    "ra": 164.1280831,
-    "dec": 7.0462027,
-    "label": "CatWISE J105630.74+070246.3",
+    "ra": 164.1412553,
+    "dec": 6.8592767,
+    "label": "CatWISE J105633.90+065133.3",
     "epoch": 2015.4,
-    "pmra": -40.98,
-    "pmdec": -83.7,
+    "pmra": -12.83,
+    "pmdec": -38.08,
     "mag": 16.95
    },
    {
@@ -17045,21 +17043,21 @@
     "mag": 16.96
    },
    {
-    "ra": 164.2093419,
-    "dec": 7.1171986,
-    "label": "CatWISE J105650.24+070701.9",
-    "epoch": 2015.4,
-    "pmra": -37.57,
-    "pmdec": -86.64,
-    "mag": 16.96
-   },
-   {
     "ra": 164.1702721,
     "dec": 7.1202452,
     "label": "CatWISE J105640.86+070712.8",
     "epoch": 2015.4,
     "pmra": 35.46,
     "pmdec": 78.0,
+    "mag": 16.96
+   },
+   {
+    "ra": 164.2093419,
+    "dec": 7.1171986,
+    "label": "CatWISE J105650.24+070701.9",
+    "epoch": 2015.4,
+    "pmra": -37.57,
+    "pmdec": -86.64,
     "mag": 16.96
    },
    {
@@ -17099,21 +17097,21 @@
     "mag": 16.96
    },
    {
-    "ra": 163.954558,
-    "dec": 6.8587801,
-    "label": "CatWISE J105549.09+065131.6",
-    "epoch": 2015.4,
-    "pmra": -78.23,
-    "pmdec": -111.02,
-    "mag": 16.96
-   },
-   {
     "ra": 164.0214987,
     "dec": 7.0949893,
     "label": "CatWISE J105605.16+070541.9",
     "epoch": 2015.4,
     "pmra": -94.16,
     "pmdec": -20.81,
+    "mag": 16.96
+   },
+   {
+    "ra": 163.954558,
+    "dec": 6.8587801,
+    "label": "CatWISE J105549.09+065131.6",
+    "epoch": 2015.4,
+    "pmra": -78.23,
+    "pmdec": -111.02,
     "mag": 16.96
    },
    {
@@ -17162,21 +17160,21 @@
     "mag": 16.97
    },
    {
-    "ra": 164.022028,
-    "dec": 6.8606557,
-    "label": "CatWISE J105605.28+065138.3",
-    "epoch": 2015.4,
-    "pmra": 76.41,
-    "pmdec": -136.97,
-    "mag": 16.97
-   },
-   {
     "ra": 164.0529375,
     "dec": 7.0516374,
     "label": "CatWISE J105612.70+070305.8",
     "epoch": 2015.4,
     "pmra": -0.29,
     "pmdec": -14.96,
+    "mag": 16.97
+   },
+   {
+    "ra": 164.022028,
+    "dec": 6.8606557,
+    "label": "CatWISE J105605.28+065138.3",
+    "epoch": 2015.4,
+    "pmra": 76.41,
+    "pmdec": -136.97,
     "mag": 16.97
    },
    {
@@ -17189,21 +17187,21 @@
     "mag": 16.97
    },
    {
-    "ra": 164.0304634,
-    "dec": 6.8205665,
-    "label": "CatWISE J105607.31+064914.0",
-    "epoch": 2015.4,
-    "pmra": -56.65,
-    "pmdec": -43.03,
-    "mag": 16.97
-   },
-   {
     "ra": 164.1472041,
     "dec": 6.9360423,
     "label": "CatWISE J105635.32+065609.7",
     "epoch": 2015.4,
     "pmra": 22.15,
     "pmdec": -31.38,
+    "mag": 16.97
+   },
+   {
+    "ra": 164.0304634,
+    "dec": 6.8205665,
+    "label": "CatWISE J105607.31+064914.0",
+    "epoch": 2015.4,
+    "pmra": -56.65,
+    "pmdec": -43.03,
     "mag": 16.97
    },
    {
@@ -17261,15 +17259,6 @@
     "mag": 16.98
    },
    {
-    "ra": 164.2116733,
-    "dec": 6.8572672,
-    "label": "CatWISE J105650.80+065126.1",
-    "epoch": 2015.4,
-    "pmra": -54.46,
-    "pmdec": -7.09,
-    "mag": 16.98
-   },
-   {
     "ra": 164.1687604,
     "dec": 6.9823789,
     "label": "CatWISE J105640.50+065856.5",
@@ -17288,21 +17277,21 @@
     "mag": 16.98
    },
    {
+    "ra": 164.2116733,
+    "dec": 6.8572672,
+    "label": "CatWISE J105650.80+065126.1",
+    "epoch": 2015.4,
+    "pmra": -54.46,
+    "pmdec": -7.09,
+    "mag": 16.98
+   },
+   {
     "ra": 164.0291962,
     "dec": 6.8451285,
     "label": "CatWISE J105607.00+065042.4",
     "epoch": 2015.4,
     "pmra": -43.65,
     "pmdec": -63.82,
-    "mag": 16.98
-   },
-   {
-    "ra": 164.0401245,
-    "dec": 6.9427853,
-    "label": "CatWISE J105609.63+065634.0",
-    "epoch": 2015.4,
-    "pmra": -6.7,
-    "pmdec": 101.86,
     "mag": 16.98
    },
    {
@@ -17315,12 +17304,12 @@
     "mag": 16.98
    },
    {
-    "ra": 163.9572346,
-    "dec": 7.0156731,
-    "label": "CatWISE J105549.73+070056.4",
+    "ra": 164.0401245,
+    "dec": 6.9427853,
+    "label": "CatWISE J105609.63+065634.0",
     "epoch": 2015.4,
-    "pmra": -124.85,
-    "pmdec": -20.97,
+    "pmra": -6.7,
+    "pmdec": 101.86,
     "mag": 16.98
    },
    {
@@ -17330,6 +17319,15 @@
     "epoch": 2015.4,
     "pmra": 83.26,
     "pmdec": -153.63,
+    "mag": 16.98
+   },
+   {
+    "ra": 163.9572346,
+    "dec": 7.0156731,
+    "label": "CatWISE J105549.73+070056.4",
+    "epoch": 2015.4,
+    "pmra": -124.85,
+    "pmdec": -20.97,
     "mag": 16.98
    },
    {
@@ -17549,21 +17547,21 @@
     "mag": 17.01
    },
    {
-    "ra": 164.1074377,
-    "dec": 6.8467943,
-    "label": "CatWISE J105625.78+065048.4",
-    "epoch": 2015.4,
-    "pmra": -0.23,
-    "pmdec": 15.0,
-    "mag": 17.01
-   },
-   {
     "ra": 164.0717315,
     "dec": 7.0197263,
     "label": "CatWISE J105617.21+070111.0",
     "epoch": 2015.4,
     "pmra": 23.53,
     "pmdec": -41.03,
+    "mag": 17.01
+   },
+   {
+    "ra": 164.1074377,
+    "dec": 6.8467943,
+    "label": "CatWISE J105625.78+065048.4",
+    "epoch": 2015.4,
+    "pmra": -0.23,
+    "pmdec": 15.0,
     "mag": 17.01
    },
    {
@@ -17576,12 +17574,12 @@
     "mag": 17.02
    },
    {
-    "ra": 164.022976,
-    "dec": 6.8209278,
-    "label": "CatWISE J105605.51+064915.3",
+    "ra": 164.0224731,
+    "dec": 6.9850891,
+    "label": "CatWISE J105605.39+065906.3",
     "epoch": 2015.4,
-    "pmra": 10.53,
-    "pmdec": 93.72,
+    "pmra": 116.46,
+    "pmdec": -50.62,
     "mag": 17.02
    },
    {
@@ -17594,12 +17592,12 @@
     "mag": 17.02
    },
    {
-    "ra": 164.0224731,
-    "dec": 6.9850891,
-    "label": "CatWISE J105605.39+065906.3",
+    "ra": 164.022976,
+    "dec": 6.8209278,
+    "label": "CatWISE J105605.51+064915.3",
     "epoch": 2015.4,
-    "pmra": 116.46,
-    "pmdec": -50.62,
+    "pmra": 10.53,
+    "pmdec": 93.72,
     "mag": 17.02
    },
    {
@@ -17639,15 +17637,6 @@
     "mag": 17.02
    },
    {
-    "ra": 164.0540624,
-    "dec": 6.8074005,
-    "label": "CatWISE J105612.97+064826.6",
-    "epoch": 2015.4,
-    "pmra": -93.64,
-    "pmdec": 35.46,
-    "mag": 17.02
-   },
-   {
     "ra": 164.118243,
     "dec": 6.9664647,
     "label": "CatWISE J105628.37+065759.2",
@@ -17657,21 +17646,21 @@
     "mag": 17.02
    },
    {
+    "ra": 164.0540624,
+    "dec": 6.8074005,
+    "label": "CatWISE J105612.97+064826.6",
+    "epoch": 2015.4,
+    "pmra": -93.64,
+    "pmdec": 35.46,
+    "mag": 17.02
+   },
+   {
     "ra": 163.9916482,
     "dec": 7.1414022,
     "label": "CatWISE J105557.99+070829.0",
     "epoch": 2015.4,
     "pmra": -130.96,
     "pmdec": 52.05,
-    "mag": 17.02
-   },
-   {
-    "ra": 163.9687139,
-    "dec": 6.892798,
-    "label": "CatWISE J105552.49+065334.0",
-    "epoch": 2015.4,
-    "pmra": 55.16,
-    "pmdec": 180.35,
     "mag": 17.02
    },
    {
@@ -17699,6 +17688,15 @@
     "epoch": 2015.4,
     "pmra": -26.99,
     "pmdec": -13.25,
+    "mag": 17.02
+   },
+   {
+    "ra": 163.9687139,
+    "dec": 6.892798,
+    "label": "CatWISE J105552.49+065334.0",
+    "epoch": 2015.4,
+    "pmra": 55.16,
+    "pmdec": 180.35,
     "mag": 17.02
    },
    {
@@ -17756,21 +17754,21 @@
     "mag": 17.03
    },
    {
-    "ra": 164.0469998,
-    "dec": 6.8682253,
-    "label": "CatWISE J105611.28+065205.6",
-    "epoch": 2015.4,
-    "pmra": -33.89,
-    "pmdec": 50.14,
-    "mag": 17.03
-   },
-   {
     "ra": 164.0672023,
     "dec": 6.9861467,
     "label": "CatWISE J105616.12+065910.1",
     "epoch": 2015.4,
     "pmra": -257.3,
     "pmdec": 264.48,
+    "mag": 17.03
+   },
+   {
+    "ra": 164.0469998,
+    "dec": 6.8682253,
+    "label": "CatWISE J105611.28+065205.6",
+    "epoch": 2015.4,
+    "pmra": -33.89,
+    "pmdec": 50.14,
     "mag": 17.03
    },
    {
@@ -17801,21 +17799,21 @@
     "mag": 17.04
    },
    {
-    "ra": 163.9581582,
-    "dec": 6.9851994,
-    "label": "CatWISE J105549.95+065906.7",
-    "epoch": 2015.4,
-    "pmra": -189.48,
-    "pmdec": -111.5,
-    "mag": 17.04
-   },
-   {
     "ra": 164.046016,
     "dec": 7.0017352,
     "label": "CatWISE J105611.04+070006.2",
     "epoch": 2015.4,
     "pmra": 38.13,
     "pmdec": 25.35,
+    "mag": 17.04
+   },
+   {
+    "ra": 163.9581582,
+    "dec": 6.9851994,
+    "label": "CatWISE J105549.95+065906.7",
+    "epoch": 2015.4,
+    "pmra": -189.48,
+    "pmdec": -111.5,
     "mag": 17.04
    },
    {
@@ -17999,15 +17997,6 @@
     "mag": 17.06
    },
    {
-    "ra": 164.2678734,
-    "dec": 6.9752189,
-    "label": "CatWISE J105704.29+065830.7",
-    "epoch": 2015.4,
-    "pmra": -13.94,
-    "pmdec": -56.74,
-    "mag": 17.06
-   },
-   {
     "ra": 163.9727957,
     "dec": 7.0422925,
     "label": "CatWISE J105553.47+070232.2",
@@ -18017,12 +18006,30 @@
     "mag": 17.06
    },
    {
+    "ra": 164.2678734,
+    "dec": 6.9752189,
+    "label": "CatWISE J105704.29+065830.7",
+    "epoch": 2015.4,
+    "pmra": -13.94,
+    "pmdec": -56.74,
+    "mag": 17.06
+   },
+   {
     "ra": 163.9207878,
     "dec": 6.938931,
     "label": "CatWISE J105540.98+065620.1",
     "epoch": 2015.4,
     "pmra": 183.97,
     "pmdec": -64.04,
+    "mag": 17.06
+   },
+   {
+    "ra": 164.1070083,
+    "dec": 6.9681448,
+    "label": "CatWISE J105625.68+065805.3",
+    "epoch": 2015.4,
+    "pmra": -43.31,
+    "pmdec": 80.92,
     "mag": 17.06
    },
    {
@@ -18044,30 +18051,21 @@
     "mag": 17.06
    },
    {
-    "ra": 163.8944092,
-    "dec": 7.0053585,
-    "label": "CatWISE J105534.65+070019.2",
-    "epoch": 2015.4,
-    "pmra": 54.26,
-    "pmdec": 709.86,
-    "mag": 17.06
-   },
-   {
-    "ra": 164.1070083,
-    "dec": 6.9681448,
-    "label": "CatWISE J105625.68+065805.3",
-    "epoch": 2015.4,
-    "pmra": -43.31,
-    "pmdec": 80.92,
-    "mag": 17.06
-   },
-   {
     "ra": 163.9899249,
     "dec": 7.1162813,
     "label": "CatWISE J105557.58+070658.6",
     "epoch": 2015.4,
     "pmra": 22.96,
     "pmdec": -45.34,
+    "mag": 17.06
+   },
+   {
+    "ra": 163.8944092,
+    "dec": 7.0053585,
+    "label": "CatWISE J105534.65+070019.2",
+    "epoch": 2015.4,
+    "pmra": 54.26,
+    "pmdec": 709.86,
     "mag": 17.06
    },
    {
@@ -18098,21 +18096,21 @@
     "mag": 17.07
    },
    {
-    "ra": 164.1124909,
-    "dec": 6.9442875,
-    "label": "CatWISE J105626.99+065639.4",
-    "epoch": 2015.4,
-    "pmra": -37.49,
-    "pmdec": 68.78,
-    "mag": 17.07
-   },
-   {
     "ra": 164.1052425,
     "dec": 6.9639246,
     "label": "CatWISE J105625.25+065750.1",
     "epoch": 2015.4,
     "pmra": -54.99,
     "pmdec": -8.54,
+    "mag": 17.07
+   },
+   {
+    "ra": 164.1124909,
+    "dec": 6.9442875,
+    "label": "CatWISE J105626.99+065639.4",
+    "epoch": 2015.4,
+    "pmra": -37.49,
+    "pmdec": 68.78,
     "mag": 17.07
    },
    {
@@ -18188,15 +18186,6 @@
     "mag": 17.08
    },
    {
-    "ra": 164.2213418,
-    "dec": 6.84563,
-    "label": "CatWISE J105653.12+065044.2",
-    "epoch": 2015.4,
-    "pmra": -102.96,
-    "pmdec": -85.41,
-    "mag": 17.08
-   },
-   {
     "ra": 164.1795844,
     "dec": 7.0482036,
     "label": "CatWISE J105643.10+070253.5",
@@ -18206,12 +18195,12 @@
     "mag": 17.08
    },
    {
-    "ra": 163.932652,
-    "dec": 6.9692553,
-    "label": "CatWISE J105543.83+065809.3",
+    "ra": 164.2213418,
+    "dec": 6.84563,
+    "label": "CatWISE J105653.12+065044.2",
     "epoch": 2015.4,
-    "pmra": 39.06,
-    "pmdec": -39.86,
+    "pmra": -102.96,
+    "pmdec": -85.41,
     "mag": 17.08
    },
    {
@@ -18221,6 +18210,15 @@
     "epoch": 2015.4,
     "pmra": 226.55,
     "pmdec": 169.44,
+    "mag": 17.08
+   },
+   {
+    "ra": 163.932652,
+    "dec": 6.9692553,
+    "label": "CatWISE J105543.83+065809.3",
+    "epoch": 2015.4,
+    "pmra": 39.06,
+    "pmdec": -39.86,
     "mag": 17.08
    },
    {
@@ -18296,15 +18294,6 @@
     "mag": 17.09
    },
    {
-    "ra": 164.1240979,
-    "dec": 6.8839698,
-    "label": "CatWISE J105629.78+065302.2",
-    "epoch": 2015.4,
-    "pmra": 23.87,
-    "pmdec": -12.51,
-    "mag": 17.09
-   },
-   {
     "ra": 164.0803027,
     "dec": 6.9423786,
     "label": "CatWISE J105619.27+065632.5",
@@ -18320,6 +18309,15 @@
     "epoch": 2015.4,
     "pmra": 223.77,
     "pmdec": 285.54,
+    "mag": 17.09
+   },
+   {
+    "ra": 164.1240979,
+    "dec": 6.8839698,
+    "label": "CatWISE J105629.78+065302.2",
+    "epoch": 2015.4,
+    "pmra": 23.87,
+    "pmdec": -12.51,
     "mag": 17.09
    },
    {
@@ -18359,21 +18357,21 @@
     "mag": 17.09
    },
    {
-    "ra": 164.0876699,
-    "dec": 6.9386395,
-    "label": "CatWISE J105621.04+065619.1",
-    "epoch": 2015.4,
-    "pmra": 34.26,
-    "pmdec": -59.23,
-    "mag": 17.09
-   },
-   {
     "ra": 164.0590917,
     "dec": 7.0294256,
     "label": "CatWISE J105614.18+070145.9",
     "epoch": 2015.4,
     "pmra": 123.96,
     "pmdec": -23.82,
+    "mag": 17.09
+   },
+   {
+    "ra": 164.0876699,
+    "dec": 6.9386395,
+    "label": "CatWISE J105621.04+065619.1",
+    "epoch": 2015.4,
+    "pmra": 34.26,
+    "pmdec": -59.23,
     "mag": 17.09
    },
    {
@@ -18395,15 +18393,6 @@
     "mag": 17.1
    },
    {
-    "ra": 164.078372,
-    "dec": 6.8280273,
-    "label": "CatWISE J105618.80+064940.8",
-    "epoch": 2015.4,
-    "pmra": -35.67,
-    "pmdec": 75.11,
-    "mag": 17.1
-   },
-   {
     "ra": 163.9867247,
     "dec": 6.9027904,
     "label": "CatWISE J105556.81+065410.0",
@@ -18413,21 +18402,12 @@
     "mag": 17.1
    },
    {
-    "ra": 164.2364219,
-    "dec": 6.8671283,
-    "label": "CatWISE J105656.74+065201.6",
+    "ra": 164.078372,
+    "dec": 6.8280273,
+    "label": "CatWISE J105618.80+064940.8",
     "epoch": 2015.4,
-    "pmra": 54.43,
-    "pmdec": 3.74,
-    "mag": 17.1
-   },
-   {
-    "ra": 164.2119102,
-    "dec": 6.9667066,
-    "label": "CatWISE J105650.85+065800.1",
-    "epoch": 2015.4,
-    "pmra": -36.48,
-    "pmdec": 26.24,
+    "pmra": -35.67,
+    "pmdec": 75.11,
     "mag": 17.1
    },
    {
@@ -18446,6 +18426,24 @@
     "epoch": 2015.4,
     "pmra": 748.87,
     "pmdec": -1557.93,
+    "mag": 17.1
+   },
+   {
+    "ra": 164.2119102,
+    "dec": 6.9667066,
+    "label": "CatWISE J105650.85+065800.1",
+    "epoch": 2015.4,
+    "pmra": -36.48,
+    "pmdec": 26.24,
+    "mag": 17.1
+   },
+   {
+    "ra": 164.2364219,
+    "dec": 6.8671283,
+    "label": "CatWISE J105656.74+065201.6",
+    "epoch": 2015.4,
+    "pmra": 54.43,
+    "pmdec": 3.74,
     "mag": 17.1
    },
    {
@@ -18530,12 +18528,12 @@
     "mag": 17.11
    },
    {
-    "ra": 164.2012805,
-    "dec": 6.8968002,
-    "label": "CatWISE J105648.30+065348.4",
+    "ra": 164.131447,
+    "dec": 7.0139055,
+    "label": "CatWISE J105631.54+070050.0",
     "epoch": 2015.4,
-    "pmra": -71.85,
-    "pmdec": 12.86,
+    "pmra": 246.33,
+    "pmdec": -811.73,
     "mag": 17.11
    },
    {
@@ -18548,12 +18546,12 @@
     "mag": 17.11
    },
    {
-    "ra": 164.131447,
-    "dec": 7.0139055,
-    "label": "CatWISE J105631.54+070050.0",
+    "ra": 164.2012805,
+    "dec": 6.8968002,
+    "label": "CatWISE J105648.30+065348.4",
     "epoch": 2015.4,
-    "pmra": 246.33,
-    "pmdec": -811.73,
+    "pmra": -71.85,
+    "pmdec": 12.86,
     "mag": 17.11
    },
    {
@@ -18575,12 +18573,12 @@
     "mag": 17.12
    },
    {
-    "ra": 164.0677521,
-    "dec": 6.8146811,
-    "label": "CatWISE J105616.26+064852.8",
+    "ra": 164.0784143,
+    "dec": 7.1226697,
+    "label": "CatWISE J105618.81+070721.6",
     "epoch": 2015.4,
-    "pmra": 35.82,
-    "pmdec": -184.14,
+    "pmra": 6.79,
+    "pmdec": -140.44,
     "mag": 17.12
    },
    {
@@ -18602,12 +18600,12 @@
     "mag": 17.12
    },
    {
-    "ra": 164.0784143,
-    "dec": 7.1226697,
-    "label": "CatWISE J105618.81+070721.6",
+    "ra": 164.0677521,
+    "dec": 6.8146811,
+    "label": "CatWISE J105616.26+064852.8",
     "epoch": 2015.4,
-    "pmra": 6.79,
-    "pmdec": -140.44,
+    "pmra": 35.82,
+    "pmdec": -184.14,
     "mag": 17.12
    },
    {
@@ -18638,15 +18636,6 @@
     "mag": 17.12
    },
    {
-    "ra": 164.2654284,
-    "dec": 6.8984848,
-    "label": "CatWISE J105703.70+065354.5",
-    "epoch": 2015.4,
-    "pmra": -21.81,
-    "pmdec": -151.82,
-    "mag": 17.12
-   },
-   {
     "ra": 164.0466833,
     "dec": 6.9770239,
     "label": "CatWISE J105611.20+065837.2",
@@ -18662,6 +18651,15 @@
     "epoch": 2015.4,
     "pmra": -0.88,
     "pmdec": 40.07,
+    "mag": 17.12
+   },
+   {
+    "ra": 164.2654284,
+    "dec": 6.8984848,
+    "label": "CatWISE J105703.70+065354.5",
+    "epoch": 2015.4,
+    "pmra": -21.81,
+    "pmdec": -151.82,
     "mag": 17.12
    },
    {
@@ -18737,21 +18735,21 @@
     "mag": 17.13
    },
    {
-    "ra": 164.0612721,
-    "dec": 6.8307041,
-    "label": "CatWISE J105614.70+064950.5",
-    "epoch": 2015.4,
-    "pmra": -123.4,
-    "pmdec": 57.5,
-    "mag": 17.13
-   },
-   {
     "ra": 163.9866302,
     "dec": 6.9214414,
     "label": "CatWISE J105556.79+065517.1",
     "epoch": 2015.4,
     "pmra": 16.14,
     "pmdec": 58.43,
+    "mag": 17.13
+   },
+   {
+    "ra": 164.0612721,
+    "dec": 6.8307041,
+    "label": "CatWISE J105614.70+064950.5",
+    "epoch": 2015.4,
+    "pmra": -123.4,
+    "pmdec": 57.5,
     "mag": 17.13
    },
    {
@@ -18782,21 +18780,21 @@
     "mag": 17.14
    },
    {
-    "ra": 164.0692271,
-    "dec": 6.8474345,
-    "label": "CatWISE J105616.61+065050.7",
-    "epoch": 2015.4,
-    "pmra": 36.27,
-    "pmdec": 131.04,
-    "mag": 17.14
-   },
-   {
     "ra": 164.155891,
     "dec": 6.8889514,
     "label": "CatWISE J105637.41+065320.2",
     "epoch": 2015.4,
     "pmra": -67.52,
     "pmdec": 17.85,
+    "mag": 17.14
+   },
+   {
+    "ra": 164.0692271,
+    "dec": 6.8474345,
+    "label": "CatWISE J105616.61+065050.7",
+    "epoch": 2015.4,
+    "pmra": 36.27,
+    "pmdec": 131.04,
     "mag": 17.14
    },
    {
@@ -18827,21 +18825,21 @@
     "mag": 17.15
    },
    {
-    "ra": 163.9786541,
-    "dec": 6.9977191,
-    "label": "CatWISE J105554.87+065951.7",
-    "epoch": 2015.4,
-    "pmra": -37.44,
-    "pmdec": -49.61,
-    "mag": 17.15
-   },
-   {
     "ra": 164.089527,
     "dec": 7.0686773,
     "label": "CatWISE J105621.48+070407.2",
     "epoch": 2015.4,
     "pmra": -18.87,
     "pmdec": 186.22,
+    "mag": 17.15
+   },
+   {
+    "ra": 163.9786541,
+    "dec": 6.9977191,
+    "label": "CatWISE J105554.87+065951.7",
+    "epoch": 2015.4,
+    "pmra": -37.44,
+    "pmdec": -49.61,
     "mag": 17.15
    },
    {
@@ -18872,21 +18870,21 @@
     "mag": 17.15
    },
    {
-    "ra": 164.1927625,
-    "dec": 6.9349485,
-    "label": "CatWISE J105646.26+065605.8",
-    "epoch": 2015.4,
-    "pmra": -16.2,
-    "pmdec": 125.6,
-    "mag": 17.15
-   },
-   {
     "ra": 164.1478034,
     "dec": 7.0126242,
     "label": "CatWISE J105635.47+070045.4",
     "epoch": 2015.4,
     "pmra": -21.66,
     "pmdec": -63.4,
+    "mag": 17.15
+   },
+   {
+    "ra": 164.1927625,
+    "dec": 6.9349485,
+    "label": "CatWISE J105646.26+065605.8",
+    "epoch": 2015.4,
+    "pmra": -16.2,
+    "pmdec": 125.6,
     "mag": 17.15
    },
    {
@@ -18908,15 +18906,6 @@
     "mag": 17.15
    },
    {
-    "ra": 164.0245469,
-    "dec": 6.8996991,
-    "label": "CatWISE J105605.89+065358.9",
-    "epoch": 2015.4,
-    "pmra": -27.4,
-    "pmdec": 50.19,
-    "mag": 17.15
-   },
-   {
     "ra": 164.057492,
     "dec": 7.0601918,
     "label": "CatWISE J105613.79+070336.6",
@@ -18926,12 +18915,12 @@
     "mag": 17.15
    },
    {
-    "ra": 164.1590865,
-    "dec": 7.0384675,
-    "label": "CatWISE J105638.18+070218.4",
+    "ra": 164.0245469,
+    "dec": 6.8996991,
+    "label": "CatWISE J105605.89+065358.9",
     "epoch": 2015.4,
-    "pmra": -41.12,
-    "pmdec": -133.62,
+    "pmra": -27.4,
+    "pmdec": 50.19,
     "mag": 17.15
    },
    {
@@ -18941,6 +18930,15 @@
     "epoch": 2015.4,
     "pmra": -42.36,
     "pmdec": 21.69,
+    "mag": 17.15
+   },
+   {
+    "ra": 164.1590865,
+    "dec": 7.0384675,
+    "label": "CatWISE J105638.18+070218.4",
+    "epoch": 2015.4,
+    "pmra": -41.12,
+    "pmdec": -133.62,
     "mag": 17.15
    },
    {
@@ -19016,15 +19014,6 @@
     "mag": 17.16
    },
    {
-    "ra": 164.2637634,
-    "dec": 7.0550813,
-    "label": "CatWISE J105703.30+070318.2",
-    "epoch": 2015.4,
-    "pmra": 18.88,
-    "pmdec": -78.49,
-    "mag": 17.16
-   },
-   {
     "ra": 164.0052021,
     "dec": 7.1091465,
     "label": "CatWISE J105601.24+070632.9",
@@ -19040,6 +19029,15 @@
     "epoch": 2015.4,
     "pmra": 77.51,
     "pmdec": 28.82,
+    "mag": 17.16
+   },
+   {
+    "ra": 164.2637634,
+    "dec": 7.0550813,
+    "label": "CatWISE J105703.30+070318.2",
+    "epoch": 2015.4,
+    "pmra": 18.88,
+    "pmdec": -78.49,
     "mag": 17.16
    },
    {
@@ -19079,21 +19077,21 @@
     "mag": 17.17
    },
    {
-    "ra": 163.9603549,
-    "dec": 6.9653014,
-    "label": "CatWISE J105550.48+065755.0",
-    "epoch": 2015.4,
-    "pmra": 10.81,
-    "pmdec": -1.46,
-    "mag": 17.17
-   },
-   {
     "ra": 164.0949315,
     "dec": 6.9156307,
     "label": "CatWISE J105622.78+065456.2",
     "epoch": 2015.4,
     "pmra": -16.97,
     "pmdec": 27.52,
+    "mag": 17.17
+   },
+   {
+    "ra": 163.9603549,
+    "dec": 6.9653014,
+    "label": "CatWISE J105550.48+065755.0",
+    "epoch": 2015.4,
+    "pmra": 10.81,
+    "pmdec": -1.46,
     "mag": 17.17
    },
    {
@@ -19133,24 +19131,6 @@
     "mag": 17.17
    },
    {
-    "ra": 164.031018,
-    "dec": 6.8179841,
-    "label": "CatWISE J105607.44+064904.7",
-    "epoch": 2015.4,
-    "pmra": -73.65,
-    "pmdec": -165.88,
-    "mag": 17.17
-   },
-   {
-    "ra": 163.9446327,
-    "dec": 7.0562013,
-    "label": "CatWISE J105546.71+070322.3",
-    "epoch": 2015.4,
-    "pmra": -259.11,
-    "pmdec": 220.73,
-    "mag": 17.17
-   },
-   {
     "ra": 164.0745066,
     "dec": 7.0564393,
     "label": "CatWISE J105617.88+070323.1",
@@ -19166,6 +19146,24 @@
     "epoch": 2015.4,
     "pmra": 48.95,
     "pmdec": -106.17,
+    "mag": 17.17
+   },
+   {
+    "ra": 163.9446327,
+    "dec": 7.0562013,
+    "label": "CatWISE J105546.71+070322.3",
+    "epoch": 2015.4,
+    "pmra": -259.11,
+    "pmdec": 220.73,
+    "mag": 17.17
+   },
+   {
+    "ra": 164.031018,
+    "dec": 6.8179841,
+    "label": "CatWISE J105607.44+064904.7",
+    "epoch": 2015.4,
+    "pmra": -73.65,
+    "pmdec": -165.88,
     "mag": 17.17
    },
    {
@@ -19205,15 +19203,6 @@
     "mag": 17.18
    },
    {
-    "ra": 164.1520046,
-    "dec": 6.8642507,
-    "label": "CatWISE J105636.48+065151.3",
-    "epoch": 2015.4,
-    "pmra": -16.04,
-    "pmdec": 53.26,
-    "mag": 17.18
-   },
-   {
     "ra": 164.2327148,
     "dec": 6.9872841,
     "label": "CatWISE J105655.85+065914.2",
@@ -19223,12 +19212,12 @@
     "mag": 17.18
    },
    {
-    "ra": 163.9170498,
-    "dec": 7.0065417,
-    "label": "CatWISE J105540.09+070023.5",
+    "ra": 164.1520046,
+    "dec": 6.8642507,
+    "label": "CatWISE J105636.48+065151.3",
     "epoch": 2015.4,
-    "pmra": 54.19,
-    "pmdec": 57.16,
+    "pmra": -16.04,
+    "pmdec": 53.26,
     "mag": 17.18
    },
    {
@@ -19241,6 +19230,15 @@
     "mag": 17.18
    },
    {
+    "ra": 163.9170498,
+    "dec": 7.0065417,
+    "label": "CatWISE J105540.09+070023.5",
+    "epoch": 2015.4,
+    "pmra": 54.19,
+    "pmdec": 57.16,
+    "mag": 17.18
+   },
+   {
     "ra": 164.0108978,
     "dec": 6.8769379,
     "label": "CatWISE J105602.61+065236.9",
@@ -19250,21 +19248,21 @@
     "mag": 17.18
    },
    {
-    "ra": 164.1879345,
-    "dec": 6.8644573,
-    "label": "CatWISE J105645.10+065152.0",
-    "epoch": 2015.4,
-    "pmra": -75.09,
-    "pmdec": -35.65,
-    "mag": 17.18
-   },
-   {
     "ra": 164.0186197,
     "dec": 7.1389753,
     "label": "CatWISE J105604.46+070820.3",
     "epoch": 2015.4,
     "pmra": 94.14,
     "pmdec": 9.01,
+    "mag": 17.18
+   },
+   {
+    "ra": 164.1879345,
+    "dec": 6.8644573,
+    "label": "CatWISE J105645.10+065152.0",
+    "epoch": 2015.4,
+    "pmra": -75.09,
+    "pmdec": -35.65,
     "mag": 17.18
    },
    {
@@ -19286,15 +19284,6 @@
     "mag": 17.18
    },
    {
-    "ra": 164.020271,
-    "dec": 6.8202187,
-    "label": "CatWISE J105604.86+064912.7",
-    "epoch": 2015.4,
-    "pmra": 57.05,
-    "pmdec": 25.19,
-    "mag": 17.18
-   },
-   {
     "ra": 164.0118607,
     "dec": 7.0282527,
     "label": "CatWISE J105602.84+070141.7",
@@ -19304,12 +19293,12 @@
     "mag": 17.18
    },
    {
-    "ra": 163.9566214,
-    "dec": 6.8618046,
-    "label": "CatWISE J105549.58+065142.4",
+    "ra": 164.020271,
+    "dec": 6.8202187,
+    "label": "CatWISE J105604.86+064912.7",
     "epoch": 2015.4,
-    "pmra": 119.64,
-    "pmdec": 157.28,
+    "pmra": 57.05,
+    "pmdec": 25.19,
     "mag": 17.18
    },
    {
@@ -19319,6 +19308,15 @@
     "epoch": 2015.4,
     "pmra": -171.05,
     "pmdec": 98.37,
+    "mag": 17.18
+   },
+   {
+    "ra": 163.9566214,
+    "dec": 6.8618046,
+    "label": "CatWISE J105549.58+065142.4",
+    "epoch": 2015.4,
+    "pmra": 119.64,
+    "pmdec": 157.28,
     "mag": 17.18
    },
    {
@@ -19358,6 +19356,15 @@
     "mag": 17.19
    },
    {
+    "ra": 164.0695492,
+    "dec": 7.1350546,
+    "label": "CatWISE J105616.69+070806.1",
+    "epoch": 2015.4,
+    "pmra": -36.73,
+    "pmdec": 22.03,
+    "mag": 17.19
+   },
+   {
     "ra": 164.0552534,
     "dec": 7.1637687,
     "label": "CatWISE J105613.26+070949.5",
@@ -19367,12 +19374,12 @@
     "mag": 17.19
    },
    {
-    "ra": 164.0695492,
-    "dec": 7.1350546,
-    "label": "CatWISE J105616.69+070806.1",
+    "ra": 164.1627821,
+    "dec": 6.9854843,
+    "label": "CatWISE J105639.06+065907.7",
     "epoch": 2015.4,
-    "pmra": -36.73,
-    "pmdec": 22.03,
+    "pmra": -50.35,
+    "pmdec": -86.21,
     "mag": 17.19
    },
    {
@@ -19394,12 +19401,12 @@
     "mag": 17.19
    },
    {
-    "ra": 164.1627821,
-    "dec": 6.9854843,
-    "label": "CatWISE J105639.06+065907.7",
+    "ra": 164.1863494,
+    "dec": 7.0465895,
+    "label": "CatWISE J105644.72+070247.7",
     "epoch": 2015.4,
-    "pmra": -50.35,
-    "pmdec": -86.21,
+    "pmra": 97.03,
+    "pmdec": -38.4,
     "mag": 17.19
    },
    {
@@ -19409,15 +19416,6 @@
     "epoch": 2015.4,
     "pmra": 45.97,
     "pmdec": -28.58,
-    "mag": 17.19
-   },
-   {
-    "ra": 164.1863494,
-    "dec": 7.0465895,
-    "label": "CatWISE J105644.72+070247.7",
-    "epoch": 2015.4,
-    "pmra": 97.03,
-    "pmdec": -38.4,
     "mag": 17.19
    },
    {
@@ -19493,21 +19491,21 @@
     "mag": 17.2
    },
    {
-    "ra": 164.1040305,
-    "dec": 6.857096,
-    "label": "CatWISE J105624.96+065125.5",
-    "epoch": 2015.4,
-    "pmra": 57.1,
-    "pmdec": 51.44,
-    "mag": 17.2
-   },
-   {
     "ra": 164.2010056,
     "dec": 7.0504388,
     "label": "CatWISE J105648.24+070301.5",
     "epoch": 2015.4,
     "pmra": -92.63,
     "pmdec": -41.14,
+    "mag": 17.2
+   },
+   {
+    "ra": 164.1040305,
+    "dec": 6.857096,
+    "label": "CatWISE J105624.96+065125.5",
+    "epoch": 2015.4,
+    "pmra": 57.1,
+    "pmdec": 51.44,
     "mag": 17.2
    },
    {
@@ -19520,21 +19518,21 @@
     "mag": 17.2
    },
    {
-    "ra": 163.9373394,
-    "dec": 6.9826648,
-    "label": "CatWISE J105544.96+065857.5",
-    "epoch": 2015.4,
-    "pmra": 89.83,
-    "pmdec": 241.73,
-    "mag": 17.2
-   },
-   {
     "ra": 164.1676489,
     "dec": 7.0381796,
     "label": "CatWISE J105640.23+070217.4",
     "epoch": 2015.4,
     "pmra": 11.99,
     "pmdec": 17.11,
+    "mag": 17.2
+   },
+   {
+    "ra": 163.9373394,
+    "dec": 6.9826648,
+    "label": "CatWISE J105544.96+065857.5",
+    "epoch": 2015.4,
+    "pmra": 89.83,
+    "pmdec": 241.73,
     "mag": 17.2
    },
    {
@@ -19565,15 +19563,6 @@
     "mag": 17.2
    },
    {
-    "ra": 163.9514357,
-    "dec": 7.0649706,
-    "label": "CatWISE J105548.34+070353.8",
-    "epoch": 2015.4,
-    "pmra": 80.91,
-    "pmdec": 45.87,
-    "mag": 17.2
-   },
-   {
     "ra": 164.1992016,
     "dec": 7.0575456,
     "label": "CatWISE J105647.80+070327.1",
@@ -19583,13 +19572,13 @@
     "mag": 17.2
    },
    {
-    "ra": 164.2515404,
-    "dec": 6.9448892,
-    "label": "CatWISE J105700.37+065641.6",
+    "ra": 163.9514357,
+    "dec": 7.0649706,
+    "label": "CatWISE J105548.34+070353.8",
     "epoch": 2015.4,
-    "pmra": -46.27,
-    "pmdec": 17.88,
-    "mag": 17.21
+    "pmra": 80.91,
+    "pmdec": 45.87,
+    "mag": 17.2
    },
    {
     "ra": 164.0656856,
@@ -19601,12 +19590,12 @@
     "mag": 17.21
    },
    {
-    "ra": 163.9689044,
-    "dec": 7.149098,
-    "label": "CatWISE J105552.53+070856.7",
+    "ra": 164.2515404,
+    "dec": 6.9448892,
+    "label": "CatWISE J105700.37+065641.6",
     "epoch": 2015.4,
-    "pmra": -32.7,
-    "pmdec": 31.11,
+    "pmra": -46.27,
+    "pmdec": 17.88,
     "mag": 17.21
    },
    {
@@ -19616,6 +19605,15 @@
     "epoch": 2015.4,
     "pmra": -116.95,
     "pmdec": -142.27,
+    "mag": 17.21
+   },
+   {
+    "ra": 163.9689044,
+    "dec": 7.149098,
+    "label": "CatWISE J105552.53+070856.7",
+    "epoch": 2015.4,
+    "pmra": -32.7,
+    "pmdec": 31.11,
     "mag": 17.21
    },
    {
@@ -19655,15 +19653,6 @@
     "mag": 17.21
    },
    {
-    "ra": 163.8967394,
-    "dec": 7.0139409,
-    "label": "CatWISE J105535.21+070050.1",
-    "epoch": 2015.4,
-    "pmra": -40.18,
-    "pmdec": 84.87,
-    "mag": 17.21
-   },
-   {
     "ra": 164.0615251,
     "dec": 7.092466,
     "label": "CatWISE J105614.76+070532.8",
@@ -19673,21 +19662,21 @@
     "mag": 17.21
    },
    {
+    "ra": 163.8967394,
+    "dec": 7.0139409,
+    "label": "CatWISE J105535.21+070050.1",
+    "epoch": 2015.4,
+    "pmra": -40.18,
+    "pmdec": 84.87,
+    "mag": 17.21
+   },
+   {
     "ra": 164.1716922,
     "dec": 6.964578,
     "label": "CatWISE J105641.20+065752.4",
     "epoch": 2015.4,
     "pmra": 3.52,
     "pmdec": -73.44,
-    "mag": 17.21
-   },
-   {
-    "ra": 164.2761578,
-    "dec": 7.0192077,
-    "label": "CatWISE J105706.27+070109.1",
-    "epoch": 2015.4,
-    "pmra": -139.49,
-    "pmdec": 68.77,
     "mag": 17.21
    },
    {
@@ -19706,6 +19695,15 @@
     "epoch": 2015.4,
     "pmra": -10.56,
     "pmdec": -27.38,
+    "mag": 17.21
+   },
+   {
+    "ra": 164.2761578,
+    "dec": 7.0192077,
+    "label": "CatWISE J105706.27+070109.1",
+    "epoch": 2015.4,
+    "pmra": -139.49,
+    "pmdec": 68.77,
     "mag": 17.21
    },
    {
@@ -19736,15 +19734,6 @@
     "mag": 17.22
    },
    {
-    "ra": 164.019255,
-    "dec": 6.8669933,
-    "label": "CatWISE J105604.62+065201.1",
-    "epoch": 2015.4,
-    "pmra": 6.79,
-    "pmdec": 145.18,
-    "mag": 17.22
-   },
-   {
     "ra": 164.085872,
     "dec": 7.0372244,
     "label": "CatWISE J105620.60+070214.0",
@@ -19772,12 +19761,21 @@
     "mag": 17.22
    },
    {
-    "ra": 163.9742058,
-    "dec": 6.9526793,
-    "label": "CatWISE J105553.80+065709.6",
+    "ra": 164.019255,
+    "dec": 6.8669933,
+    "label": "CatWISE J105604.62+065201.1",
     "epoch": 2015.4,
-    "pmra": 140.69,
-    "pmdec": 722.08,
+    "pmra": 6.79,
+    "pmdec": 145.18,
+    "mag": 17.22
+   },
+   {
+    "ra": 164.1976968,
+    "dec": 7.0262788,
+    "label": "CatWISE J105647.44+070134.6",
+    "epoch": 2015.4,
+    "pmra": -9.18,
+    "pmdec": -31.47,
     "mag": 17.22
    },
    {
@@ -19790,12 +19788,12 @@
     "mag": 17.22
    },
    {
-    "ra": 164.1976968,
-    "dec": 7.0262788,
-    "label": "CatWISE J105647.44+070134.6",
+    "ra": 163.9742058,
+    "dec": 6.9526793,
+    "label": "CatWISE J105553.80+065709.6",
     "epoch": 2015.4,
-    "pmra": -9.18,
-    "pmdec": -31.47,
+    "pmra": 140.69,
+    "pmdec": 722.08,
     "mag": 17.22
    },
    {
@@ -19814,15 +19812,6 @@
     "epoch": 2015.4,
     "pmra": -114.13,
     "pmdec": 32.31,
-    "mag": 17.22
-   },
-   {
-    "ra": 163.9991015,
-    "dec": 6.8560459,
-    "label": "CatWISE J105559.78+065121.7",
-    "epoch": 2015.4,
-    "pmra": -112.92,
-    "pmdec": 140.26,
     "mag": 17.22
    },
    {
@@ -19853,6 +19842,15 @@
     "mag": 17.22
    },
    {
+    "ra": 163.9991015,
+    "dec": 6.8560459,
+    "label": "CatWISE J105559.78+065121.7",
+    "epoch": 2015.4,
+    "pmra": -112.92,
+    "pmdec": 140.26,
+    "mag": 17.22
+   },
+   {
     "ra": 164.128701,
     "dec": 7.1869053,
     "label": "CatWISE J105630.88+071112.8",
@@ -19880,15 +19878,6 @@
     "mag": 17.22
    },
    {
-    "ra": 164.1862,
-    "dec": 6.8736708,
-    "label": "CatWISE J105644.68+065225.2",
-    "epoch": 2015.4,
-    "pmra": -51.43,
-    "pmdec": -180.34,
-    "mag": 17.22
-   },
-   {
     "ra": 164.216767,
     "dec": 6.9365669,
     "label": "CatWISE J105652.02+065611.6",
@@ -19898,13 +19887,13 @@
     "mag": 17.22
    },
    {
-    "ra": 164.0760768,
-    "dec": 6.8384519,
-    "label": "CatWISE J105618.25+065018.4",
+    "ra": 164.1862,
+    "dec": 6.8736708,
+    "label": "CatWISE J105644.68+065225.2",
     "epoch": 2015.4,
-    "pmra": 74.06,
-    "pmdec": -0.03,
-    "mag": 17.23
+    "pmra": -51.43,
+    "pmdec": -180.34,
+    "mag": 17.22
    },
    {
     "ra": 164.186135,
@@ -19913,6 +19902,15 @@
     "epoch": 2015.4,
     "pmra": -44.98,
     "pmdec": 2.78,
+    "mag": 17.23
+   },
+   {
+    "ra": 164.0760768,
+    "dec": 6.8384519,
+    "label": "CatWISE J105618.25+065018.4",
+    "epoch": 2015.4,
+    "pmra": 74.06,
+    "pmdec": -0.03,
     "mag": 17.23
    },
    {
@@ -19925,15 +19923,6 @@
     "mag": 17.23
    },
    {
-    "ra": 164.0325845,
-    "dec": 7.163271,
-    "label": "CatWISE J105607.82+070947.7",
-    "epoch": 2015.4,
-    "pmra": -5.35,
-    "pmdec": 15.44,
-    "mag": 17.23
-   },
-   {
     "ra": 164.0871816,
     "dec": 7.1400572,
     "label": "CatWISE J105620.92+070824.2",
@@ -19943,12 +19932,12 @@
     "mag": 17.23
    },
    {
-    "ra": 163.9413846,
-    "dec": 6.969472,
-    "label": "CatWISE J105545.93+065810.0",
+    "ra": 164.0325845,
+    "dec": 7.163271,
+    "label": "CatWISE J105607.82+070947.7",
     "epoch": 2015.4,
-    "pmra": -56.36,
-    "pmdec": -68.55,
+    "pmra": -5.35,
+    "pmdec": 15.44,
     "mag": 17.23
    },
    {
@@ -19961,12 +19950,12 @@
     "mag": 17.23
    },
    {
-    "ra": 164.0086469,
-    "dec": 7.0017096,
-    "label": "CatWISE J105602.07+070006.1",
+    "ra": 163.9413846,
+    "dec": 6.969472,
+    "label": "CatWISE J105545.93+065810.0",
     "epoch": 2015.4,
-    "pmra": 27.33,
-    "pmdec": -10.64,
+    "pmra": -56.36,
+    "pmdec": -68.55,
     "mag": 17.23
    },
    {
@@ -19979,12 +19968,12 @@
     "mag": 17.23
    },
    {
-    "ra": 164.1877895,
-    "dec": 6.8261958,
-    "label": "CatWISE J105645.06+064934.3",
+    "ra": 164.0086469,
+    "dec": 7.0017096,
+    "label": "CatWISE J105602.07+070006.1",
     "epoch": 2015.4,
-    "pmra": -187.18,
-    "pmdec": 88.97,
+    "pmra": 27.33,
+    "pmdec": -10.64,
     "mag": 17.23
    },
    {
@@ -20006,21 +19995,12 @@
     "mag": 17.23
    },
    {
-    "ra": 163.9331052,
-    "dec": 7.0214418,
-    "label": "CatWISE J105543.94+070117.1",
+    "ra": 164.1877895,
+    "dec": 6.8261958,
+    "label": "CatWISE J105645.06+064934.3",
     "epoch": 2015.4,
-    "pmra": -3.63,
-    "pmdec": -6.62,
-    "mag": 17.23
-   },
-   {
-    "ra": 163.9076214,
-    "dec": 7.0172252,
-    "label": "CatWISE J105537.82+070102.0",
-    "epoch": 2015.4,
-    "pmra": 46.33,
-    "pmdec": -142.78,
+    "pmra": -187.18,
+    "pmdec": 88.97,
     "mag": 17.23
    },
    {
@@ -20033,12 +20013,30 @@
     "mag": 17.23
    },
    {
+    "ra": 163.9331052,
+    "dec": 7.0214418,
+    "label": "CatWISE J105543.94+070117.1",
+    "epoch": 2015.4,
+    "pmra": -3.63,
+    "pmdec": -6.62,
+    "mag": 17.23
+   },
+   {
     "ra": 164.1206825,
     "dec": 7.1579103,
     "label": "CatWISE J105628.96+070928.4",
     "epoch": 2015.4,
     "pmra": 59.19,
     "pmdec": -50.32,
+    "mag": 17.23
+   },
+   {
+    "ra": 163.9076214,
+    "dec": 7.0172252,
+    "label": "CatWISE J105537.82+070102.0",
+    "epoch": 2015.4,
+    "pmra": 46.33,
+    "pmdec": -142.78,
     "mag": 17.23
    },
    {
@@ -20168,15 +20166,6 @@
     "mag": 17.24
    },
    {
-    "ra": 164.0369102,
-    "dec": 7.148077,
-    "label": "CatWISE J105608.85+070853.0",
-    "epoch": 2015.4,
-    "pmra": -89.92,
-    "pmdec": -57.69,
-    "mag": 17.24
-   },
-   {
     "ra": 164.0889648,
     "dec": 7.1573655,
     "label": "CatWISE J105621.35+070926.5",
@@ -20186,12 +20175,12 @@
     "mag": 17.24
    },
    {
-    "ra": 164.2758113,
-    "dec": 6.9896151,
-    "label": "CatWISE J105706.19+065922.6",
+    "ra": 164.0369102,
+    "dec": 7.148077,
+    "label": "CatWISE J105608.85+070853.0",
     "epoch": 2015.4,
-    "pmra": -18.67,
-    "pmdec": 2.25,
+    "pmra": -89.92,
+    "pmdec": -57.69,
     "mag": 17.24
    },
    {
@@ -20213,12 +20202,21 @@
     "mag": 17.24
    },
    {
-    "ra": 163.9539109,
-    "dec": 6.8714999,
-    "label": "CatWISE J105548.93+065217.4",
+    "ra": 164.2758113,
+    "dec": 6.9896151,
+    "label": "CatWISE J105706.19+065922.6",
     "epoch": 2015.4,
-    "pmra": -69.04,
-    "pmdec": 4.08,
+    "pmra": -18.67,
+    "pmdec": 2.25,
+    "mag": 17.24
+   },
+   {
+    "ra": 163.9462227,
+    "dec": 7.0878604,
+    "label": "CatWISE J105547.09+070516.2",
+    "epoch": 2015.4,
+    "pmra": -53.51,
+    "pmdec": -16.96,
     "mag": 17.25
    },
    {
@@ -20231,12 +20229,12 @@
     "mag": 17.25
    },
    {
-    "ra": 163.9462227,
-    "dec": 7.0878604,
-    "label": "CatWISE J105547.09+070516.2",
+    "ra": 163.9539109,
+    "dec": 6.8714999,
+    "label": "CatWISE J105548.93+065217.4",
     "epoch": 2015.4,
-    "pmra": -53.51,
-    "pmdec": -16.96,
+    "pmra": -69.04,
+    "pmdec": 4.08,
     "mag": 17.25
    },
    {
@@ -20285,15 +20283,6 @@
     "mag": 17.25
    },
    {
-    "ra": 163.9066833,
-    "dec": 7.0036796,
-    "label": "CatWISE J105537.60+070013.2",
-    "epoch": 2015.4,
-    "pmra": -506.92,
-    "pmdec": 99.56,
-    "mag": 17.25
-   },
-   {
     "ra": 164.0889596,
     "dec": 7.0317599,
     "label": "CatWISE J105621.35+070154.3",
@@ -20309,6 +20298,15 @@
     "epoch": 2015.4,
     "pmra": 48.39,
     "pmdec": 65.77,
+    "mag": 17.25
+   },
+   {
+    "ra": 163.9066833,
+    "dec": 7.0036796,
+    "label": "CatWISE J105537.60+070013.2",
+    "epoch": 2015.4,
+    "pmra": -506.92,
+    "pmdec": 99.56,
     "mag": 17.25
    },
    {
@@ -20330,12 +20328,12 @@
     "mag": 17.25
    },
    {
-    "ra": 163.9804571,
-    "dec": 6.8380663,
-    "label": "CatWISE J105555.31+065017.0",
+    "ra": 164.1689512,
+    "dec": 7.076606,
+    "label": "CatWISE J105640.54+070435.7",
     "epoch": 2015.4,
-    "pmra": -200.51,
-    "pmdec": -121.83,
+    "pmra": 32.6,
+    "pmdec": 42.97,
     "mag": 17.25
    },
    {
@@ -20348,21 +20346,12 @@
     "mag": 17.25
    },
    {
-    "ra": 164.1689512,
-    "dec": 7.076606,
-    "label": "CatWISE J105640.54+070435.7",
+    "ra": 163.9804571,
+    "dec": 6.8380663,
+    "label": "CatWISE J105555.31+065017.0",
     "epoch": 2015.4,
-    "pmra": 32.6,
-    "pmdec": 42.97,
-    "mag": 17.25
-   },
-   {
-    "ra": 163.9275219,
-    "dec": 6.9943429,
-    "label": "CatWISE J105542.60+065939.6",
-    "epoch": 2015.4,
-    "pmra": -78.46,
-    "pmdec": 9.48,
+    "pmra": -200.51,
+    "pmdec": -121.83,
     "mag": 17.25
    },
    {
@@ -20375,12 +20364,30 @@
     "mag": 17.25
    },
    {
+    "ra": 163.9275219,
+    "dec": 6.9943429,
+    "label": "CatWISE J105542.60+065939.6",
+    "epoch": 2015.4,
+    "pmra": -78.46,
+    "pmdec": 9.48,
+    "mag": 17.25
+   },
+   {
     "ra": 163.9325159,
     "dec": 7.0392568,
     "label": "CatWISE J105543.80+070221.3",
     "epoch": 2015.4,
     "pmra": -107.72,
     "pmdec": -42.8,
+    "mag": 17.26
+   },
+   {
+    "ra": 164.0869626,
+    "dec": 7.1204088,
+    "label": "CatWISE J105620.87+070713.4",
+    "epoch": 2015.4,
+    "pmra": -149.47,
+    "pmdec": -44.21,
     "mag": 17.26
    },
    {
@@ -20402,15 +20409,6 @@
     "mag": 17.26
    },
    {
-    "ra": 164.0869626,
-    "dec": 7.1204088,
-    "label": "CatWISE J105620.87+070713.4",
-    "epoch": 2015.4,
-    "pmra": -149.47,
-    "pmdec": -44.21,
-    "mag": 17.26
-   },
-   {
     "ra": 164.2353203,
     "dec": 6.9437748,
     "label": "CatWISE J105656.47+065637.5",
@@ -20429,21 +20427,21 @@
     "mag": 17.26
    },
    {
-    "ra": 163.955473,
-    "dec": 7.1374089,
-    "label": "CatWISE J105549.31+070814.6",
-    "epoch": 2015.4,
-    "pmra": 77.21,
-    "pmdec": -39.74,
-    "mag": 17.26
-   },
-   {
     "ra": 164.1083609,
     "dec": 7.1510999,
     "label": "CatWISE J105626.00+070903.9",
     "epoch": 2015.4,
     "pmra": -53.3,
     "pmdec": -35.71,
+    "mag": 17.26
+   },
+   {
+    "ra": 163.955473,
+    "dec": 7.1374089,
+    "label": "CatWISE J105549.31+070814.6",
+    "epoch": 2015.4,
+    "pmra": 77.21,
+    "pmdec": -39.74,
     "mag": 17.26
    },
    {
@@ -20474,21 +20472,21 @@
     "mag": 17.26
    },
    {
-    "ra": 163.9084293,
-    "dec": 7.0227116,
-    "label": "CatWISE J105538.02+070121.7",
-    "epoch": 2015.4,
-    "pmra": -135.48,
-    "pmdec": -106.29,
-    "mag": 17.27
-   },
-   {
     "ra": 164.192067,
     "dec": 6.9684605,
     "label": "CatWISE J105646.09+065806.4",
     "epoch": 2015.4,
     "pmra": 133.64,
     "pmdec": -56.15,
+    "mag": 17.27
+   },
+   {
+    "ra": 163.9084293,
+    "dec": 7.0227116,
+    "label": "CatWISE J105538.02+070121.7",
+    "epoch": 2015.4,
+    "pmra": -135.48,
+    "pmdec": -106.29,
     "mag": 17.27
    },
    {
@@ -20582,15 +20580,6 @@
     "mag": 17.28
    },
    {
-    "ra": 164.2682618,
-    "dec": 6.9273118,
-    "label": "CatWISE J105704.38+065538.3",
-    "epoch": 2015.4,
-    "pmra": 127.38,
-    "pmdec": 53.72,
-    "mag": 17.28
-   },
-   {
     "ra": 164.1964925,
     "dec": 7.1361314,
     "label": "CatWISE J105647.15+070810.0",
@@ -20600,12 +20589,21 @@
     "mag": 17.28
    },
    {
-    "ra": 164.0198936,
-    "dec": 6.8465521,
-    "label": "CatWISE J105604.77+065047.5",
+    "ra": 164.2682618,
+    "dec": 6.9273118,
+    "label": "CatWISE J105704.38+065538.3",
     "epoch": 2015.4,
-    "pmra": 90.94,
-    "pmdec": 28.83,
+    "pmra": 127.38,
+    "pmdec": 53.72,
+    "mag": 17.28
+   },
+   {
+    "ra": 164.1174089,
+    "dec": 6.9706851,
+    "label": "CatWISE J105628.17+065814.4",
+    "epoch": 2015.4,
+    "pmra": -761.15,
+    "pmdec": -94.93,
     "mag": 17.28
    },
    {
@@ -20618,21 +20616,21 @@
     "mag": 17.28
    },
    {
+    "ra": 164.0198936,
+    "dec": 6.8465521,
+    "label": "CatWISE J105604.77+065047.5",
+    "epoch": 2015.4,
+    "pmra": 90.94,
+    "pmdec": 28.83,
+    "mag": 17.28
+   },
+   {
     "ra": 164.1831807,
     "dec": 6.836989,
     "label": "CatWISE J105643.96+065013.1",
     "epoch": 2015.4,
     "pmra": 128.19,
     "pmdec": -6.95,
-    "mag": 17.28
-   },
-   {
-    "ra": 164.1174089,
-    "dec": 6.9706851,
-    "label": "CatWISE J105628.17+065814.4",
-    "epoch": 2015.4,
-    "pmra": -761.15,
-    "pmdec": -94.93,
     "mag": 17.28
    },
    {
@@ -20654,15 +20652,6 @@
     "mag": 17.28
    },
    {
-    "ra": 164.2005499,
-    "dec": 6.8794818,
-    "label": "CatWISE J105648.13+065246.1",
-    "epoch": 2015.4,
-    "pmra": 48.16,
-    "pmdec": -45.44,
-    "mag": 17.28
-   },
-   {
     "ra": 164.0217275,
     "dec": 6.9473906,
     "label": "CatWISE J105605.21+065650.6",
@@ -20672,12 +20661,12 @@
     "mag": 17.28
    },
    {
-    "ra": 163.972096,
-    "dec": 6.8889578,
-    "label": "CatWISE J105553.30+065320.2",
+    "ra": 164.2005499,
+    "dec": 6.8794818,
+    "label": "CatWISE J105648.13+065246.1",
     "epoch": 2015.4,
-    "pmra": -118.67,
-    "pmdec": 52.96,
+    "pmra": 48.16,
+    "pmdec": -45.44,
     "mag": 17.28
    },
    {
@@ -20687,6 +20676,15 @@
     "epoch": 2015.4,
     "pmra": 44.95,
     "pmdec": 226.27,
+    "mag": 17.28
+   },
+   {
+    "ra": 163.972096,
+    "dec": 6.8889578,
+    "label": "CatWISE J105553.30+065320.2",
+    "epoch": 2015.4,
+    "pmra": -118.67,
+    "pmdec": 52.96,
     "mag": 17.28
    },
    {
@@ -20726,21 +20724,21 @@
     "mag": 17.29
    },
    {
-    "ra": 164.2223732,
-    "dec": 6.8988886,
-    "label": "CatWISE J105653.37+065355.9",
-    "epoch": 2015.4,
-    "pmra": -10.29,
-    "pmdec": -90.16,
-    "mag": 17.29
-   },
-   {
     "ra": 164.1962587,
     "dec": 7.0804272,
     "label": "CatWISE J105647.10+070449.5",
     "epoch": 2015.4,
     "pmra": -111.72,
     "pmdec": 134.38,
+    "mag": 17.29
+   },
+   {
+    "ra": 164.2223732,
+    "dec": 6.8988886,
+    "label": "CatWISE J105653.37+065355.9",
+    "epoch": 2015.4,
+    "pmra": -10.29,
+    "pmdec": -90.16,
     "mag": 17.29
    },
    {
@@ -20807,21 +20805,21 @@
     "mag": 17.29
    },
    {
-    "ra": 164.0423914,
-    "dec": 6.9128856,
-    "label": "CatWISE J105610.17+065446.3",
-    "epoch": 2015.4,
-    "pmra": -67.08,
-    "pmdec": 25.69,
-    "mag": 17.29
-   },
-   {
     "ra": 164.1538165,
     "dec": 7.0230953,
     "label": "CatWISE J105636.91+070123.1",
     "epoch": 2015.4,
     "pmra": 228.76,
     "pmdec": -475.91,
+    "mag": 17.29
+   },
+   {
+    "ra": 164.0423914,
+    "dec": 6.9128856,
+    "label": "CatWISE J105610.17+065446.3",
+    "epoch": 2015.4,
+    "pmra": -67.08,
+    "pmdec": 25.69,
     "mag": 17.29
    },
    {
@@ -20843,21 +20841,21 @@
     "mag": 17.3
    },
    {
-    "ra": 164.2542776,
-    "dec": 7.0422532,
-    "label": "CatWISE J105701.02+070232.1",
-    "epoch": 2015.4,
-    "pmra": -51.41,
-    "pmdec": 135.39,
-    "mag": 17.3
-   },
-   {
     "ra": 164.2245499,
     "dec": 7.091868,
     "label": "CatWISE J105653.89+070530.7",
     "epoch": 2015.4,
     "pmra": 54.18,
     "pmdec": 1.09,
+    "mag": 17.3
+   },
+   {
+    "ra": 164.2542776,
+    "dec": 7.0422532,
+    "label": "CatWISE J105701.02+070232.1",
+    "epoch": 2015.4,
+    "pmra": -51.41,
+    "pmdec": 135.39,
     "mag": 17.3
    },
    {
@@ -20906,21 +20904,21 @@
     "mag": 17.3
    },
    {
-    "ra": 164.145045,
-    "dec": 6.8552578,
-    "label": "CatWISE J105634.81+065118.9",
-    "epoch": 2015.4,
-    "pmra": -124.14,
-    "pmdec": 58.19,
-    "mag": 17.3
-   },
-   {
     "ra": 164.1403389,
     "dec": 6.9647944,
     "label": "CatWISE J105633.68+065753.2",
     "epoch": 2015.4,
     "pmra": -44.39,
     "pmdec": 310.49,
+    "mag": 17.3
+   },
+   {
+    "ra": 164.145045,
+    "dec": 6.8552578,
+    "label": "CatWISE J105634.81+065118.9",
+    "epoch": 2015.4,
+    "pmra": -124.14,
+    "pmdec": 58.19,
     "mag": 17.3
    },
    {
@@ -20942,21 +20940,21 @@
     "mag": 17.3
    },
    {
-    "ra": 164.2103638,
-    "dec": 6.9412472,
-    "label": "CatWISE J105650.48+065628.4",
-    "epoch": 2015.4,
-    "pmra": 27.68,
-    "pmdec": -122.53,
-    "mag": 17.31
-   },
-   {
     "ra": 164.0598126,
     "dec": 6.9899186,
     "label": "CatWISE J105614.35+065923.7",
     "epoch": 2015.4,
     "pmra": 9.12,
     "pmdec": 20.3,
+    "mag": 17.31
+   },
+   {
+    "ra": 164.1192692,
+    "dec": 7.065445,
+    "label": "CatWISE J105628.62+070355.6",
+    "epoch": 2015.4,
+    "pmra": -52.28,
+    "pmdec": -46.57,
     "mag": 17.31
    },
    {
@@ -20969,12 +20967,12 @@
     "mag": 17.31
    },
    {
-    "ra": 164.1192692,
-    "dec": 7.065445,
-    "label": "CatWISE J105628.62+070355.6",
+    "ra": 164.2103638,
+    "dec": 6.9412472,
+    "label": "CatWISE J105650.48+065628.4",
     "epoch": 2015.4,
-    "pmra": -52.28,
-    "pmdec": -46.57,
+    "pmra": 27.68,
+    "pmdec": -122.53,
     "mag": 17.31
    },
    {
@@ -21014,12 +21012,12 @@
     "mag": 17.31
    },
    {
-    "ra": 164.013185,
-    "dec": 6.864703,
-    "label": "CatWISE J105603.16+065152.9",
+    "ra": 163.9432562,
+    "dec": 6.9711728,
+    "label": "CatWISE J105546.38+065816.2",
     "epoch": 2015.4,
-    "pmra": -74.61,
-    "pmdec": -186.31,
+    "pmra": -111.48,
+    "pmdec": -123.13,
     "mag": 17.31
    },
    {
@@ -21032,21 +21030,12 @@
     "mag": 17.31
    },
    {
-    "ra": 163.897075,
-    "dec": 6.9601248,
-    "label": "CatWISE J105535.29+065736.4",
+    "ra": 164.013185,
+    "dec": 6.864703,
+    "label": "CatWISE J105603.16+065152.9",
     "epoch": 2015.4,
-    "pmra": 78.25,
-    "pmdec": 99.4,
-    "mag": 17.31
-   },
-   {
-    "ra": 163.9432562,
-    "dec": 6.9711728,
-    "label": "CatWISE J105546.38+065816.2",
-    "epoch": 2015.4,
-    "pmra": -111.48,
-    "pmdec": -123.13,
+    "pmra": -74.61,
+    "pmdec": -186.31,
     "mag": 17.31
    },
    {
@@ -21059,6 +21048,15 @@
     "mag": 17.31
    },
    {
+    "ra": 163.897075,
+    "dec": 6.9601248,
+    "label": "CatWISE J105535.29+065736.4",
+    "epoch": 2015.4,
+    "pmra": 78.25,
+    "pmdec": 99.4,
+    "mag": 17.31
+   },
+   {
     "ra": 164.0936521,
     "dec": 6.9675097,
     "label": "CatWISE J105622.47+065803.0",
@@ -21068,21 +21066,21 @@
     "mag": 17.31
    },
    {
-    "ra": 164.0279008,
-    "dec": 6.9565052,
-    "label": "CatWISE J105606.69+065723.4",
-    "epoch": 2015.4,
-    "pmra": 68.35,
-    "pmdec": -104.92,
-    "mag": 17.31
-   },
-   {
     "ra": 164.0786464,
     "dec": 6.9712963,
     "label": "CatWISE J105618.87+065816.6",
     "epoch": 2015.4,
     "pmra": -79.91,
     "pmdec": -70.84,
+    "mag": 17.31
+   },
+   {
+    "ra": 164.0279008,
+    "dec": 6.9565052,
+    "label": "CatWISE J105606.69+065723.4",
+    "epoch": 2015.4,
+    "pmra": 68.35,
+    "pmdec": -104.92,
     "mag": 17.31
    },
    {
@@ -21131,12 +21129,12 @@
     "mag": 17.32
    },
    {
-    "ra": 164.2527236,
-    "dec": 6.9549621,
-    "label": "CatWISE J105700.65+065717.8",
+    "ra": 164.1200459,
+    "dec": 7.0951052,
+    "label": "CatWISE J105628.81+070542.3",
     "epoch": 2015.4,
-    "pmra": 138.69,
-    "pmdec": -121.54,
+    "pmra": -10.17,
+    "pmdec": -96.41,
     "mag": 17.32
    },
    {
@@ -21149,12 +21147,12 @@
     "mag": 17.32
    },
    {
-    "ra": 164.1200459,
-    "dec": 7.0951052,
-    "label": "CatWISE J105628.81+070542.3",
+    "ra": 164.2527236,
+    "dec": 6.9549621,
+    "label": "CatWISE J105700.65+065717.8",
     "epoch": 2015.4,
-    "pmra": -10.17,
-    "pmdec": -96.41,
+    "pmra": 138.69,
+    "pmdec": -121.54,
     "mag": 17.32
    },
    {
@@ -21175,6 +21173,1890 @@
     "pmdec": -45.16,
     "mag": 17.32
    }
+  ],
+  "tmass": [
+   {
+    "ra": 164.12027,
+    "dec": 7.014658,
+    "label": "2MASS J10562886+0700527",
+    "epoch": 2000.163,
+    "pmra": -3866.34,
+    "pmdec": -2699.22,
+    "mag": 7.08,
+    "j": 7.085,
+    "h": 6.482,
+    "k": 6.084,
+    "gaia": "Gaia DR3 3864972938605115520"
+   },
+   {
+    "ra": 163.912415,
+    "dec": 6.962135,
+    "label": "2MASS J10553897+0657436",
+    "epoch": 2000.163,
+    "pmra": -3.55,
+    "pmdec": 5.46,
+    "mag": 8.34,
+    "j": 8.344,
+    "h": 8.222,
+    "k": 8.168,
+    "gaia": "Gaia DR3 3864961496812032256"
+   },
+   {
+    "ra": 164.279144,
+    "dec": 7.038923,
+    "label": "2MASS J10570699+0702201",
+    "epoch": 2000.163,
+    "pmra": -20.08,
+    "pmdec": -17.09,
+    "mag": 9.11,
+    "j": 9.114,
+    "h": 8.547,
+    "k": 8.484,
+    "gaia": "Gaia DR3 3864971181962701824"
+   },
+   {
+    "ra": 164.103758,
+    "dec": 7.11712,
+    "label": "2MASS J10562490+0707016",
+    "epoch": 2000.163,
+    "pmra": -108.33,
+    "pmdec": -37.15,
+    "mag": 10.92,
+    "j": 10.92,
+    "h": 10.623,
+    "k": 10.573,
+    "gaia": "Gaia DR3 3864987915155334016"
+   },
+   {
+    "ra": 163.966713,
+    "dec": 7.029194,
+    "label": "2MASS J10555201+0701450",
+    "epoch": 2000.163,
+    "pmra": 6.77,
+    "pmdec": -6.82,
+    "mag": 11.02,
+    "j": 11.024,
+    "h": 10.513,
+    "k": 10.425,
+    "gaia": "Gaia DR3 3864962252726274816"
+   },
+   {
+    "ra": 164.189475,
+    "dec": 6.900606,
+    "label": "2MASS J10564547+0654021",
+    "epoch": 2000.163,
+    "pmra": 87.86,
+    "pmdec": 11.18,
+    "mag": 11.04,
+    "j": 11.038,
+    "h": 10.481,
+    "k": 10.218,
+    "gaia": "Gaia DR3 3864968128241533056"
+   },
+   {
+    "ra": 164.077791,
+    "dec": 6.805602,
+    "label": "2MASS J10561866+0648201",
+    "epoch": 2000.163,
+    "pmra": -26.86,
+    "pmdec": -35.78,
+    "mag": 11.37,
+    "j": 11.37,
+    "h": 11.043,
+    "k": 11.03,
+    "gaia": "Gaia DR3 3864942427157237248"
+   },
+   {
+    "ra": 164.006535,
+    "dec": 6.856267,
+    "label": "2MASS J10560156+0651225",
+    "epoch": 2000.163,
+    "pmra": 50.01,
+    "pmdec": -17.6,
+    "mag": 11.61,
+    "j": 11.613,
+    "h": 11.189,
+    "k": 11.126,
+    "gaia": "Gaia DR3 3864943767187033984"
+   },
+   {
+    "ra": 164.175585,
+    "dec": 6.839556,
+    "label": "2MASS J10564214+0650224",
+    "epoch": 2000.163,
+    "pmra": -0.79,
+    "pmdec": -2.09,
+    "mag": 11.86,
+    "j": 11.864,
+    "h": 11.097,
+    "k": 10.952,
+    "gaia": "Gaia DR3 3864756747131025664"
+   },
+   {
+    "ra": 163.909807,
+    "dec": 6.925881,
+    "label": "2MASS J10553835+0655331",
+    "epoch": 2000.163,
+    "pmra": -32.0,
+    "pmdec": 6.69,
+    "mag": 12.12,
+    "j": 12.116,
+    "h": 11.643,
+    "k": 11.515,
+    "gaia": "Gaia DR3 3864948165233546496"
+   },
+   {
+    "ra": 164.025449,
+    "dec": 7.012997,
+    "label": "2MASS J10560610+0700467",
+    "epoch": 2000.163,
+    "pmra": -5.75,
+    "pmdec": 9.64,
+    "mag": 12.33,
+    "j": 12.33,
+    "h": 11.948,
+    "k": 11.893,
+    "gaia": "Gaia DR3 3864973866317841920"
+   },
+   {
+    "ra": 164.135078,
+    "dec": 7.017946,
+    "label": "2MASS J10563241+0701046",
+    "epoch": 2000.163,
+    "pmra": -36.07,
+    "pmdec": 0.44,
+    "mag": 12.62,
+    "j": 12.616,
+    "h": 12.05,
+    "k": 11.921,
+    "gaia": "Gaia DR3 3864973140467689216"
+   },
+   {
+    "ra": 164.092754,
+    "dec": 7.157754,
+    "label": "2MASS J10562226+0709279",
+    "epoch": 2000.163,
+    "pmra": -7.43,
+    "pmdec": -18.57,
+    "mag": 12.66,
+    "j": 12.66,
+    "h": 12.149,
+    "k": 12.018,
+    "gaia": "Gaia DR3 3864988297407952768"
+   },
+   {
+    "ra": 164.205102,
+    "dec": 6.926335,
+    "label": "2MASS J10564922+0655348",
+    "epoch": 2000.163,
+    "pmra": -9.35,
+    "pmdec": 4.13,
+    "mag": 12.69,
+    "j": 12.689,
+    "h": 12.384,
+    "k": 12.363,
+    "gaia": "Gaia DR3 3864968330104275456"
+   },
+   {
+    "ra": 164.174804,
+    "dec": 7.175498,
+    "label": "2MASS J10564195+0710317",
+    "epoch": 2000.163,
+    "pmra": -9.85,
+    "pmdec": -89.68,
+    "mag": 12.77,
+    "j": 12.768,
+    "h": 12.215,
+    "k": 11.954,
+    "gaia": "Gaia DR3 3864976855615073792"
+   },
+   {
+    "ra": 164.167521,
+    "dec": 7.045068,
+    "label": "2MASS J10564020+0702422",
+    "epoch": 2000.163,
+    "pmra": -36.76,
+    "pmdec": -7.64,
+    "mag": 12.84,
+    "j": 12.84,
+    "h": 12.261,
+    "k": 12.118,
+    "gaia": "Gaia DR3 3864974755375394816"
+   },
+   {
+    "ra": 163.912878,
+    "dec": 7.053828,
+    "label": "2MASS J10553909+0703137",
+    "epoch": 2000.163,
+    "pmra": -3.48,
+    "pmdec": -9.32,
+    "mag": 13.01,
+    "j": 13.012,
+    "h": 12.6,
+    "k": 12.469,
+    "gaia": "Gaia DR3 3864963249158654720"
+   },
+   {
+    "ra": 164.288415,
+    "dec": 7.009827,
+    "label": "2MASS J10570921+0700353",
+    "epoch": 2000.163,
+    "pmra": -3.4,
+    "pmdec": -11.88,
+    "mag": 13.05,
+    "j": 13.047,
+    "h": 12.928,
+    "k": 12.888,
+    "gaia": "Gaia DR3 3864970533423214592"
+   },
+   {
+    "ra": 164.092112,
+    "dec": 7.068593,
+    "label": "2MASS J10562210+0704069",
+    "epoch": 2000.163,
+    "pmra": -1.94,
+    "pmdec": -3.35,
+    "mag": 13.07,
+    "j": 13.069,
+    "h": 12.787,
+    "k": 12.721,
+    "gaia": "Gaia DR3 3864974553512607488"
+   },
+   {
+    "ra": 163.987974,
+    "dec": 7.020097,
+    "label": "2MASS J10555711+0701123",
+    "epoch": 2000.163,
+    "pmra": 2.26,
+    "pmdec": -5.8,
+    "mag": 13.2,
+    "j": 13.2,
+    "h": 12.859,
+    "k": 12.79,
+    "gaia": "Gaia DR3 3864962179711298048"
+   },
+   {
+    "ra": 164.022032,
+    "dec": 6.855655,
+    "label": "2MASS J10560528+0651203",
+    "epoch": 2000.163,
+    "pmra": -16.84,
+    "pmdec": -6.46,
+    "mag": 13.35,
+    "j": 13.353,
+    "h": 12.897,
+    "k": 12.803,
+    "gaia": "Gaia DR3 3864943595388341888"
+   },
+   {
+    "ra": 164.190411,
+    "dec": 7.0242,
+    "label": "2MASS J10564569+0701271",
+    "epoch": 2000.163,
+    "pmra": 2.52,
+    "pmdec": 0.41,
+    "mag": 13.42,
+    "j": 13.419,
+    "h": 13.13,
+    "k": 13.114,
+    "gaia": "Gaia DR3 3864971731718373632"
+   },
+   {
+    "ra": 163.988248,
+    "dec": 7.016864,
+    "label": "2MASS J10555717+0701007",
+    "epoch": 2000.163,
+    "pmra": -25.83,
+    "pmdec": 1.08,
+    "mag": 13.44,
+    "j": 13.438,
+    "h": 12.766,
+    "k": 12.535,
+    "gaia": "Gaia DR3 3864962184006797952"
+   },
+   {
+    "ra": 164.025485,
+    "dec": 7.010875,
+    "label": "2MASS J10560611+0700391",
+    "epoch": 2000.163,
+    "pmra": -4.58,
+    "pmdec": -1.12,
+    "mag": 13.48,
+    "j": 13.48,
+    "h": 13.083,
+    "k": 13.056,
+    "gaia": "Gaia DR3 3864950192458106496"
+   },
+   {
+    "ra": 164.008836,
+    "dec": 7.030208,
+    "label": "2MASS J10560212+0701487",
+    "epoch": 2000.163,
+    "pmra": -35.64,
+    "pmdec": 13.55,
+    "mag": 13.58,
+    "j": 13.58,
+    "h": 13.099,
+    "k": 12.982,
+    "gaia": "Gaia DR3 3864973935037318912"
+   },
+   {
+    "ra": 164.192766,
+    "dec": 6.853173,
+    "label": "2MASS J10564626+0651114",
+    "epoch": 2000.163,
+    "pmra": -0.58,
+    "pmdec": 0.1,
+    "mag": 13.59,
+    "j": 13.585,
+    "h": 12.935,
+    "k": 12.486,
+    "gaia": "Gaia DR3 3864756678411548800"
+   },
+   {
+    "ra": 164.04095,
+    "dec": 7.029893,
+    "label": "2MASS J10560982+0701476",
+    "epoch": 2000.163,
+    "pmra": 11.91,
+    "pmdec": -8.23,
+    "mag": 13.62,
+    "j": 13.624,
+    "h": 13.187,
+    "k": 13.1,
+    "gaia": "Gaia DR3 3864973900677579520"
+   },
+   {
+    "ra": 164.099563,
+    "dec": 6.827117,
+    "label": "2MASS J10562389+0649376",
+    "epoch": 2000.163,
+    "pmra": -6.11,
+    "pmdec": -6.3,
+    "mag": 13.68,
+    "j": 13.676,
+    "h": 13.418,
+    "k": 13.327,
+    "gaia": "Gaia DR3 3864943938985725184"
+   },
+   {
+    "ra": 164.153401,
+    "dec": 7.034515,
+    "label": "2MASS J10563681+0702042",
+    "epoch": 2000.163,
+    "pmra": -34.58,
+    "pmdec": 5.36,
+    "mag": 13.69,
+    "j": 13.691,
+    "h": 13.07,
+    "k": 12.851,
+    "gaia": "Gaia DR3 3864973282202302208"
+   },
+   {
+    "ra": 164.220479,
+    "dec": 7.118417,
+    "label": "2MASS J10565291+0707063",
+    "epoch": 2000.163,
+    "pmra": -10.97,
+    "pmdec": -12.9,
+    "mag": 13.79,
+    "j": 13.795,
+    "h": 13.502,
+    "k": 13.41,
+    "gaia": "Gaia DR3 3864975653024230656"
+   },
+   {
+    "ra": 164.167758,
+    "dec": 6.926529,
+    "label": "2MASS J10564026+0655355",
+    "epoch": 2000.163,
+    "pmra": 0.15,
+    "pmdec": -8.18,
+    "mag": 13.8,
+    "j": 13.803,
+    "h": 13.259,
+    "k": 13.192,
+    "gaia": "Gaia DR3 3864968467543257984"
+   },
+   {
+    "ra": 163.935326,
+    "dec": 7.030764,
+    "label": "2MASS J10554447+0701507",
+    "epoch": 2000.163,
+    "pmra": -9.02,
+    "pmdec": -3.63,
+    "mag": 13.81,
+    "j": 13.811,
+    "h": 13.111,
+    "k": 13.02,
+    "gaia": "Gaia DR3 3864962385869773312"
+   },
+   {
+    "ra": 164.225126,
+    "dec": 7.064675,
+    "label": "2MASS J10565403+0703528",
+    "epoch": 2000.163,
+    "pmra": 8.52,
+    "pmdec": -21.8,
+    "mag": 13.82,
+    "j": 13.819,
+    "h": 13.16,
+    "k": 12.945,
+    "gaia": "Gaia DR3 3864971907812750336"
+   },
+   {
+    "ra": 163.980915,
+    "dec": 7.079792,
+    "label": "2MASS J10555541+0704472",
+    "epoch": 2000.163,
+    "pmra": -7.2,
+    "pmdec": 0.17,
+    "mag": 13.91,
+    "j": 13.907,
+    "h": 13.52,
+    "k": 13.433,
+    "gaia": "Gaia DR3 3864986064024962432"
+   },
+   {
+    "ra": 164.103252,
+    "dec": 7.007321,
+    "label": "2MASS J10562478+0700263",
+    "epoch": 2000.163,
+    "pmra": 4.44,
+    "pmdec": -32.22,
+    "mag": 13.91,
+    "j": 13.911,
+    "h": 13.537,
+    "k": 13.455,
+    "gaia": "Gaia DR3 3864972938604904704"
+   },
+   {
+    "ra": 164.213979,
+    "dec": 6.942094,
+    "label": "2MASS J10565135+0656315",
+    "epoch": 2000.163,
+    "pmra": -12.33,
+    "pmdec": -5.04,
+    "mag": 13.93,
+    "j": 13.925,
+    "h": 13.637,
+    "k": 13.516,
+    "gaia": "Gaia DR3 3864968712357084288"
+   },
+   {
+    "ra": 164.199944,
+    "dec": 7.116332,
+    "label": "2MASS J10564798+0706587",
+    "epoch": 2000.163,
+    "pmra": -3.48,
+    "pmdec": 4.99,
+    "mag": 13.95,
+    "j": 13.947,
+    "h": 13.674,
+    "k": 13.654,
+    "gaia": "Gaia DR3 3864975618664493312"
+   },
+   {
+    "ra": 164.127638,
+    "dec": 7.140918,
+    "label": "2MASS J10563063+0708273",
+    "epoch": 2000.163,
+    "pmra": -5.09,
+    "pmdec": -4.67,
+    "mag": 14.04,
+    "j": 14.035,
+    "h": 13.612,
+    "k": 13.474,
+    "gaia": "Gaia DR3 3864988056889800320"
+   },
+   {
+    "ra": 163.977992,
+    "dec": 7.106078,
+    "label": "2MASS J10555471+0706218",
+    "epoch": 2000.163,
+    "pmra": -10.0,
+    "pmdec": -24.88,
+    "mag": 14.04,
+    "j": 14.038,
+    "h": 13.375,
+    "k": 13.23,
+    "gaia": "Gaia DR3 3864986991737863040"
+   },
+   {
+    "ra": 163.972343,
+    "dec": 6.871769,
+    "label": "2MASS J10555336+0652183",
+    "epoch": 2000.163,
+    "pmra": 3.5,
+    "pmdec": -19.57,
+    "mag": 14.05,
+    "j": 14.049,
+    "h": 13.447,
+    "k": 13.406,
+    "gaia": "Gaia DR3 3864946786548340352"
+   },
+   {
+    "ra": 164.179388,
+    "dec": 7.145269,
+    "label": "2MASS J10564305+0708429",
+    "epoch": 2000.163,
+    "pmra": -22.48,
+    "pmdec": -2.25,
+    "mag": 14.05,
+    "j": 14.055,
+    "h": 13.594,
+    "k": 13.585,
+    "gaia": "Gaia DR3 3864976752535859328"
+   },
+   {
+    "ra": 164.189901,
+    "dec": 7.002409,
+    "label": "2MASS J10564557+0700086",
+    "epoch": 2000.163,
+    "pmra": -10.67,
+    "pmdec": 1.44,
+    "mag": 14.25,
+    "j": 14.249,
+    "h": 13.664,
+    "k": 13.436,
+    "gaia": "Gaia DR3 3864970151170448896"
+   },
+   {
+    "ra": 163.955439,
+    "dec": 6.91489,
+    "label": "2MASS J10554930+0654536",
+    "epoch": 2000.163,
+    "pmra": -6.52,
+    "pmdec": 0.96,
+    "mag": 14.3,
+    "j": 14.297,
+    "h": 13.91,
+    "k": 13.865,
+    "gaia": "Gaia DR3 3864947920419712128"
+   },
+   {
+    "ra": 163.946022,
+    "dec": 7.071812,
+    "label": "2MASS J10554704+0704185",
+    "epoch": 2000.163,
+    "pmra": -69.22,
+    "pmdec": -26.65,
+    "mag": 14.32,
+    "j": 14.321,
+    "h": 13.792,
+    "k": 13.517,
+    "gaia": "Gaia DR3 3864963313582718080"
+   },
+   {
+    "ra": 164.169657,
+    "dec": 7.09697,
+    "label": "2MASS J10564071+0705490",
+    "epoch": 2000.163,
+    "pmra": -14.27,
+    "pmdec": 2.13,
+    "mag": 14.37,
+    "j": 14.371,
+    "h": 13.727,
+    "k": 13.497,
+    "gaia": "Gaia DR3 3864975202051997952"
+   },
+   {
+    "ra": 163.958424,
+    "dec": 6.897196,
+    "label": "2MASS J10555002+0653499",
+    "epoch": 2000.163,
+    "pmra": -1.37,
+    "pmdec": -1.0,
+    "mag": 14.41,
+    "j": 14.41,
+    "h": 13.983,
+    "k": 13.867,
+    "gaia": "Gaia DR3 3864947065721917824"
+   },
+   {
+    "ra": 164.017586,
+    "dec": 6.981892,
+    "label": "2MASS J10560422+0658548",
+    "epoch": 2000.163,
+    "pmra": -5.43,
+    "pmdec": -3.63,
+    "mag": 14.5,
+    "j": 14.497,
+    "h": 13.95,
+    "k": 13.778,
+    "gaia": "Gaia DR3 3864950089378892288"
+   },
+   {
+    "ra": 164.103614,
+    "dec": 7.001749,
+    "label": "2MASS J10562486+0700062",
+    "epoch": 2000.163,
+    "pmra": -28.39,
+    "pmdec": 7.18,
+    "mag": 14.54,
+    "j": 14.538,
+    "h": 13.955,
+    "k": 13.802,
+    "gaia": "Gaia DR3 3864972728150826368"
+   },
+   {
+    "ra": 164.041935,
+    "dec": 6.966204,
+    "label": "2MASS J10561006+0657583",
+    "epoch": 2000.163,
+    "pmra": -13.58,
+    "pmdec": -14.54,
+    "mag": 14.54,
+    "j": 14.541,
+    "h": 13.857,
+    "k": 13.691,
+    "gaia": "Gaia DR3 3864949264745170944"
+   },
+   {
+    "ra": 164.02519,
+    "dec": 7.147905,
+    "label": "2MASS J10560604+0708524",
+    "epoch": 2000.163,
+    "pmra": 5.83,
+    "pmdec": -9.17,
+    "mag": 14.55,
+    "j": 14.546,
+    "h": 13.838,
+    "k": 13.542,
+    "gaia": "Gaia DR3 3864987575853412992"
+   },
+   {
+    "ra": 164.128436,
+    "dec": 7.137101,
+    "label": "2MASS J10563082+0708135",
+    "epoch": 2000.163,
+    "pmra": 7.44,
+    "pmdec": -9.69,
+    "mag": 14.56,
+    "j": 14.564,
+    "h": 14.054,
+    "k": 13.896,
+    "gaia": "Gaia DR3 3864988052594362240"
+   },
+   {
+    "ra": 164.185995,
+    "dec": 7.014566,
+    "label": "2MASS J10564463+0700524",
+    "epoch": 2000.163,
+    "pmra": -3.02,
+    "pmdec": 0.77,
+    "mag": 14.57,
+    "j": 14.574,
+    "h": 14.291,
+    "k": 14.164,
+    "gaia": "Gaia DR3 3864970189825833088"
+   },
+   {
+    "ra": 163.960363,
+    "dec": 7.123755,
+    "label": "2MASS J10555048+0707255",
+    "epoch": 2000.163,
+    "pmra": 2.06,
+    "pmdec": -4.66,
+    "mag": 14.62,
+    "j": 14.621,
+    "h": 14.188,
+    "k": 14.123,
+    "gaia": "Gaia DR3 3864987197896293376"
+   },
+   {
+    "ra": 164.184162,
+    "dec": 7.151388,
+    "label": "2MASS J10564419+0709049",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 14.68,
+    "j": 14.682,
+    "h": 14.122,
+    "k": 13.546
+   },
+   {
+    "ra": 163.949552,
+    "dec": 7.023626,
+    "label": "2MASS J10554789+0701250",
+    "epoch": 2000.163,
+    "pmra": 28.41,
+    "pmdec": -24.4,
+    "mag": 14.7,
+    "j": 14.695,
+    "h": 14.093,
+    "k": 13.833,
+    "gaia": "Gaia DR3 3864962351510032896"
+   },
+   {
+    "ra": 164.085161,
+    "dec": 7.041714,
+    "label": "2MASS J10562043+0702301",
+    "epoch": 2000.163,
+    "pmra": 0.03,
+    "pmdec": -11.43,
+    "mag": 14.7,
+    "j": 14.696,
+    "h": 14.108,
+    "k": 13.892,
+    "gaia": "Gaia DR3 3864974136900103424"
+   },
+   {
+    "ra": 164.017715,
+    "dec": 6.995011,
+    "label": "2MASS J10560425+0659420",
+    "epoch": 2000.163,
+    "pmra": -19.81,
+    "pmdec": -16.26,
+    "mag": 14.83,
+    "j": 14.828,
+    "h": 14.104,
+    "k": 13.896,
+    "gaia": "Gaia DR3 3864950158097783552"
+   },
+   {
+    "ra": 164.035615,
+    "dec": 6.848285,
+    "label": "2MASS J10560854+0650538",
+    "epoch": 2000.163,
+    "pmra": -5.77,
+    "pmdec": -2.14,
+    "mag": 14.84,
+    "j": 14.837,
+    "h": 14.125,
+    "k": 13.949,
+    "gaia": "Gaia DR3 3864943522373191808"
+   },
+   {
+    "ra": 164.249218,
+    "dec": 7.052756,
+    "label": "2MASS J10565981+0703099",
+    "epoch": 2000.163,
+    "pmra": -13.23,
+    "pmdec": 0.23,
+    "mag": 14.84,
+    "j": 14.837,
+    "h": 14.077,
+    "k": 13.926,
+    "gaia": "Gaia DR3 3864972217050395008"
+   },
+   {
+    "ra": 163.962019,
+    "dec": 6.93653,
+    "label": "2MASS J10555088+0656115",
+    "epoch": 2000.163,
+    "pmra": -7.24,
+    "pmdec": -4.1,
+    "mag": 14.9,
+    "j": 14.898,
+    "h": 14.213,
+    "k": 14.091,
+    "gaia": "Gaia DR3 3864949432248203776"
+   },
+   {
+    "ra": 164.087058,
+    "dec": 6.810751,
+    "label": "2MASS J10562089+0648387",
+    "epoch": 2000.163,
+    "pmra": -48.65,
+    "pmdec": -31.5,
+    "mag": 14.9,
+    "j": 14.903,
+    "h": 14.421,
+    "k": 14.396,
+    "gaia": "Gaia DR3 3864943900330308480"
+   },
+   {
+    "ra": 164.164089,
+    "dec": 7.122337,
+    "label": "2MASS J10563938+0707204",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 14.96,
+    "j": 14.962,
+    "h": 14.41,
+    "k": 13.863
+   },
+   {
+    "ra": 163.987308,
+    "dec": 6.887992,
+    "label": "2MASS J10555695+0653167",
+    "epoch": 2000.163,
+    "pmra": -13.17,
+    "pmdec": 6.67,
+    "mag": 14.97,
+    "j": 14.973,
+    "h": 14.343,
+    "k": 14.266,
+    "gaia": "Gaia DR3 3864946893922641408"
+   },
+   {
+    "ra": 164.087128,
+    "dec": 6.965376,
+    "label": "2MASS J10562091+0657553",
+    "epoch": 2000.163,
+    "pmra": -17.34,
+    "pmdec": -0.73,
+    "mag": 14.99,
+    "j": 14.986,
+    "h": 14.285,
+    "k": 14.304,
+    "gaia": "Gaia DR3 3864972487632652288"
+   },
+   {
+    "ra": 164.025883,
+    "dec": 7.111386,
+    "label": "2MASS J10560621+0706409",
+    "epoch": 2000.163,
+    "pmra": -2.63,
+    "pmdec": -1.33,
+    "mag": 15.0,
+    "j": 15.004,
+    "h": 14.43,
+    "k": 14.337,
+    "gaia": "Gaia DR3 3864986609485343232"
+   },
+   {
+    "ra": 164.233023,
+    "dec": 7.007942,
+    "label": "2MASS J10565592+0700285",
+    "epoch": 2000.163,
+    "pmra": 10.98,
+    "pmdec": -32.88,
+    "mag": 15.07,
+    "j": 15.067,
+    "h": 14.488,
+    "k": 14.261,
+    "gaia": "Gaia DR3 3864971422480874496"
+   },
+   {
+    "ra": 164.04433,
+    "dec": 7.04791,
+    "label": "2MASS J10561063+0702524",
+    "epoch": 2000.163,
+    "pmra": -13.76,
+    "pmdec": -9.1,
+    "mag": 15.12,
+    "j": 15.118,
+    "h": 14.513,
+    "k": 14.096,
+    "gaia": "Gaia DR3 3864974068180822016"
+   },
+   {
+    "ra": 164.229452,
+    "dec": 6.887331,
+    "label": "2MASS J10565506+0653143",
+    "epoch": 2000.163,
+    "pmra": 1.8,
+    "pmdec": -29.46,
+    "mag": 15.2,
+    "j": 15.197,
+    "h": 14.489,
+    "k": 14.452,
+    "gaia": "Gaia DR3 3864780485414915584"
+   },
+   {
+    "ra": 164.065507,
+    "dec": 7.011141,
+    "label": "2MASS J10561572+0700401",
+    "epoch": 2000.163,
+    "pmra": -0.72,
+    "pmdec": -2.71,
+    "mag": 15.23,
+    "j": 15.235,
+    "h": 14.628,
+    "k": 14.473,
+    "gaia": "Gaia DR3 3864973621504025344"
+   },
+   {
+    "ra": 164.224757,
+    "dec": 6.899203,
+    "label": "2MASS J10565394+0653571",
+    "epoch": 2000.163,
+    "pmra": -14.56,
+    "pmdec": 9.23,
+    "mag": 15.24,
+    "j": 15.237,
+    "h": 14.59,
+    "k": 14.31,
+    "gaia": "Gaia DR3 3864780524069331328"
+   },
+   {
+    "ra": 164.156287,
+    "dec": 6.833196,
+    "label": "2MASS J10563750+0649595",
+    "epoch": 2000.163,
+    "pmra": 5.31,
+    "pmdec": -22.01,
+    "mag": 15.3,
+    "j": 15.3,
+    "h": 15.058,
+    "k": 15.027,
+    "gaia": "Gaia DR3 3864756708475676416"
+   },
+   {
+    "ra": 164.056814,
+    "dec": 7.106389,
+    "label": "2MASS J10561363+0706230",
+    "epoch": 2000.163,
+    "pmra": 10.56,
+    "pmdec": -15.97,
+    "mag": 15.36,
+    "j": 15.364,
+    "h": 14.815,
+    "k": 14.591,
+    "gaia": "Gaia DR3 3864986437686649472"
+   },
+   {
+    "ra": 164.183468,
+    "dec": 7.160291,
+    "label": "2MASS J10564403+0709370",
+    "epoch": 2000.163,
+    "pmra": -5.32,
+    "pmdec": -1.49,
+    "mag": 15.38,
+    "j": 15.379,
+    "h": 14.984,
+    "k": 15.042,
+    "gaia": "Gaia DR3 3864976782599965952"
+   },
+   {
+    "ra": 164.083158,
+    "dec": 7.149849,
+    "label": "2MASS J10561995+0708594",
+    "epoch": 2000.163,
+    "pmra": -24.62,
+    "pmdec": 16.07,
+    "mag": 15.39,
+    "j": 15.39,
+    "h": 14.711,
+    "k": 14.451,
+    "gaia": "Gaia DR3 3864988190033319040"
+   },
+   {
+    "ra": 163.926425,
+    "dec": 7.05794,
+    "label": "2MASS J10554234+0703285",
+    "epoch": 2000.163,
+    "pmra": 0.54,
+    "pmdec": -5.94,
+    "mag": 15.41,
+    "j": 15.406,
+    "h": 14.751,
+    "k": 14.851,
+    "gaia": "Gaia DR3 3864963176143761920"
+   },
+   {
+    "ra": 164.07985,
+    "dec": 7.022205,
+    "label": "2MASS J10561916+0701199",
+    "epoch": 2000.163,
+    "pmra": -0.18,
+    "pmdec": 3.63,
+    "mag": 15.42,
+    "j": 15.424,
+    "h": 15.034,
+    "k": 14.68,
+    "gaia": "Gaia DR3 3864973758942980224"
+   },
+   {
+    "ra": 164.221543,
+    "dec": 7.063272,
+    "label": "2MASS J10565317+0703477",
+    "epoch": 2000.163,
+    "pmra": -7.51,
+    "pmdec": -1.4,
+    "mag": 15.43,
+    "j": 15.433,
+    "h": 15.0,
+    "k": 14.979,
+    "gaia": "Gaia DR3 3864971907812750464"
+   },
+   {
+    "ra": 164.202665,
+    "dec": 6.951096,
+    "label": "2MASS J10564863+0657039",
+    "epoch": 2000.163,
+    "pmra": -21.72,
+    "pmdec": -8.75,
+    "mag": 15.44,
+    "j": 15.44,
+    "h": 14.651,
+    "k": 14.33,
+    "gaia": "Gaia DR3 3864968914219860352"
+   },
+   {
+    "ra": 164.115258,
+    "dec": 6.873742,
+    "label": "2MASS J10562766+0652254",
+    "epoch": 2000.163,
+    "pmra": -7.19,
+    "pmdec": -7.64,
+    "mag": 15.46,
+    "j": 15.456,
+    "h": 15.299,
+    "k": 15.389,
+    "gaia": "Gaia DR3 3864944729259706240"
+   },
+   {
+    "ra": 164.146122,
+    "dec": 7.143107,
+    "label": "2MASS J10563506+0708351",
+    "epoch": 2000.163,
+    "pmra": -0.01,
+    "pmdec": -14.97,
+    "mag": 15.5,
+    "j": 15.504,
+    "h": 15.072,
+    "k": 14.752,
+    "gaia": "Gaia DR3 3864976679520964608"
+   },
+   {
+    "ra": 164.013576,
+    "dec": 7.073889,
+    "label": "2MASS J10560325+0704260",
+    "epoch": 2000.163,
+    "pmra": -15.38,
+    "pmdec": -7.75,
+    "mag": 15.51,
+    "j": 15.507,
+    "h": 14.772,
+    "k": 14.992,
+    "gaia": "Gaia DR3 3864985892226269824"
+   },
+   {
+    "ra": 164.08043,
+    "dec": 6.845161,
+    "label": "2MASS J10561930+0650425",
+    "epoch": 2000.163,
+    "pmra": -17.91,
+    "pmdec": 3.9,
+    "mag": 15.51,
+    "j": 15.513,
+    "h": 14.921,
+    "k": 14.701,
+    "gaia": "Gaia DR3 3864944209567958656"
+   },
+   {
+    "ra": 164.129246,
+    "dec": 7.078187,
+    "label": "2MASS J10563101+0704414",
+    "epoch": 2000.163,
+    "pmra": -7.16,
+    "pmdec": -3.38,
+    "mag": 15.57,
+    "j": 15.57,
+    "h": 15.282,
+    "k": 15.026,
+    "gaia": "Gaia DR3 3864975790463187456"
+   },
+   {
+    "ra": 164.06442,
+    "dec": 7.007808,
+    "label": "2MASS J10561546+0700281",
+    "epoch": 2000.163,
+    "pmra": -8.87,
+    "pmdec": -1.37,
+    "mag": 15.58,
+    "j": 15.582,
+    "h": 15.086,
+    "k": 14.672,
+    "gaia": "Gaia DR3 3864973621504024832"
+   },
+   {
+    "ra": 163.992535,
+    "dec": 7.051406,
+    "label": "2MASS J10555820+0703050",
+    "epoch": 2000.163,
+    "pmra": -4.03,
+    "pmdec": -13.42,
+    "mag": 15.59,
+    "j": 15.588,
+    "h": 14.951,
+    "k": 14.715,
+    "gaia": "Gaia DR3 3864985750491868160"
+   },
+   {
+    "ra": 164.069881,
+    "dec": 6.90878,
+    "label": "2MASS J10561677+0654316",
+    "epoch": 2000.163,
+    "pmra": 3.34,
+    "pmdec": -11.56,
+    "mag": 15.59,
+    "j": 15.59,
+    "h": 14.954,
+    "k": 14.51,
+    "gaia": "Gaia DR3 3864945824475670784"
+   },
+   {
+    "ra": 164.061092,
+    "dec": 6.939713,
+    "label": "2MASS J10561466+0656229",
+    "epoch": 2000.163,
+    "pmra": -11.84,
+    "pmdec": -17.16,
+    "mag": 15.61,
+    "j": 15.606,
+    "h": 15.082,
+    "k": 14.787,
+    "gaia": "Gaia DR3 3864948882492390144"
+   },
+   {
+    "ra": 164.020458,
+    "dec": 6.879225,
+    "label": "2MASS J10560490+0652452",
+    "epoch": 2000.163,
+    "pmra": -0.25,
+    "pmdec": -6.57,
+    "mag": 15.61,
+    "j": 15.612,
+    "h": 15.247,
+    "k": 15.195,
+    "gaia": "Gaia DR3 3864945347734998400"
+   },
+   {
+    "ra": 163.990597,
+    "dec": 7.091611,
+    "label": "2MASS J10555774+0705297",
+    "epoch": 2000.163,
+    "pmra": -10.91,
+    "pmdec": -4.07,
+    "mag": 15.64,
+    "j": 15.641,
+    "h": 15.305,
+    "k": 15.27,
+    "gaia": "Gaia DR3 3864986162808738048"
+   },
+   {
+    "ra": 163.911164,
+    "dec": 6.924586,
+    "label": "2MASS J10553867+0655285",
+    "epoch": 2000.163,
+    "pmra": -8.49,
+    "pmdec": -1.9,
+    "mag": 15.67,
+    "j": 15.667,
+    "h": 15.092,
+    "k": 14.864,
+    "gaia": "Gaia DR3 3864948160938363264"
+   },
+   {
+    "ra": 164.116981,
+    "dec": 7.189319,
+    "label": "2MASS J10562807+0711215",
+    "epoch": 2000.163,
+    "pmra": -3.18,
+    "pmdec": -6.45,
+    "mag": 15.67,
+    "j": 15.669,
+    "h": 15.216,
+    "k": 14.912,
+    "gaia": "Gaia DR3 3864988808508619520"
+   },
+   {
+    "ra": 163.95551,
+    "dec": 6.969335,
+    "label": "2MASS J10554932+0658096",
+    "epoch": 2000.163,
+    "pmra": -6.43,
+    "pmdec": 11.04,
+    "mag": 15.68,
+    "j": 15.675,
+    "h": 15.191,
+    "k": 15.047,
+    "gaia": "Gaia DR3 3864949810205516032"
+   },
+   {
+    "ra": 164.223984,
+    "dec": 7.005386,
+    "label": "2MASS J10565375+0700193",
+    "epoch": 2000.163,
+    "pmra": -8.84,
+    "pmdec": -41.14,
+    "mag": 15.69,
+    "j": 15.689,
+    "h": 15.039,
+    "k": 15.029,
+    "gaia": "Gaia DR3 3864971388121135872"
+   },
+   {
+    "ra": 163.954687,
+    "dec": 6.971012,
+    "label": "2MASS J10554912+0658156",
+    "epoch": 2000.163,
+    "pmra": -6.31,
+    "pmdec": 10.96,
+    "mag": 15.76,
+    "j": 15.758,
+    "h": 15.073,
+    "k": 15.106,
+    "gaia": "Gaia DR3 3864949878924992896"
+   },
+   {
+    "ra": 164.056391,
+    "dec": 7.121478,
+    "label": "2MASS J10561353+0707173",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 15.79,
+    "j": 15.794,
+    "h": 14.974,
+    "k": 14.734
+   },
+   {
+    "ra": 164.166483,
+    "dec": 7.123326,
+    "label": "2MASS J10563995+0707239",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 15.82,
+    "j": 15.818,
+    "h": 15.33,
+    "k": 15.173
+   },
+   {
+    "ra": 164.028703,
+    "dec": 6.996041,
+    "label": "2MASS J10560688+0659457",
+    "epoch": 2000.163,
+    "pmra": -88.38,
+    "pmdec": -13.63,
+    "mag": 15.83,
+    "j": 15.826,
+    "h": 15.189,
+    "k": 15.118,
+    "gaia": "Gaia DR3 3864950188162456448"
+   },
+   {
+    "ra": 164.228406,
+    "dec": 6.892948,
+    "label": "2MASS J10565481+0653346",
+    "epoch": 2000.163,
+    "pmra": -16.0,
+    "pmdec": -3.44,
+    "mag": 15.92,
+    "j": 15.92,
+    "h": 15.091,
+    "k": 15.018,
+    "gaia": "Gaia DR3 3864780485414918144"
+   },
+   {
+    "ra": 164.074288,
+    "dec": 7.05783,
+    "label": "2MASS J10561782+0703281",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 15.93,
+    "j": 15.931,
+    "h": 15.534,
+    "k": 15.124
+   },
+   {
+    "ra": 164.203328,
+    "dec": 7.007671,
+    "label": "2MASS J10564879+0700276",
+    "epoch": 2000.163,
+    "pmra": -3.61,
+    "pmdec": 3.07,
+    "mag": 15.94,
+    "j": 15.935,
+    "h": 15.59,
+    "k": 15.108,
+    "gaia": "Gaia DR3 3864969979371863296"
+   },
+   {
+    "ra": 164.117388,
+    "dec": 7.170694,
+    "label": "2MASS J10562817+0710144",
+    "epoch": 2000.163,
+    "pmra": 1.38,
+    "pmdec": -36.05,
+    "mag": 15.94,
+    "j": 15.938,
+    "h": 15.204,
+    "k": 14.939,
+    "gaia": "Gaia DR3 3864988705429398912"
+   },
+   {
+    "ra": 164.199166,
+    "dec": 6.958524,
+    "label": "2MASS J10564779+0657306",
+    "epoch": 2000.163,
+    "pmra": -0.1,
+    "pmdec": -4.84,
+    "mag": 15.97,
+    "j": 15.968,
+    "h": 15.657,
+    "k": 15.237,
+    "gaia": "Gaia DR3 3864969017299076224"
+   },
+   {
+    "ra": 164.091063,
+    "dec": 7.158015,
+    "label": "2MASS J10562185+0709288",
+    "epoch": 2000.163,
+    "pmra": -40.98,
+    "pmdec": -62.37,
+    "mag": 15.97,
+    "j": 15.973,
+    "h": 15.396,
+    "k": 14.578,
+    "gaia": "Gaia DR3 3864988293114680576"
+   },
+   {
+    "ra": 163.937344,
+    "dec": 7.041964,
+    "label": "2MASS J10554496+0702310",
+    "epoch": 2000.163,
+    "pmra": -4.68,
+    "pmdec": 0.93,
+    "mag": 15.98,
+    "j": 15.985,
+    "h": 15.518,
+    "k": 16.883,
+    "gaia": "Gaia DR3 3864962420229514240"
+   },
+   {
+    "ra": 164.106284,
+    "dec": 7.108832,
+    "label": "2MASS J10562550+0706317",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.01,
+    "j": 16.013,
+    "h": 15.119,
+    "k": 14.468
+   },
+   {
+    "ra": 164.28549,
+    "dec": 7.033194,
+    "label": "2MASS J10570851+0701594",
+    "epoch": 2000.163,
+    "pmra": 0.22,
+    "pmdec": -56.83,
+    "mag": 16.03,
+    "j": 16.028,
+    "h": 15.458,
+    "k": 15.461,
+    "gaia": "Gaia DR3 3864971181962707328"
+   },
+   {
+    "ra": 163.983295,
+    "dec": 7.000628,
+    "label": "2MASS J10555599+0700022",
+    "epoch": 2000.163,
+    "pmra": -5.18,
+    "pmdec": 2.41,
+    "mag": 16.03,
+    "j": 16.034,
+    "h": 15.184,
+    "k": 15.139,
+    "gaia": "Gaia DR3 3864950325601598592"
+   },
+   {
+    "ra": 164.070089,
+    "dec": 7.042694,
+    "label": "2MASS J10561682+0702336",
+    "epoch": 2000.163,
+    "pmra": -0.54,
+    "pmdec": 0.55,
+    "mag": 16.04,
+    "j": 16.042,
+    "h": 15.407,
+    "k": 15.202,
+    "gaia": "Gaia DR3 3864973831958102528"
+   },
+   {
+    "ra": 164.20182,
+    "dec": 7.141396,
+    "label": "2MASS J10564843+0708290",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.07,
+    "j": 16.073,
+    "h": 15.517,
+    "k": 14.909
+   },
+   {
+    "ra": 164.240461,
+    "dec": 6.944829,
+    "label": "2MASS J10565771+0656413",
+    "epoch": 2000.163,
+    "pmra": -29.85,
+    "pmdec": 6.55,
+    "mag": 16.08,
+    "j": 16.081,
+    "h": 15.716,
+    "k": 15.532,
+    "gaia": "Gaia DR3 3864968776781017344"
+   },
+   {
+    "ra": 164.118313,
+    "dec": 6.962517,
+    "label": "2MASS J10562839+0657450",
+    "epoch": 2000.163,
+    "pmra": -4.46,
+    "pmdec": -5.53,
+    "mag": 16.09,
+    "j": 16.093,
+    "h": 15.702,
+    "k": 15.192,
+    "gaia": "Gaia DR3 3864969567054890624"
+   },
+   {
+    "ra": 164.003377,
+    "dec": 6.842664,
+    "label": "2MASS J10560081+0650335",
+    "epoch": 2000.163,
+    "pmra": 6.04,
+    "pmdec": -6.46,
+    "mag": 16.1,
+    "j": 16.099,
+    "h": 15.596,
+    "k": 15.758,
+    "gaia": "Gaia DR3 3864943659812144512"
+   },
+   {
+    "ra": 164.25141,
+    "dec": 7.060434,
+    "label": "2MASS J10570033+0703375",
+    "epoch": 2000.163,
+    "pmra": 13.06,
+    "pmdec": -11.16,
+    "mag": 16.12,
+    "j": 16.122,
+    "h": 15.779,
+    "k": 15.135,
+    "gaia": "Gaia DR3 3864972212754860672"
+   },
+   {
+    "ra": 164.067886,
+    "dec": 6.965135,
+    "label": "2MASS J10561629+0657544",
+    "epoch": 2000.163,
+    "pmra": -8.93,
+    "pmdec": -5.2,
+    "mag": 16.14,
+    "j": 16.141,
+    "h": 15.876,
+    "k": 15.68,
+    "gaia": "Gaia DR3 3864949088650823808"
+   },
+   {
+    "ra": 164.064646,
+    "dec": 7.042713,
+    "label": "2MASS J10561551+0702337",
+    "epoch": 2000.163,
+    "pmra": -16.5,
+    "pmdec": -10.41,
+    "mag": 16.14,
+    "j": 16.145,
+    "h": 15.569,
+    "k": 15.417,
+    "gaia": "Gaia DR3 3864973827662458368"
+   },
+   {
+    "ra": 164.113095,
+    "dec": 7.086991,
+    "label": "2MASS J10562714+0705131",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.16,
+    "j": 16.157,
+    "h": 15.223,
+    "k": 14.536
+   },
+   {
+    "ra": 164.096105,
+    "dec": 6.910041,
+    "label": "2MASS J10562306+0654361",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.17,
+    "j": 16.172,
+    "h": 15.162,
+    "k": 14.534
+   },
+   {
+    "ra": 164.113767,
+    "dec": 6.954936,
+    "label": "2MASS J10562730+0657177",
+    "epoch": 2000.163,
+    "pmra": 27.81,
+    "pmdec": -30.3,
+    "mag": 16.17,
+    "j": 16.174,
+    "h": 15.41,
+    "k": 16.44,
+    "gaia": "Gaia DR3 3864969463975674624"
+   },
+   {
+    "ra": 164.083406,
+    "dec": 7.143322,
+    "label": "2MASS J10562001+0708359",
+    "epoch": 2000.163,
+    "pmra": -2.36,
+    "pmdec": -2.39,
+    "mag": 16.21,
+    "j": 16.209,
+    "h": 16.089,
+    "k": 16.371,
+    "gaia": "Gaia DR3 3864988190033318144"
+   },
+   {
+    "ra": 164.022704,
+    "dec": 6.981358,
+    "label": "2MASS J10560544+0658528",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.22,
+    "j": 16.216,
+    "h": 15.575,
+    "k": 14.949
+   },
+   {
+    "ra": 164.230737,
+    "dec": 7.064659,
+    "label": "2MASS J10565537+0703527",
+    "epoch": 2000.163,
+    "pmra": -8.91,
+    "pmdec": -0.81,
+    "mag": 16.23,
+    "j": 16.228,
+    "h": 15.604,
+    "k": 15.245,
+    "gaia": "Gaia DR3 3864972281474337920"
+   },
+   {
+    "ra": 164.079149,
+    "dec": 7.134162,
+    "label": "2MASS J10561899+0708029",
+    "epoch": 2000.163,
+    "pmra": -9.55,
+    "pmdec": -9.06,
+    "mag": 16.26,
+    "j": 16.256,
+    "h": 16.051,
+    "k": 15.579,
+    "gaia": "Gaia DR3 3864988155673575680"
+   },
+   {
+    "ra": 164.212717,
+    "dec": 6.906344,
+    "label": "2MASS J10565105+0654228",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.26,
+    "j": 16.257,
+    "h": 14.529,
+    "k": 14.268
+   },
+   {
+    "ra": 164.092895,
+    "dec": 6.835338,
+    "label": "2MASS J10562229+0650072",
+    "epoch": 2000.163,
+    "pmra": -3.03,
+    "pmdec": -0.11,
+    "mag": 16.28,
+    "j": 16.282,
+    "h": 15.892,
+    "k": 15.521,
+    "gaia": "Gaia DR3 3864944003409526528"
+   },
+   {
+    "ra": 164.074704,
+    "dec": 6.857531,
+    "label": "2MASS J10561792+0651271",
+    "epoch": 2000.163,
+    "pmra": -0.03,
+    "pmdec": -40.29,
+    "mag": 16.33,
+    "j": 16.33,
+    "h": 15.791,
+    "k": 15.483,
+    "gaia": "Gaia DR3 3864944381366652160"
+   },
+   {
+    "ra": 164.115548,
+    "dec": 6.864008,
+    "label": "2MASS J10562773+0651504",
+    "epoch": 2000.163,
+    "pmra": -17.0,
+    "pmdec": -13.93,
+    "mag": 16.36,
+    "j": 16.357,
+    "h": 15.743,
+    "k": 15.126,
+    "gaia": "Gaia DR3 3864944724964036992"
+   },
+   {
+    "ra": 164.099769,
+    "dec": 6.941492,
+    "label": "2MASS J10562394+0656293",
+    "epoch": 2000.163,
+    "pmra": -3.15,
+    "pmdec": -23.14,
+    "mag": 16.37,
+    "j": 16.372,
+    "h": 15.56,
+    "k": 15.054,
+    "gaia": "Gaia DR3 3864945996274367616"
+   },
+   {
+    "ra": 164.036472,
+    "dec": 7.177499,
+    "label": "2MASS J10560875+0710389",
+    "epoch": 2000.163,
+    "pmra": -5.26,
+    "pmdec": -7.93,
+    "mag": 16.38,
+    "j": 16.378,
+    "h": 16.141,
+    "k": 15.659,
+    "gaia": "Gaia DR3 3864989289544953600"
+   },
+   {
+    "ra": 164.115435,
+    "dec": 7.086041,
+    "label": "2MASS J10562770+0705097",
+    "epoch": 2000.163,
+    "pmra": -5.81,
+    "pmdec": -12.31,
+    "mag": 16.4,
+    "j": 16.396,
+    "h": 15.849,
+    "k": 15.644,
+    "gaia": "Gaia DR3 3864975859182664320"
+   },
+   {
+    "ra": 164.281572,
+    "dec": 7.0051,
+    "label": "2MASS J10570757+0700183",
+    "epoch": 2000.163,
+    "pmra": -6.14,
+    "pmdec": 0.88,
+    "mag": 16.44,
+    "j": 16.44,
+    "h": 16.077,
+    "k": 15.706,
+    "gaia": "Gaia DR3 3864970739581645312"
+   },
+   {
+    "ra": 164.065426,
+    "dec": 7.074499,
+    "label": "2MASS J10561570+0704281",
+    "epoch": 2000.163,
+    "pmra": 9.29,
+    "pmdec": -8.15,
+    "mag": 16.46,
+    "j": 16.457,
+    "h": 15.6,
+    "k": 16.108,
+    "gaia": "Gaia DR3 3864974514857426432"
+   },
+   {
+    "ra": 163.927305,
+    "dec": 7.043438,
+    "label": "2MASS J10554255+0702363",
+    "epoch": 2000.163,
+    "pmra": -3.91,
+    "pmdec": -0.42,
+    "mag": 16.47,
+    "j": 16.466,
+    "h": 15.506,
+    "k": 15.294,
+    "gaia": "Gaia DR3 3864963176143758464"
+   },
+   {
+    "ra": 164.147405,
+    "dec": 6.887291,
+    "label": "2MASS J10563537+0653142",
+    "epoch": 2000.163,
+    "pmra": -9.89,
+    "pmdec": 5.48,
+    "mag": 16.47,
+    "j": 16.468,
+    "h": 15.443,
+    "k": 15.208,
+    "gaia": "Gaia DR3 3864944656244563712"
+   },
+   {
+    "ra": 164.160041,
+    "dec": 6.838771,
+    "label": "2MASS J10563840+0650195",
+    "epoch": 2000.163,
+    "pmra": -35.7,
+    "pmdec": -17.87,
+    "mag": 16.48,
+    "j": 16.476,
+    "h": 16.273,
+    "k": 15.885,
+    "gaia": "Gaia DR3 3864756708475676800"
+   },
+   {
+    "ra": 164.230089,
+    "dec": 6.978162,
+    "label": "2MASS J10565522+0658413",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.48,
+    "j": 16.477,
+    "h": 15.792,
+    "k": 14.876
+   },
+   {
+    "ra": 164.136583,
+    "dec": 7.018924,
+    "label": "2MASS J10563277+0701081",
+    "epoch": 2000.163,
+    "pmra": -36.74,
+    "pmdec": 0.85,
+    "mag": 16.48,
+    "j": 16.482,
+    "h": 15.681,
+    "k": 15.633,
+    "gaia": "Gaia DR3 3864973140467758976"
+   },
+   {
+    "ra": 163.949161,
+    "dec": 7.015237,
+    "label": "2MASS J10554779+0700548",
+    "epoch": 2000.163,
+    "pmra": -14.15,
+    "pmdec": 0.6,
+    "mag": 16.49,
+    "j": 16.491,
+    "h": 15.849,
+    "k": 15.341,
+    "gaia": "Gaia DR3 3864962110991862272"
+   },
+   {
+    "ra": 163.996205,
+    "dec": 6.99105,
+    "label": "2MASS J10555908+0659277",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.53,
+    "j": 16.526,
+    "h": 15.554,
+    "k": 15.198
+   },
+   {
+    "ra": 164.278178,
+    "dec": 7.00905,
+    "label": "2MASS J10570676+0700325",
+    "epoch": 2000.163,
+    "pmra": -8.63,
+    "pmdec": 13.93,
+    "mag": 16.54,
+    "j": 16.541,
+    "h": 15.744,
+    "k": 15.346,
+    "gaia": "Gaia DR3 3864970735286107264"
+   },
+   {
+    "ra": 163.945255,
+    "dec": 6.997479,
+    "label": "2MASS J10554686+0659509",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.55,
+    "j": 16.549,
+    "h": 15.912,
+    "k": 15.113
+   },
+   {
+    "ra": 164.192755,
+    "dec": 7.010862,
+    "label": "2MASS J10564626+0700391",
+    "epoch": 2000.163,
+    "pmra": 2.18,
+    "pmdec": -5.99,
+    "mag": 16.68,
+    "j": 16.675,
+    "h": 15.492,
+    "k": 15.261,
+    "gaia": "Gaia DR3 3864970185530188160"
+   },
+   {
+    "ra": 163.89997,
+    "dec": 7.035045,
+    "label": "2MASS J10553599+0702061",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.68,
+    "j": 16.677,
+    "h": 15.592,
+    "k": 15.568
+   },
+   {
+    "ra": 164.11697,
+    "dec": 6.853303,
+    "label": "2MASS J10562807+0651118",
+    "epoch": 2000.163,
+    "pmra": -30.14,
+    "pmdec": -11.1,
+    "mag": 16.68,
+    "j": 16.683,
+    "h": 16.247,
+    "k": 15.749,
+    "gaia": "Gaia DR3 3864944140848482688"
+   },
+   {
+    "ra": 164.135789,
+    "dec": 6.835033,
+    "label": "2MASS J10563258+0650061",
+    "epoch": 2000.163,
+    "pmra": -11.28,
+    "pmdec": -6.64,
+    "mag": 16.71,
+    "j": 16.708,
+    "h": 16.253,
+    "k": 15.662,
+    "gaia": "Gaia DR3 3864756399238105856"
+   },
+   {
+    "ra": 164.11419,
+    "dec": 7.079633,
+    "label": "2MASS J10562740+0704466",
+    "epoch": 2000.163,
+    "pmra": 0.0,
+    "pmdec": 0.0,
+    "mag": 16.75,
+    "j": 16.752,
+    "h": 15.865,
+    "k": 15.486
+   },
+   {
+    "ra": 164.257784,
+    "dec": 6.958682,
+    "label": "2MASS J10570186+0657312",
+    "epoch": 2000.163,
+    "pmra": -36.27,
+    "pmdec": -22.85,
+    "mag": 16.78,
+    "j": 16.78,
+    "h": 16.232,
+    "k": 15.602,
+    "gaia": "Gaia DR3 3864968815436297984"
+   }
   ]
  },
  "predictions": [
@@ -21183,7 +23065,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.88,
-   "pm_arcsec_yr": 16.002,
+   "pm_arcsec_yr": 15.964,
    "match": null,
    "bands": [
     "all",
@@ -21201,17 +23083,24 @@
      "epoch": 1,
      "visit": 1,
      "mjd": 61013.865,
-     "x": 92.0,
+     "x": 91.99,
      "y": 94.33
     },
     {
      "epoch": 2,
      "visit": 2,
      "mjd": 61180.196,
-     "x": 92.99,
-     "y": 94.98
+     "x": 92.98,
+     "y": 94.97
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "track",
+    "id": "2MASS J10563681+0702042",
+    "epoch": 2000.163,
+    "sep_arcsec": 50.13
+   }
   },
   {
    "id": "m2",
@@ -21245,14 +23134,21 @@
      "x": 73.27,
      "y": 73.16
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "gaia",
+    "id": "2MASS J10562886+0700527",
+    "epoch": 2000.163,
+    "sep_arcsec": 0.29
+   }
   },
   {
    "id": "m3",
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.85,
-   "pm_arcsec_yr": 8.657,
+   "pm_arcsec_yr": 8.707,
    "match": null,
    "bands": [
     "all"
@@ -21263,7 +23159,7 @@
      "visit": 0,
      "mjd": 60808.973,
      "x": 40.98,
-     "y": 135.18
+     "y": 135.17
     },
     {
      "epoch": 1,
@@ -21286,7 +23182,7 @@
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.82,
-   "pm_arcsec_yr": 16.188,
+   "pm_arcsec_yr": 16.132,
    "match": null,
    "bands": [
     "all"
@@ -21296,7 +23192,7 @@
      "epoch": 0,
      "visit": 0,
      "mjd": 60808.973,
-     "x": 24.12,
+     "x": 24.13,
      "y": 107.98
     },
     {
@@ -21311,16 +23207,23 @@
      "visit": 2,
      "mjd": 61180.196,
      "x": 26.47,
-     "y": 106.7
+     "y": 106.71
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "track",
+    "id": "2MASS J10570602+0653487",
+    "epoch": 2000.163,
+    "sep_arcsec": 56.43
+   }
   },
   {
    "id": "m5",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.78,
-   "pm_arcsec_yr": 11.612,
+   "confidence": 0.77,
+   "pm_arcsec_yr": 12.158,
    "match": null,
    "bands": [
     "all"
@@ -21330,48 +23233,14 @@
      "epoch": 0,
      "visit": 0,
      "mjd": 60808.973,
-     "x": 80.08,
-     "y": 86.51
+     "x": 138.94,
+     "y": 46.68
     },
     {
      "epoch": 1,
      "visit": 1,
      "mjd": 61013.865,
-     "x": 79.11,
-     "y": 86.09
-    },
-    {
-     "epoch": 2,
-     "visit": 2,
-     "mjd": 61180.196,
-     "x": 78.32,
-     "y": 85.76
-    }
-   ]
-  },
-  {
-   "id": "m6",
-   "label": "Possible mover",
-   "kind": "mover",
-   "confidence": 0.76,
-   "pm_arcsec_yr": 12.1,
-   "match": null,
-   "bands": [
-    "all"
-   ],
-   "track": [
-    {
-     "epoch": 0,
-     "visit": 0,
-     "mjd": 60808.973,
-     "x": 138.93,
-     "y": 46.67
-    },
-    {
-     "epoch": 1,
-     "visit": 1,
-     "mjd": 61013.865,
-     "x": 138.1,
+     "x": 138.11,
      "y": 45.94
     },
     {
@@ -21381,14 +23250,21 @@
      "x": 137.43,
      "y": 45.35
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "track",
+    "id": "2MASS J10553897+0657436",
+    "epoch": 2000.163,
+    "sep_arcsec": 78.28
+   }
   },
   {
-   "id": "m7",
+   "id": "m6",
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.74,
-   "pm_arcsec_yr": 10.052,
+   "pm_arcsec_yr": 10.048,
    "match": null,
    "bands": [
     "cold"
@@ -21415,14 +23291,21 @@
      "x": 106.3,
      "y": 27.37
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "track",
+    "id": "2MASS J10561546+0700281",
+    "epoch": 2000.163,
+    "sep_arcsec": 5.86
+   }
   },
   {
-   "id": "m8",
+   "id": "m7",
    "label": "Possible mover",
    "kind": "mover",
    "confidence": 0.66,
-   "pm_arcsec_yr": 13.175,
+   "pm_arcsec_yr": 13.179,
    "match": null,
    "bands": [
     "cold"
@@ -21449,14 +23332,21 @@
      "x": 67.5,
      "y": 84.62
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "track",
+    "id": "2MASS J10561063+0702524",
+    "epoch": 2000.163,
+    "sep_arcsec": 15.41
+   }
   },
   {
-   "id": "m9",
+   "id": "m8",
    "label": "Possible mover",
    "kind": "mover",
-   "confidence": 0.6,
-   "pm_arcsec_yr": 15.111,
+   "confidence": 0.62,
+   "pm_arcsec_yr": 15.1,
    "match": null,
    "bands": [
     "all"
@@ -21481,9 +23371,16 @@
      "visit": 2,
      "mjd": 61180.196,
      "x": 67.87,
-     "y": 58.86
+     "y": 58.85
     }
-   ]
+   ],
+   "tmass_1999": {
+    "agrees": true,
+    "basis": "track",
+    "id": "2MASS J10565317+0703477",
+    "epoch": 2000.163,
+    "sep_arcsec": 81.34
+   }
   },
   {
    "id": "a1",

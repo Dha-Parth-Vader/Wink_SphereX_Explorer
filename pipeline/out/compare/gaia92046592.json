@@ -1,18 +1,18 @@
 {
  "id": "gaia92046592",
- "pipeline_version": "1",
+ "pipeline_version": "2",
  "reference_visit": 2,
  "visits": [
   {
    "visit": 0,
    "mjd": 60872.002,
    "year": 2025.5373,
-   "n_sources_all": 345,
-   "n_sources_cold": 190,
-   "noise": 0.003705,
+   "n_sources_all": 355,
+   "n_sources_cold": 191,
+   "noise": 0.003599,
    "coverage": 1.0,
    "offset_px": [
-    -0.0,
+    -0.001,
     0.002
    ]
   },
@@ -20,9 +20,9 @@
    "visit": 1,
    "mjd": 61048.014,
    "year": 2026.0192,
-   "n_sources_all": 341,
+   "n_sources_all": 354,
    "n_sources_cold": 177,
-   "noise": 0.003761,
+   "noise": 0.003647,
    "coverage": 1.0,
    "offset_px": [
     0.011,
@@ -33,9 +33,9 @@
    "visit": 2,
    "mjd": 61235.704,
    "year": 2026.5331,
-   "n_sources_all": 349,
-   "n_sources_cold": 190,
-   "noise": 0.003656,
+   "n_sources_all": 362,
+   "n_sources_cold": 191,
+   "noise": 0.003567,
    "coverage": 1.0,
    "offset_px": [
     0.0,
@@ -45,36 +45,36 @@
  ],
  "movers": [
   {
-   "t0": 2025.6839,
-   "x0": 53.453,
-   "y0": 86.855,
-   "vx_px_yr": 3.7142,
-   "vy_px_yr": -5.0101,
-   "pm_arcsec_yr": 38.356,
-   "pm_err": 0.751,
-   "significance": 51.1,
-   "pa_deg": 216.6,
-   "snr": 29.8,
+   "t0": 2025.6972,
+   "x0": 53.506,
+   "y0": 86.786,
+   "vx_px_yr": 3.6989,
+   "vy_px_yr": -4.999,
+   "pm_arcsec_yr": 38.245,
+   "pm_err": 0.716,
+   "significance": 53.4,
+   "pa_deg": 216.5,
+   "snr": 31.0,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 52.87,
-     "y": 87.632,
-     "snr": 29.8
+     "x": 52.872,
+     "y": 87.633,
+     "snr": 31.0
     },
     {
      "visit": 1,
-     "x": 55.027,
-     "y": 84.803,
-     "snr": 11.8
+     "x": 55.026,
+     "y": 84.806,
+     "snr": 12.5
     },
     {
      "visit": 2,
-     "x": 56.184,
-     "y": 83.078,
-     "snr": 7.3
+     "x": 56.18,
+     "y": 83.077,
+     "snr": 7.7
     }
    ],
    "bands": [
@@ -84,36 +84,36 @@
    "is_target": false
   },
   {
-   "t0": 2026.0014,
-   "x0": 65.53,
-   "y0": 16.627,
-   "vx_px_yr": 1.7803,
-   "vy_px_yr": 0.8997,
-   "pm_arcsec_yr": 12.268,
-   "pm_err": 0.559,
-   "significance": 21.9,
+   "t0": 2025.9999,
+   "x0": 65.527,
+   "y0": 16.624,
+   "vx_px_yr": 1.7772,
+   "vy_px_yr": 0.8981,
+   "pm_arcsec_yr": 12.246,
+   "pm_err": 0.539,
+   "significance": 22.7,
    "pa_deg": 296.8,
-   "snr": 16.3,
+   "snr": 17.0,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 64.963,
-     "y": 16.356,
-     "snr": 16.3
+     "x": 64.964,
+     "y": 16.355,
+     "snr": 17.0
     },
     {
      "visit": 1,
-     "x": 65.046,
-     "y": 16.35,
-     "snr": 16.1
+     "x": 65.045,
+     "y": 16.349,
+     "snr": 16.8
     },
     {
      "visit": 2,
-     "x": 66.766,
-     "y": 17.269,
-     "snr": 15.0
+     "x": 66.767,
+     "y": 17.268,
+     "snr": 15.5
     }
    ],
    "bands": [
@@ -124,36 +124,36 @@
    "is_target": false
   },
   {
-   "t0": 2025.8301,
-   "x0": 108.547,
-   "y0": 126.268,
-   "vx_px_yr": 1.1361,
-   "vy_px_yr": 0.06,
-   "pm_arcsec_yr": 6.997,
-   "pm_err": 0.558,
-   "significance": 12.5,
-   "pa_deg": 273.0,
-   "snr": 77.3,
+   "t0": 2025.8337,
+   "x0": 108.557,
+   "y0": 126.267,
+   "vx_px_yr": 1.1805,
+   "vy_px_yr": 0.0522,
+   "pm_arcsec_yr": 7.267,
+   "pm_err": 0.55,
+   "significance": 13.2,
+   "pa_deg": 272.5,
+   "snr": 79.7,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 108.399,
+     "x": 108.4,
      "y": 126.262,
-     "snr": 77.3
+     "snr": 79.7
     },
     {
      "visit": 1,
      "x": 108.403,
-     "y": 126.258,
-     "snr": 76.8
+     "y": 126.257,
+     "snr": 79.3
     },
     {
      "visit": 2,
      "x": 110.522,
-     "y": 126.382,
-     "snr": 9.6
+     "y": 126.363,
+     "snr": 10.0
     }
    ],
    "bands": [
@@ -163,36 +163,36 @@
    "is_target": false
   },
   {
-   "t0": 2025.896,
-   "x0": 9.953,
-   "y0": 110.801,
-   "vx_px_yr": 1.3896,
-   "vy_px_yr": -0.9742,
-   "pm_arcsec_yr": 10.437,
-   "pm_err": 1.246,
-   "significance": 8.4,
-   "pa_deg": 235.0,
-   "snr": 8.7,
+   "t0": 2025.8974,
+   "x0": 10.006,
+   "y0": 110.875,
+   "vx_px_yr": 1.41,
+   "vy_px_yr": -1.2537,
+   "pm_arcsec_yr": 11.604,
+   "pm_err": 1.191,
+   "significance": 9.7,
+   "pa_deg": 228.4,
+   "snr": 9.1,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 9.312,
-     "y": 111.283,
-     "snr": 8.7
+     "x": 9.367,
+     "y": 111.477,
+     "snr": 9.1
     },
     {
      "visit": 1,
-     "x": 10.625,
-     "y": 110.215,
-     "snr": 6.5
+     "x": 10.632,
+     "y": 110.203,
+     "snr": 6.8
     },
     {
      "visit": 2,
-     "x": 10.544,
-     "y": 110.454,
-     "snr": 5.9
+     "x": 10.633,
+     "y": 110.386,
+     "snr": 6.2
     }
    ],
    "bands": [
@@ -202,13 +202,91 @@
    "is_target": false
   },
   {
-   "t0": 2026.0154,
+   "t0": 2025.9403,
+   "x0": 39.803,
+   "y0": 52.085,
+   "vx_px_yr": -1.9069,
+   "vy_px_yr": 0.8343,
+   "pm_arcsec_yr": 12.801,
+   "pm_err": 1.428,
+   "significance": 9.0,
+   "pa_deg": 66.4,
+   "snr": 7.2,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 40.303,
+     "y": 51.871,
+     "snr": 7.2
+    },
+    {
+     "visit": 1,
+     "x": 40.191,
+     "y": 51.906,
+     "snr": 7.0
+    },
+    {
+     "visit": 2,
+     "x": 38.216,
+     "y": 52.787,
+     "snr": 5.3
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m5",
+   "is_target": false
+  },
+  {
+   "t0": 2025.8897,
+   "x0": 71.756,
+   "y0": 56.91,
+   "vx_px_yr": 1.2189,
+   "vy_px_yr": 1.537,
+   "pm_arcsec_yr": 12.064,
+   "pm_err": 1.422,
+   "significance": 8.5,
+   "pa_deg": 321.6,
+   "snr": 7.7,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 71.23,
+     "y": 56.222,
+     "snr": 7.7
+    },
+    {
+     "visit": 1,
+     "x": 72.264,
+     "y": 57.642,
+     "snr": 5.6
+    },
+    {
+     "visit": 2,
+     "x": 72.334,
+     "y": 57.585,
+     "snr": 5.1
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m6",
+   "is_target": false
+  },
+  {
+   "t0": 2026.0155,
    "x0": 15.09,
    "y0": 100.7,
    "vx_px_yr": 2.0011,
    "vy_px_yr": 0.5529,
    "pm_arcsec_yr": 12.768,
-   "pm_err": 1.526,
+   "pm_err": 1.523,
    "significance": 8.4,
    "pa_deg": 285.4,
    "snr": 7.1,
@@ -223,13 +301,13 @@
     },
     {
      "visit": 1,
-     "x": 15.603,
-     "y": 100.942,
+     "x": 15.602,
+     "y": 100.943,
      "snr": 7.1
     },
     {
      "visit": 2,
-     "x": 15.734,
+     "x": 15.735,
      "y": 100.8,
      "snr": 5.6
     }
@@ -237,135 +315,135 @@
    "bands": [
     "cold"
    ],
-   "id": "m5",
+   "id": "m7",
    "is_target": false
   },
   {
    "t0": 2026.0299,
    "x0": 73.005,
    "y0": 73.002,
-   "vx_px_yr": 0.117,
-   "vy_px_yr": -0.4214,
-   "pm_arcsec_yr": 2.69,
+   "vx_px_yr": 0.1162,
+   "vy_px_yr": -0.4215,
+   "pm_arcsec_yr": 2.689,
    "pm_err": 0.349,
    "significance": 7.7,
-   "pa_deg": 195.5,
-   "snr": 34211.3,
+   "pa_deg": 195.4,
+   "snr": 35283.0,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 72.949,
+     "x": 72.95,
      "y": 73.221,
-     "snr": 31376.4
+     "snr": 32303.3
     },
     {
      "visit": 1,
      "x": 73.0,
      "y": 72.986,
-     "snr": 34211.3
+     "snr": 35283.0
     },
     {
      "visit": 2,
      "x": 73.066,
      "y": 72.8,
-     "snr": 31804.2
+     "snr": 32600.3
     }
    ],
    "bands": [
     "all",
     "cold"
    ],
-   "id": "m6",
+   "id": "m8",
    "is_target": true
   },
   {
-   "t0": 2025.8106,
-   "x0": 57.76,
-   "y0": 26.713,
-   "vx_px_yr": 0.8251,
-   "vy_px_yr": 0.4106,
-   "pm_arcsec_yr": 5.668,
-   "pm_err": 0.804,
-   "significance": 7.1,
-   "pa_deg": 296.5,
-   "snr": 18.1,
+   "t0": 2025.812,
+   "x0": 57.764,
+   "y0": 26.717,
+   "vx_px_yr": 0.8364,
+   "vy_px_yr": 0.4121,
+   "pm_arcsec_yr": 5.734,
+   "pm_err": 0.768,
+   "significance": 7.5,
+   "pa_deg": 296.2,
+   "snr": 18.8,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
-     "x": 57.692,
-     "y": 26.66,
-     "snr": 18.1
+     "x": 57.694,
+     "y": 26.662,
+     "snr": 18.8
     },
     {
      "visit": 1,
-     "x": 57.581,
-     "y": 26.668,
-     "snr": 16.9
+     "x": 57.582,
+     "y": 26.671,
+     "snr": 17.6
     },
     {
      "visit": 2,
      "x": 59.516,
-     "y": 27.442,
-     "snr": 6.5
+     "y": 27.439,
+     "snr": 6.8
     }
    ],
    "bands": [
     "all"
    ],
-   "id": "m7",
+   "id": "m9",
    "is_target": false
   },
   {
-   "t0": 2025.9753,
+   "t0": 2025.9751,
    "x0": 140.292,
    "y0": 120.684,
-   "vx_px_yr": -1.3772,
-   "vy_px_yr": -0.3042,
-   "pm_arcsec_yr": 8.674,
-   "pm_err": 1.516,
-   "significance": 5.7,
+   "vx_px_yr": -1.378,
+   "vy_px_yr": -0.3043,
+   "pm_arcsec_yr": 8.679,
+   "pm_err": 1.477,
+   "significance": 5.9,
    "pa_deg": 102.5,
-   "snr": 6.6,
+   "snr": 6.8,
    "n_visits": 3,
    "saturated": false,
    "positions": [
     {
      "visit": 0,
      "x": 140.662,
-     "y": 120.759,
-     "snr": 6.3
+     "y": 120.758,
+     "snr": 6.5
     },
     {
      "visit": 1,
-     "x": 140.645,
-     "y": 120.775,
-     "snr": 6.6
+     "x": 140.644,
+     "y": 120.774,
+     "snr": 6.8
     },
     {
      "visit": 2,
-     "x": 139.211,
-     "y": 120.436,
-     "snr": 5.3
+     "x": 139.209,
+     "y": 120.435,
+     "snr": 5.4
     }
    ],
    "bands": [
     "all"
    ],
-   "id": "m8",
+   "id": "m10",
    "is_target": false
   },
   {
-   "t0": 2025.9885,
+   "t0": 2025.9886,
    "x0": 36.553,
    "y0": 134.599,
-   "vx_px_yr": -0.5433,
-   "vy_px_yr": 0.5874,
-   "pm_arcsec_yr": 4.921,
-   "pm_err": 0.864,
+   "vx_px_yr": -0.5432,
+   "vy_px_yr": 0.5869,
+   "pm_arcsec_yr": 4.918,
+   "pm_err": 0.863,
    "significance": 5.7,
    "pa_deg": 42.8,
    "snr": 10.7,
@@ -380,13 +458,13 @@
     },
     {
      "visit": 1,
-     "x": 36.372,
-     "y": 134.811,
+     "x": 36.371,
+     "y": 134.812,
      "snr": 8.4
     },
     {
      "visit": 2,
-     "x": 36.319,
+     "x": 36.318,
      "y": 134.847,
      "snr": 9.6
     }
@@ -394,7 +472,7 @@
    "bands": [
     "cold"
    ],
-   "id": "m9",
+   "id": "m11",
    "is_target": false
   }
  ],
@@ -445,10 +523,10 @@
   ],
   "mean_offset_px": 0.026,
   "within_third_px": true,
-  "mover": "m6",
+  "mover": "m8",
   "saturated": false,
   "expected_pm_arcsec_yr": 2.553,
-  "measured_pm_arcsec_yr": 2.69
+  "measured_pm_arcsec_yr": 2.689
  },
  "variability": {
   "source": "exposures",
@@ -456,48 +534,39 @@
   "visits": 3,
   "per_detector": {
    "1": {
-    "pairs": 27,
-    "median_ratio": 1.009,
-    "median_sigma": 6.2,
+    "pairs": 20,
+    "median_ratio": 1.007,
+    "median_sigma": 3.8,
     "change": false
    },
-   "2": {
-    "pairs": 1,
-    "median_ratio": 2.631,
-    "median_sigma": 256.4,
-    "change": true
-   },
    "3": {
-    "pairs": 4,
-    "median_ratio": 2.022,
-    "median_sigma": 132.5,
-    "change": true
+    "pairs": 2,
+    "median_ratio": 1.057,
+    "median_sigma": 18.3,
+    "change": false
    },
    "4": {
-    "pairs": 28,
+    "pairs": 20,
     "median_ratio": 1.005,
-    "median_sigma": 21.8,
+    "median_sigma": 8.9,
     "change": false
    },
    "5": {
-    "pairs": 135,
-    "median_ratio": 0.998,
-    "median_sigma": 3.2,
+    "pairs": 120,
+    "median_ratio": 0.997,
+    "median_sigma": 3.1,
     "change": false
    },
    "6": {
-    "pairs": 153,
-    "median_ratio": 0.991,
-    "median_sigma": 3.2,
+    "pairs": 148,
+    "median_ratio": 0.99,
+    "median_sigma": 3.0,
     "change": false
    }
   },
-  "verdict": "possible change",
-  "saturated": true,
-  "changing_detectors": [
-   2,
-   3
-  ]
+  "verdict": "steady",
+  "saturated": false,
+  "changing_detectors": []
  },
  "transients": [],
  "notes": [

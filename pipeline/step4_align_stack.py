@@ -27,7 +27,7 @@ from concurrent.futures import ProcessPoolExecutor
 import numpy as np
 from astropy.io import fits
 from astropy.wcs import WCS, FITSFixedWarning
-from scipy.ndimage import grey_dilation, label, map_coordinates
+from scipy.ndimage import grey_dilation, label, map_coordinates, median_filter
 
 warnings.simplefilter("ignore", FITSFixedWarning)
 logging.getLogger("astropy").setLevel(logging.ERROR)
@@ -112,21 +112,32 @@ def stack_frames(imgs):
     return np.where(k >= need, m, np.nan).astype(np.float32), k.astype(np.int16)
 
 
+GLOW_BOX = 15       # px; a running median this wide wipes out point stars and leaves only extended glow
+
+
 def flatten(img):
-    """Subtract a 2nd-order surface fitted to sky pixels only, so it can't leave boxes around stars."""
+    """Subtract a 2nd-order surface fitted to sky pixels only, so it can't leave boxes around stars.
+    Extended glow around very bright stars is left out of the fit: Eps Indi A's halo covers a sixth of its field
+    and used to bend the surface up, pushing the sky on the far side to solid black."""
     n = img.shape[0]
     yy, xx = np.mgrid[0:n, 0:n] / (n - 1) - 0.5
     A = np.stack([np.ones_like(xx), xx, yy, xx * yy, xx ** 2, yy ** 2], -1).reshape(-1, 6)
     z = img.reshape(-1)
-    use = np.isfinite(z)
+    sky = np.nanmedian(z)
+    noise = 1.4826 * np.nanmedian(np.abs(z - sky))
+    glow = median_filter(np.where(np.isfinite(img), img, sky), size=GLOW_BOX) > sky + 2 * noise
+    use = np.isfinite(z) & ~glow.reshape(-1)
+    if use.sum() < 0.3 * n * n:   # glow fills the field: fall back to fitting everything
+        use = np.isfinite(z)
     if use.sum() < 100:
         return img
+    keep = use.copy()
     coef = None
     for _ in range(5):
         coef, *_ = np.linalg.lstsq(A[use], z[use], rcond=None)
         r = z - A @ coef
         s = 1.4826 * np.nanmedian(np.abs(r[use]))
-        new = np.isfinite(z) & (r < 2.5 * s) & (r > -4 * s)
+        new = keep & (r < 2.5 * s) & (r > -4 * s)
         if new.sum() < 100 or (new == use).all():
             break
         use = new

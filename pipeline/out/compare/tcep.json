@@ -1,15 +1,15 @@
 {
  "id": "tcep",
- "pipeline_version": "1",
+ "pipeline_version": "2",
  "reference_visit": 0,
  "visits": [
   {
    "visit": 0,
    "mjd": 60865.109,
    "year": 2025.5184,
-   "n_sources_all": 38,
-   "n_sources_cold": 25,
-   "noise": 0.432276,
+   "n_sources_all": 90,
+   "n_sources_cold": 51,
+   "noise": 0.171878,
    "coverage": 0.996,
    "offset_px": [
     0.0,
@@ -20,30 +20,109 @@
    "visit": 1,
    "mjd": 61035.26,
    "year": 2025.9843,
-   "n_sources_all": 33,
-   "n_sources_cold": 23,
-   "noise": 0.557054,
+   "n_sources_all": 80,
+   "n_sources_cold": 55,
+   "noise": 0.190112,
    "coverage": 0.995,
    "offset_px": [
-    -0.013,
-    -0.008
+    -0.006,
+    -0.006
    ]
   },
   {
    "visit": 2,
    "mjd": 61231.384,
    "year": 2026.5212,
-   "n_sources_all": 33,
-   "n_sources_cold": 38,
-   "noise": 0.494729,
+   "n_sources_all": 86,
+   "n_sources_cold": 84,
+   "noise": 0.188315,
    "coverage": 0.996,
    "offset_px": [
-    -0.008,
-    0.002
+    -0.002,
+    0.003
    ]
   }
  ],
- "movers": [],
+ "movers": [
+  {
+   "t0": 2026.0948,
+   "x0": 19.429,
+   "y0": 53.728,
+   "vx_px_yr": 0.5736,
+   "vy_px_yr": -1.2834,
+   "pm_arcsec_yr": 8.645,
+   "pm_err": 0.767,
+   "significance": 11.3,
+   "pa_deg": 204.1,
+   "snr": 12.8,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 18.951,
+     "y": 54.757,
+     "snr": 10.0
+    },
+    {
+     "visit": 1,
+     "x": 19.623,
+     "y": 53.367,
+     "snr": 10.4
+    },
+    {
+     "visit": 2,
+     "x": 19.595,
+     "y": 53.335,
+     "snr": 12.8
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m1",
+   "is_target": false
+  },
+  {
+   "t0": 2026.0042,
+   "x0": 40.351,
+   "y0": 37.628,
+   "vx_px_yr": 0.5114,
+   "vy_px_yr": 0.7546,
+   "pm_arcsec_yr": 5.606,
+   "pm_err": 0.785,
+   "significance": 7.1,
+   "pa_deg": 325.9,
+   "snr": 11.1,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 40.185,
+     "y": 37.385,
+     "snr": 11.1
+    },
+    {
+     "visit": 1,
+     "x": 40.182,
+     "y": 37.376,
+     "snr": 10.9
+    },
+    {
+     "visit": 2,
+     "x": 40.689,
+     "y": 38.128,
+     "snr": 11.0
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m2",
+   "is_target": false
+  }
+ ],
  "target": {
   "per_visit": [
    {
