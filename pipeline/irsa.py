@@ -18,7 +18,7 @@ SURVEY_START_MJD = 60796.0
 SURVEY_DAYS = 182.6
 
 session = requests.Session()
-session.headers["User-Agent"] = "skyblink-pipeline"
+session.headers["User-Agent"] = "wink-pipeline"
 
 
 class ArchiveBusy(Exception):

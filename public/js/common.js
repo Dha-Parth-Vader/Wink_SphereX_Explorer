@@ -11,6 +11,8 @@
   ];
   // the viewer lives under the Search Tool tab
   const PAGE_TO_NAV = { viewer: "search" };
+  // team logo: replace public/img/logo.svg (or point this at a .png) and every page picks it up
+  const LOGO = "img/logo.svg";
 
   // 2026.0 positions from pipeline/out/targets.json (Gaia DR3 or CatWISE2020 propagated), not J2000.
   // pmra/pmdec in mas/yr; fov in degrees.
@@ -128,7 +130,7 @@
   const store = {
     get(key, fallback) {
       try {
-        const raw = window.localStorage.getItem("skyblink." + key);
+        const raw = window.localStorage.getItem("wink." + key);
         return raw == null ? fallback : JSON.parse(raw);
       } catch (e) {
         return fallback;
@@ -136,7 +138,7 @@
     },
     set(key, value) {
       try {
-        window.localStorage.setItem("skyblink." + key, JSON.stringify(value));
+        window.localStorage.setItem("wink." + key, JSON.stringify(value));
       } catch (e) {
         /* storage unavailable: settings just won't be remembered */
       }
@@ -194,7 +196,7 @@
     });
 
     const header = el("header", { class: "site-header" }, el("div", { class: "bar" }, [
-      el("a", { class: "brand", href: "index.html" }, [el("span", { class: "brand-mark", "aria-hidden": "true" }, "✦"), "SkyBlink"]),
+      el("a", { class: "brand", href: "index.html" }, [el("img", { class: "brand-logo", src: LOGO, alt: "", width: "28", height: "28" }), "Wink"]),
       toggle,
       nav,
     ]));
@@ -208,7 +210,7 @@
     body.append(footer);
   }
 
-  window.SkyBlink = {
+  window.Wink = {
     NAV, TARGETS, FOV_OPTIONS, DEFAULT_FOV,
     parseRA, parseDec, formatRA, formatDec, formatFov, nearestFovOption,
     store, params, isEmbed, viewerUrl, el,

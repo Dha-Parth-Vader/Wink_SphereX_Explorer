@@ -10,7 +10,7 @@ window.LEARN_CHAPTERS = [
         title: "Finding a spot: RA and Dec",
         blocks: [
           { p: "Astronomers pin a position on the sky with two numbers, like longitude and latitude on Earth. Declination (Dec) runs from +90° at the north celestial pole to −90° at the south. Right ascension (RA) goes around the sky." },
-          { p: "RA is often written in hours instead of degrees, because the sky turns once a day. 24 hours of RA make the full 360°, so 1 hour = 15°. SkyBlink accepts either: 133.759 (degrees) or 08h55m10.8s (hours) mean the same place." },
+          { p: "RA is often written in hours instead of degrees, because the sky turns once a day. 24 hours of RA make the full 360°, so 1 hour = 15°. Wink accepts either: 133.759 (degrees) or 08h55m10.8s (hours) mean the same place." },
           { list: [
             "1 degree = 60 arcminutes (′). The full Moon is about 30′ wide.",
             "1 arcminute = 60 arcseconds (″). One SPHEREx pixel is about 6.2″.",
@@ -78,12 +78,12 @@ window.LEARN_CHAPTERS = [
           { p: "SPHEREx has 6 detectors. Each sits behind a special filter whose colour changes smoothly from one edge to the other, so one picture holds 17 slightly different colours. 6 detectors × 17 = 102 colours from 0.75 to 5 µm." },
           { p: "As the telescope steps across the sky, each star lands on a different part of the filter, so over many pictures every star is measured in every colour. That gives a spectrum: brightness against wavelength." },
           { list: [
-            "Detector 1: 0.75–1.1 µm",
-            "Detector 2: 1.1–1.6 µm",
-            "Detector 3: 1.6–2.4 µm",
-            "Detector 4: 2.4–3.8 µm",
-            "Detector 5: 3.8–4.4 µm",
-            "Detector 6: 4.4–5.0 µm",
+            "Detector 1: bands 1–17, 0.75–1.1 µm",
+            "Detector 2: bands 18–34, 1.1–1.6 µm",
+            "Detector 3: bands 35–51, 1.6–2.4 µm",
+            "Detector 4: bands 52–68, 2.4–3.8 µm",
+            "Detector 5: bands 69–85, 3.8–4.4 µm",
+            "Detector 6: bands 86–102, 4.4–5.0 µm",
           ] },
           { try: "In the Viewer, switch detectors. In the Sky Dome, press ▶ Sweep bands." },
         ],
@@ -94,7 +94,7 @@ window.LEARN_CHAPTERS = [
         blocks: [
           { p: "SPHEREx orbits over Earth's poles and photographs the sky in strips, about 600 exposures a day. After six months it has looked in every direction. The plan is four full-sky maps over about two years." },
           { p: "Areas near the poles of Earth's orbit (the ecliptic poles) are seen again and again and become extra deep. That's why R Draconis, close to the north ecliptic pole, has thousands of pictures." },
-          { p: "For SkyBlink, one 'date' is a visit: all the pictures of a spot taken within a few days. We stack those pictures together for each detector, which cuts the noise and keeps the colour comparison fair." },
+          { p: "For Wink, one 'date' is a visit: all the pictures of a spot taken within a few days. We stack those pictures together for each detector, which cuts the noise and keeps the colour comparison fair." },
         ],
       },
       {
@@ -126,7 +126,7 @@ window.LEARN_CHAPTERS = [
         blocks: [
           { p: "Percival Lowell was sure another 'Planet X' lay past Neptune. After his death, his observatory in Arizona hired Clyde Tombaugh, a young amateur astronomer from a Kansas farm, to search for it." },
           { p: "Tombaugh photographed the same patches of sky a few nights apart and flipped between the plates in a blink comparator. Stars stayed still; a planet would jump. On 18 February 1930 he spotted a faint dot that had moved between plates taken in January. It was Pluto." },
-          { p: "Pluto turned out to be far too small to be Lowell's Planet X, and in 2006 it was renamed a dwarf planet. The blinking method is exactly what SkyBlink does." },
+          { p: "Pluto turned out to be far too small to be Lowell's Planet X, and in 2006 it was renamed a dwarf planet. The blinking method is exactly what Wink does." },
         ],
       },
       {
@@ -142,7 +142,7 @@ window.LEARN_CHAPTERS = [
         title: "Citizen scientists",
         blocks: [
           { p: "You don't need to be a professional. In the Backyard Worlds: Planet 9 project, volunteers blink infrared images from NASA's WISE mission in their browser. They have found thousands of brown dwarf candidates, including some of the coldest known." },
-          { p: "SkyBlink brings the same idea to SPHEREx's newer, many-coloured pictures. When you find something, use Mark this in the Viewer to save a report and compare it in WiseView." },
+          { p: "Wink brings the same idea to SPHEREx's newer, many-coloured pictures. When you find something, use Mark this in the Viewer to save a report and compare it in WiseView." },
           { links: [["Backyard Worlds: Planet 9", "https://www.zooniverse.org/projects/marckuchner/backyard-worlds-planet-9"]] },
         ],
       },
@@ -158,7 +158,7 @@ window.LEARN_CHAPTERS = [
         title: "Imaging",
         blocks: [
           { p: "A telescope image is a grid of pixels, each holding how much light arrived from that bit of sky. Before we can compare images we clean them: subtract the faint glow of dust in our solar system, hide bad pixels, and line every picture up on the same grid with north up and east to the left." },
-          { p: "Every image also comes with flags that mark trouble: hot pixels, cosmic ray hits, ghosts from bright stars, saturated cores. SkyBlink can show those flags in red." },
+          { p: "Every image also comes with flags that mark trouble: hot pixels, cosmic ray hits, ghosts from bright stars, saturated cores. Wink can show those flags in red." },
         ],
       },
       {
@@ -169,7 +169,7 @@ window.LEARN_CHAPTERS = [
           { p: "A difference image subtracts one date from another. Things that didn't change cancel to grey. A moving star leaves a blue 'was here' spot and a red 'is here' spot next to it. A star that got brighter shows up as one red blob." },
           { list: [
             "Compare the same detector across dates, not single exposures. Each exposure sees a star in a slightly different colour, which can fake a change.",
-            "Saturated stars and partial-coverage dates can fool you. SkyBlink labels both.",
+            "Saturated stars and partial-coverage dates can fool you. Wink labels both.",
           ] },
           { try: "In the Viewer, choose Subtract → minus first to see the blue and red pair." },
         ],

@@ -437,7 +437,7 @@ def origin_allowed(origin):
 
 
 class Handler(SimpleHTTPRequestHandler):
-    server_version = "SkyBlink"
+    server_version = "Wink"
 
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=str(SITE), **kw)
@@ -566,7 +566,7 @@ def main(argv=None):
     JOB_SLOTS = threading.Semaphore(max(1, int(os.environ.get("LIVE_MAX_JOBS", 1))))
     httpd = ThreadingHTTPServer((ARGS.host, ARGS.port), Handler)
     httpd.daemon_threads = True
-    print(f"SkyBlink on http://localhost:{ARGS.port}/  (site {SITE}, live cache {LIVE}, "
+    print(f"Wink on http://localhost:{ARGS.port}/  (site {SITE}, live cache {LIVE}, "
           f"{os.environ.get('LIVE_MAX_JOBS', 1)} job(s) at a time, origins {os.environ.get('ALLOWED_ORIGINS', '*')})",
           flush=True)
     try:

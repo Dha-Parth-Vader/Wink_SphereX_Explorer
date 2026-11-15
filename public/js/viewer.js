@@ -8,7 +8,7 @@
   const MAX_SWAPS_PER_S = 3;
   const MIN_SWAP_MS = 1000 / MAX_SWAPS_PER_S;
   const SR_PER_PX = (6.15 / 206264.806) ** 2;
-  const MARKS_KEY = "skyblink.marks";
+  const MARKS_KEY = "wink.marks";
 
   const FOV_OPTIONS = [
     { deg: 2 / 60, label: "2′ (zoom)" },
@@ -136,10 +136,15 @@
     return w && w.length === 2 ? w[0].toFixed(2) + "–" + w[1].toFixed(2) + " µm" : "–";
   }
 
+  // SPHEREx: 6 detectors x 17 bands; detector d holds bands 17(d-1)+1 .. 17d
+  function bandRange(det) {
+    return det === "all" ? "bands 1–102" : "bands " + (17 * (det - 1) + 1) + "–" + 17 * det;
+  }
+
   function detLabel(det, frames) {
     const f = frames.find((x) => String(x.detector) === det);
     const w = f ? " · " + wavelengthText(f.wavelength_um) : "";
-    return (det === "all" ? "All detectors" : "Detector " + det) + w;
+    return (det === "all" ? "All detectors" : "Detector " + det) + " · " + bandRange(det === "all" ? "all" : +det) + w;
   }
 
   function toast(msg) {
@@ -987,7 +992,7 @@
     setKV("this-image", [
       ["Date", cur.date + (S.mode === "add" ? " (showing all dates added)" : "")],
       ["Visit", String(cur.visit + 1) + " of " + new Set(S.res.frames.map((f) => f.visit)).size],
-      ["Detector", cur.detector === "all" ? "All six, added" : String(cur.detector)],
+      ["Detector", cur.detector === "all" ? "All six, added (bands 1–102)" : cur.detector + " (" + bandRange(cur.detector) + ")"],
       ["Wavelength", wavelengthText(cur.wavelength_um)],
       ["Exposures", String(cur.n_exposures ?? "–")],
       ["Coverage", typeof cur.coverage === "number" ? Math.round(cur.coverage * 100) + "% of the patch" : "–"],
@@ -1107,8 +1112,8 @@
     if (S.res.crop.covered < 0.99) add("b-part", "Partial field");
     const info = el("button", {
       type: "button", class: "badge b-info",
-      title: "Faint diagonal bands on some dates are real scattered light inside SPHEREx, not a bug in SkyBlink.",
-      onclick: () => toast("Faint diagonal bands on some dates are real scattered light inside SPHEREx, not a bug in SkyBlink."),
+      title: "Faint diagonal bands on some dates are real scattered light inside SPHEREx, not a bug in Wink.",
+      onclick: () => toast("Faint diagonal bands on some dates are real scattered light inside SPHEREx, not a bug in Wink."),
     }, "Faint diagonal glow?");
     box.appendChild(info);
   }
@@ -1149,7 +1154,7 @@
     const name = S.name || (P && !/^live/.test(P.id) ? P.name : "") ||
       (S.ra !== null ? fmtRA(S.ra) + " " + fmtDec(S.dec) : "SPHEREx viewer");
     $("view-title").textContent = name;
-    document.title = name + " · SkyBlink";
+    document.title = name + " · Wink";
     const cur = S.res && S.frames[S.i];
     canvas.setAttribute("aria-label", cur
       ? "SPHEREx image of " + name + ", " + (S.mode === "add" ? "all dates added" : cur.date) + ", " +
@@ -1330,7 +1335,7 @@
   }
 
   function reportText() {
-    const lines = ["SkyBlink find report", "Made " + new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC", ""];
+    const lines = ["Wink find report", "Made " + new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC", ""];
     if (!S.marks.length) lines.push("No marks yet.");
     const credits = new Set();
     S.marks.forEach((m, j) => {
@@ -1338,7 +1343,7 @@
       lines.push("   Position: RA " + fmtRA(m.ra) + " (" + m.ra.toFixed(6) + "°), Dec " + fmtDec(m.dec) + " (" + m.dec.toFixed(6) + "°)");
       lines.push("   Date: " + m.date + " (MJD " + m.mjd.toFixed(2) + "), " + (m.detector === "all" ? "all detectors" : "detector " + m.detector));
       lines.push("   Field of view: " + m.fov_arcmin + "′" + (m.field ? " around " + m.field : ""));
-      lines.push("   SkyBlink: " + m.link);
+      lines.push("   Wink: " + m.link);
       lines.push("   WiseView: " + m.wiseview);
       if (!m.layers.length) lines.push("   Nearby catalogue sources: no catalogues were loaded");
       else if (!m.nearby.length) lines.push("   Nearby catalogue sources: none within 15″ in " + m.layers.map((l) => (l === "gaia" ? "Gaia DR3" : "CatWISE2020")).join(" or "));
@@ -1457,7 +1462,7 @@
     $("btn-copy-link").addEventListener("click", () => copyText(shareURL(), "Link"));
     $("btn-copy-embed").addEventListener("click", () => {
       const src = shareURL({ embed: "1" }).replace(/&/g, "&amp;");
-      copyText('<iframe src="' + src + '" width="640" height="720" style="border:0" title="SkyBlink: SPHEREx blink viewer" loading="lazy"></iframe>', "Embed code");
+      copyText('<iframe src="' + src + '" width="640" height="720" style="border:0" title="Wink: SPHEREx blink viewer" loading="lazy"></iframe>', "Embed code");
     });
 
     $("btn-play").addEventListener("click", togglePlay);
@@ -1509,7 +1514,7 @@
     $("btn-download").addEventListener("click", () => {
       if (!S.res) { toast("Load an image first"); return; }
       const cur = S.frames[S.i];
-      const name = "skyblink_" + (S.res.patch.id || "patch") + "_" + (S.mode === "add" ? "all-dates" : cur.date) + "_det-" + cur.detector + (S.mode === "sub" ? "_diff" : "") + ".png";
+      const name = "wink_" + (S.res.patch.id || "patch") + "_" + (S.mode === "add" ? "all-dates" : cur.date) + "_det-" + cur.detector + (S.mode === "sub" ? "_diff" : "") + ".png";
       canvas.toBlob((b) => { if (b) download(name, b); }, "image/png");
     });
 
@@ -1517,10 +1522,10 @@
     $("mark-cancel").addEventListener("click", cancelMark);
     $("mark-label").addEventListener("submit", (e) => { e.preventDefault(); saveMark($("mark-text").value.trim()); });
     $("btn-report-copy").addEventListener("click", () => copyText(reportText(), "Report"));
-    $("btn-report-txt").addEventListener("click", () => download("skyblink_report.txt", new Blob([reportText()], { type: "text/plain" })));
+    $("btn-report-txt").addEventListener("click", () => download("wink_report.txt", new Blob([reportText()], { type: "text/plain" })));
     $("btn-report-json").addEventListener("click", () => {
-      const body = { tool: "SkyBlink", made: new Date().toISOString(), marks: S.marks, text: reportText() };
-      download("skyblink_report.json", new Blob([JSON.stringify(body, null, 2)], { type: "application/json" }));
+      const body = { tool: "Wink", made: new Date().toISOString(), marks: S.marks, text: reportText() };
+      download("wink_report.json", new Blob([JSON.stringify(body, null, 2)], { type: "application/json" }));
     });
 
     canvas.addEventListener("mousemove", onHover);

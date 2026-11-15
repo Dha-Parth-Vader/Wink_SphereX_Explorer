@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sky Dome · SkyBlink</title>
+  <title>Sky Dome · Wink</title>
   <meta name="description" content="Look around the whole sky, sweep through SPHEREx's 102 colours and open any target in the Viewer.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="dome" class="page-dome">
@@ -28,8 +31,8 @@
         <button class="btn" type="button" id="btn-zoom-in" aria-label="Zoom in">+</button>
         <button class="btn" type="button" id="btn-zoom-out" aria-label="Zoom out">−</button>
         <button class="btn btn-sm" type="button" id="btn-wide">Wide</button>
-        <button class="btn btn-sm" type="button" id="btn-labels" aria-pressed="true">Labels</button>
-        <button class="btn btn-sm" type="button" id="btn-grid" aria-pressed="false">Grid</button>
+        <label class="check small dome-check"><input type="checkbox" id="chk-labels" checked> <span>Labels</span></label>
+        <label class="check small dome-check"><input type="checkbox" id="chk-grid" checked> <span>Grid</span></label>
       </div>
 
       <section class="dome-panel drawer" id="drawer" aria-labelledby="drawer-title" hidden>
@@ -69,6 +72,7 @@
           <label for="band">Band</label>
           <input type="range" id="band" min="1" max="102" step="1" value="57">
           <output id="band-out" for="band"></output>
+          <div class="det-strip" id="det-strip" aria-label="Which detector covers which bands"></div>
           <div class="row">
             <label class="check small"><input type="checkbox" id="all-bands" checked> <span>All bands</span></label>
             <button class="btn btn-sm" type="button" id="sweep-bands" aria-pressed="false">▶ Sweep bands</button>

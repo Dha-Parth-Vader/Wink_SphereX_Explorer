@@ -2,7 +2,7 @@
 // markers, grid and labels on a second canvas that is redrawn only when something changes.
 (function () {
   "use strict";
-  const SB = window.SkyBlink;
+  const SB = window.Wink;
   const { el } = SB;
   const DEG = Math.PI / 180;
   const MAX_STEPS_PER_S = 3;
@@ -29,7 +29,7 @@
     allBands: q.get("band") == null,
     dateIndex: null,
     maxEpochs: 1,
-    labels: true, grid: false,
+    labels: true, grid: true,
     hiddenCats: new Set(), onlyViewer: false, search: "",
     selected: null,
     cubes: new Map(),
@@ -500,17 +500,16 @@
   document.getElementById("btn-zoom-in").addEventListener("click", () => setView(view.ra, view.dec, view.fov / 1.5));
   document.getElementById("btn-zoom-out").addEventListener("click", () => setView(view.ra, view.dec, view.fov * 1.5));
   document.getElementById("btn-wide").addEventListener("click", () => setView(view.ra, view.dec, 120));
-  function toggleBtn(id, key) {
-    const btn = document.getElementById(id);
-    btn.setAttribute("aria-pressed", String(state[key]));
-    btn.addEventListener("click", () => {
-      state[key] = !state[key];
-      btn.setAttribute("aria-pressed", String(state[key]));
+  function toggleCheck(id, key) {
+    const box = document.getElementById(id);
+    box.checked = state[key];
+    box.addEventListener("change", () => {
+      state[key] = box.checked;
       invalidate();
     });
   }
-  toggleBtn("btn-labels", "labels");
-  toggleBtn("btn-grid", "grid");
+  toggleCheck("chk-labels", "labels");
+  toggleCheck("chk-grid", "grid");
 
   // Objects drawer --------------------------------------------------------------------------
   const listEl = document.getElementById("obj-list");
@@ -612,8 +611,8 @@
     if (!p) return;
     const band = state.bands[state.band - 1];
     document.getElementById("d-band").textContent = state.allBands
-      ? "All 102 bands (17 per row, detectors 1 to 6 top to bottom)"
-      : "Band " + state.band + " · detector " + band.detector + " · " + band.center_um.toFixed(2) + " µm";
+      ? "All 102 bands: one row per detector, D1 (bands 1–17) at the top to D6 (bands 86–102) at the bottom"
+      : "Band " + state.band + " of 102 · " + detText(band.detector) + " · " + band.center_um.toFixed(2) + " µm";
     const ep = epochOf(p);
     document.getElementById("d-date").textContent = ep ? "Date: " + mjdToDate(ep.mjd) : "";
     tctx.imageSmoothingEnabled = false;
@@ -678,12 +677,33 @@
   const dateOut = document.getElementById("date-out");
   const sweepDatesBtn = document.getElementById("sweep-dates");
 
+  // which detector holds which bands: D1 = bands 1-17 ... D6 = bands 86-102
+  function detText(det) {
+    return "detector " + det + " (bands " + (17 * (det - 1) + 1) + "–" + 17 * det + ")";
+  }
+
+  const detStrip = document.getElementById("det-strip");
+  function renderDetStrip() {
+    detStrip.textContent = "";
+    for (let d = 1; d <= 6; d++) {
+      const own = state.bands.filter((b) => b.detector === d);
+      const lo = own.length ? (own[0].center_um - own[0].width_um / 2).toFixed(2) : "";
+      const hi = own.length ? (own[own.length - 1].center_um + own[own.length - 1].width_um / 2).toFixed(2) : "";
+      detStrip.appendChild(SB.el("span", { class: "det-seg", "data-det": String(d),
+        title: "Detector " + d + ": bands " + (17 * (d - 1) + 1) + "–" + 17 * d + (lo ? ", " + lo + "–" + hi + " µm" : "") },
+        [SB.el("b", {}, "D" + d), " " + (17 * (d - 1) + 1) + "–" + 17 * d]));
+    }
+  }
+
   function showBand() {
     bandInput.value = state.band;
     bandInput.disabled = state.allBands;
     allBandsBox.checked = state.allBands;
     const b = state.bands[state.band - 1];
-    bandOut.textContent = state.allBands ? "0.75–5 µm" : (b ? state.band + " · D" + b.detector + " · " + b.center_um.toFixed(2) + " µm" : String(state.band));
+    bandOut.textContent = state.allBands ? "All 102 · 0.75–5 µm" : (b ? state.band + " · D" + b.detector + " · " + b.center_um.toFixed(2) + " µm" : String(state.band));
+    for (const seg of detStrip.children) {
+      seg.classList.toggle("on", !state.allBands && b && +seg.dataset.det === b.detector);
+    }
     updateDetails();
     invalidate();
   }
@@ -756,6 +776,7 @@
     const get = (path) => fetch(path).then((r) => { if (!r.ok) throw new Error(path + " " + r.status); return r.json(); });
     Promise.all([get("data/dome/bands.json"), get("data/dome/poi.json")]).then(([bands, poi]) => {
       state.bands = bands;
+      renderDetStrip();
       state.categories = poi.categories || {};
       state.pois = poi.pois || [];
       state.maxEpochs = Math.max(1, ...state.pois.map((p) => (p.epochs || []).length));

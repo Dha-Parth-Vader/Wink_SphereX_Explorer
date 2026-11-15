@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  const SB = window.SkyBlink;
+  const SB = window.Wink;
   const { el } = SB;
 
   const TYPE_LABEL = { "brown-dwarf": "Brown dwarf", star: "Star", variable: "Variable", nebula: "Nebula", asteroid: "Asteroid" };

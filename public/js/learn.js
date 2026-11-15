@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  const { el } = window.SkyBlink;
+  const { el } = window.Wink;
   const navList = document.getElementById("chapter-nav");
   const holder = document.getElementById("chapters");
 

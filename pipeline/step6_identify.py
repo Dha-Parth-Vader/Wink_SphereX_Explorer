@@ -322,7 +322,7 @@ def skybot(target_id, mjd, ra, dec, radius_deg):
         return cache[key]
     params = {"-ep": f"{mjd + 2400000.5:.5f}", "-ra": f"{ra:.6f}", "-dec": f"{dec:.6f}",
               "-rd": f"{radius_deg:.5f}", "-mime": "text", "-output": "obs", "-loc": "500",
-              "-filter": "0", "-objFilter": "111", "-refsys": "EQJ2000", "-from": "SkyBlink"}
+              "-filter": "0", "-objFilter": "111", "-refsys": "EQJ2000", "-from": "Wink"}
     url = SKYBOT_URL + "?" + urllib.parse.urlencode(params)
     last = None
     for delay in (0, 3, 10):

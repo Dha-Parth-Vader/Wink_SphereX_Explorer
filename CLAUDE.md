@@ -1,8 +1,8 @@
-# SkyBlink: Project Brief (CLAUDE.md)
+# Wink: Project Brief (CLAUDE.md)
 
 ## What we're building
-SkyBlink is a public web tool for NASA Space Apps 2026, challenge "Planet X & SPHEREx". A user enters a sky
-position (RA, Dec), and SkyBlink shows a series of real SPHEREx images of that patch like a little video
+Wink is a public web tool for NASA Space Apps 2026, challenge "Planet X & SPHEREx". A user enters a sky
+position (RA, Dec), and Wink shows a series of real SPHEREx images of that patch like a little video
 ("blinking"), so anyone can spot things that move or change brightness. It must be tested on 5 targets:
 Barnard's Star, Epsilon Indi B, WISE 0855-0714 (RA 08h55m10.831s, Dec -07d14m42.53s), RW Aurigae, R Draconis.
 Audience: amateurs. Plain language everywhere. No login.
