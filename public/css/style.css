@@ -634,3 +634,21 @@ body.embed .v-grid { grid-template-columns: minmax(0, 1fr); }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Community finds */
+.g-community { color: var(--mover); }
+.mark-share-hint { flex-basis: 100%; text-align: center; margin: 0; }
+.mark-label select { min-height: 36px; }
+.hunt-tools { margin-bottom: 0.75rem; }
+.hunt-map { padding: 0.75rem; }
+.hunt-map canvas { display: block; width: 100%; }
+.hunt-note { margin: 0.4rem 0 0; min-height: 1.4em; }
+.hunt-h { font-size: var(--fs-lg); margin: 1.5rem 0 0.6rem; }
+.hunt-glyph { display: inline-block; width: 1.1em; text-align: center; }
+.h-mover { color: var(--mover); }
+.h-variable { color: var(--variable); }
+.h-artifact { color: var(--faint); }
+.h-target { color: var(--muted); }
+.hunt-list { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.4rem; }
+.hunt-item { display: flex; gap: 0.6rem; align-items: baseline; text-decoration: none; color: inherit; padding: 0.6rem 0.8rem; }
+.hunt-item:hover { border-color: var(--accent); color: inherit; }

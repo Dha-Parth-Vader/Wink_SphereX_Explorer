@@ -23,3 +23,10 @@ services:
         value: "8"
       - key: SPHEREX_LIVE_CACHE
         value: /tmp/spherex-live
+      # community marks (Supabase). Secrets: set them in the Render dashboard; sync: false keeps them out of git
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: MARKS_SALT
+        sync: false
