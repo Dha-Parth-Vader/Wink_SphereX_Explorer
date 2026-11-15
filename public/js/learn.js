@@ -8,6 +8,7 @@
     if (b.p) return el("p", {}, b.p);
     if (b.list) return el("ul", {}, b.list.map((item) => el("li", {}, item)));
     if (b.try) return el("p", { class: "try" }, b.try);
+    if (b.go) return el("p", { class: "try" }, el("a", { href: b.go[1] }, b.go[0]));
     if (b.links) {
       const parts = [];
       b.links.forEach(([label, href], i) => {

@@ -10,7 +10,7 @@
     { id: "about", label: "About", href: "about.html" },
   ];
   // the viewer lives under the Search Tool tab
-  const PAGE_TO_NAV = { viewer: "search" };
+  const PAGE_TO_NAV = { viewer: "search", simulator: "learn" };
   // team logo: replace public/img/logo.svg (or point this at a .png) and every page picks it up
   const LOGO = "img/logo.svg";
 

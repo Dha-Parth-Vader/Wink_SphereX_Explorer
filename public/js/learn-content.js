@@ -135,6 +135,7 @@ window.LEARN_CHAPTERS = [
         blocks: [
           { p: "In 2016 Konstantin Batygin and Mike Brown noticed that several distant icy bodies past Neptune have oddly lined-up orbits. One explanation is a planet several times Earth's mass, far beyond Pluto. Nobody has found it yet, and some astronomers think the pattern has other causes." },
           { p: "A planet that far out would be faint and slow, so surveys look for it with long-baseline images and infrared light." },
+          { go: ["Try it: hide a planet in real SPHEREx pictures and see whether you could find it →", "simulator.html"] },
         ],
       },
       {

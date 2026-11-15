@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What would SPHEREx see? · Wink</title>
+  <meta name="description" content="Hide a made-up planet in real SPHEREx pictures and try to find it by blinking. Brightness, motion and the detection limit come from physics and the pictures' own noise.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="simulator">
+  <main id="main">
+    <div class="wrap">
+      <h1>What would SPHEREx see?</h1>
+      <p class="lead">Hide a made-up planet in real SPHEREx pictures, then try to find it by blinking. Its brightness and motion come from physics, and the detection limit comes from each picture's own noise. Often the honest answer is “you can't see it”.</p>
+
+      <div class="sim-grid">
+        <section class="card sim-controls" aria-label="Set up the object">
+          <fieldset class="seg sim-mode">
+            <legend>What to hide</legend>
+            <label><input type="radio" name="sim-mode" value="planet" checked> Planet X in our solar system</label>
+            <label><input type="radio" name="sim-mode" value="cold"> Cold world near the Sun</label>
+          </fieldset>
+
+          <div id="planet-opts" class="sim-opts">
+            <label class="sim-slider">Distance from the Sun <output id="out-au"></output>
+              <input type="range" id="in-au" min="0" max="100" step="1"></label>
+            <p class="hint">Earth is 1 AU from the Sun, Neptune 30 AU. Planet Nine, if it exists, could be 400 to 800 AU away.</p>
+            <label class="sim-slider">Size <output id="out-re"></output>
+              <input type="range" id="in-re" min="0.5" max="15" step="0.5" value="4"></label>
+            <label class="sim-slider">How much light it reflects <output id="out-albedo"></output>
+              <input type="range" id="in-albedo" min="0.05" max="0.7" step="0.05" value="0.3"></label>
+            <p class="hint">Far from the Sun a planet is too cold to glow at SPHEREx's wavelengths, so all we could see is reflected sunlight.</p>
+          </div>
+
+          <div id="cold-opts" class="sim-opts" hidden>
+            <label class="sim-field">Kind of object
+              <select id="in-twin">
+                <option value="y">Y dwarf, about 400 K (a twin of WISE 1405+5534)</option>
+                <option value="t">T dwarf, about 800 K (a twin of Gliese 570 D)</option>
+              </select></label>
+            <label class="sim-slider">Distance <output id="out-ly"></output>
+              <input type="range" id="in-ly" min="0" max="100" step="1"></label>
+            <label class="sim-slider">Motion across the sky <output id="out-pm"></output>
+              <input type="range" id="in-pm" min="0" max="10" step="0.1" value="1"></label>
+            <label class="sim-slider">Moving towards <output id="out-pa"></output>
+              <input type="range" id="in-pa" min="0" max="359" step="1" value="60"></label>
+            <p class="hint">These glow by their own warmth, mostly at 4 to 5 µm. Brightness comes from what our pipeline measured for the real object, scaled by distance.</p>
+          </div>
+
+          <label class="sim-field">Field
+            <select id="in-field"></select></label>
+          <label class="sim-field">Detector
+            <select id="in-det">
+              <option value="1" selected>1 · 0.75–1.09 µm</option>
+              <option value="2">2 · 1.10–1.62 µm</option>
+              <option value="3">3 · 1.63–2.41 µm</option>
+              <option value="4">4 · 2.42–3.82 µm</option>
+              <option value="5">5 · 3.83–4.41 µm</option>
+              <option value="6">6 · 4.42–5.00 µm</option>
+              <option value="all">All six added</option>
+            </select></label>
+
+          <div class="row sim-actions">
+            <button type="button" class="btn btn-primary" id="btn-hide">Hide it somewhere</button>
+            <button type="button" class="btn" id="btn-reveal" aria-pressed="true">Hide the circle</button>
+          </div>
+          <p class="hint">Or click the picture to put it there on the first date.</p>
+        </section>
+
+        <section class="sim-stage" id="sim-stage" aria-label="Pictures with the simulated object">
+          <div class="badges"><span class="badge b-sim">Simulated object added</span></div>
+          <canvas id="sim-canvas" tabindex="0" role="img" aria-label="Loading"></canvas>
+          <p class="caption" id="sim-caption"></p>
+          <p class="sim-guess" id="sim-guess" role="status" aria-live="polite"></p>
+          <div class="player">
+            <button type="button" class="btn icon" id="btn-prev" aria-label="Previous date">◀</button>
+            <button type="button" class="btn btn-primary" id="btn-play" aria-pressed="false">▶ Play</button>
+            <button type="button" class="btn icon" id="btn-next" aria-label="Next date">▶</button>
+          </div>
+        </section>
+      </div>
+
+      <section class="card sim-result" aria-labelledby="sim-result-title">
+        <h2 id="sim-result-title">Could SPHEREx see it?</h2>
+        <p id="sim-verdict" role="status" aria-live="polite">Loading the pictures…</p>
+        <div class="sim-table-wrap">
+          <table class="data-table">
+            <thead><tr><th scope="col">Date</th><th scope="col">Its brightness (µJy)</th><th scope="col">Faintest SPHEREx can pick out (µJy)</th><th scope="col">Signal / noise</th><th scope="col">Verdict</th></tr></thead>
+            <tbody id="sim-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card lesson" aria-labelledby="sim-how-title">
+        <h2 id="sim-how-title">How this works</h2>
+        <p><strong>Brightness.</strong> A planet shines by reflected sunlight. Twice as far from the Sun, it gets a quarter of the light, and we see a quarter of what it reflects back, so it looks 16 times fainter. A cold world between the stars shines by its own warmth, so it only fades with the square of its distance.</p>
+        <p><strong>Motion.</strong> The pictures were taken months apart, from different places on Earth's orbit. A nearby planet seems to jump against the stars because we moved, not because it did. At a few hundred AU the jump between dates is bigger than the whole picture.</p>
+        <p><strong>The limit.</strong> We measure the noise in each picture and call something visible when it is 5 times brighter than that noise. Between 3 and 5 times, you can only find it if you already know where to look.</p>
+        <p><strong>What we simplified.</strong> The Sun is treated as a 5772 K glowing ball and the planet as evenly grey, on a circular orbit. The object is added as a smooth blob without its own noise, and pictures from one date are stacked, so you can't see it drift during a date. The cold worlds use our own pipeline's measurements of real brown dwarfs. Real searches add many more dates and much more care, and SPHEREx's all-sky maps get deeper as it keeps observing.</p>
+      </section>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/data-source.js"></script>
+  <script src="js/simulator.js"></script>
+</body>
+</html>
