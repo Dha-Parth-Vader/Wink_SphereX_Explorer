@@ -275,6 +275,29 @@ legend { padding: 0 0.4rem; color: var(--muted); font-size: var(--fs-sm); font-w
 .lesson li { margin-bottom: 0.3em; }
 .lesson .try { border-left: 3px solid var(--accent); padding: 0.5rem 0.8rem; background: rgba(124, 200, 255, 0.07); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
 .lesson .links { font-size: var(--fs-sm); }
+.lesson-goal { color: var(--text); font-weight: 500; }
+.lesson-goal .kicker { margin-right: 0.35rem; }
+.lesson-body { margin-top: 0.8rem; display: grid; gap: 0.6rem; }
+.lesson-stage { display: grid; gap: 0.3rem; justify-items: start; }
+.lesson-canvas, .lesson-plot {
+  width: 100%; max-width: 360px; height: auto; aspect-ratio: 1; display: block;
+  image-rendering: pixelated; background: #000; border: 1px solid var(--line); border-radius: var(--r-sm);
+}
+.lesson-canvas:focus-visible, .lesson-plot:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lesson-plot { background: var(--bg-2); max-width: 420px; }
+.lesson-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.lesson-status, .lesson-hint { font: 400 var(--fs-xs) var(--mono); margin: 0; }
+.lesson-slider { display: grid; gap: 0.3rem; max-width: 612px; }
+.lesson-strip-wrap { max-width: 612px; }
+.lesson-strip { width: 100%; height: auto; display: block; }
+.lesson-result { margin: 0; padding: 0.55rem 0.8rem; border-left: 3px solid var(--accent); background: var(--bg-2); max-width: 70ch; min-height: 3.2em; }
+.lesson-credit { font-size: var(--fs-xs); margin: 0; }
+.lesson-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 0.75rem; }
+.lesson-pair figure { margin: 0; display: grid; gap: 0.25rem; }
+.lesson-pair .lesson-canvas { max-width: 220px; }
+.lesson-pair figcaption { font: 400 var(--fs-xs) var(--mono); }
+.learn-links { font-size: var(--fs-sm); margin: 0.4rem 0 0; }
+.learn-links a + a::before { content: " · "; color: var(--muted); }
 @media (max-width: 860px) {
   .learn { grid-template-columns: 1fr; }
   .chapter-nav { position: static; }

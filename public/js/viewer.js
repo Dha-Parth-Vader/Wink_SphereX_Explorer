@@ -407,6 +407,7 @@
       setupFrames();
       hideStatus();
       renderAll();
+      renderLearnLinks();
     } catch (e) {
       if (token !== S.token || e.code === "cancelled") return;
       showError(e);
@@ -419,6 +420,25 @@
     S.res = null;
     S.frames = [];
     renderAll();
+    renderLearnLinks();
+  }
+
+  // hands-on Education lessons that fit what this patch shows
+  function renderLearnLinks() {
+    const box = $("learn-links");
+    if (!box) return;
+    box.textContent = "";
+    const r = S.res;
+    if (!r) { box.hidden = true; return; }
+    const v = r.verdicts || {}, kind = r.patch && r.patch.kind;
+    const links = [];
+    if (v.motion === "moves") links.push(["lesson-mover", "Find the mover"], ["lesson-moved", "How we know it moved"]);
+    if (kind === "brown-dwarf") links.push(["lesson-wavelength", "Colours you can't see"]);
+    if (v.variability === "changing" || v.variability === "possible change") links.push(["lesson-colour", "A star that changes colour"]);
+    if (!links.length || r.source === "live") links.push(["lesson-planetx", "Could SPHEREx catch Planet X?"]);
+    box.append(el("span", { class: "muted" }, "Learn: "));
+    for (const [id, label] of links) box.append(el("a", { href: "learn.html#" + id }, label));
+    box.hidden = false;
   }
 
   function showEmpty() {
