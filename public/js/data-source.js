@@ -11,6 +11,8 @@
   const WAKE_WINDOW_MS = 75000;
   const MIN_DOWNLOAD_FOV = 5 / 60;
   const DEFAULT_LAYERS = ["gaia", "wise"];
+  // 2MASS is opt-in so "layers missing = gaia,wise" (R32) still holds; the live server ignores it for now
+  const KNOWN_LAYERS = ["gaia", "wise", "tmass"];
   const D2R = Math.PI / 180;
 
   class DataError extends Error {
@@ -142,7 +144,7 @@
   function normaliseLayers(layers) {
     if (layers === undefined || layers === null) return DEFAULT_LAYERS.slice();
     const list = Array.isArray(layers) ? layers : String(layers).split(",");
-    return list.map((s) => s.trim().toLowerCase()).filter((s) => DEFAULT_LAYERS.includes(s));
+    return list.map((s) => s.trim().toLowerCase()).filter((s) => KNOWN_LAYERS.includes(s));
   }
 
   function nearestOf(list, ra, dec) {

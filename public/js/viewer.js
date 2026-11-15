@@ -28,6 +28,16 @@
     { id: "rdra", name: "R Draconis", ra: 248.167233, dec: 66.755024, pmra: -20.64, pmdec: 6.15, fov: 10 / 60, tag: "varies" },
   ];
 
+  const LAYER_ORDER = ["gaia", "wise", "tmass"];
+  const LAYER_NAMES = { gaia: "Gaia DR3", wise: "CatWISE2020", tmass: "2MASS" };
+  const LAYER_EPOCH = { gaia: 2016.0, wise: 2015.4, tmass: 1999.0 };
+  // 2MASS bands: centre wavelength (µm) and zero-magnitude flux (Jy), Cohen et al. 2003
+  const TMASS_BANDS = [
+    { key: "j", name: "J", um: 1.235, zp: 1594 },
+    { key: "h", name: "H", um: 1.662, zp: 1024 },
+    { key: "k", name: "Ks", um: 2.159, zp: 666.7 },
+  ];
+
   const MODE_HINTS = {
     each: "Blink through the dates. Something that jumps is moving; something that pulses is changing brightness.",
     add: "All dates added together: faint things show up better, and movers smear into a short streak.",
@@ -36,7 +46,7 @@
 
   const S = {
     ra: null, dec: null, fov: 10 / 60, name: "", det: "all", mode: "each", ref: "first",
-    flags: false, gaia: true, wise: true, track: true, embed: false, speed: 2,
+    flags: false, gaia: true, wise: true, tmass: true, track: true, embed: false, speed: 2,
     layers: ["gaia", "wise"], passthrough: {},
     res: null, frames: [], i: 0, pix: new Map(),
     playing: false, playTimer: null, lastSwap: -Infinity, wantFrame: 0, swapTimer: null,
@@ -197,13 +207,14 @@
     S.flags = q.get("flags") === "1";
     S.gaia = q.get("gaia") !== "0";
     S.wise = q.get("wise") !== "0";
+    S.tmass = q.get("tmass") !== "0";
     S.track = q.get("track") !== "0";
     S.embed = q.get("embed") === "1";
     const speed = parseInt(q.get("speed"), 10);
     if (isFinite(speed)) S.speed = clamp(speed, 1, MAX_SWAPS_PER_S);
     if (q.has("layers")) {
       const l = q.get("layers").toLowerCase();
-      S.layers = l === "" || l === "none" ? [] : l.split(",").map((s) => s.trim()).filter((s) => s === "gaia" || s === "wise");
+      S.layers = l === "" || l === "none" ? [] : l.split(",").map((s) => s.trim()).filter((s) => LAYER_ORDER.includes(s));
     }
     for (const k of ["source", "api"]) if (q.get(k)) S.passthrough[k] = q.get(k);
   }
@@ -221,6 +232,7 @@
     if (S.flags) q.set("flags", "1");
     if (!S.gaia) q.set("gaia", "0");
     if (!S.wise) q.set("wise", "0");
+    if (!S.tmass) q.set("tmass", "0");
     if (!S.track) q.set("track", "0");
     if (S.layers.join(",") !== "gaia,wise") q.set("layers", S.layers.length ? S.layers.join(",") : "none");
     if (S.speed !== 2) q.set("speed", String(S.speed));
@@ -667,6 +679,8 @@
         ctx.beginPath();
         if (shape === "diamond") {
           ctx.moveTo(x, y - r); ctx.lineTo(x + r, y); ctx.lineTo(x, y + r); ctx.lineTo(x - r, y); ctx.closePath();
+        } else if (shape === "triangle") {
+          ctx.moveTo(x, y - r); ctx.lineTo(x + r * 0.9, y + r * 0.6); ctx.lineTo(x - r * 0.9, y + r * 0.6); ctx.closePath();
         } else {
           ctx.rect(x - r * 0.8, y - r * 0.8, r * 1.6, r * 1.6);
         }
@@ -675,6 +689,7 @@
     };
     if (S.gaia && S.res.overlays.gaia) drawCat(S.res.overlays.gaia, 2016.0, cssVar("--gaia", "#5ce1e6"), "diamond");
     if (S.wise && S.res.overlays.wise) drawCat(S.res.overlays.wise, 2015.4, cssVar("--wise", "#ffb347"), "square");
+    if (S.tmass && S.res.overlays.tmass) drawCat(S.res.overlays.tmass, 1999.0, cssVar("--tmass", "#c3a6ff"), "triangle");
 
     const pxPerArcsec = canvas.width / view().n / P.pixel_scale_arcsec;
 
@@ -1073,26 +1088,26 @@
   function renderLayersPanel() {
     $("ly-flags").checked = S.flags;
     $("ly-track").checked = S.track;
-    for (const k of ["gaia", "wise"]) {
+    for (const k of LAYER_ORDER) {
       const box = $("ly-" + k), hint = $("ly-" + k + "-hint");
       const loaded = S.layers.includes(k);
       box.disabled = !loaded;
       box.checked = loaded && S[k];
       hint.textContent = "";
-      const nice = k === "gaia" ? "Gaia" : "WISE";
+      const nice = { gaia: "Gaia", wise: "WISE", tmass: "2MASS" }[k];
       if (!loaded) {
-        hint.appendChild(document.createTextNode("Not loaded for this search. "));
+        hint.appendChild(document.createTextNode(k === "tmass" ? "1999 positions and J, H, Ks brightness. " : "Not loaded for this search. "));
         hint.appendChild(el("button", { type: "button", class: "linklike", onclick: () => addLayer(k) }, "Load " + nice));
+      } else if (S.res && !S.res.overlays[k] && k === "tmass") {
+        hint.textContent = S.res.source === "live" ? "2MASS isn't available for live searches yet." : "No 2MASS data for this patch yet.";
       } else if (S.res && S.res.overlays[k] && !S.res.overlays[k].length) {
-        hint.textContent = k === "wise"
-          ? "No CatWISE sources here. Very bright stars aren't in CatWISE."
-          : "No Gaia stars in this field.";
+        hint.textContent = { wise: "No CatWISE sources here. Very bright stars aren't in CatWISE.", gaia: "No Gaia stars in this field.", tmass: "No 2MASS sources in this field." }[k];
       }
     }
   }
 
   function addLayer(k) {
-    if (!S.layers.includes(k)) S.layers = ["gaia", "wise"].filter((x) => x === k || S.layers.includes(x));
+    if (!S.layers.includes(k)) S.layers = LAYER_ORDER.filter((x) => x === k || S.layers.includes(x));
     S[k] = true;
     load();
   }
@@ -1112,6 +1127,7 @@
       if (typeof p.confidence === "number") bits.push(Math.round(p.confidence * 100) + "% sure");
       if (p.pm_arcsec_yr) bits.push(p.pm_arcsec_yr + "″/yr");
       if (p.match) bits.push(typeof p.match === "string" ? p.match : (p.match.label || p.match.name || "matched"));
+      if (p.tmass_1999) bits.push(p.tmass_1999.agrees ? "2MASS " + Math.round(p.tmass_1999.epoch) + " position agrees" : "2MASS " + Math.round(p.tmass_1999.epoch) + " position doesn't fit");
       const b = el("button", {
         type: "button", class: "pred" + (S.selectedPred === p.id ? " on" : ""),
         "aria-pressed": String(S.selectedPred === p.id),
@@ -1196,6 +1212,7 @@
     renderCaption();
     renderPlayer();
     renderInfo();
+    renderStarInfo();
     renderChart();
     renderLayersPanel();
     renderMarks();
@@ -1209,6 +1226,7 @@
     renderCaption();
     renderPlayer();
     renderInfo();
+    renderStarInfo();
     renderChart();
   }
 
@@ -1252,6 +1270,116 @@
     renderPlayer();
   }
 
+  // ---- star info: catalogue matches at the target or clicked spot, 2MASS J/H/Ks next to SPHEREx ----
+
+  const detLoading = new Set();
+
+  function ensureDetector(det) {
+    if (detLoading.has(det)) return;
+    detLoading.add(det);
+    const token = S.token;
+    SkyData.loadImages(S.res, det).then(() => {
+      detLoading.delete(det);
+      if (token === S.token) renderStarInfo();
+    }, () => detLoading.delete(det));
+  }
+
+  // SPHEREx detector wavelength ranges (µm), as in pipeline/stackfile.py. One date's stack can cover only part
+  // of its detector's range, so pick the detector by these and show the range that was actually measured.
+  const DETECTOR_UM = { 1: [0.75, 1.09], 2: [1.10, 1.62], 3: [1.63, 2.41], 4: [2.42, 3.82], 5: [3.83, 4.41], 6: [4.42, 5.00] };
+
+  function detectorFrameAt(um, visit) {
+    const det = Object.keys(DETECTOR_UM).find((d) => um >= DETECTOR_UM[d][0] && um <= DETECTOR_UM[d][1]);
+    return S.res.frames.find((f) => f.visit === visit && String(f.detector) === det) || null;
+  }
+
+  function renderStarInfo() {
+    const box = $("star-info");
+    box.textContent = "";
+    const cur = S.res && S.frames[S.i];
+    if (!cur) {
+      box.appendChild(el("p", { class: "muted" }, "No image loaded."));
+      return;
+    }
+    const posFor = (f) => (S.measure ? [S.measure.x, S.measure.y] : targetPositionPix(f));
+    const [x, y] = posFor(cur);
+    const [ra, dec] = G.pixToSky(S.res.patch, x, y);
+    const year = mjdYear(cur.mjd);
+    box.appendChild(el("p", { class: "hint" }, (S.measure ? "Clicked spot" : "Target") + " · " + fmtRA(ra) + " " + fmtDec(dec)));
+
+    const near = {};
+    for (const k of S.layers) {
+      for (const s of (S.res.overlays && S.res.overlays[k]) || []) {
+        const [sra, sdec] = propagate(s, s.epoch || LAYER_EPOCH[k], year);
+        const sep = G.separation(ra, dec, sra, sdec) * 3600;
+        if (sep <= 6 && (!near[k] || sep < near[k].sep)) near[k] = { s, sep };
+      }
+    }
+    const rows = [];
+    if (near.gaia) rows.push(["Gaia DR3", "G " + fmtNum(near.gaia.s.mag) + " · " + near.gaia.sep.toFixed(1) + "″ away", near.gaia.s.label]);
+    if (near.wise) rows.push(["CatWISE", "W1 " + fmtNum(near.wise.s.mag) + " · " + near.wise.sep.toFixed(1) + "″ away", near.wise.s.label]);
+    if (near.tmass) rows.push(["2MASS", near.tmass.s.label.replace("2MASS ", "") + " · " + near.tmass.sep.toFixed(1) + "″ away", near.tmass.s.label]);
+    if (rows.length) {
+      const dl = el("dl", { class: "kv" });
+      for (const [k, v, title] of rows) {
+        dl.appendChild(el("dt", null, k));
+        dl.appendChild(el("dd", { title }, v));
+      }
+      box.appendChild(dl);
+    } else if (S.layers.length) {
+      box.appendChild(el("p", { class: "muted" }, "No catalogue star within 6″ of this spot."));
+    }
+
+    if (!S.layers.includes("tmass")) {
+      const p = el("p", { class: "hint" }, "Compare this star's 2MASS J, H and Ks brightness with SPHEREx. ");
+      p.appendChild(el("button", { type: "button", class: "linklike", onclick: () => addLayer("tmass") }, "Load 2MASS"));
+      box.appendChild(p);
+      return;
+    }
+    if (!near.tmass) {
+      if (S.res.overlays.tmass) box.appendChild(el("p", { class: "muted" }, "No 2MASS source within 6″, so there's nothing to compare."));
+      return;
+    }
+
+    const t = near.tmass.s;
+    const table = el("table", { class: "data-table star-table" });
+    table.appendChild(el("caption", { class: "sr-only" }, "2MASS brightness next to SPHEREx on " + cur.date));
+    const head = el("tr");
+    for (const h of ["Band", "2MASS", "SPHEREx " + cur.date]) head.appendChild(el("th", { scope: "col" }, h));
+    table.appendChild(el("thead")).appendChild(head);
+    const tb = el("tbody");
+    let saturated = false;
+    for (const b of TMASS_BANDS) {
+      const mag = t[b.key];
+      const two = isFinite(mag) && mag !== null ? fmtNum(mag) + " mag ≈ " + fmtNum(b.zp * 10 ** (-mag / 2.5) * 1e6) + " µJy" : "–";
+      let sx = "–";
+      const f = detectorFrameAt(b.um, cur.visit);
+      if (f) {
+        if (!S.res.images[f.url]) {
+          ensureDetector(String(f.detector));
+          sx = "loading…";
+        } else {
+          const [fx, fy] = posFor(f);
+          const m = measureFrame(f, fx, fy);
+          sx = "D" + f.detector + " " + wavelengthText(f.wavelength_um) + ": " +
+            (m && isFinite(m.value) ? fmtNum(m.value) + " µJy" + (m.flagged ? " (flagged)" : "") : "off the edge");
+          if (!S.measure && f.saturated) saturated = true;
+        }
+      } else {
+        sx = "no SPHEREx image here on this date";
+      }
+      const tr = el("tr");
+      for (const c of [b.name + " " + b.um.toFixed(2) + " µm", two, sx]) tr.appendChild(el("td", null, c));
+      tb.appendChild(tr);
+    }
+    table.appendChild(tb);
+    box.appendChild(table);
+    const notes = ["2MASS measured this star in " + Math.round(t.epoch) + ". SPHEREx values are measured from the picture over the whole detector's wavelength range, so they're approximate."];
+    if (saturated) notes.push("The target is saturated here, so SPHEREx reads too low.");
+    if (S.res.patch.kind === "variable") notes.push("This star changes brightness, so the two surveys needn't agree.");
+    box.appendChild(el("p", { class: "hint" }, notes.join(" ")));
+  }
+
   // ---- marks (R41) ----
 
   function nearbySources(ra, dec) {
@@ -1259,9 +1387,9 @@
     const year = S.frames[S.i] ? mjdYear(S.frames[S.i].mjd) : 2026;
     for (const k of S.layers) {
       for (const s of (S.res && S.res.overlays[k]) || []) {
-        const [sra, sdec] = propagate(s, s.epoch || (k === "gaia" ? 2016 : 2015.4), year);
+        const [sra, sdec] = propagate(s, s.epoch || LAYER_EPOCH[k], year);
         const sep = G.separation(ra, dec, sra, sdec) * 3600;
-        if (sep <= 15) out.push({ catalogue: k === "gaia" ? "Gaia DR3" : "CatWISE2020", label: s.label, sep_arcsec: +sep.toFixed(1), mag: s.mag ?? null });
+        if (sep <= 15) out.push({ catalogue: LAYER_NAMES[k], label: s.label, sep_arcsec: +sep.toFixed(1), mag: s.mag ?? null });
       }
     }
     return out.sort((a, b) => a.sep_arcsec - b.sep_arcsec).slice(0, 5);
@@ -1271,6 +1399,7 @@
     const c = ["SPHEREx images: NASA/JPL-Caltech, via NASA/IPAC Infrared Science Archive (IRSA)."];
     if (S.layers.includes("gaia")) c.push("Gaia DR3: European Space Agency (ESA) mission Gaia, processed by the Gaia Data Processing and Analysis Consortium (DPAC).");
     if (S.layers.includes("wise")) c.push("CatWISE2020 catalogue (Marocco et al. 2021).");
+    if (S.layers.includes("tmass")) c.push("Two Micron All Sky Survey (2MASS), a joint project of the University of Massachusetts and IPAC/Caltech, funded by NASA and the NSF.");
     c.push("WiseView (Caselden et al. 2018).");
     return c;
   }
@@ -1371,7 +1500,7 @@
       lines.push("   Wink: " + m.link);
       lines.push("   WiseView: " + m.wiseview);
       if (!m.layers.length) lines.push("   Nearby catalogue sources: no catalogues were loaded");
-      else if (!m.nearby.length) lines.push("   Nearby catalogue sources: none within 15″ in " + m.layers.map((l) => (l === "gaia" ? "Gaia DR3" : "CatWISE2020")).join(" or "));
+      else if (!m.nearby.length) lines.push("   Nearby catalogue sources: none within 15″ in " + m.layers.map((l) => LAYER_NAMES[l]).join(" or "));
       else lines.push("   Nearby catalogue sources: " + m.nearby.map((n) => n.catalogue + " " + n.label + " at " + n.sep_arcsec + "″" + (n.mag !== null ? " (mag " + n.mag + ")" : "")).join("; "));
       lines.push("");
       m.credits.forEach((c) => credits.add(c));
@@ -1442,6 +1571,7 @@
     S.measure = { x, y, ra, dec };
     renderCanvas();
     renderInfo();
+    renderStarInfo();
     renderChart();
   }
 
@@ -1513,6 +1643,7 @@
     $("ly-flags").addEventListener("change", () => { S.flags = $("ly-flags").checked; renderCanvas(); renderInfo(); writeURL(); });
     $("ly-gaia").addEventListener("change", () => { S.gaia = $("ly-gaia").checked; renderCanvas(); writeURL(); });
     $("ly-wise").addEventListener("change", () => { S.wise = $("ly-wise").checked; renderCanvas(); writeURL(); });
+    $("ly-tmass").addEventListener("change", () => { S.tmass = $("ly-tmass").checked; renderCanvas(); writeURL(); });
     $("ly-track").addEventListener("change", () => { S.track = $("ly-track").checked; renderCanvas(); writeURL(); });
 
     $("adj-bright").addEventListener("input", () => { S.adj.bright = +$("adj-bright").value; renderCanvas(); });
@@ -1534,7 +1665,7 @@
       $("btn-chart-table").textContent = S.chartTable ? "Chart view" : "Table view";
       renderChart();
     });
-    $("btn-back-target").addEventListener("click", () => { S.measure = null; renderCanvas(); renderInfo(); renderChart(); });
+    $("btn-back-target").addEventListener("click", () => { S.measure = null; renderCanvas(); renderInfo(); renderStarInfo(); renderChart(); });
 
     $("btn-download").addEventListener("click", () => {
       if (!S.res) { toast("Load an image first"); return; }

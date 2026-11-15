@@ -1,6 +1,6 @@
 """Step 6: identify what step 5 found. Movers are confirmed against Gaia DR3 and CatWISE2020 (R16),
-one-visit sources against SkyBoT asteroid predictions (R17). Also saves the Gaia and WISE overlays for the
-viewer. Reads out/compare/<id>.json and cache/<id>/stack.fits, writes out/identify/<id>.json.
+one-visit sources against SkyBoT asteroid predictions (R17). 2MASS (observed 1997-2001) gives each mover a
+third, much older position to check against. Also saves the Gaia, WISE and 2MASS overlays for the viewer. Reads out/compare/<id>.json and cache/<id>/stack.fits, writes out/identify/<id>.json.
 SkyBoT answers are cached in cache/<id>/skybot.json.
 
     python pipeline/step6_identify.py --only barnard,wise0855 [--workers 4] [--force] [--offline]
@@ -30,11 +30,14 @@ SCS_MAX_DEG = 0.05       # IRSA Cone Search times out on bigger circles when it'
 SKYBOT_URL = "https://ssp.imcce.fr/webservices/skybot/api/conesearch.php"
 GAIA_EPOCH = 2016.0
 CATWISE_EPOCH = 2015.4
+TMASS_EPOCH = 1999.0     # nominal; each 2MASS source carries its own date (jdate)
+TMASS_MATCH = 2.0        # arcsec between 2MASS and Gaia moved back to the 2MASS date
 CONE_BASE = 6.0          # arcsec, before widening by proper motion
 MATCH_ARCSEC = 12.0      # 2 px at 2026.0
 ASTEROID_VMAX = 20.5
 ASTEROID_MATCH = 12.0
 FIELD_ROWS = 1500
+CAT_EPOCH = {"gaia": GAIA_EPOCH, "wise": CATWISE_EPOCH, "tmass": TMASS_EPOCH}
 
 
 class ArchiveError(Exception):
@@ -100,8 +103,8 @@ def scs(table, ra, dec, radius_deg, retries=6):
     rows, seen = [], set()
     for text in texts:
         for r in csv.DictReader(io.StringIO(text)):
-            key = r.get("source_id") or r.get("source_name")
-            if key in seen:
+            key = r.get("source_id") or r.get("source_name") or r.get("designation")
+            if key is not None and key in seen:
                 continue
             seen.add(key)
             if separation_arcsec(ra, dec, float(r["ra"]), float(r["dec"])) <= radius_deg * 3600:
@@ -205,6 +208,89 @@ def catwise_cone(ra, dec, radius_deg, top=None):
     return out
 
 
+def tmass_cone(ra, dec, radius_deg, top=None):
+    rows = cone_rows("fp_psc", "designation, ra, dec, j_m, h_m, k_m, jdate", ra, dec, radius_deg, top, "j_m")
+    out = []
+    for r in rows:
+        if _f(r, "ra") is None:
+            continue
+        jd = _f(r, "jdate")
+        epoch = round(2000.0 + (jd - 2451545.0) / 365.25, 3) if jd else TMASS_EPOCH
+        out.append({"catalog": "2MASS", "id": f"2MASS J{r.get('designation', '').strip()}",
+                    "ra": _f(r, "ra"), "dec": _f(r, "dec"), "pmra": None, "pmdec": None,
+                    "mag": _f(r, "j_m"), "j_m": _f(r, "j_m"), "h_m": _f(r, "h_m"), "k_m": _f(r, "k_m"),
+                    "epoch": epoch})
+    return out
+
+
+def move_to(src, epoch):
+    """Position of a catalogue source at another epoch from its proper motion (mas/yr)."""
+    dt = epoch - src["epoch"]
+    dec = src["dec"] + (src["pmdec"] or 0) / 3.6e6 * dt
+    ra = src["ra"] + (src["pmra"] or 0) / 3.6e6 * dt / math.cos(math.radians(src["dec"]))
+    return ra, dec
+
+
+def nearest_tmass(ra_at, tmass, limit):
+    """Closest 2MASS source to a position function ra_at(epoch) -> (ra, dec), checked at each source's date."""
+    best = None
+    for t in tmass:
+        ra, dec = ra_at(t["epoch"])
+        sep = separation_arcsec(ra, dec, t["ra"], t["dec"])
+        if sep <= limit and (best is None or sep < best[1]):
+            best = (t, sep)
+    return best
+
+
+def tmass_check(mover, grid, cones, result):
+    """Extra check on a mover from the ~1999 2MASS epoch. When Gaia confirmed the mover, Gaia's position moved
+    back to the 2MASS date must land on a 2MASS source. Without a Gaia match we extrapolate our own track,
+    which is far less precise over 25+ years, so the tolerance grows with our motion error."""
+    tmass = cones.get("tmass") or []
+    gaia_id = (result.get("matches", {}).get("gaia") or {}).get("id")
+    gaia = next((s for s in cones.get("gaia") or [] if s["id"] == gaia_id), None)
+    if gaia and gaia["pmra"] is not None:
+        found = nearest_tmass(lambda ep: move_to(gaia, ep), tmass, 3 * TMASS_MATCH)
+        basis, tol = "gaia", TMASS_MATCH
+    else:
+        def track(ep):
+            dt = ep - mover["t0"]
+            r, d = grid.to_radec(mover["x0"] + mover["vx_px_yr"] * dt, mover["y0"] + mover["vy_px_yr"] * dt)
+            return float(r), float(d)
+        tol = MATCH_ARCSEC + 3 * mover["pm_err"] * (EPOCH - TMASS_EPOCH)
+        found = nearest_tmass(track, tmass, tol)
+        basis = "track"
+    if not found:
+        return {"basis": basis, "agrees": False, "match": None}
+    t, sep = found
+    return {"basis": basis, "agrees": sep <= tol, "match": {"id": t["id"], "epoch": t["epoch"],
+                                                           "sep_arcsec": round(sep, 2), "j_m": t["j_m"],
+                                                           "h_m": t["h_m"], "k_m": t["k_m"]}}
+
+
+def link_tmass_to_gaia(tmass, gaia):
+    """Give each 2MASS source the proper motion of the Gaia star it matches (Gaia moved back to that source's
+    own 2MASS date), so the viewer can carry 2MASS markers forward to the SPHEREx dates like the others."""
+    if not tmass or not gaia:
+        return
+    g = [s for s in gaia if s["pmra"] is not None]
+    if not g:
+        return
+    ra = np.array([s["ra"] for s in g])
+    dec = np.array([s["dec"] for s in g])
+    pmra = np.array([s["pmra"] for s in g])
+    pmdec = np.array([s["pmdec"] for s in g])
+    cosd = np.cos(np.radians(dec))
+    for t in tmass:
+        dt = t["epoch"] - GAIA_EPOCH
+        dra = (ra + pmra / 3.6e6 * dt / cosd - t["ra"]) * math.cos(math.radians(t["dec"]))
+        ddec = dec + pmdec / 3.6e6 * dt - t["dec"]
+        sep = np.hypot(dra, ddec) * 3600
+        i = int(np.argmin(sep))
+        if sep[i] <= TMASS_MATCH:
+            t["pmra"], t["pmdec"], t["gaia_id"] = g[i]["pmra"], g[i]["pmdec"], g[i]["id"]
+
+
 def mover_sky(mover, grid):
     """Mover position at 2026.0 and its motion in mas/yr (east, north)."""
     dt = EPOCH - mover["t0"]
@@ -261,7 +347,9 @@ def mover_cones(mover, grid):
     pm = mover["pm_arcsec_yr"] + 3 * mover["pm_err"]
     gaia_r = (CONE_BASE + pm * (EPOCH - GAIA_EPOCH)) / 3600
     wise_r = (CONE_BASE + pm * (EPOCH - CATWISE_EPOCH)) / 3600
-    return {"gaia": gaia_cone(ra, dec, gaia_r), "wise": catwise_cone(ra, dec, wise_r)}
+    tmass_r = (CONE_BASE + pm * (EPOCH - TMASS_EPOCH + 2)) / 3600   # 2MASS ran 1997-2001
+    return {"gaia": gaia_cone(ra, dec, gaia_r), "wise": catwise_cone(ra, dec, wise_r),
+            "tmass": tmass_cone(ra, dec, tmass_r)}
 
 
 def parse_skybot(text):
@@ -406,7 +494,7 @@ def identify_target(target_id, targets, force=False, offline=False):
         return None
     old = read_json(out_path)
     if (not force and old and not old.get("errors") and old.get("pipeline_version") == PIPELINE_VERSION
-            and out_path.stat().st_mtime >= comp_path.stat().st_mtime):
+            and "tmass" in old.get("catalogues", {}) and out_path.stat().st_mtime >= comp_path.stat().st_mtime):
         print(f"  {target_id}: done already", flush=True)
         return old
 
@@ -416,7 +504,7 @@ def identify_target(target_id, targets, force=False, offline=False):
     errors, notes = [], []
     fov = max(grid.nx, grid.ny) * grid.scale / 3600
     field = {}
-    for name, fn in (("gaia", gaia_cone), ("wise", catwise_cone)):
+    for name, fn in (("gaia", gaia_cone), ("wise", catwise_cone), ("tmass", tmass_cone)):
         if offline:
             field[name] = None
             continue
@@ -426,6 +514,8 @@ def identify_target(target_id, targets, force=False, offline=False):
             field[name] = None
             errors.append(f"{name} field: {exc}")
 
+    link_tmass_to_gaia(field.get("tmass"), field.get("gaia"))
+
     movers = []
     for m in comp["movers"]:
         entry = {**m}
@@ -433,12 +523,18 @@ def identify_target(target_id, targets, force=False, offline=False):
             entry.update({"confirmed": False, "matches": {}, "lookup": "skipped (offline)"})
         else:
             try:
-                entry.update(confirm_mover(m, grid, mover_cones(m, grid)))
+                cones = mover_cones(m, grid)
+                entry.update(confirm_mover(m, grid, {k: cones[k] for k in ("gaia", "wise")}))
+                entry["tmass_check"] = tmass_check(m, grid, cones, entry)
             except ArchiveError as exc:
                 errors.append(f"mover {m['id']}: {exc}")
                 entry.update({"confirmed": False, "matches": {}, "lookup": "failed"})
         if entry.get("catwise_gaia_disagree"):
             notes.append(f"Mover {m['id']}: CatWISE and Gaia disagree on its motion; we go with Gaia.")
+        check = entry.get("tmass_check")
+        if check and check["basis"] == "gaia" and check["match"] and not check["agrees"]:
+            notes.append(f"Mover {m['id']}: Gaia's motion doesn't lead back to its 2MASS position "
+                         f"({check['match']['sep_arcsec']}″ off in {check['match']['epoch']:.0f}).")
         movers.append(entry)
 
     transients = [dict(t) for t in comp.get("transients", [])]
@@ -465,15 +561,17 @@ def identify_target(target_id, targets, force=False, offline=False):
                          f"{expected:.2f}″/yr by more than 20%.")
 
     result = {"id": target_id, "pipeline_version": PIPELINE_VERSION,
-              "catalogues": {name: ({"loaded": True, "epoch": GAIA_EPOCH if name == "gaia" else CATWISE_EPOCH,
-                                     "sources": rows} if rows is not None else {"loaded": False})
+              "catalogues": {name: ({"loaded": True, "epoch": CAT_EPOCH[name], "sources": rows}
+                                    if rows is not None else {"loaded": False})
                              for name, rows in field.items()},
               "movers": movers, "asteroids": asteroids, "transients": transients, "target": tgt,
               "notes": notes, "errors": errors}
     write_json(out_path, result)
     conf = sum(1 for m in movers if m.get("confirmed"))
+    old_ok = sum(1 for m in movers if (m.get("tmass_check") or {}).get("agrees"))
     n_ast = sum(1 for t in transients if t.get("kind") == "asteroid")
-    print(f"  {target_id}: {conf}/{len(movers)} mover(s) confirmed, {len(asteroids)} asteroid(s) in field, "
+    print(f"  {target_id}: {conf}/{len(movers)} mover(s) confirmed ({old_ok} also at the 2MASS epoch), "
+          f"{len(asteroids)} asteroid(s) in field, "
           f"{n_ast}/{len(transients)} one-visit source(s) are asteroids"
           f"{', ' + str(len(errors)) + ' lookup error(s), rerun later' if errors else ''}", flush=True)
     return result

@@ -173,9 +173,14 @@ def predictions(stack, comp, ident, target, name):
             label = f"{name} (target)"
         else:
             label = "Known fast-moving object" if match else "Possible mover"
-        out.append({"id": m["id"], "label": label, "kind": "mover", "confidence": conf,
-                    "pm_arcsec_yr": m["pm_arcsec_yr"], "match": match, "bands": m.get("bands", ["all"]),
-                    "track": track})
+        entry = {"id": m["id"], "label": label, "kind": "mover", "confidence": conf,
+                 "pm_arcsec_yr": m["pm_arcsec_yr"], "match": match, "bands": m.get("bands", ["all"]),
+                 "track": track}
+        check = m.get("tmass_check")
+        if check and check.get("match"):
+            entry["tmass_1999"] = {"agrees": check["agrees"], "basis": check["basis"], "id": check["match"]["id"],
+                                   "epoch": check["match"]["epoch"], "sep_arcsec": check["match"]["sep_arcsec"]}
+        out.append(entry)
     var = (comp or {}).get("variability", {})
     if var.get("verdict") in ("changing", "possible change"):
         track = []
@@ -209,17 +214,31 @@ def predictions(stack, comp, ident, target, name):
     return out
 
 
+CAT_NAMES = {"gaia": "Gaia DR3", "wise": "CatWISE2020", "tmass": "2MASS"}
+
+
 def overlays(ident, layers):
     out, notes = {}, []
     cats = (ident or {}).get("catalogues", {})
     for name in layers:
         info = cats.get(name)
+        if name == "tmass" and info is None:
+            continue    # step 6 ran before 2MASS was added; the layer is simply absent
         if not info or not info.get("loaded"):
-            notes.append(f"{'Gaia DR3' if name == 'gaia' else 'CatWISE2020'} lookup didn't finish; rerun step 6.")
+            notes.append(f"{CAT_NAMES[name]} lookup didn't finish; rerun step 6.")
             continue
-        out[name] = [{"ra": round(s["ra"], 7), "dec": round(s["dec"], 7), "label": s["id"], "epoch": s["epoch"],
-                      "pmra": clean_float(s["pmra"], 2) or 0.0, "pmdec": clean_float(s["pmdec"], 2) or 0.0,
-                      "mag": clean_float(s["mag"], 2)} for s in info["sources"]]
+        rows = []
+        for s in info["sources"]:
+            row = {"ra": round(s["ra"], 7), "dec": round(s["dec"], 7), "label": s["id"], "epoch": s["epoch"],
+                   "pmra": clean_float(s["pmra"], 2) or 0.0, "pmdec": clean_float(s["pmdec"], 2) or 0.0,
+                   "mag": clean_float(s["mag"], 2)}
+            if name == "tmass":
+                row.update({"j": clean_float(s.get("j_m"), 3), "h": clean_float(s.get("h_m"), 3),
+                            "k": clean_float(s.get("k_m"), 3)})
+                if s.get("gaia_id"):
+                    row["gaia"] = s["gaia_id"]
+            rows.append(row)
+        out[name] = rows
     return out, notes
 
 
@@ -253,7 +272,7 @@ def status_text(v, pm):
     return "steady" if v["motion"] == "steady" else v["motion"]
 
 
-def export_patch(stack, patch_id, site, name, kind, target=None, layers=("gaia", "wise"), comp=None,
+def export_patch(stack, patch_id, site, name, kind, target=None, layers=("gaia", "wise", "tmass"), comp=None,
                  ident=None, clean_rows=None, subtype="", simulated=False):
     """Write frames, <id>.json and dome cubes for one stack; returns (patch json, fragment)."""
     site = Path(site)

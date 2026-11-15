@@ -29,7 +29,8 @@ then crops to the requested field.
                "flags": ["plain-language notes"], "flag_bits": { "NAME": count } }],
   "light_curve": [{ "mjd", "flux_ujy", "err", "detector", "wavelength_um", "flagged", "approximate" }],
   "spectrum"?: [{ "wavelength_um", "flux_ujy", "err", "visit", "saturated" }],
-  "overlays": { "gaia": [{ "ra", "dec", "label", "epoch", "pmra", "pmdec", "mag" }], "wise": [...] },
+  "overlays": { "gaia": [{ "ra", "dec", "label", "epoch", "pmra", "pmdec", "mag" }], "wise": [...],
+                "tmass": [{ ..., "j", "h", "k", "gaia"? }] },
   "predictions": [{ "id", "label", "kind": "mover" | "variable" | "asteroid" | "unidentified",
                     "confidence", "pm_arcsec_yr"?, "match"?, "track": [{ "epoch": frameIndex, "x", "y" }] }],
   "verdicts": { "motion", "variability", "notes" }
@@ -41,6 +42,9 @@ then crops to the requested field.
 - `flux_ujy` is real microJy per detector; for detector "all" it is relative.
 - `overlays` only holds the layers that were loaded (R32). A missing layer means "not requested",
   an empty list means "requested, nothing found".
+- `overlays.tmass` is 2MASS: `epoch` is each source's own 1997-2001 date, `j`/`h`/`k` are magnitudes, and
+  `pmra`/`pmdec` come from the matching Gaia star (named in `gaia`), else 0. It is opt-in: `layers` must
+  include `tmass`. Mover predictions may carry `tmass_1999` {agrees, basis, id, epoch, sep_arcsec}.
 - `track` x/y are pixels in the PNG (x right, y down).
 
 ## Frames

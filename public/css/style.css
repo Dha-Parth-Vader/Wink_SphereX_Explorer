@@ -43,6 +43,7 @@
   --warn: #ffcf5c;
   --gaia: #5ce1e6;
   --wise: #ffb347;
+  --tmass: #c3a6ff;
   --track: #f5f56b;
   --mover: #ff6bd5;
   --variable: #9cff6b;
@@ -551,6 +552,9 @@ body.page-viewer { font-size: 15px; }
 .g-flags { display: inline-block; width: 11px; height: 11px; background: var(--flag); border-radius: 2px; }
 .g-gaia { color: var(--gaia); }
 .g-wise { color: var(--wise); }
+.g-tmass { color: var(--tmass); }
+.star-table { margin-top: 6px; font-size: 12px; }
+.star-table td, .star-table th { padding: 4px 5px; vertical-align: top; }
 .g-track { color: var(--track); }
 .layers .hint { padding-left: 24px; }
 .slider { display: grid; gap: 2px; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
