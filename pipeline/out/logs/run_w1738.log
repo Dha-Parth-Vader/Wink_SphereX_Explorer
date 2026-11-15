@@ -1,0 +1,52 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only w1738
+w1738: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only w1738
+w1738: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only w1738
+step 5: comparing 1 target(s)
+  w1738: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only w1738
+step 6: identifying 1 target(s)
+  w1738: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only w1738
+w1738: 362 cleaned, 0 skipped, 348 good target measurements, 12 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only w1738
+w1738: 4 visits stacked on a 147x147 grid, target offsets [1.16, 1.75, 1.25, 1.46] px; moved 0.39 px (2.16"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only w1738
+step 5: comparing 1 target(s)
+  w1738: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only w1738
+w1738: 362 cleaned, 0 skipped, 348 good target measurements, 12 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only w1738
+w1738: 4 visits stacked on a 147x147 grid, target offsets [1.16, 1.75, 1.25, 1.46] px; moved 0.39 px (2.16"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only w1738
+step 5: comparing 1 target(s)
+  w1738: 19 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only w1738
+step 6: identifying 1 target(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only w1738
+w1738: already clean
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only w1738
+w1738: already stacked
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only w1738
+step 5: comparing 1 target(s)
+  w1738: done already
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only w1738
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: HTTP Error 502: Proxy Error); using Cone Search
+  w1738: 0/19 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 2 lookup error(s), rerun later

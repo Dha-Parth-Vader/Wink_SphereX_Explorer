@@ -1,0 +1,110 @@
+{
+ "id": "mira",
+ "pipeline_version": "1",
+ "reference_visit": 2,
+ "visits": [
+  {
+   "visit": 0,
+   "mjd": 60880.181,
+   "year": 2025.5597,
+   "n_sources_all": 2,
+   "n_sources_cold": 3,
+   "noise": 1.102321,
+   "coverage": 0.992,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 1,
+   "mjd": 61054.622,
+   "year": 2026.0373,
+   "n_sources_all": 1,
+   "n_sources_cold": 18,
+   "noise": 1.322309,
+   "coverage": 0.991,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 61242.746,
+   "year": 2026.5524,
+   "n_sources_all": 13,
+   "n_sources_cold": 1,
+   "noise": 0.725534,
+   "coverage": 0.993,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "movers": [],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 0,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.34,
+     73.12
+    ],
+    "offset_px": 0.36,
+    "saturated": true
+   },
+   {
+    "visit": 1,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.09,
+     72.5
+    ],
+    "offset_px": 0.511,
+    "saturated": true
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.09,
+     72.64
+    ],
+    "offset_px": 0.366,
+    "saturated": true
+   }
+  ],
+  "mean_offset_px": 0.412,
+  "within_third_px": false,
+  "mover": null,
+  "saturated": true,
+  "expected_pm_arcsec_yr": 0.0,
+  "measured_pm_arcsec_yr": null
+ },
+ "variability": {
+  "source": "exposures",
+  "n_points": 3,
+  "visits": 1,
+  "per_detector": {},
+  "verdict": "only one visit"
+ },
+ "transients": [],
+ "notes": [
+  "Visit 2 is the reference because the first visit is noisier or less complete."
+ ]
+}

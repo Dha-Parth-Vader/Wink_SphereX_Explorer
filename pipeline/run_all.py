@@ -9,12 +9,16 @@ same command again.
 --force TAG redoes one step and everything after it (a TAG of "all" redoes everything).
 """
 import argparse
+import os
 import subprocess
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from stackfile import OUT, PIPE, SITE, load_targets, parse_only
+
+# Windows consoles and logs default to cp1252, which can't print the arcsec sign the steps use
+ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
 
 STEPS = [(2, "download", "step2_download.py"), (3, "clean", "step3_clean.py"), (4, "stack", "step4_align_stack.py"),
          (5, "compare", "step5_compare.py"), (6, "identify", "step6_identify.py"), (7, "export", "step7_export.py"),
@@ -43,7 +47,7 @@ def run_step(script, args, log):
     cmd = [sys.executable, str(PIPE / script)] + args
     log.write(f"\n$ {' '.join(cmd)}\n")
     log.flush()
-    return subprocess.run(cmd, cwd=PIPE.parent, stdout=log, stderr=subprocess.STDOUT).returncode
+    return subprocess.run(cmd, cwd=PIPE.parent, stdout=log, stderr=subprocess.STDOUT, env=ENV).returncode
 
 
 def run_target(target_id, steps, forced, workers, extra, total, counter):
@@ -108,10 +112,10 @@ def main(argv=None):
         if 7 in forced:
             cmd.append("--force")
         print("step 7: exporting", flush=True)
-        if subprocess.run([sys.executable, str(PIPE / "step7_export.py")] + cmd, cwd=PIPE.parent).returncode:
+        if subprocess.run([sys.executable, str(PIPE / "step7_export.py")] + cmd, cwd=PIPE.parent, env=ENV).returncode:
             print("step 7 had failures (see above)", flush=True)
     if 8 in steps:
-        subprocess.run([sys.executable, str(PIPE / "merge_lists.py"), "--site", args.site], cwd=PIPE.parent)
+        subprocess.run([sys.executable, str(PIPE / "merge_lists.py"), "--site", args.site], cwd=PIPE.parent, env=ENV)
     if failed:
         print(f"failed: {', '.join(sorted(failed))} (run the same command again to retry)", flush=True)
     return 1 if failed else 0

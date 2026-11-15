@@ -1,0 +1,39 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only exlup
+exlup: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only exlup
+exlup: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only exlup
+step 5: comparing 1 target(s)
+  exlup: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only exlup
+step 6: identifying 1 target(s)
+  exlup: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only exlup
+exlup: 352 cleaned, 0 skipped, 325 good target measurements, 38 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only exlup
+exlup: 3 visits stacked on a 147x147 grid, target offsets [0.26, 0.3, 0.33] px; moved 0.06 px (0.36"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only exlup
+step 5: comparing 1 target(s)
+  exlup: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only exlup
+exlup: 352 cleaned, 0 skipped, 325 good target measurements, 38 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only exlup
+exlup: 3 visits stacked on a 147x147 grid, target offsets [0.26, 0.3, 0.33] px; moved 0.06 px (0.36"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only exlup
+step 5: comparing 1 target(s)
+  exlup: 13 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only exlup
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
+  exlup: 0/13 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 1 lookup error(s), rerun later

@@ -379,7 +379,7 @@ def read_clean_csv(target_id):
                     row["err_ujy"], row["flagged"] = float("nan"), False
             except (KeyError, ValueError):
                 continue
-            if math.isfinite(row["flux_ujy"]):
+            if math.isfinite(row["flux_ujy"]) and math.isfinite(row["wavelength_um"]):
                 rows.append(row)
     rows.sort(key=lambda r: r["mjd"])
     if rows and any(r["visit"] is None for r in rows):

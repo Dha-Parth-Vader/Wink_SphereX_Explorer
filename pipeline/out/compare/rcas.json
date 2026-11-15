@@ -1,0 +1,150 @@
+{
+ "id": "rcas",
+ "pipeline_version": "1",
+ "reference_visit": 1,
+ "visits": [
+  {
+   "visit": 0,
+   "mjd": 60868.688,
+   "year": 2025.5282,
+   "n_sources_all": 39,
+   "n_sources_cold": 18,
+   "noise": 0.588408,
+   "coverage": 0.994,
+   "offset_px": [
+    -0.027,
+    0.032
+   ]
+  },
+  {
+   "visit": 1,
+   "mjd": 61033.558,
+   "year": 2025.9796,
+   "n_sources_all": 57,
+   "n_sources_cold": 17,
+   "noise": 0.425758,
+   "coverage": 0.996,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 61235.308,
+   "year": 2026.532,
+   "n_sources_all": 55,
+   "n_sources_cold": 17,
+   "noise": 0.454487,
+   "coverage": 0.995,
+   "offset_px": [
+    -0.021,
+    0.024
+   ]
+  }
+ ],
+ "movers": [
+  {
+   "t0": 2026.0133,
+   "x0": 60.28,
+   "y0": 55.695,
+   "vx_px_yr": -0.0116,
+   "vy_px_yr": -0.3791,
+   "pm_arcsec_yr": 2.332,
+   "pm_err": 0.346,
+   "significance": 6.7,
+   "pa_deg": 178.2,
+   "snr": 98.6,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 60.287,
+     "y": 55.861,
+     "snr": 94.0
+    },
+    {
+     "visit": 1,
+     "x": 60.278,
+     "y": 55.739,
+     "snr": 98.6
+    },
+    {
+     "visit": 2,
+     "x": 60.275,
+     "y": 55.484,
+     "snr": 94.7
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m1",
+   "is_target": false
+  }
+ ],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 0,
+    "predicted": [
+     73.01,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.23,
+     73.12
+    ],
+    "offset_px": 0.252,
+    "saturated": true
+   },
+   {
+    "visit": 1,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     72.99,
+     72.75
+    ],
+    "offset_px": 0.248,
+    "saturated": true
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     72.99,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     72.94,
+     73.12
+    ],
+    "offset_px": 0.127,
+    "saturated": true
+   }
+  ],
+  "mean_offset_px": 0.209,
+  "within_third_px": true,
+  "mover": null,
+  "saturated": true,
+  "expected_pm_arcsec_yr": 0.085,
+  "measured_pm_arcsec_yr": null
+ },
+ "variability": {
+  "source": "detector stacks",
+  "n_points": 18,
+  "visits": 3,
+  "per_detector": {},
+  "verdict": "no same-wavelength comparison"
+ },
+ "transients": [],
+ "notes": [
+  "Visit 1 is the reference because the first visit is noisier or less complete."
+ ]
+}

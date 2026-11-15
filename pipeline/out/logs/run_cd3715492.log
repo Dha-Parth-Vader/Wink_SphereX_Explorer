@@ -1,0 +1,39 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only cd3715492
+cd3715492: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only cd3715492
+cd3715492: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only cd3715492
+step 5: comparing 1 target(s)
+  cd3715492: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only cd3715492
+step 6: identifying 1 target(s)
+  cd3715492: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only cd3715492
+cd3715492: 350 cleaned, 0 skipped, 12 good target measurements, 338 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only cd3715492
+cd3715492: 3 visits stacked on a 147x147 grid, target offsets [0.18, 0.02, 0.08] px; moved 1.06 px (6.53"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only cd3715492
+step 5: comparing 1 target(s)
+  cd3715492: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only cd3715492
+cd3715492: 350 cleaned, 0 skipped, 12 good target measurements, 338 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only cd3715492
+cd3715492: 3 visits stacked on a 147x147 grid, target offsets [0.18, 0.02, 0.08] px; moved 1.06 px (6.53"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only cd3715492
+step 5: comparing 1 target(s)
+  cd3715492: 8 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only cd3715492
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
+  cd3715492: 0/8 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 1 lookup error(s), rerun later

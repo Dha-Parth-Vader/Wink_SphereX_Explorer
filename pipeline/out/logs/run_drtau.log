@@ -1,0 +1,42 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only drtau
+drtau: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only drtau
+drtau: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only drtau
+step 5: comparing 1 target(s)
+  drtau: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only drtau
+step 6: identifying 1 target(s)
+  drtau: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only drtau
+drtau: 334 cleaned, 0 skipped, 166 good target measurements, 177 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only drtau
+drtau: 3 visits stacked on a 147x147 grid, target offsets [0.05, 0.04, 0.05] px; moved 0.06 px (0.37"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only drtau
+step 5: comparing 1 target(s)
+  drtau: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only drtau
+drtau: 334 cleaned, 0 skipped, 166 good target measurements, 177 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only drtau
+drtau: already clean
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only drtau
+drtau: 3 visits stacked on a 147x147 grid, target offsets [0.05, 0.04, 0.05] px; moved 0.06 px (0.37"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only drtau
+step 5: comparing 1 target(s)
+  drtau: 5 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only drtau
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
+  drtau: 0/5 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 1 lookup error(s), rerun later

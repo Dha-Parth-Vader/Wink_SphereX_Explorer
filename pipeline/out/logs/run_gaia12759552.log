@@ -1,0 +1,62 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia12759552
+gaia12759552: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia12759552
+gaia12759552: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia12759552
+step 5: comparing 1 target(s)
+  gaia12759552: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia12759552
+step 6: identifying 1 target(s)
+  gaia12759552: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia12759552
+gaia12759552: 334 cleaned, 0 skipped, 113 good target measurements, 223 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia12759552
+gaia12759552: 3 visits stacked on a 147x147 grid, target offsets [0.09, 0.03, 0.02] px; moved 0.57 px (3.54"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia12759552
+step 5: comparing 1 target(s)
+  gaia12759552: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia12759552
+gaia12759552: 334 cleaned, 0 skipped, 113 good target measurements, 223 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia12759552
+gaia12759552: 3 visits stacked on a 147x147 grid, target offsets [0.09, 0.03, 0.02] px; moved 0.57 px (3.54"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia12759552
+step 5: comparing 1 target(s)
+  gaia12759552: FAILED UnicodeEncodeError: 'charmap' codec can't encode character '\u2033' in position 41: character maps to <undefined>
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia12759552
+gaia12759552: 334 cleaned, 0 skipped, 113 good target measurements, 223 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia12759552
+gaia12759552: 3 visits stacked on a 147x147 grid, target offsets [0.09, 0.03, 0.02] px; moved 0.57 px (3.54"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia12759552
+step 5: comparing 1 target(s)
+  gaia12759552: 16 mover(s), target 3.893″/yr, variability steady, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia12759552
+step 6: identifying 1 target(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia12759552
+gaia12759552: already clean
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia12759552
+gaia12759552: already stacked
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia12759552
+step 5: comparing 1 target(s)
+  gaia12759552: done already
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia12759552
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
+  gaia12759552: 2/16 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 2 lookup error(s), rerun later

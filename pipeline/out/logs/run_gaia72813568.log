@@ -1,0 +1,39 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia72813568
+gaia72813568: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia72813568
+gaia72813568: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia72813568
+step 5: comparing 1 target(s)
+  gaia72813568: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia72813568
+step 6: identifying 1 target(s)
+  gaia72813568: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia72813568
+gaia72813568: 345 cleaned, 0 skipped, 113 good target measurements, 234 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia72813568
+gaia72813568: 3 visits stacked on a 147x147 grid, target offsets [0.1, 0.04, 0.07] px; moved 0.5 px (3.06"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia72813568
+step 5: comparing 1 target(s)
+  gaia72813568: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia72813568
+gaia72813568: 345 cleaned, 0 skipped, 113 good target measurements, 234 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia72813568
+gaia72813568: 3 visits stacked on a 147x147 grid, target offsets [0.1, 0.04, 0.07] px; moved 0.5 px (3.06"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia72813568
+step 5: comparing 1 target(s)
+  gaia72813568: 12 mover(s), target 2.399″/yr, variability steady, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia72813568
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
+  gaia72813568: 1/12 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 1 lookup error(s), rerun later

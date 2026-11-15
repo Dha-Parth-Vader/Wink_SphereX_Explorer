@@ -1,0 +1,56 @@
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only rcas
+rcas: nothing downloaded yet (run step2_download.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only rcas
+rcas: not cleaned yet (run step3_clean.py)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only rcas
+step 5: comparing 1 target(s)
+  rcas: no stack.fits yet (run step 4)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only rcas
+step 6: identifying 1 target(s)
+  rcas: no compare result yet (run step 5)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only rcas
+rcas: 346 cleaned, 0 skipped, 0 good target measurements, 346 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only rcas
+rcas: 3 visits stacked on a 147x147 grid, target offsets [0.11, 0.48, 0.22] px; moved 0.12 px (0.75"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only rcas
+step 5: comparing 1 target(s)
+  rcas: FAILED KeyError: 'RA'
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only rcas
+rcas: 346 cleaned, 0 skipped, 0 good target measurements, 346 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only rcas
+rcas: 346 cleaned, 0 skipped, 0 good target measurements, 346 saturated, 0 without ZODI
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only rcas
+rcas: 3 visits stacked on a 147x147 grid, target offsets [0.11, 0.48, 0.22] px; moved 0.12 px (0.75"/yr)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only rcas
+step 5: comparing 1 target(s)
+  rcas: 1 mover(s), variability no same-wavelength comparison, 0 one-visit source(s)
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only rcas
+step 6: identifying 1 target(s)
+  rcas: 0/1 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 4 lookup error(s), rerun later
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step3_clean.py --only rcas
+rcas: already clean
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only rcas
+rcas: already stacked
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step5_compare.py --only rcas
+step 5: comparing 1 target(s)
+  rcas: done already
+
+$ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.py --only rcas
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
+  rcas: 0/1 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 2 lookup error(s), rerun later
