@@ -245,6 +245,32 @@
       const p = project(vec(ra, labelDec));
       if (p && p.d > 0) octx.fillText(ra / 15 + "h", p.x + 4, p.y + 12);
     }
+    drawEclipticPoles();
+  }
+
+  // J2000 ecliptic poles; SPHEREx's deep fields sit around them, so these spots get the most visits
+  const ECLIPTIC_POLES = [
+    { name: "North ecliptic pole", ra: 270.0, dec: 66.5607 },
+    { name: "South ecliptic pole", ra: 90.0, dec: -66.5607 },
+  ];
+
+  function drawEclipticPoles() {
+    const warm = getComputedStyle(document.documentElement).getPropertyValue("--warm").trim() || "#ffb85c";
+    octx.strokeStyle = warm;
+    octx.fillStyle = warm;
+    octx.lineWidth = 1.5;
+    for (const pole of ECLIPTIC_POLES) {
+      const p = project(vec(pole.ra, pole.dec));
+      if (!p || p.d < 0) continue;
+      octx.beginPath();
+      octx.moveTo(p.x - 7, p.y); octx.lineTo(p.x + 7, p.y);
+      octx.moveTo(p.x, p.y - 7); octx.lineTo(p.x, p.y + 7);
+      octx.stroke();
+      octx.beginPath();
+      octx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+      octx.stroke();
+      octx.fillText(pole.name, p.x + 9, p.y - 6);
+    }
   }
 
   function shapePath(shape, x, y, r) {
