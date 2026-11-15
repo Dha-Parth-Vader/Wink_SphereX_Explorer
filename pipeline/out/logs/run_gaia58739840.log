@@ -1,0 +1,33 @@
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia58739840
+gaia58739840: 341 cleaned, 0 skipped, 62 good target measurements, 282 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia58739840
+gaia58739840: 3 visits stacked on a 147x147 grid, target offsets [0.25, 0.28, 0.26] px; moved 0.6 px (3.74"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia58739840
+step 5: comparing 1 target(s)
+  gaia58739840: FAILED KeyError: 'RA'
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only gaia58739840 --force
+gaia58739840: 341 cleaned, 0 skipped, 62 good target measurements, 282 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only gaia58739840 --force
+gaia58739840: 3 visits stacked on a 147x147 grid, target offsets [0.25, 0.28, 0.26] px; moved 0.6 px (3.74"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only gaia58739840 --force
+step 5: comparing 1 target(s)
+  gaia58739840: 5 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia58739840
+step 6: identifying 1 target(s)
+  TAP failed (IRSA TAP failed: The read operation timed out); using IRSA Cone Search
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia58739840 --force
+step 6: identifying 1 target(s)
+  IRSA TAP failed (IRSA TAP failed: The read operation timed out); using ESA Gaia archive and IRSA Cone Search
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only gaia58739840 --force
+step 6: identifying 1 target(s)
+  IRSA TAP failed (IRSA TAP failed: The read operation timed out); using ESA Gaia archive and IRSA Gator
+  gaia58739840: 0/5 mover(s) confirmed, 1 asteroid(s) in field, 0/0 one-visit source(s) are asteroids

@@ -16,11 +16,16 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
+import numpy as np
+from astropy.io import ascii
+
 from stackfile import (CACHE, EPOCH, OUT, PIPELINE_VERSION, load_targets, parse_only, read_json, read_stack,
                        run_many, separation_arcsec, stack_path, target_map, write_json)
 
 TAP_URL = "https://irsa.ipac.caltech.edu/TAP/sync"
 SCS_URL = "https://irsa.ipac.caltech.edu/SCS"
+GATOR_URL = "https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query"
+ESA_GAIA_TAP = "https://gea.esac.esa.int/tap-server/tap/sync"
 SCS_MAX_DEG = 0.05       # IRSA Cone Search times out on bigger circles when it's busy; larger cones are tiled
 SKYBOT_URL = "https://ssp.imcce.fr/webservices/skybot/api/conesearch.php"
 GAIA_EPOCH = 2016.0
@@ -36,9 +41,11 @@ class ArchiveError(Exception):
     pass
 
 
-def tap(query, retries=4, timeout=120):
-    """IRSA TAP sync query returning a list of dicts (retries on 5xx and 'Server busy')."""
-    url = TAP_URL + "?" + urllib.parse.urlencode({"LANG": "ADQL", "FORMAT": "csv", "QUERY": query})
+def tap(query, retries=4, timeout=120, base=TAP_URL):
+    """TAP sync query (IRSA unless base says otherwise) returning a list of dicts (retries on 5xx and
+    'Server busy')."""
+    url = base + "?" + urllib.parse.urlencode({"LANG": "ADQL", "REQUEST": "doQuery", "FORMAT": "csv",
+                                               "QUERY": query})
     delay = 2.0
     for attempt in range(retries):
         try:
@@ -102,8 +109,48 @@ def scs(table, ra, dec, radius_deg, retries=6):
     return rows
 
 
+def gator(table, columns, ra, dec, radius_deg):
+    """IRSA's Gator catalogue query: answers a whole-field CatWISE cone in a couple of seconds and returns
+    only the columns asked for, even when TAP and Cone Search are struggling."""
+    names = [c.strip() for c in columns.split(",")]
+    url = GATOR_URL + "?" + urllib.parse.urlencode({
+        "catalog": table, "spatial": "cone", "objstr": f"{ra:.6f} {dec:.6f}", "radius": f"{radius_deg * 3600:.2f}",
+        "radunits": "arcsec", "outfmt": "1", "selcols": ",".join(names)})
+    delay = 2.0
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(url, timeout=120) as resp:
+                text = resp.read().decode("utf-8", "replace")
+            break
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+            if attempt == 3:
+                raise ArchiveError(f"IRSA Gator failed: {exc}") from exc
+            time.sleep(delay)
+            delay *= 2
+    if "|" not in text:
+        return []
+    return [{c: str(r[c]) if c in r.colnames and r[c] is not np.ma.masked else "" for c in names}
+            for r in ascii.read(text, format="ipac")]
+
+
+def fallback_rows(table, columns, ra, dec, radius_deg, top, order):
+    """Without IRSA TAP: Gaia from ESA's Gaia archive (same DR3 data), CatWISE2020 from IRSA Gator; tiled
+    IRSA Cone Search if those fail too."""
+    try:
+        if table == "gaia_dr3_source":
+            head = f"SELECT TOP {top} " if top else "SELECT "
+            tail = f" ORDER BY {order}" if top else ""
+            return tap(f"{head}{columns} FROM gaiadr3.gaia_source WHERE CONTAINS(POINT('ICRS',ra,dec),"
+                       f"CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{tail}", timeout=180, base=ESA_GAIA_TAP)
+        return gator(table, columns, ra, dec, radius_deg)
+    except ArchiveError as exc:
+        print(f"  {exc}; trying IRSA Cone Search", flush=True)
+        return scs(table, ra, dec, radius_deg)
+
+
 def cone_rows(table, columns, ra, dec, radius_deg, top=None, order=None):
-    """TAP first; once TAP has failed in this run, IRSA Cone Search for the rest (same rows, same columns)."""
+    """IRSA TAP first. IRSA TAP was down for hours on 14 Nov 2026, so once it has failed in this run the
+    rest of the run uses fallback_rows (same rows, same columns)."""
     global _tap_down
     if not _tap_down:
         head = f"SELECT TOP {top} " if top else "SELECT "
@@ -113,8 +160,9 @@ def cone_rows(table, columns, ra, dec, radius_deg, top=None, order=None):
                        f"CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{tail}", retries=1, timeout=60)
         except ArchiveError as exc:
             _tap_down = True
-            print(f"  IRSA TAP isn't answering ({str(exc)[:60]}); using Cone Search", flush=True)
-    rows = scs(table, ra, dec, radius_deg)
+            print(f"  IRSA TAP isn't answering ({str(exc)[:60]}); using ESA Gaia, IRSA Gator, Cone Search",
+                  flush=True)
+    rows = fallback_rows(table, columns, ra, dec, radius_deg, top, order)
     if top:
         rows.sort(key=lambda r: _f(r, order) if _f(r, order) is not None else 99.0)
         rows = rows[:top]

@@ -1,0 +1,25 @@
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only groombridge34
+groombridge34: 341 cleaned, 0 skipped, 2 good target measurements, 339 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only groombridge34
+groombridge34: 3 visits stacked on a 147x147 grid, target offsets [0.12, 0.08, 0.01] px; moved 0.61 px (3.7"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only groombridge34
+step 5: comparing 1 target(s)
+  groombridge34: FAILED KeyError: 'RA'
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only groombridge34 --force
+groombridge34: 341 cleaned, 0 skipped, 2 good target measurements, 339 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only groombridge34 --force
+groombridge34: 3 visits stacked on a 147x147 grid, target offsets [0.12, 0.08, 0.01] px; moved 0.61 px (3.7"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only groombridge34 --force
+step 5: comparing 1 target(s)
+  groombridge34: 12 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only groombridge34 --force
+step 6: identifying 1 target(s)
+  IRSA TAP failed (IRSA TAP failed: HTTP Error 502: Proxy Error); using ESA Gaia archive and IRSA Gator
+  groombridge34: 1/12 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids

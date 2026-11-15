@@ -1,0 +1,25 @@
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only epsindib
+epsindib: 361 cleaned, 0 skipped, 335 good target measurements, 16 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only epsindib
+epsindib: 4 visits stacked on a 147x147 grid, target offsets [0.1, 0.15, 0.1, 0.15] px; moved 1.03 px (4.58"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only epsindib
+step 5: comparing 1 target(s)
+  epsindib: FAILED KeyError: 'RA'
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only epsindib --force
+epsindib: 361 cleaned, 0 skipped, 335 good target measurements, 16 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only epsindib --force
+epsindib: 4 visits stacked on a 147x147 grid, target offsets [0.1, 0.15, 0.1, 0.15] px; moved 1.03 px (4.58"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only epsindib --force
+step 5: comparing 1 target(s)
+  epsindib: 15 mover(s), target 4.457″/yr, variability steady, 27 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only epsindib --force
+step 6: identifying 1 target(s)
+  IRSA TAP failed (IRSA TAP failed: The read operation timed out); using ESA Gaia archive and IRSA Gator
+  epsindib: 2/15 mover(s) confirmed, 0 asteroid(s) in field, 0/27 one-visit source(s) are asteroids

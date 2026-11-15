@@ -1,0 +1,280 @@
+{
+ "id": "etaaql",
+ "pipeline_version": "1",
+ "reference_visit": 1,
+ "visits": [
+  {
+   "visit": 1,
+   "mjd": 60952.531,
+   "year": 2025.7578,
+   "n_sources_all": 275,
+   "n_sources_cold": 274,
+   "noise": 0.068749,
+   "coverage": 0.999,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 61153.579,
+   "year": 2026.3082,
+   "n_sources_all": 269,
+   "n_sources_cold": 282,
+   "noise": 0.073002,
+   "coverage": 0.999,
+   "offset_px": [
+    -0.009,
+    0.012
+   ]
+  },
+  {
+   "visit": 3,
+   "mjd": 61313.921,
+   "year": 2026.7472,
+   "n_sources_all": 260,
+   "n_sources_cold": 277,
+   "noise": 0.071162,
+   "coverage": 0.999,
+   "offset_px": [
+    0.003,
+    -0.004
+   ]
+  }
+ ],
+ "movers": [
+  {
+   "t0": 2026.3064,
+   "x0": 47.01,
+   "y0": 20.733,
+   "vx_px_yr": -1.3903,
+   "vy_px_yr": 0.2258,
+   "pm_arcsec_yr": 8.662,
+   "pm_err": 0.372,
+   "significance": 23.3,
+   "pa_deg": 80.8,
+   "snr": 37.4,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 47.502,
+     "y": 20.647,
+     "snr": 22.4
+    },
+    {
+     "visit": 2,
+     "x": 47.607,
+     "y": 20.649,
+     "snr": 22.7
+    },
+    {
+     "visit": 3,
+     "x": 46.123,
+     "y": 20.871,
+     "snr": 37.4
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m1",
+   "is_target": false
+  },
+  {
+   "t0": 2026.5079,
+   "x0": 41.513,
+   "y0": 87.354,
+   "vx_px_yr": -0.3021,
+   "vy_px_yr": -0.7171,
+   "pm_arcsec_yr": 4.786,
+   "pm_err": 0.691,
+   "significance": 6.9,
+   "pa_deg": 157.2,
+   "snr": 58.7,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 42.156,
+     "y": 89.555,
+     "snr": 5.7
+    },
+    {
+     "visit": 2,
+     "x": 41.524,
+     "y": 87.3,
+     "snr": 58.0
+    },
+    {
+     "visit": 3,
+     "x": 41.469,
+     "y": 87.293,
+     "snr": 58.7
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m2",
+   "is_target": false
+  },
+  {
+   "t0": 2026.4144,
+   "x0": 97.729,
+   "y0": 59.357,
+   "vx_px_yr": 0.2113,
+   "vy_px_yr": -1.5097,
+   "pm_arcsec_yr": 9.375,
+   "pm_err": 1.376,
+   "significance": 6.8,
+   "pa_deg": 188.0,
+   "snr": 8.4,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 97.546,
+     "y": 60.77,
+     "snr": 5.1
+    },
+    {
+     "visit": 2,
+     "x": 97.751,
+     "y": 59.094,
+     "snr": 7.7
+    },
+    {
+     "visit": 3,
+     "x": 97.779,
+     "y": 59.051,
+     "snr": 8.4
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m3",
+   "is_target": false
+  },
+  {
+   "t0": 2026.2711,
+   "x0": 76.117,
+   "y0": 58.28,
+   "vx_px_yr": -0.1167,
+   "vy_px_yr": 0.3292,
+   "pm_arcsec_yr": 2.148,
+   "pm_err": 0.351,
+   "significance": 6.1,
+   "pa_deg": 19.5,
+   "snr": 47.2,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 1,
+     "x": 76.216,
+     "y": 58.1,
+     "snr": 45.8
+    },
+    {
+     "visit": 2,
+     "x": 76.026,
+     "y": 58.32,
+     "snr": 47.2
+    },
+    {
+     "visit": 3,
+     "x": 76.11,
+     "y": 58.422,
+     "snr": 44.9
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m4",
+   "is_target": false
+  }
+ ],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 1,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     72.91,
+     72.91
+    ],
+    "offset_px": 0.129,
+    "saturated": true
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.0,
+     73.0
+    ],
+    "offset_px": 0.001,
+    "saturated": true
+   },
+   {
+    "visit": 3,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.09,
+     72.78
+    ],
+    "offset_px": 0.234,
+    "saturated": true
+   }
+  ],
+  "mean_offset_px": 0.121,
+  "within_third_px": true,
+  "mover": null,
+  "saturated": true,
+  "expected_pm_arcsec_yr": 0.012,
+  "measured_pm_arcsec_yr": null
+ },
+ "variability": {
+  "source": "detector stacks",
+  "n_points": 18,
+  "visits": 3,
+  "per_detector": {
+   "5": {
+    "pairs": 3,
+    "median_ratio": 1.123,
+    "median_sigma": 7294.5,
+    "change": false
+   },
+   "6": {
+    "pairs": 3,
+    "median_ratio": 1.177,
+    "median_sigma": 28114.8,
+    "change": false
+   }
+  },
+  "verdict": "steady",
+  "saturated": true,
+  "changing_detectors": []
+ },
+ "transients": [],
+ "notes": []
+}

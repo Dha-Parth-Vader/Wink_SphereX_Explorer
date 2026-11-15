@@ -1,0 +1,183 @@
+{
+ "id": "rtri",
+ "pipeline_version": "1",
+ "reference_visit": 2,
+ "visits": [
+  {
+   "visit": 0,
+   "mjd": 60894.275,
+   "year": 2025.5983,
+   "n_sources_all": 82,
+   "n_sources_cold": 56,
+   "noise": 0.061823,
+   "coverage": 0.999,
+   "offset_px": [
+    -0.016,
+    0.02
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 61069.774,
+   "year": 2026.0788,
+   "n_sources_all": 99,
+   "n_sources_cold": 60,
+   "noise": 0.042858,
+   "coverage": 0.999,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 3,
+   "mjd": 61260.848,
+   "year": 2026.6019,
+   "n_sources_all": 90,
+   "n_sources_cold": 58,
+   "noise": 0.050057,
+   "coverage": 0.999,
+   "offset_px": [
+    -0.018,
+    0.021
+   ]
+  }
+ ],
+ "movers": [
+  {
+   "t0": 2026.4022,
+   "x0": 101.97,
+   "y0": 81.903,
+   "vx_px_yr": 0.5407,
+   "vy_px_yr": 2.9381,
+   "pm_arcsec_yr": 18.373,
+   "pm_err": 0.599,
+   "significance": 30.7,
+   "pa_deg": 349.6,
+   "snr": 39.2,
+   "n_visits": 3,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 0,
+     "x": 101.522,
+     "y": 79.858,
+     "snr": 10.2
+    },
+    {
+     "visit": 2,
+     "x": 101.816,
+     "y": 80.46,
+     "snr": 11.3
+    },
+    {
+     "visit": 3,
+     "x": 102.076,
+     "y": 82.538,
+     "snr": 39.2
+    }
+   ],
+   "bands": [
+    "all"
+   ],
+   "id": "m1",
+   "is_target": false
+  },
+  {
+   "t0": 2026.3368,
+   "x0": 3.14,
+   "y0": 143.291,
+   "vx_px_yr": 2.2735,
+   "vy_px_yr": -3.7884,
+   "pm_arcsec_yr": 27.172,
+   "pm_err": 2.99,
+   "significance": 9.1,
+   "pa_deg": 211.0,
+   "snr": 5.6,
+   "n_visits": 2,
+   "saturated": false,
+   "positions": [
+    {
+     "visit": 2,
+     "x": 2.554,
+     "y": 144.268,
+     "snr": 5.6
+    },
+    {
+     "visit": 3,
+     "x": 3.743,
+     "y": 142.286,
+     "snr": 5.5
+    }
+   ],
+   "bands": [
+    "cold"
+   ],
+   "id": "m2",
+   "is_target": false
+  }
+ ],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 0,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.41,
+     73.28
+    ],
+    "offset_px": 0.495,
+    "saturated": true
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.08,
+     72.8
+    ],
+    "offset_px": 0.215,
+    "saturated": true
+   },
+   {
+    "visit": 3,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.03,
+     73.34
+    ],
+    "offset_px": 0.348,
+    "saturated": true
+   }
+  ],
+  "mean_offset_px": 0.353,
+  "within_third_px": false,
+  "mover": null,
+  "saturated": true,
+  "expected_pm_arcsec_yr": 0.036,
+  "measured_pm_arcsec_yr": null
+ },
+ "variability": {
+  "source": "detector stacks",
+  "n_points": 18,
+  "visits": 3,
+  "per_detector": {},
+  "verdict": "no same-wavelength comparison"
+ },
+ "transients": [],
+ "notes": [
+  "Visit 2 is the reference because the first visit is noisier or less complete."
+ ]
+}

@@ -1,0 +1,25 @@
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only teegardensstar
+teegardensstar: 332 cleaned, 0 skipped, 168 good target measurements, 166 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only teegardensstar
+teegardensstar: 3 visits stacked on a 147x147 grid, target offsets [0.03, 0.07, 0.07] px; moved 0.86 px (5.23"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only teegardensstar
+step 5: comparing 1 target(s)
+  teegardensstar: FAILED KeyError: 'RA'
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only teegardensstar --force
+teegardensstar: 332 cleaned, 0 skipped, 168 good target measurements, 166 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only teegardensstar --force
+teegardensstar: 3 visits stacked on a 147x147 grid, target offsets [0.03, 0.07, 0.07] px; moved 0.86 px (5.23"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only teegardensstar --force
+step 5: comparing 1 target(s)
+  teegardensstar: 15 mover(s), target 4.87″/yr, variability steady, 1 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only teegardensstar --force
+step 6: identifying 1 target(s)
+  IRSA TAP failed (IRSA TAP failed: The read operation timed out); using ESA Gaia archive and IRSA Gator
+  teegardensstar: 1/15 mover(s) confirmed, 3 asteroid(s) in field, 0/1 one-visit source(s) are asteroids

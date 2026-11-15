@@ -1,0 +1,110 @@
+{
+ "id": "rleo",
+ "pipeline_version": "1",
+ "reference_visit": 3,
+ "visits": [
+  {
+   "visit": 0,
+   "mjd": 60791.355,
+   "year": 2025.3165,
+   "n_sources_all": 9,
+   "n_sources_cold": 8,
+   "noise": 0.724983,
+   "coverage": 0.994,
+   "offset_px": [
+    -0.033,
+    -0.008
+   ]
+  },
+  {
+   "visit": 2,
+   "mjd": 60995.903,
+   "year": 2025.8765,
+   "n_sources_all": 6,
+   "n_sources_cold": 5,
+   "noise": 1.198342,
+   "coverage": 0.992,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "visit": 3,
+   "mjd": 61165.718,
+   "year": 2026.3415,
+   "n_sources_all": 14,
+   "n_sources_cold": 5,
+   "noise": 0.544665,
+   "coverage": 0.993,
+   "offset_px": [
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "movers": [],
+ "target": {
+  "per_visit": [
+   {
+    "visit": 0,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     72.81,
+     72.96
+    ],
+    "offset_px": 0.198,
+    "saturated": true
+   },
+   {
+    "visit": 2,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     72.79,
+     73.03
+    ],
+    "offset_px": 0.21,
+    "saturated": true
+   },
+   {
+    "visit": 3,
+    "predicted": [
+     73.0,
+     73.0
+    ],
+    "found": true,
+    "measured": [
+     73.0,
+     73.05
+    ],
+    "offset_px": 0.048,
+    "saturated": true
+   }
+  ],
+  "mean_offset_px": 0.152,
+  "within_third_px": true,
+  "mover": null,
+  "saturated": true,
+  "expected_pm_arcsec_yr": 0.0,
+  "measured_pm_arcsec_yr": null
+ },
+ "variability": {
+  "source": "detector stacks",
+  "n_points": 16,
+  "visits": 3,
+  "per_detector": {},
+  "verdict": "no same-wavelength comparison"
+ },
+ "transients": [],
+ "notes": [
+  "Visit 3 is the reference because the first visit is noisier or less complete."
+ ]
+}

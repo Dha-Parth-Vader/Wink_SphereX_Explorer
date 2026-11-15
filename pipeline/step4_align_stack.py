@@ -6,12 +6,9 @@ Stacks (R11, R12): 3-sigma-clipped mean per (visit, detector), at least 3 frames
 visit. Pixels seen by fewer than 40% of the best-covered pixel's frames are blanked. A smooth background
 is subtracted unless --no-flatten (nebulae).
 
-cache/<id>/stack.fits extensions, all [visit, band, y, x]:
-  STACK    clipped mean in MJy/sr. band 0 = all detectors, 1..6 = detector, 7 = cold (D5+D6 mean)
-  DISPLAY  STACK with interior holes (saturated cores) filled for pictures (R19); edge gaps stay NaN
-  NFRAMES  frames that went into each pixel
-  SATFRAC  fraction of frames with saturation flags at the pixel
-  FLAGFRAC fraction of frames where the science mask drops the pixel (contamination)
+cache/<id>/stack.fits uses the layout in stackfile.py, which steps 5 to 7 and the live server read:
+one Vnn_<ALL|D1..D6> image per visit and band, a Vnn_<band>_FLAGS contamination mask (science mask drops
+the pixel in most frames) and a Vnn_CUBE of 32 px centre tiles per SPHEREx band for the Sky Dome.
 out/stack/<id>.json: per visit the dates, frames per detector, wavelengths, coverage, flag counts and the
 target's measured vs predicted position.
 
@@ -36,12 +33,17 @@ warnings.simplefilter("ignore", FITSFixedWarning)
 logging.getLogger("astropy").setLevel(logging.ERROR)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import stackfile  # noqa: E402
+
 OUT = os.path.join(HERE, "out")
 CACHE = os.environ.get("SPHEREX_CACHE", os.path.join(HERE, "cache"))
 PIX_ARCSEC = 6.15
 MIN_FRAMES = 3
 MIN_VISIT_FRAMES = 12
 MIN_COVER = 0.4
+TILE = 32
+FLAG_MAJORITY = 0.5
 BANDS = ["all", 1, 2, 3, 4, 5, 6, "cold"]
 COLD_BAND = 7
 
@@ -190,8 +192,8 @@ def run(t, fov, do_flatten, force):
         return f"{t['id']}: no visit has {MIN_VISIT_FRAMES}+ cleaned frames, nothing stacked"
     nv, nb = len(visits), len(BANDS)
     stack = np.full((nv, nb, n, n), np.nan, np.float32)
-    nfr = np.zeros((nv, nb, n, n), np.int16)
-    satf = np.zeros((nv, nb, n, n), np.float32)
+    c0 = max(0, n // 2 - TILE // 2)
+    cube = np.full((nv, 102, TILE, TILE), np.nan, np.float32)
     flagf = np.zeros((nv, nb, n, n), np.float32)
     cdir = os.path.join(CACHE, t["id"], "clean")
     meta = []
@@ -200,28 +202,35 @@ def run(t, fov, do_flatten, force):
         per_det = {}
         for det in range(1, 7):
             drows = [r for r in vrows if int(r["detector"]) == det]
-            imgs, bads, sats, used = [], [], [], []
+            imgs, bads, used = [], [], []
+            tiles = {}
             for r in drows:
                 path = os.path.join(cdir, r["file"])
                 if not os.path.exists(path):
                     continue
-                im, bad, sat = reproject(path, grid, n)
+                im, bad, _ = reproject(path, grid, n)
                 if np.isfinite(im).sum() < 0.05 * n * n:
                     continue
-                imgs.append(im); bads.append(bad); sats.append(sat); used.append(r)
+                imgs.append(im); bads.append(bad); used.append(r)
+                bi = stackfile.band_index(float(r["wavelength_um"])) if r["wavelength_um"] not in ("", "nan") else None
+                if bi is not None:
+                    tiles.setdefault(bi, []).append(im[c0:c0 + TILE, c0:c0 + TILE])
             if len(imgs) < MIN_FRAMES:
                 continue
             m, k = stack_frames(imgs)
             if do_flatten:
                 m = flatten(m)
-            stack[i, det], nfr[i, det] = m, k
-            satf[i, det] = np.mean(sats, axis=0)
+            stack[i, det] = m
             flagf[i, det] = np.mean(bads, axis=0)
             lams = [float(r["wavelength_um"]) for r in used if r["wavelength_um"] not in ("", "nan")]
             flag_counts = Counter()
             for r in used:
                 flag_counts.update(json.loads(r["flag_counts"]))
             target_sat = [r["saturated"] == "True" for r in used]
+            for bi, ts in tiles.items():
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore", RuntimeWarning)
+                    cube[i, bi] = np.nanmean(ts, axis=0)
             per_det[det] = dict(n_frames=len(imgs),
                                 wavelength_um=[round(min(lams), 4), round(max(lams), 4)] if lams else None,
                                 coverage=round(float(np.isfinite(m).mean()), 3),
@@ -235,16 +244,12 @@ def run(t, fov, do_flatten, force):
                 warnings.simplefilter("ignore", RuntimeWarning)
                 allb = np.nanmean(stack[i, dets], axis=0)
             stack[i, 0] = np.where(ncov >= max(1, (len(dets) + 1) // 2), allb, np.nan)
-            nfr[i, 0] = nfr[i, dets].sum(axis=0)
-            satf[i, 0] = satf[i, dets].max(axis=0)
             flagf[i, 0] = flagf[i, dets].mean(axis=0)
             cold = [d for d in (5, 6) if d in per_det]
             if cold:
                 with warnings.catch_warnings():
                     warnings.simplefilter("ignore", RuntimeWarning)
                     stack[i, COLD_BAND] = np.nanmean(stack[i, cold], axis=0)
-                nfr[i, COLD_BAND] = nfr[i, cold].sum(axis=0)
-                satf[i, COLD_BAND] = satf[i, cold].max(axis=0)
                 flagf[i, COLD_BAND] = flagf[i, cold].mean(axis=0)
         mjds = [float(r["mjd"]) for r in vrows]
         meta.append(dict(visit=v, mjd_mean=round(float(np.mean(mjds)), 3), mjd_min=round(min(mjds), 3),
@@ -280,19 +285,34 @@ def run(t, fov, do_flatten, force):
                       arcsec_per_yr=round(shift * PIX_ARCSEC / yrs, 2) if yrs > 0.05 else None,
                       catalogue_arcsec_per_yr=round(t.get("pm_mas", 0) / 1000, 2))
 
-    hdr = grid.to_header()
-    hdr["TARGET"] = t["name"]
-    hdr["FOV_DEG"] = fov
-    hdr["BANDS"] = "0=all,1..6=detector,7=cold D5+D6"
-    hdr["FLATTEN"] = do_flatten
-    os.makedirs(os.path.dirname(stack_path), exist_ok=True)
-    fits.HDUList([fits.PrimaryHDU(header=hdr),
-                  fits.ImageHDU(stack, hdr, name="STACK"),
-                  fits.ImageHDU(display, hdr, name="DISPLAY"),
-                  fits.ImageHDU(nfr, hdr, name="NFRAMES"),
-                  fits.ImageHDU(satf, hdr, name="SATFRAC"),
-                  fits.ImageHDU(flagf, hdr, name="FLAGFRAC")]).writeto(stack_path + ".part", overwrite=True)
-    os.replace(stack_path + ".part", stack_path)
+    sgrid = stackfile.Grid(t["ra"], t["dec"], n, n, PIX_ARCSEC)
+    images, extras, cubes = {}, {}, {}
+    for i, m in enumerate(meta):
+        v = m["visit"]
+        for b, name in enumerate(stackfile.BANDS):
+            img = stack[i, b]
+            if not np.isfinite(img).any():
+                continue
+            dets = [d for d in m["detectors"] if name == "ALL" or name == f"D{d}"]
+            per = [m["detectors"][d] for d in dets]
+            lams = [x for p in per if p["wavelength_um"] for x in p["wavelength_um"]]
+            fb = Counter()
+            for p in per:
+                for k, c in p["flag_bits"].items():
+                    fb[k] += c / max(p["n_frames"], 1)
+            hdr = {"VISIT": v, "MJD": m["mjd_mean"], "MJDMIN": m["mjd_min"], "MJDMAX": m["mjd_max"],
+                   "NFRAMES": sum(p["n_frames"] for p in per),
+                   "COVERAGE": round(float(np.isfinite(img).mean()), 3),
+                   "SATUR": any(p["target_saturated_frac"] >= 0.5 for p in per),
+                   "SKY": 0.0, "NOISE": stackfile.robust_noise(img)}
+            if lams:
+                hdr["WAVEMIN"], hdr["WAVEMAX"] = min(lams), max(lams)
+            hdr.update({f"FB_{k}": int(round(c / max(len(per), 1))) for k, c in fb.items() if round(c)})
+            images[(v, name)] = (img, hdr)
+            extras[(v, name, "FLAGS")] = flagf[i, b] > FLAG_MAJORITY
+        if np.isfinite(cube[i]).any():
+            cubes[v] = cube[i]
+    stackfile.write_stack(stack_path, sgrid, t["id"], images, extras, cubes)
     info = dict(id=t["id"], name=t["name"], ra=t["ra"], dec=t["dec"], epoch=t["epoch"], fov_deg=fov, size_px=n,
                 pixel_scale_arcsec=PIX_ARCSEC, bands=[str(b) for b in BANDS], flatten=do_flatten,
                 visits_skipped=skipped, visits=meta, motion=motion)

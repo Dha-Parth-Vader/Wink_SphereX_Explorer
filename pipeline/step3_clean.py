@@ -169,8 +169,9 @@ def clean_one(job):
                 visit=row["visit"], detector=row["detector"], x=round(x, 2), y=round(y, 2),
                 wavelength_um=round(lam, 4), bandwidth_um=round(bw, 4), zodi_missing=zodi_missing,
                 sky_mjysr=round(sky, 4), noise_mjysr=round(noise, 4), flux_ujy=round(flux, 2),
-                flux_err_ujy=round(ferr, 2), flux_display_ujy=round(flux_d, 2),
-                aperture_bad_frac=round(fbad, 2), saturated=saturated, bad_frac=round(float(bad.mean()), 4),
+                err_ujy=round(ferr, 2), flux_display_ujy=round(flux_d, 2),
+                aperture_bad_frac=round(fbad, 2), flagged=bool(fbad >= 0.3 or not np.isfinite(flux)),
+                saturated=saturated, bad_frac=round(float(bad.mean()), 4),
                 flag_counts=json.dumps({k: v for k, v in counts.items() if v}))
 
 

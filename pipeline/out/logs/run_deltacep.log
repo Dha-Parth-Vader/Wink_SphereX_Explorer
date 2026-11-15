@@ -1,0 +1,25 @@
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only deltacep
+deltacep: 351 cleaned, 0 skipped, 0 good target measurements, 350 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only deltacep
+deltacep: 3 visits stacked on a 147x147 grid, target offsets [0.16, 0.18, 0.13] px; moved 0.15 px (0.93"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only deltacep
+step 5: comparing 1 target(s)
+  deltacep: FAILED KeyError: 'RA'
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only deltacep --force
+deltacep: 351 cleaned, 0 skipped, 0 good target measurements, 350 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only deltacep --force
+deltacep: 3 visits stacked on a 147x147 grid, target offsets [0.16, 0.18, 0.13] px; moved 0.15 px (0.93"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only deltacep --force
+step 5: comparing 1 target(s)
+  deltacep: 13 mover(s), variability steady, 0 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only deltacep --force
+step 6: identifying 1 target(s)
+  IRSA TAP failed (IRSA TAP failed: The read operation timed out); using ESA Gaia archive and IRSA Gator
+  deltacep: 0/13 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids
