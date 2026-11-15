@@ -456,6 +456,8 @@ body.page-viewer { font-size: 15px; }
 .v-share { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .v-grid { display: grid; grid-template-columns: 250px minmax(0, 1fr) 280px; gap: 14px; align-items: start; }
+/* the flag list changes length every date; anchoring the scroll to it made the page jump while blinking */
+.v-left { overflow-anchor: none; }
 .v-centre { min-width: 0; }
 .v-title { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
 .v-title h1 { font-size: 22px; }

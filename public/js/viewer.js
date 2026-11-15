@@ -372,6 +372,7 @@
     S.controller = ctl;
     const token = ++S.token;
     stopPlay();
+    releaseLeftHeight();
     startTicker();
     showStatus({ msg: "Looking for SPHEREx images…", indeterminate: true, actions: [{ label: "Cancel", onClick: cancelLoad }], dim: true });
     writeURL();
@@ -1043,6 +1044,30 @@
       $("patch-info").appendChild(el("dt", null, "Notes"));
       $("patch-info").appendChild(dd);
     }
+    holdLeftHeight();
+  }
+
+  // The flag list changes length from date to date. If the left column shrank while blinking, the page
+  // would get shorter and the browser would pull the scroll position up, so the whole page jumped.
+  // It keeps its tallest height until the next search or a change of window width.
+  let leftWidth = 0;
+  function holdLeftHeight() {
+    const box = document.querySelector(".v-left");
+    if (!box || !box.offsetParent) return;
+    if (box.offsetWidth !== leftWidth) {
+      leftWidth = box.offsetWidth;
+      box.style.minHeight = "";
+    }
+    const cs = getComputedStyle(box);
+    const pad = cs.boxSizing === "border-box" ? 0 : parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom) +
+      parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
+    const h = Math.ceil(box.getBoundingClientRect().height - pad);
+    if (h > (parseFloat(box.style.minHeight) || 0)) box.style.minHeight = h + "px";
+  }
+
+  function releaseLeftHeight() {
+    const box = document.querySelector(".v-left");
+    if (box) box.style.minHeight = "";
   }
 
   function renderLayersPanel() {
