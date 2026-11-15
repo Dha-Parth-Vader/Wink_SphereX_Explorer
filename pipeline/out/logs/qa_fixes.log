@@ -1,0 +1,23 @@
+0 lists fresh, 1 to query
+  TAP failed (HTTP 502), using SIA
+  IRSA: HTTP 502; retrying in 3 s
+  IRSA: HTTP 502; retrying in 6 s
+  IRSA: HTTP 502; retrying in 12 s
+  IRSA: HTTP 502; retrying in 24 s
+  IRSA: HTTP 502; retrying in 48 s
+wise0855             258 images
+wise0855           256/256 in cache, 0 failed, 127.3 s, 215.5 MB new
+run_all: 1 target(s), steps [3, 4, 5, 6, 7], 3 at a time
+[1/1] wise0855: done in 109 s
+step 7: exporting
+step 7: exporting 1 target(s) to public/data
+  wise0855: 26 frames, 25 prediction(s), 102/102 bands measured, status 'moves 8.6″/yr'
+epsindib: 4 visits stacked on a 147x147 grid, target offsets [0.12, 0.15, 0.08, 0.14] px; moved 1.0 px (4.43"/yr)
+step 5: comparing 1 target(s)
+  epsindib: 59 mover(s), target 4.441″/yr, variability steady, 20 one-visit source(s)
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: HTTP Error 502: Proxy Error); using IRSA Gator, ESA Gaia, Cone Search
+  epsindib: 2/59 mover(s) confirmed, 0 asteroid(s) in field, 0/20 one-visit source(s) are asteroids
+step 7: exporting 1 target(s) to public/data
+  epsindib: 26 frames, 79 prediction(s), 101/102 bands measured, status 'moves 4.4″/yr'
+merged: 101 patches (100 real, 1 simulated), 101 gallery cards, 109 dome objects

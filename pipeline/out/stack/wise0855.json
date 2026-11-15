@@ -1,8 +1,8 @@
 {
  "id": "wise0855",
  "name": "WISE 0855-0714",
- "ra": 133.75947,
- "dec": -7.242557,
+ "ra": 133.758981,
+ "dec": -7.242106,
  "epoch": 2026.0,
  "fov_deg": 0.25,
  "size_px": 147,
@@ -31,8 +31,8 @@
     "1": {
      "n_frames": 4,
      "wavelength_um": [
-      0.9912,
-      1.0641
+      0.9913,
+      1.0642
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
@@ -60,22 +60,22 @@
      "n_frames": 8,
      "wavelength_um": [
       1.2784,
-      1.6274
+      1.6275
      ],
-     "coverage": 0.993,
+     "coverage": 0.992,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 316,
-      "COLD": 114,
+      "COLD": 115,
       "FULLSAMPLE": 240,
-      "HALO": 3813,
-      "NONFUNC": 823,
-      "OUTLIER": 5977,
+      "HALO": 3806,
+      "NONFUNC": 819,
+      "OUTLIER": 5979,
       "OVERFLOW": 102,
-      "PERSIST": 573,
-      "SOURCE": 211797,
-      "SUR_ERROR": 1116,
-      "TRANSIENT": 1620
+      "PERSIST": 566,
+      "SOURCE": 211760,
+      "SUR_ERROR": 1114,
+      "TRANSIENT": 1613
      },
      "obs_ids": [
       "2025W19_1B_0181_1",
@@ -91,8 +91,8 @@
     "3": {
      "n_frames": 3,
      "wavelength_um": [
-      2.2076,
-      2.4126
+      2.2077,
+      2.4127
      ],
      "coverage": 0.995,
      "target_saturated_frac": 0.0,
@@ -118,22 +118,22 @@
     "4": {
      "n_frames": 4,
      "wavelength_um": [
-      3.3523,
-      3.6325
+      3.3524,
+      3.6326
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 119,
       "COLD": 105,
-      "HALO": 2356,
-      "NONFUNC": 1463,
-      "OUTLIER": 2917,
+      "HALO": 2347,
+      "NONFUNC": 1458,
+      "OUTLIER": 2912,
       "OVERFLOW": 154,
       "PERSIST": 72,
-      "SOURCE": 115267,
-      "SUR_ERROR": 1069,
-      "TRANSIENT": 1258
+      "SOURCE": 115299,
+      "SUR_ERROR": 1063,
+      "TRANSIENT": 1251
      },
      "obs_ids": [
       "2025W19_1B_0241_1",
@@ -145,21 +145,21 @@
     "5": {
      "n_frames": 8,
      "wavelength_um": [
-      4.0375,
+      4.0376,
       4.4057
      ],
-     "coverage": 0.991,
+     "coverage": 0.99,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 14,
       "COLD": 274,
-      "HALO": 5144,
+      "HALO": 5142,
       "NONFUNC": 1730,
-      "OUTLIER": 4325,
+      "OUTLIER": 4326,
       "OVERFLOW": 172,
       "PERSIST": 47,
       "SNOWBALL": 9,
-      "SOURCE": 180447,
+      "SOURCE": 180408,
       "SUR_ERROR": 1875,
       "TRANSIENT": 2360
      },
@@ -177,22 +177,22 @@
     "6": {
      "n_frames": 3,
      "wavelength_um": [
-      4.8595,
-      5.0034
+      4.8596,
+      5.0035
      ],
-     "coverage": 0.994,
+     "coverage": 0.993,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "COLD": 97,
-      "HALO": 2430,
+      "HALO": 2446,
       "NONFUNC": 666,
-      "OUTLIER": 1783,
+      "OUTLIER": 1784,
       "OVERFLOW": 61,
       "PERSIST": 8,
       "SNOWBALL": 20,
-      "SOURCE": 52169,
-      "SUR_ERROR": 641,
-      "TRANSIENT": 1063
+      "SOURCE": 52174,
+      "SUR_ERROR": 643,
+      "TRANSIENT": 1072
      },
      "obs_ids": [
       "2025W19_1B_0116_1",
@@ -204,14 +204,14 @@
    "coverage_all": 1.0,
    "check_band": "cold",
    "target_predicted_px": [
-    72.15,
-    72.95
+    72.13,
+    72.93
    ],
    "target_measured_px": [
-    72.11,
-    72.78
+    72.14,
+    72.89
    ],
-   "offset_px": 0.17
+   "offset_px": 0.04
   },
   {
    "visit": 1,
@@ -225,22 +225,22 @@
      "n_frames": 18,
      "wavelength_um": [
       0.7451,
-      1.1151
+      1.115
      ],
      "coverage": 1.0,
-     "target_saturated_frac": 0.06,
+     "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 596,
-      "COLD": 352,
-      "CROSSTALK": 2489,
-      "HALO": 12486,
-      "NONFUNC": 2250,
-      "OUTLIER": 11213,
+      "COLD": 351,
+      "CROSSTALK": 2488,
+      "HALO": 12491,
+      "NONFUNC": 2255,
+      "OUTLIER": 11208,
       "OVERFLOW": 196,
-      "PERSIST": 2691,
-      "SOURCE": 409616,
-      "SUR_ERROR": 3365,
-      "TRANSIENT": 4831
+      "PERSIST": 2697,
+      "SOURCE": 409791,
+      "SUR_ERROR": 3363,
+      "TRANSIENT": 4833
      },
      "obs_ids": [
       "2025W44_2B_0305_1",
@@ -273,17 +273,17 @@
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 807,
-      "COLD": 241,
-      "HALO": 9262,
-      "NONFUNC": 1834,
-      "OUTLIER": 13869,
+      "COLD": 240,
+      "HALO": 9270,
+      "NONFUNC": 1831,
+      "OUTLIER": 13891,
       "OVERFLOW": 264,
-      "PERSIST": 8873,
+      "PERSIST": 8864,
       "SNOWBALL": 8,
-      "SOURCE": 506186,
+      "SOURCE": 506180,
       "STREAK": 1186,
-      "SUR_ERROR": 2604,
-      "TRANSIENT": 4078
+      "SUR_ERROR": 2606,
+      "TRANSIENT": 4079
      },
      "obs_ids": [
       "2025W45_2A_0164_1",
@@ -311,7 +311,7 @@
      "n_frames": 18,
      "wavelength_um": [
       1.6255,
-      2.3807
+      2.3806
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
@@ -319,15 +319,15 @@
       "BLOOM": 681,
       "COLD": 360,
       "DICHROIC": 9005,
-      "HALO": 11766,
-      "NONFUNC": 2731,
-      "OUTLIER": 15973,
+      "HALO": 11741,
+      "NONFUNC": 2736,
+      "OUTLIER": 15965,
       "OVERFLOW": 236,
-      "PERSIST": 7451,
-      "SOURCE": 446622,
-      "STREAK": 559,
-      "SUR_ERROR": 3608,
-      "TRANSIENT": 4994
+      "PERSIST": 7420,
+      "SOURCE": 446654,
+      "STREAK": 551,
+      "SUR_ERROR": 3607,
+      "TRANSIENT": 4991
      },
      "obs_ids": [
       "2025W46_1A_0075_4",
@@ -354,23 +354,23 @@
      "n_frames": 18,
      "wavelength_um": [
       2.4295,
-      3.8321
+      3.832
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 539,
-      "COLD": 413,
-      "DICHROIC": 11918,
-      "HALO": 9095,
+      "COLD": 412,
+      "DICHROIC": 11901,
+      "HALO": 9102,
       "HOT": 1,
       "NONFUNC": 3889,
-      "OUTLIER": 12192,
-      "OVERFLOW": 542,
+      "OUTLIER": 12198,
+      "OVERFLOW": 543,
       "PERSIST": 843,
-      "SOURCE": 510948,
-      "SUR_ERROR": 3822,
-      "TRANSIENT": 4788
+      "SOURCE": 511013,
+      "SUR_ERROR": 3818,
+      "TRANSIENT": 4787
      },
      "obs_ids": [
       "2025W44_2B_0305_1",
@@ -403,16 +403,16 @@
      "target_saturated_frac": 0.26,
      "flag_bits": {
       "BLOOM": 32,
-      "COLD": 559,
-      "HALO": 11011,
-      "NONFUNC": 3917,
+      "COLD": 558,
+      "HALO": 11003,
+      "NONFUNC": 3914,
       "OUTLIER": 10830,
       "OVERFLOW": 396,
-      "PERSIST": 2503,
-      "SOURCE": 433666,
+      "PERSIST": 2507,
+      "SOURCE": 433667,
       "STREAK": 1287,
-      "SUR_ERROR": 4012,
-      "TRANSIENT": 5050
+      "SUR_ERROR": 4009,
+      "TRANSIENT": 5046
      },
      "obs_ids": [
       "2025W45_2A_0164_1",
@@ -440,23 +440,23 @@
      "n_frames": 18,
      "wavelength_um": [
       4.4124,
-      4.9791
+      4.979
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.17,
      "flag_bits": {
       "COLD": 541,
       "FULLSAMPLE": 272,
-      "HALO": 11218,
-      "NONFUNC": 4056,
-      "OUTLIER": 11801,
+      "HALO": 11244,
+      "NONFUNC": 4058,
+      "OUTLIER": 11813,
       "OVERFLOW": 440,
-      "PERSIST": 2420,
+      "PERSIST": 2415,
       "SNOWBALL": 29,
-      "SOURCE": 341073,
+      "SOURCE": 340962,
       "STREAK": 241,
-      "SUR_ERROR": 4304,
-      "TRANSIENT": 5194
+      "SUR_ERROR": 4309,
+      "TRANSIENT": 5199
      },
      "obs_ids": [
       "2025W46_1A_0075_4",
@@ -483,14 +483,14 @@
    "coverage_all": 1.0,
    "check_band": "cold",
    "target_predicted_px": [
-    72.81,
-    72.99
+    72.8,
+    72.98
    ],
    "target_measured_px": [
-    72.91,
-    73.32
+    72.61,
+    73.02
    ],
-   "offset_px": 0.35
+   "offset_px": 0.19
   },
   {
    "visit": 2,
@@ -506,20 +506,20 @@
       1.2805,
       1.4417
      ],
-     "coverage": 0.988,
+     "coverage": 0.987,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 289,
       "COLD": 82,
-      "HALO": 3022,
+      "HALO": 3019,
       "NONFUNC": 574,
-      "OUTLIER": 4653,
+      "OUTLIER": 4655,
       "OVERFLOW": 89,
-      "PERSIST": 3522,
+      "PERSIST": 3523,
       "SNOWBALL": 11,
-      "SOURCE": 162646,
-      "SUR_ERROR": 888,
-      "TRANSIENT": 1308
+      "SOURCE": 162644,
+      "SUR_ERROR": 885,
+      "TRANSIENT": 1305
      },
      "obs_ids": [
       "2025W50_2A_0086_1",
@@ -533,22 +533,22 @@
     "3": {
      "n_frames": 3,
      "wavelength_um": [
-      1.8928,
-      2.0281
+      1.8927,
+      2.028
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 127,
       "COLD": 81,
-      "HALO": 1798,
-      "NONFUNC": 588,
-      "OUTLIER": 2775,
+      "HALO": 1800,
+      "NONFUNC": 591,
+      "OUTLIER": 2772,
       "OVERFLOW": 41,
-      "PERSIST": 1099,
-      "SOURCE": 76012,
-      "SUR_ERROR": 584,
-      "TRANSIENT": 814
+      "PERSIST": 1103,
+      "SOURCE": 76014,
+      "SUR_ERROR": 587,
+      "TRANSIENT": 817
      },
      "obs_ids": [
       "2025W50_2A_0232_1",
@@ -560,20 +560,20 @@
      "n_frames": 6,
      "wavelength_um": [
       4.0399,
-      4.2187
+      4.2186
      ],
-     "coverage": 0.987,
-     "target_saturated_frac": 0.17,
+     "coverage": 0.986,
+     "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 4,
-      "COLD": 186,
-      "HALO": 3896,
-      "NONFUNC": 929,
-      "OUTLIER": 3136,
-      "OVERFLOW": 102,
+      "COLD": 185,
+      "HALO": 3899,
+      "NONFUNC": 926,
+      "OUTLIER": 3137,
+      "OVERFLOW": 101,
       "PERSIST": 1980,
-      "SOURCE": 139318,
-      "SUR_ERROR": 1355,
+      "SOURCE": 139326,
+      "SUR_ERROR": 1353,
       "TRANSIENT": 1685
      },
      "obs_ids": [
@@ -588,8 +588,8 @@
     "6": {
      "n_frames": 3,
      "wavelength_um": [
-      4.6289,
-      4.7321
+      4.6288,
+      4.732
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
@@ -597,12 +597,12 @@
       "COLD": 95,
       "HALO": 1629,
       "NONFUNC": 782,
-      "OUTLIER": 1930,
-      "OVERFLOW": 90,
+      "OUTLIER": 1933,
+      "OVERFLOW": 89,
       "PERSIST": 138,
       "SNOWBALL": 16,
-      "SOURCE": 57952,
-      "SUR_ERROR": 623,
+      "SOURCE": 57971,
+      "SUR_ERROR": 622,
       "TRANSIENT": 775
      },
      "obs_ids": [
@@ -616,13 +616,13 @@
    "check_band": "cold",
    "target_predicted_px": [
     72.93,
-    73.0
+    72.99
    ],
    "target_measured_px": [
-    72.73,
-    73.29
+    72.65,
+    73.17
    ],
-   "offset_px": 0.36
+   "offset_px": 0.33
   },
   {
    "visit": 3,
@@ -636,7 +636,7 @@
      "n_frames": 14,
      "wavelength_um": [
       0.7419,
-      1.0894
+      1.0895
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.07,
@@ -644,14 +644,14 @@
       "BLOOM": 385,
       "COLD": 331,
       "CROSSTALK": 1749,
-      "HALO": 10508,
-      "NONFUNC": 1743,
-      "OUTLIER": 8790,
+      "HALO": 10488,
+      "NONFUNC": 1744,
+      "OUTLIER": 8791,
       "OVERFLOW": 146,
-      "PERSIST": 890,
-      "SOURCE": 316863,
-      "SUR_ERROR": 2578,
-      "TRANSIENT": 3890
+      "PERSIST": 898,
+      "SOURCE": 316854,
+      "SUR_ERROR": 2574,
+      "TRANSIENT": 3885
      },
      "obs_ids": [
       "2026W18_2A_0264_1",
@@ -674,22 +674,22 @@
      "n_frames": 15,
      "wavelength_um": [
       1.1086,
-      1.5889
+      1.589
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 565,
       "COLD": 220,
-      "HALO": 12147,
+      "HALO": 12140,
       "HOT": 2,
-      "NONFUNC": 1422,
-      "OUTLIER": 11328,
+      "NONFUNC": 1423,
+      "OUTLIER": 11335,
       "OVERFLOW": 208,
-      "PERSIST": 1327,
-      "SOURCE": 403573,
-      "SUR_ERROR": 2690,
-      "TRANSIENT": 4797
+      "PERSIST": 1337,
+      "SOURCE": 403492,
+      "SUR_ERROR": 2688,
+      "TRANSIENT": 4793
      },
      "obs_ids": [
       "2026W18_2A_0247_1",
@@ -713,23 +713,23 @@
      "n_frames": 20,
      "wavelength_um": [
       1.6267,
-      2.3632
+      2.3633
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 775,
-      "COLD": 441,
-      "DICHROIC": 1910,
-      "HALO": 14927,
-      "NONFUNC": 2809,
-      "OUTLIER": 18130,
+      "COLD": 442,
+      "DICHROIC": 1925,
+      "HALO": 14923,
+      "NONFUNC": 2801,
+      "OUTLIER": 18133,
       "OVERFLOW": 255,
-      "PERSIST": 1132,
+      "PERSIST": 1131,
       "SNOWBALL": 28,
-      "SOURCE": 502651,
-      "SUR_ERROR": 3748,
-      "TRANSIENT": 6202
+      "SOURCE": 502705,
+      "SUR_ERROR": 3746,
+      "TRANSIENT": 6194
      },
      "obs_ids": [
       "2026W17_1B_0227_2",
@@ -758,23 +758,23 @@
      "n_frames": 14,
      "wavelength_um": [
       2.4221,
-      3.7298
+      3.7299
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 424,
       "COLD": 332,
-      "DICHROIC": 15935,
-      "HALO": 7511,
-      "NONFUNC": 4414,
-      "OUTLIER": 10897,
+      "DICHROIC": 15926,
+      "HALO": 7495,
+      "NONFUNC": 4407,
+      "OUTLIER": 10880,
       "OVERFLOW": 558,
-      "PERSIST": 432,
+      "PERSIST": 431,
       "SNOWBALL": 31,
-      "SOURCE": 397163,
+      "SOURCE": 397296,
       "SUR_ERROR": 3168,
-      "TRANSIENT": 3900
+      "TRANSIENT": 3894
      },
      "obs_ids": [
       "2026W18_2A_0264_1",
@@ -796,23 +796,23 @@
     "5": {
      "n_frames": 15,
      "wavelength_um": [
-      3.8314,
-      4.3679
+      3.8315,
+      4.368
      ],
      "coverage": 1.0,
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "BLOOM": 9,
-      "COLD": 496,
-      "HALO": 17328,
-      "NONFUNC": 3148,
-      "OUTLIER": 9032,
+      "COLD": 499,
+      "HALO": 17354,
+      "NONFUNC": 3152,
+      "OUTLIER": 9026,
       "OVERFLOW": 374,
       "PERSIST": 214,
-      "SNOWBALL": 325,
-      "SOURCE": 346457,
-      "SUR_ERROR": 4477,
-      "TRANSIENT": 7160
+      "SNOWBALL": 327,
+      "SOURCE": 346414,
+      "SUR_ERROR": 4482,
+      "TRANSIENT": 7182
      },
      "obs_ids": [
       "2026W18_2A_0247_1",
@@ -842,15 +842,15 @@
      "target_saturated_frac": 0.0,
      "flag_bits": {
       "COLD": 729,
-      "HALO": 15608,
-      "NONFUNC": 4305,
-      "OUTLIER": 13450,
+      "HALO": 15625,
+      "NONFUNC": 4298,
+      "OUTLIER": 13446,
       "OVERFLOW": 433,
-      "PERSIST": 327,
-      "SNOWBALL": 108,
-      "SOURCE": 387645,
+      "PERSIST": 326,
+      "SNOWBALL": 105,
+      "SOURCE": 387822,
       "SUR_ERROR": 4708,
-      "TRANSIENT": 6878
+      "TRANSIENT": 6880
      },
      "obs_ids": [
       "2026W17_1B_0227_2",
@@ -879,24 +879,24 @@
    "coverage_all": 1.0,
    "check_band": "cold",
    "target_predicted_px": [
-    73.43,
-    73.03
+    73.44,
+    73.04
    ],
    "target_measured_px": [
-    73.36,
-    73.46
+    73.11,
+    73.22
    ],
-   "offset_px": 0.44
+   "offset_px": 0.38
   }
  ],
  "motion": {
   "first_mjd": 60801.235,
   "last_mjd": 61162.047,
   "years": 0.988,
-  "shift_px": 1.42,
-  "north_px": 0.68,
-  "east_px": -1.25,
-  "arcsec_per_yr": 8.86,
-  "catalogue_arcsec_per_yr": 7.94
+  "shift_px": 1.02,
+  "north_px": 0.33,
+  "east_px": -0.97,
+  "arcsec_per_yr": 6.38,
+  "catalogue_arcsec_per_yr": 8.15
  }
 }
