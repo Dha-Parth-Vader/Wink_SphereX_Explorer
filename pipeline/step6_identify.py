@@ -14,11 +14,14 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 from stackfile import (CACHE, EPOCH, OUT, PIPELINE_VERSION, load_targets, parse_only, read_json, read_stack,
                        run_many, separation_arcsec, stack_path, target_map, write_json)
 
 TAP_URL = "https://irsa.ipac.caltech.edu/TAP/sync"
+SCS_URL = "https://irsa.ipac.caltech.edu/SCS"
+SCS_MAX_DEG = 0.05       # IRSA Cone Search times out on bigger circles when it's busy; larger cones are tiled
 SKYBOT_URL = "https://ssp.imcce.fr/webservices/skybot/api/conesearch.php"
 GAIA_EPOCH = 2016.0
 CATWISE_EPOCH = 2015.4
@@ -33,13 +36,13 @@ class ArchiveError(Exception):
     pass
 
 
-def tap(query, retries=4):
+def tap(query, retries=4, timeout=120):
     """IRSA TAP sync query returning a list of dicts (retries on 5xx and 'Server busy')."""
     url = TAP_URL + "?" + urllib.parse.urlencode({"LANG": "ADQL", "FORMAT": "csv", "QUERY": query})
     delay = 2.0
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(url, timeout=120) as resp:
+            with urllib.request.urlopen(url, timeout=timeout) as resp:
                 text = resp.read().decode("utf-8", "replace")
             if "Server busy" in text[:500]:
                 raise ArchiveError("Server busy")
@@ -53,6 +56,71 @@ def tap(query, retries=4):
     return []
 
 
+_tap_down = False
+
+
+def scs(table, ra, dec, radius_deg, retries=6):
+    """Same circle from IRSA's Cone Search, tiled with SCS_MAX_DEG circles. Rows keep the table's column
+    names, so callers read them exactly as TAP rows. Duplicates from overlapping tiles are dropped."""
+    centres = [(ra, dec)]
+    if radius_deg > SCS_MAX_DEG:
+        step, centres = SCS_MAX_DEG * math.sqrt(3), []
+        n = int(radius_deg / step) + 2
+        for j in range(-n, n + 1):
+            for i in range(-n, n + 1):
+                x, y = (i + 0.5 * (j % 2)) * step, j * 1.5 * SCS_MAX_DEG
+                if math.hypot(x, y) <= radius_deg + SCS_MAX_DEG:
+                    centres.append(((ra + x / math.cos(math.radians(dec))) % 360, dec + y))
+
+    def fetch(centre):
+        cra, cdec = centre
+        url = SCS_URL + "?" + urllib.parse.urlencode({"table": table, "RA": f"{cra:.6f}", "DEC": f"{cdec:.6f}",
+                                                       "SR": f"{min(radius_deg, SCS_MAX_DEG):.6f}", "format": "csv"})
+        for attempt in range(retries):
+            try:
+                with urllib.request.urlopen(url, timeout=60) as resp:
+                    text = resp.read().decode("utf-8", "replace")
+                if text.lstrip().startswith("<"):
+                    raise ArchiveError("Cone Search error: " + text[:200])
+                return text
+            except (urllib.error.URLError, TimeoutError, ConnectionError, ArchiveError) as exc:
+                if attempt == retries - 1:
+                    raise ArchiveError(f"IRSA Cone Search failed: {exc}") from exc
+                time.sleep(min(30, 2 * 2 ** attempt))
+
+    with ThreadPoolExecutor(4) as pool:   # a few tiles at a time; more makes a busy IRSA answer 502
+        texts = list(pool.map(fetch, centres))
+    rows, seen = [], set()
+    for text in texts:
+        for r in csv.DictReader(io.StringIO(text)):
+            key = r.get("source_id") or r.get("source_name")
+            if key in seen:
+                continue
+            seen.add(key)
+            if separation_arcsec(ra, dec, float(r["ra"]), float(r["dec"])) <= radius_deg * 3600:
+                rows.append(r)
+    return rows
+
+
+def cone_rows(table, columns, ra, dec, radius_deg, top=None, order=None):
+    """TAP first; once TAP has failed in this run, IRSA Cone Search for the rest (same rows, same columns)."""
+    global _tap_down
+    if not _tap_down:
+        head = f"SELECT TOP {top} " if top else "SELECT "
+        tail = f" ORDER BY {order}" if top else ""
+        try:
+            return tap(f"{head}{columns} FROM {table} WHERE CONTAINS(POINT('ICRS',ra,dec),"
+                       f"CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{tail}", retries=1, timeout=60)
+        except ArchiveError as exc:
+            _tap_down = True
+            print(f"  IRSA TAP isn't answering ({str(exc)[:60]}); using Cone Search", flush=True)
+    rows = scs(table, ra, dec, radius_deg)
+    if top:
+        rows.sort(key=lambda r: _f(r, order) if _f(r, order) is not None else 99.0)
+        rows = rows[:top]
+    return rows
+
+
 def _f(row, key):
     try:
         v = float(row.get(key, ""))
@@ -62,20 +130,16 @@ def _f(row, key):
 
 
 def gaia_cone(ra, dec, radius_deg, top=None):
-    head = f"SELECT TOP {top} " if top else "SELECT "
-    order = " ORDER BY phot_g_mean_mag" if top else ""
-    rows = tap(f"{head}source_id, ra, dec, pmra, pmdec, phot_g_mean_mag FROM gaia_dr3_source "
-               f"WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{order}")
+    rows = cone_rows("gaia_dr3_source", "source_id, ra, dec, pmra, pmdec, phot_g_mean_mag", ra, dec, radius_deg,
+                     top, "phot_g_mean_mag")
     return [{"catalog": "Gaia DR3", "id": f"Gaia DR3 {r['source_id']}", "ra": _f(r, "ra"), "dec": _f(r, "dec"),
              "pmra": _f(r, "pmra"), "pmdec": _f(r, "pmdec"), "mag": _f(r, "phot_g_mean_mag"),
              "epoch": GAIA_EPOCH} for r in rows if _f(r, "ra") is not None]
 
 
 def catwise_cone(ra, dec, radius_deg, top=None):
-    head = f"SELECT TOP {top} " if top else "SELECT "
-    order = " ORDER BY w1mpro" if top else ""
-    rows = tap(f"{head}source_name, ra, dec, pmra, pmdec, w1mpro, w2mpro FROM catwise_2020 "
-               f"WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',{ra:.6f},{dec:.6f},{radius_deg:.6f}))=1{order}")
+    rows = cone_rows("catwise_2020", "source_name, ra, dec, pmra, pmdec, w1mpro, w2mpro", ra, dec, radius_deg,
+                     top, "w1mpro")
     out = []
     for r in rows:
         if _f(r, "ra") is None:
