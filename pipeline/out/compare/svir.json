@@ -22,7 +22,7 @@
    "year": 2026.0447,
    "n_sources_all": 53,
    "n_sources_cold": 21,
-   "noise": 0.05164,
+   "noise": 0.051633,
    "coverage": 0.999,
    "offset_px": [
     0.0,
@@ -97,11 +97,20 @@
   "measured_pm_arcsec_yr": null
  },
  "variability": {
-  "source": "detector stacks",
-  "n_points": 18,
+  "source": "exposures",
+  "n_points": 30,
   "visits": 3,
-  "per_detector": {},
-  "verdict": "no same-wavelength comparison"
+  "per_detector": {
+   "1": {
+    "pairs": 15,
+    "median_ratio": 1.352,
+    "median_sigma": 0.0,
+    "change": false
+   }
+  },
+  "verdict": "steady",
+  "saturated": true,
+  "changing_detectors": []
  },
  "transients": [],
  "notes": [

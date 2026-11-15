@@ -137,11 +137,20 @@
   "measured_pm_arcsec_yr": null
  },
  "variability": {
-  "source": "detector stacks",
-  "n_points": 18,
-  "visits": 3,
-  "per_detector": {},
-  "verdict": "no same-wavelength comparison"
+  "source": "exposures",
+  "n_points": 7,
+  "visits": 2,
+  "per_detector": {
+   "1": {
+    "pairs": 1,
+    "median_ratio": 5.158,
+    "median_sigma": 0.0,
+    "change": false
+   }
+  },
+  "verdict": "steady",
+  "saturated": true,
+  "changing_detectors": []
  },
  "transients": [],
  "notes": [

@@ -356,49 +356,54 @@
  },
  "variability": {
   "source": "exposures",
-  "n_points": 290,
+  "n_points": 213,
   "visits": 3,
   "per_detector": {
    "1": {
     "pairs": 55,
     "median_ratio": 1.403,
-    "median_sigma": 0.0,
-    "change": false
+    "median_sigma": 91.1,
+    "change": true
    },
    "2": {
-    "pairs": 43,
-    "median_ratio": 1.094,
-    "median_sigma": 0.0,
-    "change": false
+    "pairs": 19,
+    "median_ratio": 1.272,
+    "median_sigma": 81.5,
+    "change": true
    },
    "3": {
-    "pairs": 54,
-    "median_ratio": 0.965,
-    "median_sigma": 0.0,
+    "pairs": 3,
+    "median_ratio": 1.167,
+    "median_sigma": 46.8,
     "change": false
    },
    "4": {
-    "pairs": 2,
-    "median_ratio": 1.402,
+    "pairs": 20,
+    "median_ratio": 0.868,
     "median_sigma": 0.0,
     "change": false
    },
    "5": {
-    "pairs": 126,
-    "median_ratio": 1.593,
-    "median_sigma": 0.0,
-    "change": false
+    "pairs": 35,
+    "median_ratio": 0.599,
+    "median_sigma": 157.6,
+    "change": true
    },
    "6": {
-    "pairs": 150,
-    "median_ratio": 1.095,
-    "median_sigma": 0.0,
-    "change": false
+    "pairs": 79,
+    "median_ratio": 0.694,
+    "median_sigma": 130.7,
+    "change": true
    }
   },
-  "verdict": "steady",
+  "verdict": "possible change",
   "saturated": true,
-  "changing_detectors": []
+  "changing_detectors": [
+   1,
+   2,
+   5,
+   6
+  ]
  },
  "transients": [],
  "notes": [

@@ -60,3 +60,18 @@ $ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.
 step 6: identifying 1 target(s)
   IRSA TAP isn't answering (IRSA TAP failed: HTTP Error 502: Proxy Error); using Cone Search
   rwaur: 0/7 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 5 lookup error(s), rerun later
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only rwaur
+rwaur: 335 cleaned, 0 skipped, 171 good target measurements, 176 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only rwaur
+rwaur: 3 visits stacked on a 147x147 grid, target offsets [0.16, 0.17, 0.23] px; moved 0.08 px (0.49"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only rwaur
+step 5: comparing 1 target(s)
+  rwaur: 7 mover(s), variability possible change, 0 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only rwaur
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: HTTP Error 502: Proxy Error); using IRSA Gator, ESA Gaia, Cone Search
+  rwaur: 0/7 mover(s) confirmed, 1 asteroid(s) in field, 0/0 one-visit source(s) are asteroids

@@ -52,3 +52,18 @@ $ C:\Python3.14\python.exe C:\dev\Wink_SphereX_Explorer\pipeline\step6_identify.
 step 6: identifying 1 target(s)
   IRSA TAP isn't answering (IRSA TAP failed: The read operation timed out); using Cone Search
   w1541: 0/10 mover(s) confirmed, 0 asteroid(s) in field, 0/0 one-visit source(s) are asteroids, 2 lookup error(s), rerun later
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step3_clean.py --only w1541
+w1541: 340 cleaned, 0 skipped, 331 good target measurements, 7 saturated, 0 without ZODI
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step4_align_stack.py --only w1541
+w1541: 3 visits stacked on a 147x147 grid, target offsets [2.39, 2.54, 2.58] px; moved 0.09 px (0.58"/yr)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step5_compare.py --only w1541
+step 5: comparing 1 target(s)
+  w1541: 10 mover(s), variability no same-wavelength comparison, 0 one-visit source(s)
+
+$ C:\Users\parth\AppData\Local\Temp\claude\e41fc77fb21bd311\904120c5-752e-4ab4-8809-ec7fec6c83cb\scratchpad\venv\Scripts\python.exe C:\Users\parth\OneDrive\Documents\GitHub\Wink_SphereX_Explorer\pipeline\step6_identify.py --only w1541
+step 6: identifying 1 target(s)
+  IRSA TAP isn't answering (IRSA TAP failed: HTTP Error 502: Proxy Error); using IRSA Gator, ESA Gaia, Cone Search
+  w1541: 0/10 mover(s) confirmed, 2 asteroid(s) in field, 0/0 one-visit source(s) are asteroids
