@@ -21,7 +21,7 @@
         <button role="tab" id="tab-raw" aria-controls="panel-raw" aria-selected="true" data-tab="raw">Raw search</button>
         <button role="tab" id="tab-gallery" aria-controls="panel-gallery" aria-selected="false" tabindex="-1" data-tab="gallery">Gallery</button>
         <button role="tab" id="tab-filtered" aria-controls="panel-filtered" aria-selected="false" tabindex="-1" data-tab="filtered">Filtered search <span class="badge badge-proto">Prototype</span></button>
-        <button role="tab" id="tab-community" aria-controls="panel-community" aria-selected="false" tabindex="-1" data-tab="community">Community finds</button>
+        <button role="tab" id="tab-community" aria-controls="panel-community" aria-selected="false" tabindex="-1" data-tab="community">Community finds <span class="badge badge-edu">Educational</span></button>
       </div>
 
       <section id="panel-raw" role="tabpanel" aria-labelledby="tab-raw">
@@ -125,7 +125,7 @@
       </section>
 
       <section id="panel-community" role="tabpanel" aria-labelledby="tab-community" hidden>
-        <p class="small muted">Spots that visitors marked in the Viewer and chose to share. Nobody checks them first, so open one and blink it yourself.</p>
+        <p class="small muted"><span class="badge badge-edu">Educational</span> Spots that visitors marked in the Viewer and chose to share. This is for learning and practice, not a discovery catalogue: nobody checks the marks, so open one and blink it yourself.</p>
         <div class="row hunt-tools" id="hunt-tools">
           <label class="check"><input type="checkbox" name="hunt-label" value="mover" checked> <span><span class="hunt-glyph h-mover" aria-hidden="true">◆</span> Movers</span></label>
           <label class="check"><input type="checkbox" name="hunt-label" value="variable" checked> <span><span class="hunt-glyph h-variable" aria-hidden="true">●</span> Changes brightness</span></label>
